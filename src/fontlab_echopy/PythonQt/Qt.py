@@ -1,0 +1,5 @@
+# this_file: src/fontlab_echopy/PythonQt/Qt.py
+# Generated from native metadata and independent enrichment inputs.
+'Native PythonQt.Qt; complete annotated documentation is in the adjacent .pyi source.'
+from fontlab_echopy._runtime import populate as _populate
+_populate(globals(), 'PythonQt.Qt', {'QAbstractTextDocumentLayout::PaintContext': 'QAbstractTextDocumentLayout__PaintContext', 'QAbstractTextDocumentLayout::Selection': 'QAbstractTextDocumentLayout__Selection', 'QInputMethodEvent::Attribute': 'QInputMethodEvent__Attribute', 'QPagedPaintDevice::Margins': 'QPagedPaintDevice__Margins', 'QPainter::PixmapFragment': 'QPainter__PixmapFragment', 'QPainterPath::Element': 'QPainterPath__Element', 'QPixmapCache::Key': 'QPixmapCache__Key', 'QStateMachine::SignalEvent': 'QStateMachine__SignalEvent', 'QStateMachine::WrappedEvent': 'QStateMachine__WrappedEvent', 'QTextEdit::ExtraSelection': 'QTextEdit__ExtraSelection', 'QTextLayout::FormatRange': 'QTextLayout__FormatRange', 'QTextOption::Tab': 'QTextOption__Tab', 'QTouchEvent::TouchPoint': 'QTouchEvent__TouchPoint'})

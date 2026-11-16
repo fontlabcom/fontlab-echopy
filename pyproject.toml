@@ -1,0 +1,84 @@
+# this_file: pyproject.toml
+[build-system]
+requires = ["hatchling>=1.27", "hatch-vcs>=0.4"]
+build-backend = "hatchling.build"
+
+[project]
+name = "fontlab_echopy"
+dynamic = ["version"]
+description = "Source-readable native FontLab API facades and regeneration tools"
+readme = "README.md"
+requires-python = ">=3.11"
+license = "Apache-2.0 AND LGPL-3.0-only AND GFDL-1.3-only"
+license-files = ["LICENSE", "NOTICE", "licenses/*"]
+dependencies = []
+
+[project.optional-dependencies]
+enrich = ["beautifulsoup4>=4.12", "markdownify>=1.2,<2"]
+# Loaded by documentation builds: tooling/griffe_native.py (R046).
+docs = ["griffe>=2.3.2"]
+test = [
+    "pytest>=8",
+    "beautifulsoup4>=4.12",
+    "markdownify>=1.2,<2",
+    "griffe>=2.3.2",
+]
+
+[project.scripts]
+fontlab-echopy = "fontlab_echopy.tooling.cli:main"
+
+[project.urls]
+Repository = "https://github.com/fontlabcom/fontlab-echopy"
+
+[tool.hatch.version]
+source = "vcs"
+[tool.hatch.version.raw-options]
+fallback_version = "0.1.0"
+[tool.hatch.build.targets.wheel]
+packages = ["src/fontlab_echopy", "src/echopy"]
+[tool.hatch.build.targets.sdist]
+only-include = [
+    "install.vfpy",
+    "src",
+    "tests",
+    "patches",
+    "enrichment",
+    "reports",
+    "examples",
+    "pyproject.toml",
+    "README.md",
+    "LICENSE",
+    "licenses",
+    "NOTICE",
+    "MIGRATION.json",
+    "CHANGELOG.md",
+    "DEPENDENCIES.md",
+    "test.sh",
+    "generated/FL.py",
+    "generated/PythonQt/BoolResult.py",
+    "generated/PythonQt/Config.py",
+    "generated/PythonQt/Debug.py",
+    "generated/PythonQt/Qt.py",
+    "generated/PythonQt/QtCore.py",
+    "generated/PythonQt/QtGui.py",
+    "generated/PythonQt/QtNetwork.py",
+    "generated/PythonQt/QtOpenGL.py",
+    "generated/PythonQt/QtSvg.py",
+    "generated/PythonQt/QtUiTools.py",
+    "generated/PythonQt/QtXmlPatterns.py",
+    "generated/PythonQt/__init__.py",
+    "generated/PythonQt/private.py",
+    "generated/fontgate.py",
+    "generated/fontlab.py",
+    "generated/fontlabpr.py",
+    "generated/fontpr.py",
+    "generated/coverage.json",
+    "tools/capture_fl.py",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+[tool.fontlab-install]
+# install.vfpy: reverse-domain id; FontLab keeps Extensions/<id>/install.log.
+id = "com.fontlab.echopy"

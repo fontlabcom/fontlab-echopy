@@ -1,0 +1,16 @@
+FontLab Echopy
+
+Modified and migrated from fontlabcom/fontlab-python-docs code-shadow.
+Original code-shadow source: Apache License 2.0, retained in LICENSE.
+Original aidus introspector: Copyright (c) 2025 Fontlab Ltd; proprietary.
+Its verbatim source is archived under legacy/, excluded from distributions.
+The replacement capture implementation is newly written for Echopy.
+
+Qt reference documentation: Copyright (c) 2025 The Qt Company Ltd and
+respective documentation contributors, GNU Free Documentation License 1.3.
+Qt for Python signature declarations: Copyright (c) 2020 The Qt Company Ltd,
+LGPL version 3 (or the alternative licenses retained under licenses/).
+Source URLs and SHA256 revisions are recorded in reports/qt-enrichment.json.
+Extracted documentation and declarations have been transformed and merged
+into native API source facades; original binary implementations are not shipped.
+GNU license texts and original alternative terms are retained under licenses/.

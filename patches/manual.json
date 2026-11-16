@@ -1,0 +1,493 @@
+{
+  "fontlab": {
+    "doc": "High-level FontLab editing API. flGlyph contains drawing layers, flLayer contains shapes, and flContour contains nodes. CurrentFont() and CurrentGlyph() access the active editing context."
+  },
+  "fontlab.flGlyph": {
+    "doc": "A FontLab editing glyph containing flLayer objects. The captured declaration exposes `name` and `layers`; iterate `layers` to inspect layer names. Unicode assignments belong to the associated fontgate glyph; they are not flGlyph attributes.\n\nExample::\n\n    glyph = fl.CurrentGlyph()\n    if glyph:\n        print(glyph.name)\n        for layer in glyph.layers:\n            print(layer.name)",
+    "source": "generated/fontlab.py: flGlyph captured declaration",
+    "extensions": [
+      "def layer_names(self) -> list[str]:\n    \"\"\"List layer names; immutable native classes use extensions.layer_names.\"\"\"\n    from fontlab_echopy.extensions import layer_names\n    return layer_names(self)",
+      "def has_layer(self, name: str) -> bool:\n    \"\"\"Check for a named layer; see extensions.has_layer on immutable classes.\"\"\"\n    from fontlab_echopy.extensions import has_layer\n    return has_layer(self, name)"
+    ]
+  },
+  "fontlab.flLayer": {
+    "doc": "A drawing layer holding shapes, components and anchors. The captured declaration exposes `getContours`, `name`, `shapes`, `components`, `anchors`, `advanceWidth`, `boundingBox` and `isService`. Retrieve contours with `getContours`; the captured flLayer has no contours attribute.\n\nExample::\n\n    layer = glyph.layers[0]\n    for contour in layer.getContours():\n        for node in contour.nodes:\n            print(node.x, node.y)",
+    "source": "generated/fontlab.py: flLayer captured declaration"
+  },
+  "fontlab.flContour": {
+    "doc": "A closed or open path made of flNode objects. The captured declaration exposes `nodes` and `closed`. Obtain contours with the getContours method of a layer.\n\nExample::\n\n    for contour in layer.getContours():\n        for node in contour.nodes:\n            print(node.x, node.y)",
+    "source": "generated/fontlab.py: flContour captured declaration"
+  },
+  "fontlab.flNode": {
+    "doc": "A contour node. The captured declaration exposes `x`, `y`, `type` and `smooth`. The `type` member distinguishes on-curve points from off-curve control points. Read or assign `x` and `y` on the original native object.",
+    "source": "generated/fontlab.py: flNode captured declaration"
+  },
+  "fontgate": {
+    "doc": "Low-level FontLab font data API. fgFont provides glyphs, naming data, features and kerning; fgGlyph provides glyph data. Feature data is exposed by fgFont.features; there is no captured module-level fgFeatures class."
+  },
+  "fontgate.fgFont": {
+    "doc": "A font data object. The captured declaration exposes `glyphs`, `info`, `features`, `kerning` and `axes`. Access naming information through `info`; the captured fgFont has no family attribute. Consult each native member declaration for its return type and calling convention.",
+    "source": "generated/fontgate.py: fgFont captured declaration"
+  },
+  "fontgate.fgGlyph": {
+    "doc": "A glyph data object. The captured declaration exposes `name`, `unicode`, `unicodes`, `width`, `anchors` and `components`. Outlines are associated with layer data rather than a contours attribute.\n\nExample::\n\n    print(glyph.name)\n    print(glyph.unicode)\n    print(glyph.width)",
+    "source": "generated/fontgate.py: fgGlyph captured declaration"
+  },
+  "fontgate.fgContour": {
+    "doc": "A contour in the fontgate data model. The captured declaration exposes `nodes`, `getNodes`, `getNode`, `countNodes` and `open`. Consult the native declarations for supported calling conventions.",
+    "source": "generated/fontgate.py: fgContour captured declaration"
+  },
+  "fontgate.fgPoint": {
+    "doc": "A two-dimensional point. The captured declaration exposes the coordinates `x` and `y` and the native vector operations. The captured fgPoint has no point type attribute. Read `x` and `y` or use `asTuple` to inspect coordinates.",
+    "source": "generated/fontgate.py: fgPoint captured declaration"
+  },
+  "PythonQt.QtGui.QWidget": {
+    "extensions": [
+      "def echopy_object_name(self) -> str:\n    \"\"\"Read the objectName after explicit install_extensions().\"\"\"\n    from fontlab_echopy.extensions import object_name\n    return object_name(self)"
+    ]
+  },
+  "fontlab.flAnchor": {
+    "doc": "An editing anchor whose `name` identifies the object and whose `anchorPoint` holds its QPointF position. The captured declaration exposes `isGlobal`, `fixHorzDirection` and `fixVertDirection` as boolean attributes. Consult the retained constructor documentation for supported creation forms.",
+    "source": "generated/fontlab.py: flAnchor captured declaration"
+  },
+  "fontlab.flGuideLine": {
+    "doc": "An editing guideline with `angle`, `centerPoint` and `vectorPoint` attributes. The captured declaration identifies `centerPoint` and `vectorPoint` as QPointF values, and `linef` as a QLineF. `name` identifies the object; `color` is a QColor value. Consult the retained constructors for supported line and point forms.",
+    "source": "generated/fontlab.py: flGuideLine captured declaration"
+  },
+  "fontlab.flShape": {
+    "doc": "An editing shape with a `contours` collection of flContour objects. `getContours()` also returns its contours, and `contoursCount` reports their count. `boundingBox` is a QRectF attribute. Read the captured boolean attributes `isComponent` and `isComposite` to inspect the shape kind.",
+    "source": "generated/fontlab.py: flShape captured declaration"
+  },
+  "fontgate.fgAnchor": {
+    "doc": "A font-data anchor with `name`, `x` and `y` attributes. `position` exposes its coordinates as an fgPoint. `draw()` sends the anchor to a segment pen; `drawPoints()` uses a point pen. Consult the retained constructors for copying and named coordinate forms.",
+    "source": "generated/fontgate.py: fgAnchor captured declaration"
+  },
+  "fontgate.fgLayer": {
+    "doc": "A font-data layer exposing `name`, `anchors`, `guides` and `hints`. The captured declarations identify those collections as fgAnchors, fgGuides and fgHints. `countContours()` and `countShapes()` report contour and shape counts; `addContour()` adds an fgContour and returns an fgContour. Consult the member documentation for transformation and bounding-box arguments.",
+    "source": "generated/fontgate.py: fgLayer captured declaration"
+  },
+  "fontgate.fgShape": {
+    "doc": "A font-data shape whose `contours` attribute holds fgContours. `countContours()` and `countNodes()` report outline counts; `addContour()` adds an fgContour. `matrix` exposes an fgMatrix, while `name` and `opacity` describe the shape.",
+    "source": "generated/fontgate.py: fgShape captured declaration"
+  },
+  "fontlab.FontMetrics": {
+    "doc": "Vertical metrics record for a font. The captured declaration exposes `upm`, `ascender`, `descender`, `lineGap`, `capsHeight` and `xHeight` as numeric (double) attributes, and `init` for initialisation. Consult the retained constructor documentation for the supported creation forms, which take a units-per-em value, an existing record, or a package with a layer name.",
+    "source": "generated/fontlab.py: FontMetrics captured declaration"
+  },
+  "fontlab.flZone": {
+    "doc": "An alignment zone described by `position` and `width` (both double), with `name`, `tags`, `program` and `programText` attributes. The captured declaration also exposes `guaranteeName`, `tagsSet` and `toZone`. Consult the retained constructor documentation for the supported creation forms.",
+    "source": "generated/fontlab.py: flZone captured declaration"
+  },
+  "fontlab.CurveEx": {
+    "doc": "A curve segment record. The captured declaration exposes the end points `p0` and `p1`, the control points `bcp0` and `bcp1`, the control vectors `bcv0` and `bcv1`, the bounding rectangle `brect`, and the index attributes `leftIdx`, `rightIdx` and `contourIx`. Captured methods include `split`, `extremum`, `smooth`, `improve`, `fastLength` and `applyTransform`. Consult the retained constructor documentation for the supported point-based creation forms.",
+    "source": "generated/fontlab.py: CurveEx captured declaration"
+  },
+  "fontlab.fgSymbol": {
+    "doc": "A glyph reference identified by `unicode`, `name`, `id` and `pid`, with the flags `hasName`, `hasUnicode` and `empty`. The captured declaration exposes `glyph` (returning a glyph for a font), `computeID`, `compare`, `clear`, and `data`, `setData`, `containsData` and `clearData` keyed by the `DataCode` attribute. Consult the retained constructor documentation for the supported creation forms. Caution: FontLab 9.0.9809 terminates when fgSymbol() is called with no arguments (Fontlab/fl#8632, open).",
+    "source": "generated/fontlab.py: fgSymbol captured declaration"
+  },
+  "fontlab.flObject": {
+    "doc": "Base editing object. The captured declaration exposes identity and state attributes `id`, `name`, `type`, `refCnt`, `isValid`, `isNull`, `isPresent`, `isReleased`, `isChanged` and `hasChanges`. Captured methods cover properties (`getProperty`, `setProperty`, `getProperties`), flags (`flag`, `setFlag`, `clearFlag`), history states (`historyStates`, `restoreHistoryState`, `hasHistoryState`) and object lifetime (`clone`, `release`, `remove`, `update`, `changed`).",
+    "source": "generated/fontlab.py: flObject captured declaration"
+  },
+  "fontlab.flPinPoint": {
+    "doc": "A pin point object with a `point` position, a `style`, an `appearance` value and the boolean attributes `anchor`, `isLatch`, `markEnabled`, `cloudEnabled` and `hasExpression`, plus the text attributes `expressionX` and `expressionY`. The captured declaration also exposes `translate`, `createInstance` and the object property, flag and history methods shared with the base editing object.",
+    "source": "generated/fontlab.py: flPinPoint captured declaration"
+  },
+  "fontgate.fgKerning": {
+    "doc": "The kerning table of a font. The captured declaration exposes `get` and `set` for a value addressed by a pair or by a tuple of two names, `has_key`, `keys`, `values`, `items`, `asDict`, `remove` and `clear`, and the group operations `addGroup`, `deleteGroup`, `deleteAllGroups`, `renameGroup` and `hasGroupKerning`. It also exposes `getPlainPairs`, `getPlainPairsDict`, `setPlainPairs`, `scale` and the `groups` attribute.",
+    "source": "generated/fontgate.py: fgKerning captured declaration"
+  },
+  "fontgate.fgKerningGroups": {
+    "doc": "A dictionary of kerning groups. The captured declaration exposes `has_key`, `keys`, `values`, `items`, `asDict`, `clear`, `remove` and `rename`. Each item is a group name with a list of glyph names and a mode.",
+    "source": "generated/fontgate.py: fgKerningGroups captured declaration"
+  },
+  "fontgate.fgKerningObject": {
+    "doc": "One side of a kerning pair: a glyph or a group. The captured declaration exposes `id` (the glyph or group name) and `mode` (glyphMode or groupMode), with `asDict` and `asTuple`. Consult the retained constructor documentation for the supported creation forms.",
+    "source": "generated/fontgate.py: fgKerningObject captured declaration"
+  },
+  "fontgate.fgKerningObjectPair": {
+    "doc": "A kerning pair made of a `left` and a `right` kerning object, each a glyph or a group, with `asDict` and `asTuple`. Consult the retained constructor documentation for the supported creation forms, which take names, kerning objects or a tuple of two kerning objects.",
+    "source": "generated/fontgate.py: fgKerningObjectPair captured declaration"
+  },
+  "fontlab.Interval": {
+    "doc": "A numeric interval with `t0` and `t1` (both double) and `d` and `key` attributes. The captured declaration exposes `isEmpty`, `middle`, `reversed`, `setT0T1`, `toAbsolute` and `toInterval`. Consult the retained constructor documentation for the supported creation forms.",
+    "source": "generated/fontlab.py: Interval captured declaration"
+  },
+  "fontlab.PaintBrush": {
+    "doc": "A paint brush described by `angle`, `flatness` and `size` (all double) and a `shape` attribute. The captured declaration exposes `assign`, `init`, `render` and `toString`. Consult the retained constructor documentation for the supported creation forms.",
+    "source": "generated/fontlab.py: PaintBrush captured declaration"
+  },
+  "fontlab.flInstance": {
+    "doc": "A font instance with the string attributes `name`, `sgn`, `tsn`, `weight` and `width`, the bool attributes `bold`, `exportable` and `italic`, the numeric attributes `slv` (int) and `weightValue` (double), and a `location` attribute. The captured declaration exposes `autoSGN`, `autoSLV`, `autoTSN` and `setSLV`. It is created as `flInstance()` or as `flInstance(name, tsn, location)`.",
+    "source": "generated/fontlab.py: flInstance captured declaration"
+  },
+  "fontlab.flStem": {
+    "doc": "A stem described by `value` (double), with `name`, `tags`, `program` and `programText` attributes. The captured declaration also exposes `guaranteeName`, `linear`, `ppm`, `tagsSet` and `toStem`. Consult the retained constructor documentation for the supported creation forms.",
+    "source": "generated/fontlab.py: flStem captured declaration"
+  },
+  "fontlab.flTTHCommand": {
+    "doc": "A TrueType hinting command with `code`, `parameters` and `point_names` attributes. The captured declaration exposes `fromString`, `isDelta`, `isFinal`, `isHorizontal`, `isVertical`, `nodesCount`, `parametersCount`, `stemIndex` and `zoneIndex`. It is created as `flTTHCommand()`.",
+    "source": "generated/fontlab.py: flTTHCommand captured declaration"
+  },
+  "fontgate.fgGroup": {
+    "doc": "A kerning or metrics group with an int `id`, a string `name` and a `mode`. The captured mode values are `'FeaClassGroupMode'`, `'KernLeftGroupMode'`, `'KernRightGroupMode'` and `'KernBothSideGroupMode'`. The captured declaration exposes `isBoth`, `isFeaGroup`, `isLeft` and `isRight`. It is created as `fgGroup()`, as a copy `fgGroup(fgGroup)` or as `fgGroup(('name', [ids], mode, 'mainglyphname'))`.",
+    "source": "generated/fontgate.py: fgGroup captured declaration"
+  },
+  "fontgate.fgMatrix": {
+    "doc": "A transformation matrix with the attributes `m11`, `m12`, `m21`, `m22`, `dx` and `dy`. The captured declaration exposes `asDict`, `asTuple`, `assign`, `determinant`, `invert`, `inverted`, `invertible`, `noMove`, `noRotate`, `noScale`, `scale`, `slant` and `standard`. It is created as `fgMatrix()`, as a copy `fgMatrix(fgMatrix)` or as `fgMatrix(m11, m12, m21, m22, dx, dy)`; two matrices combine with `fgMatrix * fgMatrix`.",
+    "source": "generated/fontgate.py: fgMatrix captured declaration"
+  },
+  "fontgate.fgPen": {
+    "doc": "A pen with a bool `smooth` attribute. The captured declaration exposes `beginPath`, `closePath`, `curveTo`, `curveToOne`, `endPath`, `lineTo`, `moveTo` and `qCurveToOne`. It is created as `fgPen(fgGlyph)` or as a copy `fgPen(fgPen)`.",
+    "source": "generated/fontgate.py: fgPen captured declaration"
+  },
+  "fontgate.fgStem": {
+    "doc": "A stem described by a string `name`, a float `value` and a `program` dict of int to int. The captured declaration exposes `clear`, `fillProgram`, `ppm` and `setProgram`. It is created as `fgStem()`, as a copy `fgStem(fgStem)` or as `fgStem(value)`.",
+    "source": "generated/fontgate.py: fgStem captured declaration"
+  },
+  "fontgate.fgZone": {
+    "doc": "A zone described by a string `name`, float `position` and `width`, a bool `top` and a `program` dict of int to int. The captured declaration exposes `clear`, `getIntValues`, `v0` and `v1`. It is created as `fgZone()` or as a copy `fgZone(fgZone)`.",
+    "source": "generated/fontgate.py: fgZone captured declaration"
+  },
+  "fontlab.AccentInfo": {
+    "doc": "A data wrapper with the attributes `layer` and `offset`. The captured declaration exposes `asDict` (represent the object as a dictionary) and `asTuple` (represent it as a tuple).",
+    "source": "generated/fontlab.py: AccentInfo captured declaration"
+  },
+  "fontlab.GlyphComponent": {
+    "doc": "A glyph component described by `name_id` (uint), `transform` (QTransform), `use_anchors` (bool) and `width_scale` (double). It is created as `GlyphComponent()`, as a copy `GlyphComponent(GlyphComponent)`, from an id `GlyphComponent(uint id)`, from a name `GlyphComponent(string name)` or as `GlyphComponent(uint id, QTransform tx, double w, bool ua)`.",
+    "source": "generated/fontlab.py: GlyphComponent captured declaration"
+  },
+  "fontlab.flEvent": {
+    "doc": "An event with `type` (EventType) and `modifiers` (int) attributes and an `EventType` dict. It is created as a copy `flEvent(flEvent)` or as `flEvent(EventType type[, int modifiers=-1])`.",
+    "source": "generated/fontlab.py: flEvent captured declaration"
+  },
+  "fontlab.flLayerAttributes": {
+    "doc": "A data wrapper with the attributes `isActive`, `isLocked`, `isService`, `isVisible`, `isWireframe` and `wireframeColor`. The captured declaration exposes `asDict` (represent the object as a dictionary) and `asTuple` (represent it as a tuple).",
+    "source": "generated/fontlab.py: flLayerAttributes captured declaration"
+  },
+  "fontlab.SmartCornerParameters": {
+    "doc": "A data wrapper with the single attribute `curvature`. The captured declaration exposes `asDict` (represent the object as a dictionary) and `asTuple` (represent it as a tuple).",
+    "source": "generated/fontlab.py: SmartCornerParameters captured declaration"
+  },
+  "fontgate.fgAxes": {
+    "doc": "An axes list representation with a `masters` attribute holding the masters (fgMasters). It is created as `fgAxes()` or as a copy `fgAxes(fgAxes)`.",
+    "source": "generated/fontgate.py: fgAxes captured declaration"
+  },
+  "fontgate.fgCaret": {
+    "doc": "A caret with a string `name` and a coordinate `v` (fgOtValue). It is created as `fgCaret()`, as a copy `fgCaret(fgCaret)` or from a coordinate and name as `fgCaret((fgOtValue/float/int, 'name'))`.",
+    "source": "generated/fontgate.py: fgCaret captured declaration"
+  },
+  "fontgate.fgDesignPosition": {
+    "doc": "A design position whose `data` attribute is a list of doubles. It is created as `fgDesignPosition()`, as a copy `fgDesignPosition(fgDesignPosition)` or from an axis count as `fgDesignPosition(axisCount)`.",
+    "source": "generated/fontgate.py: fgDesignPosition captured declaration"
+  },
+  "fontgate.fgDeviceRecord": {
+    "doc": "A device record with int attributes `ppm` and `correction`. It is created as `fgDeviceRecord()`, as a copy `fgDeviceRecord(fgDeviceRecord)`, from a tuple `fgDeviceRecord(tuple(int ppm, int correction))` or as `fgDeviceRecord(int ppm, int correction)`.",
+    "source": "generated/fontgate.py: fgDeviceRecord captured declaration"
+  },
+  "fontgate.fgAnchors": {
+    "doc": "A list of anchor objects. The captured declaration exposes `append`, `asList`, `clean`, `del_` and `insert`. The native spelling of `del_` is del, which the capture says to reach through getattr on the native object.",
+    "source": "generated/fontgate.py: fgAnchors captured declaration"
+  },
+  "fontlab.flSnaps": {
+    "doc": "A holder of snap constants. The captured declaration exposes the dict attributes `FastGuidelines`, `MarkerFlags`, `MarkerKey`, `SnapLineFlags`, `SnapMode`, `SnapStyle` and `ViewMode`; it has no methods beyond the constructor.",
+    "source": "generated/fontlab.py: flSnaps captured declaration"
+  },
+  "fontlab.PaintBrushShape": {
+    "doc": "A data wrapper for a brush shape. The captured declaration exposes the attributes `cap0`, `cap1`, `cap_length0`, `cap_length1` and `data`, and the methods `asDict` and `asTuple`, which represent the object as a dictionary or a tuple.",
+    "source": "generated/fontlab.py: PaintBrushShape captured declaration"
+  },
+  "fontlab.flMouseEvent": {
+    "doc": "A mouse event. The captured declaration exposes the attributes `button`, `buttons`, `delta`, `firstPressed`, `global_`, `modifiers`, `movement`, `origin`, `prev` and `type`. It is created as a copy `flMouseEvent(flMouseEvent)`.",
+    "source": "generated/fontlab.py: flMouseEvent captured declaration"
+  },
+  "fontlab.flModel": {
+    "doc": "A static-only model class with no constructor. The captured declaration exposes the methods `createObject`, `getClassMask`, `instance`, `isClassMask`, `notifyGlyphChanged`, `notifyGlyphUpdate`, `notifyGlyphsChanged` and `typeToStr`, and the dict attributes `ModelType` and `ObjectParameter`. Call `instance` to obtain the flModel object.",
+    "source": "generated/fontlab.py: flModel captured declaration"
+  },
+  "fontlab.ExportControl": {
+    "doc": "An export control record. The captured declaration exposes the attributes `conflictMode`, `contentMode`, `contentName`, `destinationFolder`, `destinationMode`, `groupFamily`, `groupProfiles`, `profileId` and `profileName`, and the methods `init`, `load` and `store`. `load` returns a bool.",
+    "source": "generated/fontlab.py: ExportControl captured declaration"
+  },
+  "fontgate.fgAxis": {
+    "doc": "An axis. The captured declaration exposes the attributes `blendMap`, `map`, `name`, `shortName` and `type`. It is created as `fgAxis('name')`, which sets the name.",
+    "source": "generated/fontgate.py: fgAxis captured declaration"
+  },
+  "fontgate.fgMaster": {
+    "doc": "A master. The captured declaration exposes the attributes `name`, `penColor` and `position`. It is created as `fgMaster()`, as a copy `fgMaster(fgMaster)` or as `fgMaster('name')`.",
+    "source": "generated/fontgate.py: fgMaster captured declaration"
+  },
+  "fontgate.fgMasters": {
+    "doc": "A list of fgMaster objects. The captured declaration exposes `append`, `asList`, `clean`, `del_` and `insert`. The native spelling of `del_` is del, which the capture says to reach through getattr on the native object.",
+    "source": "generated/fontgate.py: fgMasters captured declaration"
+  },
+  "fontgate.fgGuide": {
+    "doc": "A guide. The captured declaration exposes the attributes `color`, `horizontal`, `index`, `name`, `p0`, `p1`, `position` and `vertical`, and the method `copy`. It is created as `fgGuide()`, as a copy `fgGuide(fgGuide)`, as `fgGuide(float pos[, bool horizontal = false])` or as `fgGuide(fgPoint p0, fgPoint p1[, name=''[, horizonta=false[, color=fgColor]]])`.",
+    "source": "generated/fontgate.py: fgGuide captured declaration"
+  },
+  "fontgate.fgComponent": {
+    "doc": "A component. The captured declaration exposes the attributes `baseGlyph`, `box`, `hasFullMatrix`, `index`, `matrix`, `offset` and `scale`, and the methods `draw`, `drawPoints` and `move`. `draw` takes a segment pen, `drawPoints` takes a point pen, and `move` takes float dx and dy. It is created as `fgComponent()`, as a copy `fgComponent(fgComponent)` or as `fgComponent('name', fgMatrix)`.",
+    "source": "generated/fontgate.py: fgComponent captured declaration"
+  },
+  "fontgate.fgBrush": {
+    "doc": "A brush. The captured declaration exposes the attributes `kind`, `size` and `solid`, and the methods `asDict`, `asTuple`, `black`, `isBlack`, `isTransparent` and `transparent`. It is created as `fgBrush()`, as a copy `fgBrush(fgBrush)`, as `fgBrush(fgColor)` for a solid brush with the default size (1, 0), or as `fgBrush(fgColor, fgPoint)` for a solid brush with a size.",
+    "source": "generated/fontgate.py: fgBrush captured declaration"
+  },
+  "fontgate.fgCmapRecord": {
+    "doc": "A cmap record. The captured declaration exposes the attributes `eid`, `format`, `lid`, `nid`, `pagename`, `pid` and `type`, and the methods `asDict` and `asTuple`.",
+    "source": "generated/fontgate.py: fgCmapRecord captured declaration"
+  },
+  "fontgate.fgCoding": {
+    "doc": "Coding data. The captured declaration exposes the attributes `cmaps`, `codepageRange`, `encoding`, `encodingType`, `importedEncoding` and `unicodeRange`. It is created as `fgCoding()`, as a copy `fgCoding(fgCoding)` or as `fgCoding(bool [unicodeRange], bool [codepageRange], fgCMaps cmaps, fgEncoding encoding, fgEncoding importedEncoding, 'encDefault'/'encStandard'/'encCustom')`.",
+    "source": "generated/fontgate.py: fgCoding captured declaration"
+  },
+  "fontgate.fgCuspPoint": {
+    "doc": "A cusp point. The captured declaration exposes the attributes `hlink0`, `hlink1`, `index`, `middleH`, `middleV`, `p`, `vlink0` and `vlink1`. It is created as `fgCuspPoint()` or as a copy `fgCuspPoint(fgCuspPoint)`.",
+    "source": "generated/fontgate.py: fgCuspPoint captured declaration"
+  },
+  "fontgate.fgGaspRecord": {
+    "doc": "A gasp record. The captured declaration exposes the attributes `rangeMaxpPPEM` and the behavior constants `DOGRAY`, `GRIDFIT`, `SYMMETRIC_GRIDFIT` and `SYMMETRIC_SMOOTHING`, and the methods `addSymmetry`, `rangeGaspBehavior` and `set`. It is created as `fgGaspRecord()`, as a copy `fgGaspRecord(fgGaspRecord)` or as `fgGaspRecord(int rangeMaxPPEM, int rangeGaspBehavior)`.",
+    "source": "generated/fontgate.py: fgGaspRecord captured declaration"
+  },
+  "fontgate.fgHintCommand": {
+    "doc": "A hint command. The captured declaration exposes the attributes `code`, `index`, `pointName` and `subrIndex`. It is created as `fgHintCommand()`, as a copy `fgHintCommand(fgHintCommand)` or as `fgHintCommand(code, index)`, where the possible values for code are 'none'/'hintH'/'hintV'/'replace'.",
+    "source": "generated/fontgate.py: fgHintCommand captured declaration"
+  },
+  "fontgate.fgLib": {
+    "doc": "A dictionary with font- or glyph-related data. The captured declaration exposes the methods `clear`, `get`, `hasKey`, `items`, `keys` and `update`.",
+    "source": "generated/fontgate.py: fgLib captured declaration"
+  },
+  "fontgate.fgMaxP": {
+    "doc": "The maxp table values. The captured declaration exposes the attributes `maxFunctionDefs`, `maxInstructionDefs`, `maxStackElements`, `maxStorage`, `maxTwilightPoints` and `maxZones`, and the methods `asDict` and `asTuple`.",
+    "source": "generated/fontgate.py: fgMaxP captured declaration"
+  },
+  "fontgate.fgMetricsClass": {
+    "doc": "A metrics class. The captured declaration exposes the attributes `glyphs`, `keyGlyphName`, `left`, `name`, `right` and `width`, and the method `hasGlyph`. It is created as `fgMetricsClass()` or as a copy `fgMetricsClass(fgMetricsClass)`.",
+    "source": "generated/fontgate.py: fgMetricsClass captured declaration"
+  },
+  "fontgate.fgOtValue": {
+    "doc": "An OpenType value. The captured declaration exposes the attributes `coordinate`, `deviceTable` and `point_index`. It is created as `fgOtValue()`, as a copy `fgOtValue(fgOtValue)`, from a float as `fgOtValue(float)` or from an int or long as `fgOtValue(int/long)`. The captured math operations are `fgOtValue + fgOtValue`, `fgOtValue - fgOtValue` and `fgOtValue * float`.",
+    "source": "generated/fontgate.py: fgOtValue captured declaration"
+  },
+  "fontlab.FaBasicPtr": {
+    "doc": "A fix-pointer record. The captured declaration exposes the method `fix` and the attributes `canBeFixed`, `contour`, `id`, `location`, `nodeIndex`, `priority`, `report`, `title` and `vector`. Test `canBeFixed` before calling `fix`; the captured `fix` is declared as returning an flGlyph or nothing.",
+    "source": "generated/fontlab.py: FaBasicPtr captured declaration"
+  },
+  "fontlab.FontLayer": {
+    "doc": "A font layer object. The captured declaration exposes no named members, only a native constructor. Do not rely on any attribute of `FontLayer`; glyph layers belong to flLayer.",
+    "source": "generated/fontlab.py: FontLayer captured declaration"
+  },
+  "fontlab.LocationValue": {
+    "doc": "A location value, `LocationValue`. The captured declaration exposes no named members, only the native constructors `LocationValue(flLocation)` and `LocationValue(double)`.",
+    "source": "generated/fontlab.py: LocationValue captured declaration"
+  },
+  "fontlab.flLocation": {
+    "doc": "A design-space location. The captured declaration exposes no named members, only the native constructors `flLocation()` and `flLocation(flLocation)`. The flAxis method locationName takes an flLocation.",
+    "source": "generated/fontlab.py: flLocation captured declaration"
+  },
+  "fontlab.flHintingParameters": {
+    "doc": "Font-level hinting parameters. The captured declaration exposes the method `init` and the attributes `blueFuzz`, `blueScale`, `blueShift`, `codePPM`, `dropoutPPM`, `flex`, `fontDirectionHint`, `forceBold`, `forceBoldTreshold`, `lowestRecPPEM`, `maxFunctionDefs`, `maxInstructionDefs`, `maxStackElements`, `maxStorage`, `maxTwilightPoints`, `maxZones`, `stemSnapLimit` and `zonePPM`. It is created as `flHintingParameters()`. Note the captured spelling `forceBoldTreshold`.",
+    "source": "generated/fontlab.py: flHintingParameters captured declaration"
+  },
+  "fontlab.flAxis": {
+    "doc": "A variation axis. The captured declaration exposes the attributes `name`, `tag`, `shortName`, `minimal`, `default`, `maximum`, `designMin`, `designDef`, `designMax`, `hidden`, `map` and `playRange`, and methods including `checkValue`, `getRange`, `mappedValue`, `normalize`, `styleName`, `styleValue`, `valueWeight` and `valueWidth`. It is created as `flAxis()`, `flAxis(string name)` or `flAxis(string name, string tag, string short_name)`.",
+    "source": "generated/fontlab.py: flAxis captured declaration"
+  },
+  "fontlab.flSticker": {
+    "doc": "A sticker object on the canvas. The captured declaration exposes the attributes `text`, `textRect`, `shape` and `boundingBox`, and the method `move`. It is created as `flSticker()`, `flSticker(flObject)`, `flSticker(flSticker)` or `flSticker(QString)`. It also carries the shared object members `name`, `id`, `type`, `isValid`, `release` and `remove`.",
+    "source": "generated/fontlab.py: flSticker captured declaration"
+  },
+  "fontlab.flTransform": {
+    "doc": "A transform object. The captured declaration exposes the attributes `transform` and `scale` and the methods `map`, `mapRect` and `translate`. It is created as `flTransform()`, `flTransform(flTransform)`, `flTransform(flObject)` or `flTransform(QTransform)`. It also carries the shared object members `name`, `id`, `type`, `isValid`, `release` and `remove`.",
+    "source": "generated/fontlab.py: flTransform captured declaration"
+  },
+  "fontlab.flPaper": {
+    "doc": "A paper object holding glyph information. The captured declaration exposes the methods `activeGlyphInfo`, `getGlyphInfo`, `glyphInfoAt`, `glyphsBoundRect`, `hasActive`, `hasContent`, `glyph`, `setActiveGlyph` and `setPaperGlyph`. It is created as `flPaper()`, `flPaper(flPaper)`, `flPaper(flObject)` or `flPaper(QBrush)`. It also carries the shared object members `name`, `id`, `type`, `isValid`, `release` and `remove`.",
+    "source": "generated/fontlab.py: flPaper captured declaration"
+  },
+  "fontlab.flProperty": {
+    "doc": "A property object. The captured declaration exposes the property accessors `getProperty`, `getPropertyInt`, `getPropertyFloat`, `setProperty`, `setPropertyInt` and `setPropertyFloat`, and the attribute `objectAttr`. It is created with no captured constructor overloads. It also carries the shared object members `name`, `id`, `type`, `isValid`, `release` and `remove`.",
+    "source": "generated/fontlab.py: flProperty captured declaration"
+  },
+  "fontlab.TransformFrame": {
+    "doc": "A transformation frame. The captured declaration exposes the transformation methods `translate`, `scale`, `rotate`, `rotate180`, `slant`, `flipHorizontal`, `flipVertical`, `horizontalReflection`, `verticalReflection` and `doTransformation`, the geometry methods `boundingRect`, `polygon`, `expandPolygon`, `getMapped`, `getTransform`, `initCenter` and `prepareTransformations`, the control methods `getControlPos`, `setControlPos` and `setProjectionPos`, the size and margin methods `bw`, `lh`, `mb`, `mh`, `ml`, `mr`, `mt`, `mw`, `rh` and `tw`, and the attributes `tl`, `tr`, `bl`, `br` and `cr`. It is created with no captured constructor overloads.",
+    "source": "generated/fontlab.py: TransformFrame captured declaration"
+  },
+  "fontlab.fgSymbolList": {
+    "doc": "A list of symbols. The captured declaration exposes the list methods `append`, `insert`, `remove`, `replace`, `clear`, `at`, `last`, `mid`, `size`, `empty`, `assign`, `compare` and `equals`, the loading methods `set`, `setList`, `setGlyphsList`, `setIdList`, `setNamesList`, `setUnicodeList`, `setData`, `setString` and `setSterile`, and the reading and storage methods `data`, `string`, `symbols`, `computeString`, `store`, `restore`, `reserve`, `clearData`, `clearString` and `limitLineLength`. It is created with no captured constructor overloads.",
+    "source": "generated/fontlab.py: fgSymbolList captured declaration"
+  },
+  "fontlab.YPanelManager": {
+    "doc": "A panel manager. The captured declaration exposes the signals `desktopClientRectChanged`, `panelClosed`, `toolbarOpened` and `toolbarClosed` and the method `showContextMenu`. It also carries the Qt object members `parent`, `children`, `findChild`, `findChildren`, `setParent`, `connect`, `disconnect`, `deleteLater` and `property`, and the attribute `objectName`. It is created with no captured constructor overloads.",
+    "source": "generated/fontlab.py: YPanelManager captured declaration"
+  },
+  "fontlab.flGraphicsInfo": {
+    "doc": "Graphics information. The captured declaration exposes the attribute `transform`. It is created with no captured constructor overloads. It also carries the shared object members `changed`, `clone`, `cloneObject`, `getProperty`, `setProperty`, `release`, `remove` and `update` and the shared attributes `id`, `name`, `type`, `isValid` and `isNull`.",
+    "source": "generated/fontlab.py: flGraphicsInfo captured declaration"
+  },
+  "fontlab.flAuditInfo": {
+    "doc": "Audit information. The captured declaration exposes `glyphLocation`, and the attributes `basic`, `item`. It is created with no captured constructor overloads. It also carries the shared object members `changed`, `clone`, `cloneObject`, `getProperty`, `setProperty`, `release`, `remove` and `update` and the shared attributes `id`, `name`, `type`, `isValid` and `isNull`.",
+    "source": "generated/fontlab.py: flAuditInfo captured declaration"
+  },
+  "fontlab.flPropertyDouble": {
+    "doc": "A numeric property. The captured declaration exposes the attributes `value`, `expression`. It is created with no captured constructor overloads. It also carries the shared object members `changed`, `clone`, `cloneObject`, `getProperty`, `setProperty`, `release`, `remove` and `update` and the shared attributes `id`, `name`, `type`, `isValid` and `isNull`.",
+    "source": "generated/fontlab.py: flPropertyDouble captured declaration"
+  },
+  "fontlab.flPropertyPoint": {
+    "doc": "A point property. The captured declaration exposes `hasExpression`, and the attributes `point`, `paramType`, `ParameterType`, `expressionX`, `expressionY`. It is created with no captured constructor overloads. It also carries the shared object members `changed`, `clone`, `cloneObject`, `getProperty`, `setProperty`, `release`, `remove` and `update` and the shared attributes `id`, `name`, `type`, `isValid` and `isNull`.",
+    "source": "generated/fontlab.py: flPropertyPoint captured declaration"
+  },
+  "fontlab.flSearchInfo": {
+    "doc": "Search information. The captured declaration exposes `combine`, and the attributes `dist`, `glyphInfo`, `transform`. It is created with no captured constructor overloads. It also carries the shared object members `changed`, `clone`, `cloneObject`, `getProperty`, `setProperty`, `release`, `remove` and `update` and the shared attributes `id`, `name`, `type`, `isValid` and `isNull`.",
+    "source": "generated/fontlab.py: flSearchInfo captured declaration"
+  },
+  "fontlab.flModelProducer": {
+    "doc": "A model producer. The captured declaration exposes `copyToClipboard`, `getClipboardData`, `getObjectsFromClipboard`, `getObjectsFromData`, `countGlyphsInData`. It is created with no captured constructor overloads. It also carries the shared object members `changed`, `clone`, `cloneObject`, `getProperty`, `setProperty`, `release`, `remove` and `update` and the shared attributes `id`, `name`, `type`, `isValid` and `isNull`.",
+    "source": "generated/fontlab.py: flModelProducer captured declaration"
+  },
+  "fontlab.flBasicTool": {
+    "doc": "A basic tool. The captured declaration exposes `activateTool`, `deactivateTool`, and the attributes `cursorId`, `needDeactivateParent`. It is created with no captured constructor overloads. It also carries the shared object members `changed`, `clone`, `cloneObject`, `getProperty`, `setProperty`, `release`, `remove` and `update` and the shared attributes `id`, `name`, `type`, `isValid` and `isNull`.",
+    "source": "generated/fontlab.py: flBasicTool captured declaration"
+  },
+  "fontlab.flExpression": {
+    "doc": "Expression holder. The captured declaration exposes `expression`, `hasExpression`, `hasError`, `error`, `clearError`, `isNeedToComplete`, `resetReady`, `ready` and `variables`. It is created with no captured constructor overloads. It also carries the shared object members `changed`, `clone`, `cloneObject`, `getProperty`, `setProperty`, `release`, `remove` and `update` and the shared attributes `id`, `name`, `type`, `isValid` and `isNull`.",
+    "source": "generated/fontlab.py: flExpression captured declaration"
+  },
+  "fontlab.flMarkerPoint": {
+    "doc": "Marker point. The captured declaration exposes `markerFlag`, `setMarkerFlag`, `markerFlags`, `isStem`, `isSelected`, `key` and `position`. It is created with no captured constructor overloads. It also carries the shared object members `changed`, `clone`, `cloneObject`, `getProperty`, `setProperty`, `release`, `remove` and `update` and the shared attributes `id`, `name`, `type`, `isValid` and `isNull`.",
+    "source": "generated/fontlab.py: flMarkerPoint captured declaration"
+  },
+  "fontlab.flShapeBuilder": {
+    "doc": "Shape builder. The captured declaration exposes `deactivate`, `getSmartNodes`, `hasFeature`, `init`, `prepareTransformationData`, `resetTransformationData`, `setDestShape`, `setDestShapeData`, `setOwnerLayer`, `setOwnerShapeData`, `canUngroup`, `haveResult` and `title`. It is created with no captured constructor overloads. It also carries the shared object members `changed`, `clone`, `cloneObject`, `getProperty`, `setProperty`, `release`, `remove` and `update` and the shared attributes `id`, `name`, `type`, `isValid` and `isNull`.",
+    "source": "generated/fontlab.py: flShapeBuilder captured declaration"
+  },
+  "fontlab.flSnapLine": {
+    "doc": "Snap line. The captured declaration exposes `distanceTo`, `offsetTo`, `getHashCode`, `isSnapLine`, `reset`, `setSnapFlag`, `setSnapFlagValue`, `snapFlag`, `angle`, `angleMode`, `center`, `centerPoint`, `color`, `constraints`, `expression`, `extLinef`, `extPosition`, `length`, `hasColor`, `hasExtLine`, `isHint`, `isZone`, `isPassive` and `isMeasurementLine`. It is created with no captured constructor overloads. It also carries the shared object members `changed`, `clone`, `cloneObject`, `getProperty`, `setProperty`, `release`, `remove` and `update` and the shared attributes `id`, `name`, `type`, `isValid` and `isNull`.",
+    "source": "generated/fontlab.py: flSnapLine captured declaration"
+  },
+  "fontlab.flSnapObject": {
+    "doc": "Snap object. The captured declaration exposes `distanceTo`, `offsetTo`, `getHashCode`, `reset`, `setSnapFlag`, `setSnapFlagValue`, `snapFlag`, `snapFlags`, `style`, `isHint`, `isZone`, `isPassive` and `isMeasurementLine`. It is created with no captured constructor overloads. It also carries the shared object members `changed`, `clone`, `cloneObject`, `getProperty`, `setProperty`, `release`, `remove` and `update` and the shared attributes `id`, `name`, `type`, `isValid` and `isNull`.",
+    "source": "generated/fontlab.py: flSnapObject captured declaration"
+  },
+  "fontlab.flContourInfo": {
+    "doc": "Contour information. The captured declaration exposes `contour`, `shapeInfo`, `glyphInfo`, `getHitNode`, `getNodesInfo`, `cloneSelected`, `brectOnCanvas`, `combine`, `dist` and `transform`. It is created with no captured constructor overloads. It also carries the shared object members `changed`, `clone`, `cloneObject`, `getProperty`, `setProperty`, `release`, `remove` and `update` and the shared attributes `id`, `name`, `type`, `isValid` and `isNull`.",
+    "source": "generated/fontlab.py: flContourInfo captured declaration"
+  },
+  "fontlab.flLayerInfo": {
+    "doc": "Layer information. The captured declaration exposes `layer`, `glyphInfo`, `combine`, `dist`, `transform` and `brectOnCanvas`. It is created with no captured constructor overloads. It also carries the shared object members `changed`, `clone`, `cloneObject`, `getProperty`, `setProperty`, `release`, `remove` and `update` and the shared attributes `id`, `name`, `type`, `isValid` and `isNull`.",
+    "source": "generated/fontlab.py: flLayerInfo captured declaration"
+  },
+  "fontlab.flNodeInfo": {
+    "doc": "Node information. The captured declaration exposes `node`, `contour`, `contourInfo`, `shape`, `shapeInfo`, `glyphInfo`, `getGlyphPoint`, `setGlyphPoint`, `setGlyphPointX`, `setGlyphPointY`, `getMappedPoint`, `toNodesInfo`, `breakContourExpanded`, `combine`, `dist` and `transform`. It is created with no captured constructor overloads. It also carries the shared object members `changed`, `clone`, `cloneObject`, `getProperty`, `setProperty`, `release`, `remove` and `update` and the shared attributes `id`, `name`, `type`, `isValid` and `isNull`.",
+    "source": "generated/fontlab.py: flNodeInfo captured declaration"
+  },
+  "fontlab.flShapeInfo": {
+    "doc": "Shape information. The captured declaration exposes `shape`, `layer`, `composites`, `appendComposite`, `pushFrontComposite`, `takeFirstComposite`, `takeLastComposite`, `ownerComposite`, `ownerCompositeInfo`, `getContoursInfo`, `findNode`, `contains`, `boundingBox`, `toCanvasTransform`, `toGlyphTransform`, `replaceShape`, `move` and `hasAboveComposites`. It is created with no captured constructor overloads. It also carries the shared object members `changed`, `clone`, `cloneObject`, `getProperty`, `setProperty`, `release`, `remove` and `update` and the shared attributes `id`, `name`, `type`, `isValid` and `isNull`.",
+    "source": "generated/fontlab.py: flShapeInfo captured declaration"
+  },
+  "fontlab.flGlyphInfo": {
+    "doc": "Glyph information. The captured declaration exposes `glyph`, `boundingBox`, `createBoundingBox`, `applyTransform`, `applyTransformTo`, `getNearbyContours`, `getTopHitShape`, `hitToShape`, `kerningOffset`, `setKerningOffset`, `setBoundAscender`, `setBoundDescender`, `setBoundLeft`, `setBoundRight`, `setGlyphScale`, `fontSize`, `leftOffset`, `rightOffset`, `isActive`, `isSelected` and `isNullGlyph`. It is created with no captured constructor overloads. It also carries the shared object members `changed`, `clone`, `cloneObject`, `getProperty`, `setProperty`, `release`, `remove` and `update` and the shared attributes `id`, `name`, `type`, `isValid` and `isNull`.",
+    "source": "generated/fontlab.py: flGlyphInfo captured declaration"
+  },
+  "fontlab.flObjectsList_flGuideLine_": {
+    "doc": "Guideline list. The captured declaration exposes `append`, `at`, `clearContent`, `contains`, `count`, `first`, `indexOf`, `insert`, `last`, `list`, `removeOne` and `swap`. It is created with no captured constructor overloads. It also carries the shared object members `changed`, `clone`, `cloneObject`, `getProperty`, `setProperty`, `release`, `remove` and `update` and the shared attributes `id`, `name`, `type`, `isValid` and `isNull`.",
+    "source": "generated/fontlab.py: flObjectsList_flGuideLine_ captured declaration"
+  },
+  "fontlab.flObjectsList_flShape_": {
+    "doc": "Shape list. The captured declaration exposes `append`, `at`, `clearContent`, `contains`, `count`, `first`, `indexOf`, `insert`, `last`, `list`, `removeOne` and `swap`. It is created with no captured constructor overloads. It also carries the shared object members `changed`, `clone`, `cloneObject`, `getProperty`, `setProperty`, `release`, `remove` and `update` and the shared attributes `id`, `name`, `type`, `isValid` and `isNull`.",
+    "source": "generated/fontlab.py: flObjectsList_flShape_ captured declaration"
+  },
+  "fontlab.flShapeData": {
+    "doc": "Shape data. The captured declaration exposes `addContour`, `addContours`, `arrangeContours`, `assignContours`, `clearContours`, `clearIncludesList`, `goDown`, `goUp`, `includesList`, `removeAnchor`, `removeContour`, `sendToBack`, `sendToFront`, `sortContours`, `takeIncludesList`, `builder`, `componentGlyph`, `componentLayer`, `contours`, `includes`, `isComponent`, `isComposite`, `referenceCount`, `segments` and `shapeType`. It is created with no captured constructor overloads. It also carries the shared object members `changed`, `clone`, `cloneObject`, `getProperty`, `setProperty`, `release`, `remove` and `update` and the shared attributes `id`, `name`, `type`, `isValid` and `isNull`.",
+    "source": "generated/fontlab.py: flShapeData captured declaration"
+  },
+  "fontlab.flAbstractEditor": {
+    "doc": "Abstract editor. The captured declaration exposes `activate`, `deactivate` and `widget`. It is created with no captured constructor overloads. It also carries the shared object members `changed`, `clone`, `cloneObject`, `getProperty`, `setProperty`, `release`, `remove` and `update` and the shared attributes `id`, `name`, `type`, `isValid` and `isNull`.",
+    "source": "generated/fontlab.py: flAbstractEditor captured declaration"
+  },
+  "fontlab.flVisualItem": {
+    "doc": "Visual item. The captured declaration exposes `appendDecorator`, `clearDecorators`, `clearItems`, `contain`, `containsItem`, `hide`, `show`, `move`, `select`, `unselect`, `invselect`, `mapCanvasToItem`, `mapItemToCanvas`, `mapCanvasDistanceToItem`, `paint`, `canvas`, `opacity`, `visible`, `selected`, `locked` and `itemScale`. It is created with no captured constructor overloads. It also carries the shared object members `changed`, `clone`, `cloneObject`, `getProperty`, `setProperty`, `release`, `remove` and `update` and the shared attributes `id`, `name`, `type`, `isValid` and `isNull`.",
+    "source": "generated/fontlab.py: flVisualItem captured declaration"
+  },
+  "fontlab.flAbstractVectorNode": {
+    "doc": "Abstract vector node. The captured declaration exposes `angleTo`, `canBeSmooth`, `canCollapse`, `collapseHandles`, `convertToCurve`, `convertToLine`, `moveBy`, `rotateBy`, `scaleBy`, `skewBy`, `makeStart`, `nextNode`, `prevNode`, `isCurve`, `isOn`, `isOff`, `isFirst`, `isLast`, `smooth`, `position`, `selected`, `x` and `y`. It is created with no captured constructor overloads. It also carries the shared object members `changed`, `clone`, `cloneObject`, `getProperty`, `setProperty`, `release`, `remove` and `update` and the shared attributes `id`, `name`, `type`, `isValid` and `isNull`.",
+    "source": "generated/fontlab.py: flAbstractVectorNode captured declaration"
+  },
+  "fontlab.flVectorNode": {
+    "doc": "Vector node. The captured declaration exposes `angleTo`, `canBeSmooth`, `canCollapse`, `collapseHandles`, `convertToCurve`, `convertToLine`, `moveBy`, `rotateBy`, `scaleBy`, `skewBy`, `makeStart`, `nextNode`, `prevNode`, `isCurve`, `isOn`, `isOff`, `isFirst`, `isLast`, `smooth`, `position`, `selected`, `x`, `y`, `guideline`, `mode`, `setPositionMode` and `isVectorNode`. It is created with no captured constructor overloads. It also carries the shared object members `changed`, `clone`, `cloneObject`, `getProperty`, `setProperty`, `release`, `remove` and `update` and the shared attributes `id`, `name`, `type`, `isValid` and `isNull`.",
+    "source": "generated/fontlab.py: flVectorNode captured declaration"
+  },
+  "fontlab.flTextBlock": {
+    "doc": "Text block. The captured declaration exposes `addFeature`, `removeFeature`, `removeFeatures`, `setFeatures`, `features`, `fontSize`, `charsCount`, `glyphsCount`, `getAllGlyphs`, `getGlyphAt`, `getActiveGlyph`, `setActiveGlyph`, `getSelectedGlyphs`, `getSelectedCharacters`, `getLineIndex`, `getGlyphsInLine`, `reformat`, `textFits`, `script`, `frameRect` and `locked`. It is created with no captured constructor overloads. It also carries the shared object members `changed`, `clone`, `cloneObject`, `getProperty`, `setProperty`, `release`, `remove` and `update` and the shared attributes `id`, `name`, `type`, `isValid` and `isNull`.",
+    "source": "generated/fontlab.py: flTextBlock captured declaration"
+  },
+  "fontlab.flWorkspace": {
+    "doc": "Workspace. The captured declaration exposes `addPackage`, `closePackage`, `closeProject`, `createNewProject`, `readProject`, `saveProject`, `currentPackage`, `currentGlyph`, `packages`, `canvases`, `getActiveCanvas`, `setActiveCanvas`, `hasPackage`, `findPackageId`, `exportCurrentFont`, `exportFont`, `doZoomIn`, `doZoomOut`, `setRulers` and `isRulersEnabled`. It is created with no captured constructor overloads. It also carries the shared object members `changed`, `clone`, `cloneObject`, `getProperty`, `setProperty`, `release`, `remove` and `update` and the shared attributes `id`, `name`, `type`, `isValid` and `isNull`.",
+    "source": "generated/fontlab.py: flWorkspace captured declaration"
+  },
+  "fontlab.Info": {
+    "doc": "Font info. The captured declaration exposes `ascender`, `capHeight`, `copyright`, `descender`, `familyName`, `italicAngle`, `note`, `openTypeHeadCreated`, `openTypeHheaAscender`, `openTypeHheaDescender`, `openTypeHheaLineGap`, `openTypeNameDesigner`, `openTypeNameLicense`, `openTypeNameVersion` and `openTypeOS2Panose`. It is created with no captured constructor overloads.",
+    "source": "generated/fontlab.py: Info captured declaration"
+  },
+  "fontlab.YPanelWidget": {
+    "doc": "Panel widget. The captured declaration exposes `addAction`, `adjustSize`, `close`, `hide`, `show`, `move`, `resize`, `update`, `setEnabled`, `setVisible`, `isVisible`, `isEnabled`, `connect`, `disconnect`, `deleteLater`, `findChild`, `findChildren`, `className` and `grab`. It is created with no captured constructor overloads.",
+    "source": "generated/fontlab.py: YPanelWidget captured declaration"
+  },
+  "fontlab.flCanvas": {
+    "doc": "Canvas. The captured declaration exposes `activateEditor`, `deactivateEditor`, `addTextBlock`, `clearTextBlocks`, `clearItems`, `appendDecorator`, `clearDecorators`, `hoveredItem`, `haveSelectedNodes`, `invertSelectedNodes`, `isActiveCanvas`, `isFocusedCanvas`, `ensureVisible`, `hide`, `currentHistoryState` and `hasHistoryState`. It is created with no captured constructor overloads. It also carries the shared object members `changed`, `clone`, `cloneObject`, `getProperty`, `setProperty`, `release`, `remove` and `update` and the shared attributes `id`, `name`, `type`, `isValid` and `isNull`.",
+    "source": "generated/fontlab.py: flCanvas captured declaration"
+  },
+  "fontlab.flItems": {
+    "doc": "Application items. The captured declaration exposes `appendRecentFile`, `buildRecentList`, `clearRecentFiles`, `getCursor`, `getCursorId`, `instance`, `notifyActivateGlyph`, `notifyClipboardChanged`, `notifyGlyphActivated`, `notifyGlyphDeactivated`, `notifyFontSelected` and `notifyEditModeChanged`. It is created with no captured constructor overloads.",
+    "source": "generated/fontlab.py: flItems captured declaration"
+  },
+  "fontlab.flPackage": {
+    "doc": "Font package. The captured declaration exposes `addAxis`, `addGlyph`, `addInstance`, `addMaster`, `autoKern`, `autohintGlyphs`, `clearInstances`, `clearMasters`, `close`, `deleteGlyph`, `deleteGroups`, `findAxis`, `findGroup`, `findUnicode`, `generateGlyph`, `getAllGroups`, `hasAxis` and `hasMaster`. It is created with no captured constructor overloads. It also carries the shared object members `changed`, `clone`, `cloneObject`, `getProperty`, `setProperty`, `release`, `remove` and `update` and the shared attributes `id`, `name`, `type`, `isValid` and `isNull`.",
+    "source": "generated/fontlab.py: flPackage captured declaration"
+  },
+  "fontlab.flPreferences": {
+    "doc": "Preferences. The captured declaration exposes `doInterpolate`, `fontAuditTests`, `instance`, `load`, `save`, `saveView`, `setFontAuditTest`, `setGridDistances`, `sourceMetricsSamples`, `unicode2text`, `ConflictOverwrite`, `ConflictRename`, `ConflictSkip`, `DestinationAsk`, `DestinationFolder` and `DsigAlgorithmSHA256`. It is created with no captured constructor overloads.",
+    "source": "generated/fontlab.py: flPreferences captured declaration"
+  },
+  "fontgate.fgBitmaps": {
+    "doc": "A list of bitmap objects. The captured declaration exposes `append`, `asList`, `clean`, `del_` and `insert`. The native spelling of `del_` is del, which the capture says to reach through getattr on the native object.",
+    "source": "generated/fontgate.py: fgBitmaps captured declaration"
+  },
+  "fontgate.fgCMaps": {
+    "doc": "A list of character map objects. The captured declaration exposes `append`, `asList`, `clean`, `del_` and `insert`. The native spelling of `del_` is del, which the capture says to reach through getattr on the native object.",
+    "source": "generated/fontgate.py: fgCMaps captured declaration"
+  },
+  "fontgate.fgCarets": {
+    "doc": "A list of caret objects. The captured declaration exposes `append`, `asList`, `clean`, `del_` and `insert`. The native spelling of `del_` is del, which the capture says to reach through getattr on the native object.",
+    "source": "generated/fontgate.py: fgCarets captured declaration"
+  },
+  "fontgate.fgContours": {
+    "doc": "A list of contour objects. The captured declaration exposes `append`, `asList`, `clean`, `del_` and `insert`. The native spelling of `del_` is del, which the capture says to reach through getattr on the native object.",
+    "source": "generated/fontgate.py: fgContours captured declaration"
+  },
+  "fontgate.fgCuspPoints": {
+    "doc": "A list of cusp point objects. The captured declaration exposes `append`, `asList`, `clean`, `del_` and `insert`. The native spelling of `del_` is del, which the capture says to reach through getattr on the native object.",
+    "source": "generated/fontgate.py: fgCuspPoints captured declaration"
+  },
+  "fontgate.fgDeviceRecords": {
+    "doc": "A list of device record objects. The captured declaration exposes `append`, `asList`, `clean`, `del_` and `insert`. The native spelling of `del_` is del, which the capture says to reach through getattr on the native object.",
+    "source": "generated/fontgate.py: fgDeviceRecords captured declaration"
+  },
+  "fontgate.fgGaspRecords": {
+    "doc": "A list of gasp record objects. The captured declaration exposes `append`, `asList`, `clean`, `del_` and `insert`. The native spelling of `del_` is del, which the capture says to reach through getattr on the native object.",
+    "source": "generated/fontgate.py: fgGaspRecords captured declaration"
+  },
+  "fontgate.fgGlyphs": {
+    "doc": "A list of glyph objects. The captured declaration exposes `append`, `asList`, `clean`, `del_` and `insert`. The native spelling of `del_` is del, which the capture says to reach through getattr on the native object.",
+    "source": "generated/fontgate.py: fgGlyphs captured declaration"
+  },
+  "fontgate.fgGlyphDict": {
+    "doc": "Glyph dictionaries. The captured declaration exposes the attributes `flags`, `lib`, `tags` and `values`.",
+    "source": "generated/fontgate.py: fgGlyphDict captured declaration"
+  },
+  "fontgate.fgGlyphIDsSet": {
+    "doc": "A set of glyph ids. The captured declaration exposes `asList`, `clean`, `contains` (which returns a bool) and `del_`. It is created as `fgGlyphIDsSet()` or as a copy `fgGlyphIDsSet(fgGlyphIDsSet)`. The native spelling of `del_` is del, which the capture says to reach through getattr on the native object.",
+    "source": "generated/fontgate.py: fgGlyphIDsSet captured declaration"
+  }
+}

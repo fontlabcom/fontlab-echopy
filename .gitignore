@@ -1,0 +1,18 @@
+.venv/
+.local/
+.cache/
+__pycache__/
+*.pyc
+.pytest_cache/
+dist/
+*.egg-info/
+# Private and scratch state: macOS metadata, agent scratch dirs, local envs (never source)
+.DS_Store
+.omc/
+**/.omc/
+.superpowers/
+.worktrees/
+*.vfpyc
+.coverage
+.coverage.*
+generated/capture-FL.json

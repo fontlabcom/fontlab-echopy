@@ -1,0 +1,14 @@
+{
+  "fontlab": {
+    "flContour": "flContour representation\n\nConstructors:\n  flContour()\n  flContour(flObject)\n  flContour(flContour)\n  flContour(fgContour)\n  flContour(id)\n  flContour(list(Node)[, bool closed=false])\n  flContour(list(QPointF)[, flNode::NodeType=flNode::On[, bool closed=false]])\n  flContour(QRectF)\n  flContour(QLineF)\n\nNative bases: object",
+    "flGlyph": "flGlyph representation\n\nConstructors:\n  flGlyph()\n  flGlyph(flGlyph)\n  flGlyph(flObject)\n  flGlyph(fgGlyph, fgFont)\n\nNative bases: object",
+    "flLayer": "flLayer representation\n\nConstructors:\n  flLayer()\n  flLayer(flObject)\n  flLayer(flGlyph)\n  flLayer('title')\n\nNative bases: object",
+    "flNode": "flNode representation\n\nConstructors:\n  flNode()\n  flNode(Node) - make clone\n  flNode(QPointF position[, string nodeType=\"on\"[, int nodeKind=None]])\n  flNode(double x, double y[, string nodeType=\"on\"[, int nodeKind=None]])\n\nNative bases: object"
+  },
+  "fontgate": {
+    "fgContour": "Contour representation\n\nConstructors:\n  fgContour() - default\n  fgContour(fgContour) - copy\n\nNative bases: object",
+    "fgFont": "Font representation\n\nConstructors:\n  fgFont() - create new empty font\n  fgFont('font_name') -  - create new empty font with name 'font_name'\n\nNative bases: object",
+    "fgGlyph": "Glyph representation\n\nConstructors:\n  fgGlyph() - default\n  fgGlyph(fgGlyph) - copy\n  fgGlyph('name') - create by name\n\nNative bases: object",
+    "fgPoint": "Point representation\n\nConstructors:\n  fgPoint() - default\n  fgPoint(fgPoint) - copy\n  fgPoint(float x)\n  fgPoint(tuple(float x, float y))\n  fgPoint(float x, float y)\n\nMath Operations:\n  fgPoint + fgPoint\n  fgPoint - fgPoint\n  fgPoint * fgPoint\n  fgPoint * float - vector product\n  fgPoint / float\n  fgPoint << fgPoint - True if first point is less or equal to second\n  fgPoint >> fgPoint - True if first point is greater or equal to second\n  fgPoint ^ fgPoint - scalar product\n\nNative bases: object"
+  }
+}

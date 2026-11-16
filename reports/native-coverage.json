@@ -1,0 +1,211 @@
+{
+  "modules": {
+    "PythonQt": {
+      "class_inspection_errors": {},
+      "class_members": 0,
+      "classes": 1,
+      "declared_names": 12,
+      "inspection_errors": [],
+      "missing_class_members": {},
+      "missing_names": [],
+      "native_names": 12,
+      "source_aliases": {}
+    },
+    "PythonQt.BoolResult": {
+      "class_inspection_errors": {},
+      "class_members": 0,
+      "classes": 0,
+      "declared_names": 0,
+      "inspection_errors": [],
+      "missing_class_members": {},
+      "missing_names": [],
+      "native_names": 0,
+      "source_aliases": {}
+    },
+    "PythonQt.Config": {
+      "class_inspection_errors": {},
+      "class_members": 0,
+      "classes": 0,
+      "declared_names": 42,
+      "inspection_errors": [],
+      "missing_class_members": {},
+      "missing_names": [],
+      "native_names": 42,
+      "source_aliases": {}
+    },
+    "PythonQt.Debug": {
+      "class_inspection_errors": {},
+      "class_members": 0,
+      "classes": 0,
+      "declared_names": 48,
+      "inspection_errors": [],
+      "missing_class_members": {},
+      "missing_names": [],
+      "native_names": 48,
+      "source_aliases": {}
+    },
+    "PythonQt.Qt": {
+      "class_inspection_errors": {},
+      "class_members": 77239,
+      "classes": 597,
+      "declared_names": 618,
+      "inspection_errors": [],
+      "missing_class_members": {},
+      "missing_names": [],
+      "native_names": 618,
+      "source_aliases": {
+        "QAbstractTextDocumentLayout::PaintContext": "QAbstractTextDocumentLayout__PaintContext",
+        "QAbstractTextDocumentLayout::Selection": "QAbstractTextDocumentLayout__Selection",
+        "QInputMethodEvent::Attribute": "QInputMethodEvent__Attribute",
+        "QPagedPaintDevice::Margins": "QPagedPaintDevice__Margins",
+        "QPainter::PixmapFragment": "QPainter__PixmapFragment",
+        "QPainterPath::Element": "QPainterPath__Element",
+        "QPixmapCache::Key": "QPixmapCache__Key",
+        "QStateMachine::SignalEvent": "QStateMachine__SignalEvent",
+        "QStateMachine::WrappedEvent": "QStateMachine__WrappedEvent",
+        "QTextEdit::ExtraSelection": "QTextEdit__ExtraSelection",
+        "QTextLayout::FormatRange": "QTextLayout__FormatRange",
+        "QTextOption::Tab": "QTextOption__Tab",
+        "QTouchEvent::TouchPoint": "QTouchEvent__TouchPoint"
+      }
+    },
+    "PythonQt.QtCore": {
+      "class_inspection_errors": {},
+      "class_members": 8635,
+      "classes": 128,
+      "declared_names": 149,
+      "inspection_errors": [],
+      "missing_class_members": {},
+      "missing_names": [],
+      "native_names": 149,
+      "source_aliases": {}
+    },
+    "PythonQt.QtGui": {
+      "class_inspection_errors": {},
+      "class_members": 63652,
+      "classes": 381,
+      "declared_names": 381,
+      "inspection_errors": [],
+      "missing_class_members": {},
+      "missing_names": [],
+      "native_names": 381,
+      "source_aliases": {}
+    },
+    "PythonQt.QtNetwork": {
+      "class_inspection_errors": {},
+      "class_members": 2405,
+      "classes": 44,
+      "declared_names": 44,
+      "inspection_errors": [],
+      "missing_class_members": {},
+      "missing_names": [],
+      "native_names": 44,
+      "source_aliases": {}
+    },
+    "PythonQt.QtOpenGL": {
+      "class_inspection_errors": {},
+      "class_members": 918,
+      "classes": 11,
+      "declared_names": 11,
+      "inspection_errors": [],
+      "missing_class_members": {},
+      "missing_names": [],
+      "native_names": 11,
+      "source_aliases": {}
+    },
+    "PythonQt.QtSvg": {
+      "class_inspection_errors": {},
+      "class_members": 751,
+      "classes": 4,
+      "declared_names": 4,
+      "inspection_errors": [],
+      "missing_class_members": {},
+      "missing_names": [],
+      "native_names": 4,
+      "source_aliases": {}
+    },
+    "PythonQt.QtUiTools": {
+      "class_inspection_errors": {},
+      "class_members": 58,
+      "classes": 1,
+      "declared_names": 1,
+      "inspection_errors": [],
+      "missing_class_members": {},
+      "missing_names": [],
+      "native_names": 1,
+      "source_aliases": {}
+    },
+    "PythonQt.QtXmlPatterns": {
+      "class_inspection_errors": {},
+      "class_members": 327,
+      "classes": 18,
+      "declared_names": 18,
+      "inspection_errors": [],
+      "missing_class_members": {},
+      "missing_names": [],
+      "native_names": 18,
+      "source_aliases": {}
+    },
+    "PythonQt.private": {
+      "class_inspection_errors": {},
+      "class_members": 79036,
+      "classes": 221,
+      "declared_names": 221,
+      "inspection_errors": [],
+      "missing_class_members": {},
+      "missing_names": [],
+      "native_names": 221,
+      "source_aliases": {}
+    },
+    "fontgate": {
+      "class_inspection_errors": {},
+      "class_members": 1337,
+      "classes": 120,
+      "declared_names": 125,
+      "inspection_errors": [],
+      "missing_class_members": {},
+      "missing_names": [],
+      "native_names": 125,
+      "source_aliases": {}
+    },
+    "fontlab": {
+      "class_inspection_errors": {},
+      "class_members": 4856,
+      "classes": 73,
+      "declared_names": 110,
+      "inspection_errors": [],
+      "missing_class_members": {},
+      "missing_names": [],
+      "native_names": 110,
+      "source_aliases": {
+        "flObjectsList<flGuideLine>": "flObjectsList_flGuideLine_",
+        "flObjectsList<flShape>": "flObjectsList_flShape_"
+      }
+    },
+    "fontlabpr": {
+      "class_inspection_errors": {},
+      "class_members": 0,
+      "classes": 0,
+      "declared_names": 0,
+      "inspection_errors": [],
+      "missing_class_members": {},
+      "missing_names": [],
+      "native_names": 0,
+      "source_aliases": {}
+    },
+    "fontpr": {
+      "class_inspection_errors": {},
+      "class_members": 3,
+      "classes": 1,
+      "declared_names": 48,
+      "inspection_errors": [],
+      "missing_class_members": {},
+      "missing_names": [],
+      "native_names": 48,
+      "source_aliases": {}
+    }
+  },
+  "unavailable": [
+    "fontlabpr"
+  ]
+}
