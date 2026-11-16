@@ -16,3 +16,4 @@ dist/
 .coverage
 .coverage.*
 generated/capture-FL.json
+src/fontlab_echopy/__version__.py

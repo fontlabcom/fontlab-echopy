@@ -82,3 +82,6 @@ pythonpath = ["src"]
 [tool.fontlab-install]
 # install.vfpy: reverse-domain id; FontLab keeps Extensions/<id>/install.log.
 id = "com.fontlab.echopy"
+
+[tool.hatch.build.hooks.vcs]
+version-file = "src/fontlab_echopy/__version__.py"
