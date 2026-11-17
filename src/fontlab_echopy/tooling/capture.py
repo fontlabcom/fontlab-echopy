@@ -16,7 +16,7 @@ from typing import Any
 
 from fontlab_echopy._runtime import resolve
 
-TARGETS = ("fontlab", "fontgate", "fontpr", "fontlabpr", "FL", "PythonQt")
+TARGETS = ("fontlab", "fontgate", "fontpr", "FL", "PythonQt")
 # FontLab 5 style module: star exports and module-level instances such as `fl`.
 FL_SHAPED = ("FL",)
 QT_SEEDS = ("BoolResult", "Config", "Debug", "Qt", "QtCore", "QtGui", "QtNetwork", "QtOpenGL", "QtSvg", "QtUiTools", "QtXmlPatterns", "private")

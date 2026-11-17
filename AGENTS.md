@@ -64,10 +64,10 @@ Source-readable facades (`.py` + `.pyi` sidecars) for FontLab's native modules, 
 
 ## Layout and ownership
 
-- `generated/`: raw output of `fontlab-echopy generate`. `src/fontlab_echopy/` (and `src/echopy/`): merged output. Never hand-edit either; change `patches/manual.json` or the tooling, then regenerate. Manual overlays beat upstream enrichment.
+- `generated/`: raw output of `fontlab-echopy generate`. `src/fontlab_echopy/` (and `src/echopy/`): merged output. Never hand-edit either; change `patches/manual.json` or the tooling, then regenerate. Manual overlays beat upstream enrichment. Merge with the four overlays in README order (qt5, fontlab-proteus, fontpr-mcp, manual); after merge restore `_identities.json` from git and keep `capture_identity` in `_provenance.json` unless a new capture is in hand. Rebuild the reference overlays with `proteus-docs`/`mcp-docs` from `vendor/` (local links, not committed) and `llms` after a merge.
 - `enrichment/qt5.json`, `reports/`, `_provenance.json`, `_identities.json`: regenerated artifacts; keep them in step with the code that produced them.
 - `legacy/` and `MIGRATION.json` are hash-recorded archives. Leave unchanged.
-- Scope (issue 201): shim only the native bindings `fontlab`, `fontgate`, `fontpr`, `fontlabpr`, `FL` (captured declarations; full pipeline provenance qualification remains separate) and `PythonQt.*`. Do not add emulations of other APIs here: Glyphs/Cocoa/vanilla belong to fontlab-glyport, `fontlabapp_shim` to fontlab-fontlabapp, `aidus_code_tools` to fontlab-aidus-code. `fontlab_echopy.MOVED` makes those names raise `ImportError` with the new home.
+- Scope (issue 201): shim only the native bindings `fontlab`, `fontgate`, `fontpr`, `FL` (captured declarations; full pipeline provenance qualification remains separate) and `PythonQt.*`. Do not add emulations of other APIs here: Glyphs/Cocoa/vanilla belong to fontlab-glyport, `fontlabapp_shim` to fontlab-fontlabapp, `aidus_code_tools` to fontlab-aidus-code. `fontlab_echopy.MOVED` makes those names raise `ImportError` with the new home.
 
 ## Commands
 
@@ -80,7 +80,7 @@ Source-readable facades (`.py` + `.pyi` sidecars) for FontLab's native modules, 
 - Captures are API-only. Never read property values generically: `QSvgRenderer.currentFrame` on an empty renderer segfaults FontLab. Use class-level lookup or `indexOfProperty`.
 - Never read `flPackage.fgPackage` on an unregistered package (raises once, then segfaults).
 - PythonQt has no `QtWidgets`; widgets are in `PythonQt.QtGui`. Never construct a `QApplication` or load PySide2/PyQt/Qt 6 binaries in the host. PySide2 wheels are reference metadata only.
-- `fontlabpr` is absent in measured builds. Do not invent its API (DECISIONS.md D8).
+- `fontlabpr` does not exist in FontLab (Issue 257: no registration in the FontLab source; the shim was removed). Do not re-add it or invent its API (DECISIONS.md D8).
 - `flLayer.isMasterLayer`/`isMaskLayer`/`isService` are boolean properties on 9784, not methods (older declarations say otherwise). Recheck against the actual build before overlaying; do not generalize older measurements.
 - Do not mutate user-open fonts, preferences or the Output panel during capture. Native checks use owned fixtures through `verification/issue-104/fl-native.sh`.
 

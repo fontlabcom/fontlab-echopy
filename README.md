@@ -118,9 +118,9 @@ Multiple constructor records retain all evidence under a variadic declaration;
 the generator does not choose an overload. Missing constructor metadata keeps the
 legacy fallback. This does not qualify constructor behavior in a newer host.
 
-`fontpr` is captured separately. `fontlabpr` was absent in the verified host; its
-facade supports runtime delegation when a future host provides it. No invented
-`fontlabpr` API is shipped. PythonQt includes every discovered child, including
+`fontpr` is captured separately; its tool functions take keyword arguments only.
+Echopy ships no `fontlabpr` shim: the current FontLab source registers no such
+module, only `fontpr`. PythonQt includes every discovered child, including
 Config, Debug, private and BoolResult, even when the child cannot be imported as
 a real Python module. C++ nested/template names have sanitized source aliases;
 original names remain available through `getattr`.
@@ -157,8 +157,27 @@ fontlab-echopy generate ~/.cache/fontlab-echopy/native.json generated
 fontlab-echopy enrich ~/.cache/fontlab-echopy/native.json enrichment/qt5.json \
   --cache .cache/upstream
 fontlab-echopy merge generated src/fontlab_echopy \
-  --overlay enrichment/qt5.json --overlay patches/manual.json
+  --overlay enrichment/qt5.json --overlay enrichment/fontlab-proteus.json \
+  --overlay enrichment/fontpr-mcp.json --overlay patches/manual.json
 ```
+
+`enrichment/fontlab-proteus.json` comes from FontLab's Proteus API articles and
+`enrichment/fontpr-mcp.json` from the FontLab MCP specification. Rebuild them
+when those sources change (`vendor/` holds local links to them; it is not
+committed):
+
+```sh
+fontlab-echopy proteus-docs --api-docs vendor/api-docs --output enrichment/fontlab-proteus.json
+fontlab-echopy mcp-docs --mcp-json vendor/mcp/fontlab-mcp.json --output enrichment/fontpr-mcp.json
+fontlab-echopy llms --output src_docs/md/llms.txt
+```
+
+Reference prose replaces placeholder class leads such as `flGlyph
+representation`; constructors, native bases, manual notes (under
+`Supplemental documentation:`) and `Source:` lines follow it. `fontpr` tool
+stubs get keyword-only signatures from the MCP input schemas.
+`src_docs/md/llms.txt` is a compact index of the `fontlab`, `fontgate`, `fontpr`
+and `FL` classes and functions, published at the site root.
 
 The repeatable one-command equivalent captures inside FontLab if `--capture`
 is omitted. Outside FontLab, supply a previously captured file:
@@ -166,7 +185,8 @@ is omitted. Outside FontLab, supply a previously captured file:
 ```sh
 fontlab-echopy pipeline --capture ~/.cache/fontlab-echopy/native.json \
   --raw generated --output src/fontlab_echopy --qt-cache .cache/upstream \
-  --qt-overlay enrichment/qt5.json --overlay patches/manual.json --reports reports
+  --qt-overlay enrichment/qt5.json --overlay enrichment/fontlab-proteus.json \
+  --overlay enrichment/fontpr-mcp.json --overlay patches/manual.json --reports reports
 ```
 
 The pipeline also writes `_identities.json` into the merged package: every
@@ -205,7 +225,6 @@ checks; changing the package name alone would not be a valid transition.
 ## Scope
 
 Echopy shims only FontLab's native bindings: `fontlab`, `fontgate`, `fontpr`,
-`fontlabpr` (absent in measured builds; the absence is recorded) and
 `FL` and `PythonQt.*`. It does not emulate other APIs. The `FL` module (FontLab 5
 compatibility, `from FL import *`) is shipped as `fontlab_echopy.FL` (136
 names, 30 classes, from a native FontLab 9 capture). To refresh it, run
@@ -266,7 +285,7 @@ stub support as above to retain the complete enriched documentation.
 ## Document the actual native names
 
 The enriched Python source is also the documentation authority for the live
-`fontlab`, `fontgate`, `fontpr`, optional `fontlabpr` and `PythonQt.*` namespaces.
+`fontlab`, `fontgate`, `fontpr` and `PythonQt.*` namespaces.
 Capture inside FontLab first, then generate/enrich/merge outside it. Qt HTML
 becomes structured Markdown docstrings: paragraphs, lists, links, tables and
 code examples remain readable in the generated Python sidecars.
@@ -309,7 +328,7 @@ structured Qt Markdown and separate overload source lines in
 enrichment; `docnames` aliases that let mkdocstrings render the native
 `fontlab`/`fontgate`/`fontpr`/`PythonQt` identities; and the BoolResult
 class/namespace collision handling, each proven by strict source-only rendering.
-`fontlabpr` is absent in FontLab 9.0.9780; capture records that absence.
+No `fontlabpr` module exists in FontLab; the old capture recorded it as absent and Echopy no longer probes or shims it.
 
 ## Archive preservation in this delivery
 

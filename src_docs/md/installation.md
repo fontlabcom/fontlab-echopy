@@ -56,9 +56,9 @@ Multiple constructor records retain all evidence under a variadic declaration;
 the generator does not choose an overload. Missing constructor metadata keeps the
 legacy fallback. This does not qualify constructor behavior in a newer host.
 
-`fontpr` is captured separately. `fontlabpr` was absent in the verified host; its
-facade supports runtime delegation when a future host provides it. No invented
-`fontlabpr` API is shipped. PythonQt includes every discovered child, including
+`fontpr` is captured separately; its tool functions take keyword arguments only.
+Echopy ships no `fontlabpr` shim: the current FontLab source registers no such
+module, only `fontpr`. PythonQt includes every discovered child, including
 Config, Debug, private and BoolResult, even when the child cannot be imported as
 a real Python module. C++ nested/template names have sanitized source aliases;
 original names remain available through `getattr`.

@@ -17,3 +17,6 @@ dist/
 .coverage.*
 generated/capture-FL.json
 src/fontlab_echopy/__version__.py
+
+# Local symlinks to the FontLab Proteus documentation checkout (not redistributed)
+vendor/

@@ -10,10 +10,10 @@ from importlib import import_module
 from types import ModuleType
 from ._runtime import NativeUnavailable
 
-__all__ = ["fontlab", "fontgate", "fontpr", "fontlabpr", "PythonQt", "NativeUnavailable"]
+__all__ = ["fontlab", "fontgate", "fontpr", "PythonQt", "NativeUnavailable"]
 # FL (FontLab 5 API) is listed once its shim has been generated from a native capture.
 if Path(__file__).with_name("FL.py").exists():
-    __all__.insert(4, "FL")
+    __all__.insert(3, "FL")
 
 
 # Issue 201: Echopy shims only the native bindings. These generated packages moved.

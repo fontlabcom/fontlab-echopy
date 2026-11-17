@@ -1,5 +1,5 @@
 # this_file: src/fontlab_echopy/tooling/cli.py
-"""Explicit capture, generate, enrich, merge, and one-command build pipeline."""
+"""Explicit capture, generate, enrich, reference overlays, merge, llms.txt and pipeline."""
 
 from __future__ import annotations
 
@@ -30,6 +30,17 @@ def main(argv: list[str] | None = None) -> None:
     en.add_argument(
         "--max-classes", type=int, default=0, help="0 = every matching class"
     )
+    for command, flag, default, text in (
+        ("proteus-docs", "--api-docs", "vendor/api-docs", "Build the Proteus API overlay"),
+        ("mcp-docs", "--mcp-json", "vendor/mcp/fontlab-mcp.json", "Build the fontpr MCP overlay"),
+    ):
+        ref = sub.add_parser(command, help=text)
+        ref.add_argument(flag, type=Path, default=Path(default))
+        ref.add_argument("--generated", type=Path, default=Path("generated"))
+        ref.add_argument("--output", type=Path, required=True)
+    llms = sub.add_parser("llms", help="Write a compact llms.txt API index")
+    llms.add_argument("--package", type=Path, default=Path("src/fontlab_echopy"))
+    llms.add_argument("--output", type=Path, default=Path("src_docs/md/llms.txt"))
     mg = sub.add_parser("merge")
     mg.add_argument("raw", type=Path)
     mg.add_argument("output", type=Path)
@@ -105,6 +116,18 @@ def main(argv: list[str] | None = None) -> None:
         data = args.capture.read_bytes()
         identity = {"sha256": hashlib.sha256(data).hexdigest(), "encoding": "original-utf8-file"}
         result = generate(json.loads(data), args.output, identity)
+    elif args.command == "proteus-docs":
+        from .proteus import write as write_proteus
+
+        result = write_proteus(args.api_docs, args.generated, args.output)
+    elif args.command == "mcp-docs":
+        from .mcp import write as write_mcp
+
+        result = write_mcp(args.mcp_json, args.generated, args.output)
+    elif args.command == "llms":
+        from .llms import write as write_llms
+
+        result = write_llms(args.package, args.output)
     elif args.command == "merge":
         result = merge(args.raw, args.output, args.overlay)
     elif args.command == "enrich":

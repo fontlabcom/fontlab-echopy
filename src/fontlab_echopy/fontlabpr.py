@@ -1,5 +1,0 @@
-# this_file: src/fontlab_echopy/fontlabpr.py
-# Generated from native metadata and independent enrichment inputs.
-'Native fontlabpr; complete annotated documentation is in the adjacent .pyi source.'
-from fontlab_echopy._runtime import populate as _populate
-_populate(globals(), 'fontlabpr', {})

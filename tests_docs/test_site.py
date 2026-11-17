@@ -75,7 +75,7 @@ class SiteTests(unittest.TestCase):
         locations = {row['location'].split('#')[0] for row in search['docs']}
         self.assertEqual(locations, {'', 'declarations-and-tooling/', 'development-and-limits/', 'licence/', 'installation/'})
         text = ' '.join(row['text'] for row in search['docs'])
-        for term in ('fontlabpr', 'NativeUnavailable', 'PythonQt'):
+        for term in ('fontpr', 'NativeUnavailable', 'PythonQt'):
             self.assertIn(term, text)
 
     def test_attribution_downloads_are_exact_and_no_private_payload_is_published(self):

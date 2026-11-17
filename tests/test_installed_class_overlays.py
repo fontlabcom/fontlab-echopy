@@ -118,7 +118,7 @@ def test_installed_package_when_built_and_installed_then_six_overlays_ship(
 def test_sdist_when_built_then_required_source_test_inputs_ship(artifacts):
     inputs = [*sorted((ROOT / "generated").rglob("*.py")),
               ROOT / "generated/coverage.json", ROOT / "tools/capture_fl.py"]
-    assert len(inputs) == 20, "review the complete shipped-test input list when it changes"
+    assert len(inputs) == 19, "review the complete shipped-test input list when it changes"
     with tarfile.open(artifacts["sdist"]) as archive:
         prefix = archive.getnames()[0].split("/")[0]
         for source in inputs:

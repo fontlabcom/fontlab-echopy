@@ -95,7 +95,7 @@ def export_docnames(output: Path, *, source: Path | None = None) -> dict[str, An
         # (marked packages from other producers); Echopy itself ships none.
         shim = (source / relative.parts[0] / SHIM_MARKER).is_file()
         if (
-            module not in {"fontlab", "fontgate", "fontpr", "fontlabpr", "FL", "PythonQt"}
+            module not in {"fontlab", "fontgate", "fontpr", "FL", "PythonQt"}
             and not module.startswith("PythonQt.")
             and not shim
         ):

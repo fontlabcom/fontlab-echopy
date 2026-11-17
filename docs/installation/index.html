@@ -546,9 +546,9 @@ native descriptors keep the conservative fallback until their binding is known.
 Multiple constructor records retain all evidence under a variadic declaration;
 the generator does not choose an overload. Missing constructor metadata keeps the
 legacy fallback. This does not qualify constructor behavior in a newer host.</p>
-<p><code>fontpr</code> is captured separately. <code>fontlabpr</code> was absent in the verified host; its
-facade supports runtime delegation when a future host provides it. No invented
-<code>fontlabpr</code> API is shipped. PythonQt includes every discovered child, including
+<p><code>fontpr</code> is captured separately; its tool functions take keyword arguments only.
+Echopy ships no <code>fontlabpr</code> shim: the current FontLab source registers no such
+module, only <code>fontpr</code>. PythonQt includes every discovered child, including
 Config, Debug, private and BoolResult, even when the child cannot be imported as
 a real Python module. C++ nested/template names have sanitized source aliases;
 original names remain available through <code>getattr</code>.</p>

@@ -617,13 +617,29 @@ are local inputs, not distribution contents. Then, from this checkout:</p>
 fontlab-echopy<span class="w"> </span>enrich<span class="w"> </span>~/.cache/fontlab-echopy/native.json<span class="w"> </span>enrichment/qt5.json<span class="w"> </span><span class="se">\</span>
 <span class="w">  </span>--cache<span class="w"> </span>.cache/upstream
 fontlab-echopy<span class="w"> </span>merge<span class="w"> </span>generated<span class="w"> </span>src/fontlab_echopy<span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>--overlay<span class="w"> </span>enrichment/qt5.json<span class="w"> </span>--overlay<span class="w"> </span>patches/manual.json
+<span class="w">  </span>--overlay<span class="w"> </span>enrichment/qt5.json<span class="w"> </span>--overlay<span class="w"> </span>enrichment/fontlab-proteus.json<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--overlay<span class="w"> </span>enrichment/fontpr-mcp.json<span class="w"> </span>--overlay<span class="w"> </span>patches/manual.json
 </code></pre></div>
+<p><code>enrichment/fontlab-proteus.json</code> comes from FontLab's Proteus API articles and
+<code>enrichment/fontpr-mcp.json</code> from the FontLab MCP specification. Rebuild them
+when those sources change (<code>vendor/</code> holds local links to them; it is not
+committed):</p>
+<div class="highlight"><pre><span></span><code>fontlab-echopy<span class="w"> </span>proteus-docs<span class="w"> </span>--api-docs<span class="w"> </span>vendor/api-docs<span class="w"> </span>--output<span class="w"> </span>enrichment/fontlab-proteus.json
+fontlab-echopy<span class="w"> </span>mcp-docs<span class="w"> </span>--mcp-json<span class="w"> </span>vendor/mcp/fontlab-mcp.json<span class="w"> </span>--output<span class="w"> </span>enrichment/fontpr-mcp.json
+fontlab-echopy<span class="w"> </span>llms<span class="w"> </span>--output<span class="w"> </span>src_docs/md/llms.txt
+</code></pre></div>
+<p>Reference prose replaces placeholder class leads such as <code>flGlyph
+representation</code>; constructors, native bases, manual notes (under
+<code>Supplemental documentation:</code>) and <code>Source:</code> lines follow it. <code>fontpr</code> tool
+stubs get keyword-only signatures from the MCP input schemas.
+<code>src_docs/md/llms.txt</code> is a compact index of the <code>fontlab</code>, <code>fontgate</code>, <code>fontpr</code>
+and <code>FL</code> classes and functions, published at the site root.</p>
 <p>The repeatable one-command equivalent captures inside FontLab if <code>--capture</code>
 is omitted. Outside FontLab, supply a previously captured file:</p>
 <div class="highlight"><pre><span></span><code>fontlab-echopy<span class="w"> </span>pipeline<span class="w"> </span>--capture<span class="w"> </span>~/.cache/fontlab-echopy/native.json<span class="w"> </span><span class="se">\</span>
 <span class="w">  </span>--raw<span class="w"> </span>generated<span class="w"> </span>--output<span class="w"> </span>src/fontlab_echopy<span class="w"> </span>--qt-cache<span class="w"> </span>.cache/upstream<span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>--qt-overlay<span class="w"> </span>enrichment/qt5.json<span class="w"> </span>--overlay<span class="w"> </span>patches/manual.json<span class="w"> </span>--reports<span class="w"> </span>reports
+<span class="w">  </span>--qt-overlay<span class="w"> </span>enrichment/qt5.json<span class="w"> </span>--overlay<span class="w"> </span>enrichment/fontlab-proteus.json<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--overlay<span class="w"> </span>enrichment/fontpr-mcp.json<span class="w"> </span>--overlay<span class="w"> </span>patches/manual.json<span class="w"> </span>--reports<span class="w"> </span>reports
 </code></pre></div>
 <p>The pipeline also writes <code>_identities.json</code> into the merged package: every
 captured scope, name, class member and constructor, the capture hash, the
@@ -681,7 +697,7 @@ structured Qt Markdown and separate overload source lines in
 enrichment; <code>docnames</code> aliases that let mkdocstrings render the native
 <code>fontlab</code>/<code>fontgate</code>/<code>fontpr</code>/<code>PythonQt</code> identities; and the BoolResult
 class/namespace collision handling, each proven by strict source-only rendering.
-<code>fontlabpr</code> is absent in FontLab 9.0.9780; capture records that absence.</p>
+No <code>fontlabpr</code> module exists in FontLab; the old capture recorded it as absent and Echopy no longer probes or shims it.</p>
 <h2 id="archive-preservation-in-this-delivery">Archive preservation in this delivery</h2>
 <p>This remote branch retains <code>legacy/README.md</code>, <code>legacy/source.tar.gz</code> and
 <code>licenses/aidus-legacy-LICENSE</code> byte-for-byte. A later canonical cleanup does

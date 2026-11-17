@@ -2,6 +2,14 @@
 this_file: WORK.md
 ---
 
+## 2026-11-17 — Issue 257 Tasks 1–3
+
+Added the Proteus and MCP reference overlays, keyword-only `fontpr` signatures,
+`llms.txt`, and removed the `fontlabpr` shim. Full report:
+`WORK/issue257/task-1-3-report.md` in the workspace root. Gates: `./test.sh` 766
+passed in 87 s; `tests_docs` 36 passed; ruff clean on new and changed tooling.
+`verify-identities` could not run because the raw capture is not present locally.
+
 ## 2026-11-15 — Shared installer source alignment
 
 Copied the reviewed shared installer exactly: dependency constraints and managed origins remain protected; inactive conditional dependencies are filtered before sibling execution in the resolver target Python. FontLab imports remain standard-library-only. Package identity, runtime APIs, dependency declarations, scripts, bundles and legal files are unchanged. The real source-archive check now includes the exact root installer; the prior omission was reproduced before the single allowlist addition.

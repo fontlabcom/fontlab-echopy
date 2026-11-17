@@ -2,6 +2,15 @@
 this_file: TODO.md
 ---
 
+## Issue 257 follow-ups — 2026-11-17
+
+- [ ] Run `verify-identities` against the raw capture after the next capture; `_identities.json` was restored from HEAD after merge (it does not depend on docstrings), and `capture_identity` was re-inserted into `_provenance.json` by hand.
+- [ ] Next capture: confirm `fontlabpr` is gone from `generated/coverage.json`, `reports/*.json` and `_identities.json` (these records still show its old absence).
+- [ ] Document the 43 `fontgate` classes that still have placeholder leads; the Proteus articles cover only `fontlab`.
+- [ ] Review the 82 unplaced Proteus entries in the `proteus-docs` report (names the capture lacks).
+- [ ] Update fontlab-python-docs pages and `api-sources.lock.json` that still name `fontlabpr` and the removed shim files.
+- [ ] Recheck the 14 MCP tools that the capture lacks (`get_features`, `set_lookups`, …) on FontLab 9.1 and recapture `fontpr`.
+
 ## FontLab 9.1 API — 2026-11-16
 
 - [ ] live-verify 9.1 JSON/stroke/inktrap declarations in `fontlab_echopy.api91` on FontLab 9.1.9812 (serialized native lane, owned fixture): presence and the QByteArray round trip pass; `penParameters` writes, `expandStroke`, `makeStroke`, `inktrap_len`, presentation overrides and the refresh call remain.

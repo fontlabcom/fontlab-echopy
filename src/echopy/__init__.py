@@ -7,10 +7,10 @@ import sys
 from pathlib import Path
 from types import ModuleType
 
-__all__ = ["fontlab", "fontgate", "fontpr", "fontlabpr", "PythonQt"]
+__all__ = ["fontlab", "fontgate", "fontpr", "PythonQt"]
 _canonical = util.find_spec("fontlab_echopy")  # Locates the package without importing it.
 if _canonical is not None and _canonical.origin and Path(_canonical.origin).with_name("FL.py").exists():
-    __all__.insert(4, "FL")  # Listed once the FL shim has been generated from a capture.
+    __all__.insert(3, "FL")  # Listed once the FL shim has been generated from a capture.
 
 
 class _AliasLoader(Loader):

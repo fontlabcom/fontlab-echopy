@@ -294,7 +294,12 @@ def test_shipped_provenance_when_compared_to_shipped_files_then_hashes_and_count
 
     package = ROOT / "src/fontlab_echopy"
     provenance = json.loads((package / "_provenance.json").read_text())
-    overlays = [ROOT / "enrichment/qt5.json", ROOT / "patches/manual.json"]
+    overlays = [
+        ROOT / "enrichment/qt5.json",
+        ROOT / "enrichment/fontlab-proteus.json",
+        ROOT / "enrichment/fontpr-mcp.json",
+        ROOT / "patches/manual.json",
+    ]
     fresh = merge(ROOT / "generated", tmp_path, overlays)
     for relative, digest in provenance["merged_outputs"].items():
         shipped = hashlib.sha256((package / relative).read_bytes()).hexdigest()

@@ -70,7 +70,6 @@ only-include = [
     "generated/PythonQt/private.py",
     "generated/fontgate.py",
     "generated/fontlab.py",
-    "generated/fontlabpr.py",
     "generated/fontpr.py",
     "generated/coverage.json",
     "tools/capture_fl.py",
