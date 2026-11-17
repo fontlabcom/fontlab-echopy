@@ -214,7 +214,10 @@ the earlier one. Its rows go to `_retained_identities.json`, and
 `_provenance.json` `retained_scopes` records their source capture and hash;
 `verify-identities` fails if that file changes. Use it when a capture is
 incomplete for one module, such as a fresh session that has not yet registered
-the `PythonQt.private` wrappers.
+the `PythonQt.private` wrappers. Retained scopes are pinned
+by hash, and the hash sits in `_provenance.json` inside the package, so a
+coordinated edit of both files would pass; they cannot be re-derived from a
+capture until a full recapture replaces them.
 
 The pipeline never edits overlays. Regenerating raw output also leaves merged
 output untouched until merge. Manual overlays take precedence over upstream
