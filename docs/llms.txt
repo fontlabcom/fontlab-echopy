@@ -115,7 +115,8 @@ FontGate Python interface.
 - fgBitmap
 - fgBitmaps: A list of bitmap objects
 - fgBitmapsData
-- fgBrush: A brush
+- fgBrush: A stroke brush
+- fgCapParams
 - fgCaret: A caret with a string `name` and a coordinate `v` (fgOtValue)
 - fgCarets: A list of caret objects
 - fgCmapRecord: A cmap record
@@ -239,10 +240,12 @@ FontLab MCP tools for embedded Python.
 - build_glyph(*, glyph_name: str, recipe: str, font_id: int | None=None, font_name: str | None=None, direction: str | None=None, layer_name: str | None=None, replace: bool | None=None, auto_layer: bool | None=None, dry_run: bool | None=None)
 - call(name: str, /, **kwargs: Any)
 - close_font(*, font_id: int | None=None, font_name: str | None=None, save: bool | None=None)
+- compile_features(*, revision: str, font_id: int | None=None, font_name: str | None=None, dry_run: bool | None=None)
 - delete_all_kerning_classes(*, font_id: int | None=None, font_name: str | None=None, master_name: str | None=None, all_masters: bool | None=None, undo: bool | None=None)
 - delete_all_kerning_pairs(*, font_id: int | None=None, font_name: str | None=None, master_name: str | None=None, all_masters: bool | None=None, undo: bool | None=None)
 - delete_kerning_class(*, class_name: str, font_id: int | None=None, font_name: str | None=None, master_name: str | None=None, undo: bool | None=None)
 - delete_kerning_pair(*, left: str, right: str, font_id: int | None=None, font_name: str | None=None, master_name: str | None=None, undo: bool | None=None)
+- edit_glyph_components(*, glyph_name: str, layer_name: str, operations: list[dict[str, Any]], font_id: int | None=None, font_name: str | None=None, dry_run: bool | None=None)
 - edit_glyph_nodes(*, glyph_name: str, operations: list[dict[str, Any]], font_id: int | None=None, font_name: str | None=None, layer_name: str | None=None, dry_run: bool | None=None)
 - edit_layer_hints(*, glyph_name: str, operations: list[dict[str, Any]], font_id: int | None=None, font_name: str | None=None, layer_name: str | None=None, dry_run: bool | None=None)
 - explain(*, query: str | None=None, id: str | None=None, section: str | None=None, limit: float | None=None, max_chars: float | None=None)
@@ -250,6 +253,8 @@ FontLab MCP tools for embedded Python.
 - get_active_font()
 - get_active_glyphs()
 - get_current_glyphs()
+- get_features(*, font_id: int | None=None, font_name: str | None=None, output_path: str | None=None, format: str | None=None, overwrite: bool | None=None)
+- get_font_hinting(*, font_id: int | None=None, font_name: str | None=None, master_name: str | None=None, kind: str | None=None, offset: float | None=None, limit: float | None=None)
 - get_font_info(*, font_id: int | None=None, font_name: str | None=None, detail: str | None=None, master_name: str | None=None, kind: str | None=None, offset: float | None=None, limit: float | None=None)
 - get_font_metrics(*, font_id: int | None=None, font_name: str | None=None)
 - get_glyph(*, glyph_name: str, detail: str | None=None, layer_name: str | None=None, mark_glyph: str | None=None, component_index: float | None=None, nodes_format: str | None=None, font_id: int | None=None, font_name: str | None=None)
@@ -257,7 +262,11 @@ FontLab MCP tools for embedded Python.
 - get_glyph_nodes(*, glyph_name: str, font_id: int | None=None, font_name: str | None=None, layer_name: str | None=None, shape_index: int | None=None, contour_index: int | None=None)
 - get_kerning_pair(*, left: str, right: str, font_id: int | None=None, font_name: str | None=None, master_name: str | None=None)
 - get_layer_hints(*, glyph_name: str, font_id: int | None=None, font_name: str | None=None, layer_name: str | None=None, offset: int | None=None, limit: int | None=None, include_tth: bool | None=None)
+- get_lookups(*, font_id: int | None=None, font_name: str | None=None, output_path: str | None=None, overwrite: bool | None=None)
+- get_mcp_settings()
+- get_opentype_tables(*, font_id: int | None=None, font_name: str | None=None, tags: list[Any] | None=None, include_data: bool | None=None, output_path: str | None=None, format: str | None=None, overwrite: bool | None=None)
 - get_preferences(*, query: str | None=None, keys: list[str] | None=None, offset: int | None=None, limit: int | None=None)
+- get_vfj_schema(*, topic: str | None=None, include_examples: bool | None=None, include_dependencies: bool | None=None)
 - list_actions(*, query: str | None=None)
 - list_aidus_files(*, root: str | None=None, path: str | None=None, offset: int | None=None, limit: int | None=None)
 - list_fonts()
@@ -273,6 +282,7 @@ FontLab MCP tools for embedded Python.
 - save_font(*, font_id: int | None=None, font_name: str | None=None, path: str | None=None, format: str | None=None, overwrite: bool | None=None)
 - set_active_font(*, font_id: int | None=None, font_name: str | None=None)
 - set_active_glyph(*, glyph_name: str, font_id: int | None=None, font_name: str | None=None)
+- set_features(*, version: int, revision: str, font_id: int | None=None, font_name: str | None=None, data: dict[str, Any] | None=None, data_path: str | None=None, format: str | None=None, validate: bool | None=None, dry_run: bool | None=None)
 - set_font_info(*, font_id: int | None=None, font_name: str | None=None, font_info: dict[str, Any] | None=None, master_name: str | None=None, all_masters: bool | None=None, scale_upm: bool | None=None)
 - set_font_metrics(*, font_id: int | None=None, font_name: str | None=None, ascender: float | None=None, descender: float | None=None, x_height: float | None=None, cap_height: float | None=None, line_gap: float | None=None, italic_angle: float | None=None, weight: float | None=None, width: float | None=None)
 - set_glyph(*, glyph_name: str, glyph_data: dict[str, Any], create: bool | None=None, dry_run: bool | None=None, font_id: int | None=None, font_name: str | None=None)
@@ -280,6 +290,9 @@ FontLab MCP tools for embedded Python.
 - set_glyph_metrics(*, glyph_name: str, lsb: float | None=None, rsb: float | None=None, advance_width: float | None=None, metrics_left: str | None=None, metrics_right: str | None=None, metrics_width: str | None=None, font_id: int | None=None, font_name: str | None=None)
 - set_kerning_class(*, class_name: str, glyph_names: list[Any] | None=None, add_glyph_names: list[Any] | None=None, remove_glyph_names: list[Any] | None=None, left: bool | None=None, right: bool | None=None, font_id: int | None=None, font_name: str | None=None, master_name: str | None=None, undo: bool | None=None)
 - set_kerning_pair(*, left: str, right: str, value: float, font_id: int | None=None, font_name: str | None=None, master_name: str | None=None, undo: bool | None=None)
+- set_lookups(*, version: int, revision: str, font_id: int | None=None, font_name: str | None=None, data_path: str | None=None, data: dict[str, Any] | None=None, dry_run: bool | None=None)
+- set_mcp_settings(*, patch: dict[str, Any])
+- set_notepad_content(*, text: str | None=None, document: dict[str, Any] | None=None)
 - set_preferences(*, patch: dict[str, Any])
 - write_aidus_file(*, root: str, path: str, content: str, overwrite: bool | None=None)
 
