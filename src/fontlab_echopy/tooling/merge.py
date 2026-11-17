@@ -303,16 +303,24 @@ def merge(raw: Path, output: Path, overlays: list[Path]) -> dict[str, Any]:
         provenance["native_coverage"] = native
     # A raw tree without its own capture identity (the committed `generated/`)
     # re-merges the capture already recorded, so keep that identity. Identities
-    # embed `merge.unmatched`, so they survive only while it is unchanged; a new
-    # capture identity or a different unmatched set needs `identities` again.
+    # embed `merge.unmatched` and the extension registry, so they survive only
+    # while both are unchanged; a new capture identity, a different unmatched
+    # set or a changed registry needs `identities` again.
     previous = provenance.get("capture_identity")
-    stale = (identity is not None and identity != previous) or (
-        provenance.get("merge", {}).get("unmatched") != result["unmatched"]
+    manifest_path = output / "_identities.json"
+    shipped = (
+        json.loads(manifest_path.read_text()) if manifest_path.exists() else {}
+    )
+    stale = (
+        (identity is not None and identity != previous)
+        or provenance.get("merge", {}).get("unmatched") != result["unmatched"]
+        or shipped.get("maintained_extensions")
+        != sorted(key for key, _ in extensions)
     )
     if identity is not None:
         provenance["capture_identity"] = identity
     if stale:
-        (output / "_identities.json").unlink(missing_ok=True)
+        manifest_path.unlink(missing_ok=True)
     provenance.update(
         schema_version=1,
         merge=result,

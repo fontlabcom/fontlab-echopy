@@ -284,3 +284,22 @@ def test_pipeline_when_retain_invalid_then_argument_error_and_nothing_written(
               *[str(tmp_path / x) if x == "cache" else x for x in extra]])
     assert message in capsys.readouterr().err
     assert not (output / "_retained_identities.json").exists()
+
+
+def test_merge_when_extension_registry_changes_then_manifest_is_dropped(tmp_path):
+    """An overlay that adds an extension must not keep the old manifest's registry."""
+    capture = tmp_path / "capture.json"
+    capture.write_text(json.dumps(CAPTURE))
+    raw, output = tmp_path / "raw", tmp_path / "merged"
+    main(["pipeline", "--capture", str(capture), "--raw", str(raw), "--output", str(output)])
+    assert (output / MANIFEST).exists(), "pipeline should write the manifest"
+    main(["merge", str(raw), str(output)])
+    assert (output / MANIFEST).exists(), "an unchanged re-merge must keep the manifest"
+    overlay = tmp_path / "overlay.json"
+    overlay.write_text(json.dumps({"fontlab.Node": {"extensions": [
+        "def helper(self) -> int:\n    return 1"]}}))
+    main(["merge", str(raw), str(output), "--overlay", str(overlay)])
+    assert not (output / MANIFEST).exists(), "merge kept a manifest with an old extension registry"
+    main(["identities", str(capture), str(output)])
+    assert json.loads((output / MANIFEST).read_text())["maintained_extensions"] == ["fontlab.Node.helper"]
+    verify_identities(capture, output)
