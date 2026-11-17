@@ -343,10 +343,14 @@ def test_merge_when_raw_lacks_capture_identity_then_identity_and_identities_kept
     provenance = json.loads(provenance_path.read_text())
     provenance["capture_identity"] = {"sha256": "old"}
     provenance_path.write_text(json.dumps(provenance) + "\n")
-    (out / "_identities.json").write_text('{"kept": true}\n')
+    registry = json.loads((ROOT / "src/fontlab_echopy/_identities.json").read_text())[
+        "maintained_extensions"
+    ]
+    kept = {"kept": True, "maintained_extensions": registry}
+    (out / "_identities.json").write_text(json.dumps(kept) + "\n")
     merge(raw, out, [ROOT / "patches/manual.json"])
     assert json.loads(provenance_path.read_text())["capture_identity"] == {"sha256": "old"}
-    assert json.loads((out / "_identities.json").read_text()) == {"kept": True}
+    assert json.loads((out / "_identities.json").read_text()) == kept
 
 
 def test_merge_when_unmatched_changes_then_identities_removed(tmp_path):
