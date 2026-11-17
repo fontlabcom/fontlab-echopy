@@ -1,5 +1,5 @@
 # this_file: tests/test_api91.py
-"""FontLab 9.1 API records: absent from the 9.0 capture, guarded JSON helpers."""
+"""FontLab 9.1 API records: present in the 9.1.9813 capture, guarded JSON helpers."""
 
 import ast
 from pathlib import Path
@@ -24,22 +24,28 @@ def _captured_members(module: str) -> dict[str, set[str]]:
     return classes
 
 
+# flPackage.info returns an Info object; its members are captured on that class.
+INFO_OWNER = "fontlab.flPackage.info"
+
+
 @pytest.mark.parametrize("key", sorted(api91.NEW_IN_9_1))
-def test_new_in_9_1_when_checked_against_capture_then_absent(key):
-    """A 9.1 capture that adds the member fails here: promote it into the stubs."""
+def test_new_in_9_1_when_checked_against_capture_then_present(key):
+    """The 9.1.9813 capture declares every recorded 9.1 member in the stubs."""
     change = api91.NEW_IN_9_1[key]
     parts = change.owner.split(".")
     classes = _captured_members(parts[0])
     if len(parts) == 1:
-        assert change.member not in classes, f"{key} is now captured"
-    elif len(parts) == 2:
+        assert change.member in classes, f"{key} missing from capture"
+    elif change.owner == INFO_OWNER:
+        assert change.member in classes["Info"], f"{key} missing from capture"
+    else:
         assert parts[1] in classes, f"owner {change.owner} missing from capture"
-        assert change.member not in classes[parts[1]], f"{key} is now captured"
+        assert change.member in classes[parts[1]], f"{key} missing from capture"
     assert change.source and change.signature.startswith(change.member)
 
 
-def test_removed_in_9_1_when_checked_against_capture_then_still_present():
-    assert "size" in _captured_members("fontgate")["fgBrush"]
+def test_removed_in_9_1_when_checked_against_capture_then_absent():
+    assert "size" not in _captured_members("fontgate")["fgBrush"]
     assert set(api91.REMOVED_IN_9_1) == {"fontgate.fgBrush.size"}
 
 

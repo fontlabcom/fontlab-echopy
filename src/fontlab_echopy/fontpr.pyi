@@ -66,14 +66,21 @@ Known limitations:
 Source: FontLab MCP specification"""
 from __future__ import annotations
 from typing import Any
+import builtins as _echopy_builtins
 
 class Error:
     """Common base class for all non-exit exceptions.
 
-Native bases: Exception"""
+Native bases: Exception
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+Captured native MRO: Error, Exception, BaseException, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature."""
+
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
 
     def add_note(self, *args: Any, **kwargs: Any) -> Any:
@@ -157,6 +164,34 @@ Notes:
 ```python
 # Example
 result = fontpr.close_font(font_id=101, save=False)
+```
+
+Source: FontLab MCP specification"""
+    ...
+
+def compile_features(*, revision: str, font_id: int | None=None, font_name: str | None=None, dry_run: bool | None=None) -> Any:
+    """Compile current Features text with Classes panel data, then publish GSUB/GPOS/GDEF as one undoable change. On failure retain source and the last good tables. Does not regenerate visual Lookups. Returns compiler warnings. dry_run validates and reports candidate table sizes/hashes without publishing.
+
+Parameters:
+
+- `font_id` (float, optional): Optional font id.
+- `font_name` (str, optional): Optional font name match.
+- `revision` (str, required): Required current get_features revision; rejects stale source/classes/glyph order.
+- `dry_run` (bool, optional): Compile without publishing; default false.
+
+Effect: undoable publication of compiled GSUB/GPOS/GDEF; dry_run is read-only.
+
+Returns: `{status,published,warnings,tables:[{tag,size,sha256}],revision}`
+
+Notes:
+
+- Uses current Features text plus Classes panel data. Requires the current get_features revision. Compiles in isolation and commits only after success, preserving last good tables on failure.
+- dry_run:true reports candidate tables and warnings without publishing or creating Undo. Successful publication is one Undo command and does not regenerate visual Lookups.
+- Empty source deliberately compiles to empty layout tables. Compiler warnings are returned as text. Existing compiler limits apply; the MCP tool does not bypass them.
+
+```python
+# Validate current source
+result = fontpr.compile_features(font_id=101, revision='<get_features revision>', dry_run=True)
 ```
 
 Source: FontLab MCP specification"""
@@ -266,6 +301,36 @@ Notes:
 ```python
 # Example
 result = fontpr.delete_kerning_pair(font_id=101, left='A', right='V', master_name='Regular')
+```
+
+Source: FontLab MCP specification"""
+    ...
+
+def edit_glyph_components(*, glyph_name: str, layer_name: str, operations: list[dict[str, Any]], font_id: int | None=None, font_name: str | None=None, dry_run: bool | None=None) -> Any:
+    """Atomically add, set_transform or remove live component elements on one existing non-Auto unlocked layer, with Undo. Preserves outlines, masks/other layers, hints, anchors, metrics and metadata. Indices are original zero-based shape indices, not component ordinals. Each existing index may occur once. Additions append in operation order. Use get_glyph detail=construction to inspect components; editable live components carry shape_index. Dry run validates all operations before any changes. Matrices are absolute [a,b,c,d,tx,ty], x'=a*x+c*y+tx; y'=b*x+d*y+ty. No Python or whole-glyph replacement needed.
+
+Parameters:
+
+- `font_id` (float, optional): Optional font package id.
+- `font_name` (str, optional): Optional font name.
+- `glyph_name` (str, required): Exact existing destination glyph.
+- `layer_name` (str, required): Exact existing destination layer.
+- `dry_run` (bool, optional): Validate without changes, default false.
+- `operations` (list[dict[str, Any]], required)
+
+Effect: mutate one layer with Undo; dry_run is read-only.
+
+Returns: `{status:"validated",operations} or {status:"ok",glyph_name,layer_name,components:[{shape_index,glyph_name,source_layer,matrix}]}`
+
+Notes:
+
+- All operations validate before application. Only live component instances are targeted. Non-component shapes, hints, anchors, metadata, metrics and other layers remain unchanged.
+- Existing targets use original shape indices, each at most once. New components append. set_transform assigns an absolute affine matrix; automatically attached components cannot have their transform overridden.
+- Sources must exist and have the specified layer; cyclic and over-budget dependency graphs are rejected. Auto or locked destinations are rejected.
+
+```python
+# Preview a component placement
+result = fontpr.edit_glyph_components(glyph_name='composite.example', layer_name='Regular', dry_run=True, operations=[{'op': 'add', 'glyph_name': 'A', 'matrix': [1, 0, 0, 1, 20, 30]}])
 ```
 
 Source: FontLab MCP specification"""
@@ -455,6 +520,63 @@ Notes:
 ```python
 # Example
 result = fontpr.get_current_glyphs()
+```
+
+Source: FontLab MCP specification"""
+    ...
+
+def get_features(*, font_id: int | None=None, font_name: str | None=None, output_path: str | None=None, format: str | None=None, overwrite: bool | None=None) -> Any:
+    """Read Features panel source as data:{text:string}, with a revision covering source, shared classes and glyph order. Optional file exchange writes the data object as UTF-8 JSON or the source as .fea text. Does not decompile or compile tables.
+
+Parameters:
+
+- `font_id` (float, optional): Optional font id.
+- `font_name` (str, optional): Optional font name match.
+- `output_path` (str, optional): Optional absolute export file path.
+- `format` (str, optional): json (default) or fea. fea requires output_path.
+- `overwrite` (bool, optional): Replace an existing output file; default false.
+
+Effect: read; optional file export.
+
+Returns: `{version,font_id,revision,data:{text}} or {version,font_id,revision,data_path,format,size}`
+
+Notes:
+
+- Reads the Features panel source without decompiling binaries. Revision covers source, shared OpenType classes, glyph order and open-font identity.
+- output_path exports either data:{text} as a data-only JSON object, or plain UTF-8 FEA when format=fea. Keep version and revision separately for set_features. Existing files require overwrite:true.
+
+```python
+# Read Features source
+result = fontpr.get_features(font_id=101)
+```
+
+Source: FontLab MCP specification"""
+    ...
+
+def get_font_hinting(*, font_id: int | None=None, font_name: str | None=None, master_name: str | None=None, kind: str | None=None, offset: float | None=None, limit: float | None=None) -> Any:
+    """Read font-level alignment zones and standard stems directly, without glyphs, kerning, features or Python. Returns paged exact records for one master, plus available master names. Distinguishes PostScript, TrueType and family zones. PostScript zones match Font Info's guideline-derived values. Use this for 'list/show my font's zones/stems'; get_layer_hints is glyph-level and is not a replacement. Follow next_offset when has_more=true.
+
+Parameters:
+
+- `font_id` (float, optional): Optional FontLab package id.
+- `font_name` (str, optional): Optional font name match.
+- `master_name` (str, optional): Exact master name; defaults to current master. Reading preserves the active font/master.
+- `kind` (str, optional): all (default), zones, or stems.
+- `offset` (float, optional): Zero-based record offset, default 0.
+- `limit` (float, optional): Maximum records per page, default 50, maximum 100. Results also have a JSON byte budget.
+
+Effect: read only.
+
+Returns: `Paged font-level alignment-zone and standard-stem records, with master names and pagination metadata.`
+
+Notes:
+
+- Reads one master without changing the active font or master. Follow next_offset when has_more is true.
+- Use get_layer_hints for glyph-level hints instead.
+
+```python
+# Read font zones
+result = fontpr.get_font_hinting(kind='zones')
 ```
 
 Source: FontLab MCP specification"""
@@ -661,6 +783,89 @@ result = fontpr.get_layer_hints(glyph_name='H', layer_name='Regular')
 Source: FontLab MCP specification"""
     ...
 
+def get_lookups(*, font_id: int | None=None, font_name: str | None=None, output_path: str | None=None, overwrite: bool | None=None) -> Any:
+    """Read the editable Lookups panel document as versioned JSON, including glyph classifications, classes, scripts/features, lookup rules, flags and anchors. Works with the panel closed. Return data unchanged except intended edits to set_lookups with the returned revision. Does not compile or change Features text. For large fonts use output_path to export data as a local JSON file instead of returning it inline.
+
+Parameters:
+
+- `font_id` (float, optional): Optional FontLab package id.
+- `font_name` (str, optional): Optional font name match.
+- `output_path` (str, optional): Optional absolute local JSON file path. Writes the data object and returns its path, revision and byte count instead of inline data.
+- `overwrite` (bool, optional): Allow replacing output_path; default false.
+
+Effect: read; optionally export a JSON file; initializes the same editable document as opening the Lookups panel.
+
+Returns: `{version,font_id,revision,issue,data} or {version,font_id,revision,issue,data_path,json_bytes}`
+
+Notes:
+
+- data is the complete editable visual model, not compiled GSUB/GPOS bytes or Features text. It includes glyphsList, groupsList, scriptsList, anchorsList and lookupsList plus optional compiler settings. Preserve all fields you do not intend to edit.
+- Lookup flags include process_ligatures: false for IgnoreLigatures. Omitted process_ligatures means true. Context rules, named lookup references and anchors remain structured JSON.
+- Use the returned font_id and revision in set_lookups. The revision is scoped to the open font and editable data; reread after changes, undo or reopening. issue reports existing import limitations without adding any UI label.
+- For large fonts use output_path. Noto Nastaliq lookup data is about 11 MB, exceeding the 8 MiB incoming MCP message limit for an inline replacement. The exported UTF-8 file contains only the data object. Edit that file locally, then use set_lookups with data_path, version and revision. File export refuses overwrite unless explicitly enabled.
+
+```python
+# Read a complete Lookups document
+result = fontpr.get_lookups(font_id=101)
+```
+
+Source: FontLab MCP specification"""
+    ...
+
+def get_mcp_settings() -> Any:
+    """Read global MCP Python execution settings, allowed ranges, defaults, and read-only transport settings. Includes the cooperative Python time budget, source/output character limits and retained output-log capacity. Does not expose authentication tokens or grant Python permission.
+
+Parameters: none.
+
+Effect: read.
+
+Returns: `{settings,constraints,transport,output_log_entry_limit_chars,note}`
+
+Notes:
+
+- Reads the effective global MCP settings, defaults, ranges and read-only transport state. It never returns authentication tokens.
+- Python timeout is cooperative, not a hard interruption of native calls. Transport response waiting is derived from the Python budget; an external client can still impose a shorter deadline.
+
+```python
+# Read execution limits and ranges
+result = fontpr.get_mcp_settings()
+```
+
+Source: FontLab MCP specification"""
+    ...
+
+def get_opentype_tables(*, font_id: int | None=None, font_name: str | None=None, tags: list[Any] | None=None, include_data: bool | None=None, output_path: str | None=None, format: str | None=None, overwrite: bool | None=None) -> Any:
+    """Inspect stored OpenType table bytes: tags, byte counts and SHA-256 hashes. These are last stored/published bytes, not a fresh font export; uncompiled Features/Lookups edits are not included. Optional base64 data or JSON file export; binary export requires exactly one tag. Never compiles or modifies the font.
+
+Parameters:
+
+- `font_id` (float, optional): Optional font id.
+- `font_name` (str, optional): Optional font name match.
+- `tags` (list[Any], optional): Optional array of exact four-byte table tags, e.g. GSUB, GPOS, GDEF. Omit to list all stored tables; missing requested tags are errors.
+- `include_data` (bool, optional): Include base64 bytes; default false inline, true for JSON file export.
+- `output_path` (str, optional): Optional absolute output file path.
+- `format` (str, optional): json (default) or binary. binary requires output_path and exactly one selected table tag.
+- `overwrite` (bool, optional): Replace an existing export file; default false.
+
+Effect: read; optional file export.
+
+Returns: `{version,font_id,source:"stored",tables:[{tag,size,sha256,data_base64?}],output_path?,format?}`
+
+Notes:
+
+- Lists raw tables currently stored in the font, not custom-table XML definitions and not a fresh font export. Tables can be absent if they have never been stored/published.
+- Without tags, lists all stored tables. Explicit absent tags are errors. Default inline response contains metadata only; include_data:true adds base64.
+- JSON output_path defaults to including base64 table data in the file; the tool response omits base64 to stay compact. format:binary requires exactly one explicit tag and output_path, and writes exact raw bytes.
+- Never compiles or edits the font; use compile_features first when fresh Features-generated GSUB/GPOS/GDEF bytes are wanted. Source changes alone do not update stored tables.
+
+```python
+# Inspect all stored table sizes and hashes
+result = fontpr.get_opentype_tables(font_id=101)
+```
+
+Source: FontLab MCP specification"""
+    ...
+
 def get_preferences(*, query: str | None=None, keys: list[str] | None=None, offset: int | None=None, limit: int | None=None) -> Any:
     """Read FontLab application preferences without an open font. Returns exact keys, values and types. Search keys with query or select exact keys. Credentials and unsupported value types are excluded. Use explain for preference meaning and allowed values.
 
@@ -683,6 +888,32 @@ Notes:
 ```python
 # Example
 result = fontpr.get_preferences(query='font.ask', limit=50)
+```
+
+Source: FontLab MCP specification"""
+    ...
+
+def get_vfj_schema(*, topic: str | None=None, include_examples: bool | None=None, include_dependencies: bool | None=None) -> Any:
+    """Reference for VFJ inspection or authoring; tools with self-contained argument schemas do not require this lookup. Discover writable VFJ glyph JSON: complete glyph/layer hierarchy, outlines/nodes, components/transforms, anchors, guidelines/hints, groups/builders, images, paint, metadata and references. Request a known topic directly for field types, defaults, examples and native semantics; use overview only to discover topic names. Does not require an open font. Construction summaries are NOT writable VFJ.
+
+Parameters:
+
+- `topic` (str, optional): Schema topic; default overview lists all topics. Returns one focused definition; plural topic aliases are accepted.
+- `include_examples` (bool, optional): Include examples, default true.
+- `include_dependencies` (bool, optional): Include full transitive definitions as self-contained schema; default false. Use this when referenced definitions are needed together; known topics can be requested directly.
+
+Effect: read.
+
+Returns: `{topic,catalog_version,title,notes,definition?,related_topics?,schema?,examples?,topics?}`
+
+Notes:
+
+- Default responses contain one focused definition and related topic names. Plural aliases such as components are accepted.
+- Set include_dependencies:true to receive the full self-contained schema with transitive definitions. Ordinary component edits should use edit_glyph_components instead of replacing full VFJ.
+
+```python
+# Discover construction topics
+result = fontpr.get_vfj_schema()
 ```
 
 Source: FontLab MCP specification"""
@@ -1081,6 +1312,40 @@ result = fontpr.set_active_glyph(font_id=101, glyph_name='H')
 Source: FontLab MCP specification"""
     ...
 
+def set_features(*, version: int, revision: str, font_id: int | None=None, font_name: str | None=None, data: dict[str, Any] | None=None, data_path: str | None=None, format: str | None=None, validate: bool | None=None, dry_run: bool | None=None) -> Any:
+    """Replace Features text from data:{text:string} or a local JSON/.fea file. Requires version 1 and the get_features revision. By default compile-validates a detached candidate before one undoable source edit; retains current compiled tables and visual Lookups. validate:false explicitly permits draft source. Does not publish compiled tables; use compile_features.
+
+Parameters:
+
+- `font_id` (float, optional): Optional font id.
+- `font_name` (str, optional): Optional font name match.
+- `version` (int, required): Must be 1.
+- `revision` (str, required): Revision from get_features.
+- `data` (dict[str, Any], optional): Exactly {text:string}, the complete Features source, not a patch.
+- `data_path` (str, optional): Absolute UTF-8 JSON or .fea file path instead of data; maximum 64 MiB.
+- `format` (str, optional): File format: json (default) or fea.
+- `validate` (bool, optional): Compile-validate before editing; default true. false permits drafts without compilation validation.
+- `dry_run` (bool, optional): Validate/prepare without editing; default false.
+
+Effect: one undoable Features source replacement; compiled tables preserved.
+
+Returns: `{status,changed,validated,compiled:false,warnings,revision}`
+
+Notes:
+
+- Supply exactly one of data:{text:string} or data_path; all source is replaced, including the common prefix. JSON files contain only the data object. FEA files must be valid UTF-8.
+- Default validate:true compiles an isolated candidate with Classes panel data before editing. Failed validation leaves the font unchanged. This checks serialization too, so existing compiler limits also apply.
+- validate:false explicitly permits draft text, useful when a large imported font exceeds compiler limits. dry_run prevents commits; validated reports whether compilation validation actually ran.
+- Compiled tables and visual Lookups are retained. Call compile_features separately to publish a build; save_font persists source. Re-read after edits because native source formatting may normalize.
+
+```python
+# Validate edited source without changing font
+result = fontpr.set_features(font_id=101, version=1, revision='<get_features revision>', data={'text': 'languagesystem DFLT dflt;\\nfeature kern { pos space -17; } kern;\\n'}, dry_run=True)
+```
+
+Source: FontLab MCP specification"""
+    ...
+
 def set_font_info(*, font_id: int | None=None, font_name: str | None=None, font_info: dict[str, Any] | None=None, master_name: str | None=None, all_masters: bool | None=None, scale_upm: bool | None=None) -> Any:
     """Patch FontInfo metadata on the active or requested font using FontInfo/Python-style field names. Accepts font_info as an object, or top-level fields. Common fields include familyName/family_name, styleName/style_name, postscriptFontName, postscriptFullName, openTypeNameDesigner, openTypeOS2VendorID, copyright, trademark, versionMajor, versionMinor, unitsPerEm/upm, ascender, descender, xHeight, capHeight, openTypeOS2WeightClass, openTypeOS2WidthClass, and masters:[{name,...}] for per-master patches. Other settings can be patched with other_data (or otherData). other_data.nametablePath is a font-wide custom .nam path; an empty string or null restores standard mapping. Setting it reloads the mapping. Does not replace arbitrary full VFJ font JSON.
 
@@ -1303,6 +1568,90 @@ result = fontpr.set_kerning_pair(font_id=101, left='A', right='V', value=-80)
 Source: FontLab MCP specification"""
     ...
 
+def set_lookups(*, version: int, revision: str, font_id: int | None=None, font_name: str | None=None, data_path: str | None=None, data: dict[str, Any] | None=None, dry_run: bool | None=None) -> Any:
+    """Replace the editable Lookups document with JSON from get_lookups. Validates references before one undoable edit. Requires the read revision to reject stale writes. Preserves Features text, last compiled tables and panel state. Does not compile; use Lookups panel Compile afterwards. dry_run validates without editing. data is the complete document, not a patch.
+
+Parameters:
+
+- `font_id` (float, optional): Optional FontLab package id.
+- `font_name` (str, optional): Optional font name match.
+- `version` (int, required): Exchange format version; must be 1.
+- `revision` (str, required): Revision returned by get_lookups for this font.
+- `data_path` (str, optional): Absolute local path to a JSON data object exported by get_lookups and optionally edited. Use instead of data for large documents; maximum 64 MiB.
+- `data` (dict[str, Any], optional): Complete data object from get_lookups; retain unmodified fields and arrays. Internal underscore-prefixed metadata is not accepted.
+- `dry_run` (bool, optional): Validate without modifying the document; default false. This does not verify binary compilation.
+
+Effect: one undoable visual Lookups document replacement; no compilation.
+
+Returns: `{status,changed,version,revision,compiled:false}`
+
+Notes:
+
+- Read get_lookups first. Pass version, revision and the complete data object, retaining all unchanged arrays and fields. Missing core arrays, duplicate names, invalid references and internal metadata are rejected before committing.
+- dry_run runs structural/reference validation only; it does not guarantee binary compilation. Draft lookup rows follow the same rules as the editor.
+- The returned revision describes current committed data, including on dry_run. changed describes whether the supplied document differs. A no-op creates no undo command.
+- Features source, previous compiled tables and per-font panel preferences are preserved. Compile through the Lookups panel when ready; save_font persists the editable document in the native font.
+- Supply exactly one of data or data_path. data_path reads a local UTF-8 JSON object up to 64 MiB, with the same validation and undo as inline data. File exchange avoids the MCP incoming message limit. Pass the version and revision returned when exporting; they are not stored inside the data-only file.
+
+```python
+# Validate a replacement (replace revision and data with the values read from this font)
+result = fontpr.set_lookups(font_id=101, version=1, revision='<revision from get_lookups>', data={'glyphsList': [], 'groupsList': [], 'scriptsList': [], 'anchorsList': [], 'lookupsList': []}, dry_run=True)
+```
+
+Source: FontLab MCP specification"""
+    ...
+
+def set_mcp_settings(*, patch: dict[str, Any]) -> Any:
+    """Validate and persist a partial patch of global MCP settings. Applies to subsequent calls without restart; outside font Undo. python_timeout_seconds is 0.1..3600 (default 5). Python deadlines cannot interrupt blocked native calls. The matching bridge adjusts its response wait automatically. Does not change Python permission or enable/disable external access. Read get_mcp_settings for current values and constraints.
+
+Parameters:
+
+- `patch` (dict[str, Any], required)
+
+Effect: persist global MCP settings; outside font Undo.
+
+Returns: `Same effective settings and constraints as get_mcp_settings after persistence`
+
+Notes:
+
+- patch accepts python_timeout_seconds (0.1..3600, default 5), python_source_limit_chars (1024..1048576, default 32768), python_output_limit_chars (1024..1048576 per stream, default 65536) and python_output_log_entries (1..2000, default 200).
+- The entire patch validates before any settings change. Unknown and read-only keys are rejected. Changes apply on subsequent calls without restart; lowering log capacity also trims retained entries.
+- These settings do not grant Chat Python permission, alter authentication, enable external clients, or change fonts. The matching bridge refreshes its response wait before each Python run, including settings changed by another client.
+
+```python
+# Allow a 30-second Python run
+result = fontpr.set_mcp_settings(patch={'python_timeout_seconds': 30})
+```
+
+Source: FontLab MCP specification"""
+    ...
+
+def set_notepad_content(*, text: str | None=None, document: dict[str, Any] | None=None) -> Any:
+    """Replace the active font's Notepad content directly, without Python. Supply exactly one of text (plain text, default size) or document (styled Notepad version-1 object with spans containing text and attrs, plus optional vertical and orientation). Creates one Notepad undo operation and marks the font modified; does not save the font, open the panel, or render a hidden panel. Returns success after applying content, not after proof rendering. Maximum serialized document size: 1 MiB.
+
+Parameters:
+
+- `text` (str, optional): Plain text, including an empty string to clear Notepad.
+- `document` (dict[str, Any], optional): Styled document: {version:1, spans:[{text:string, attrs:{fontSize:48}}], vertical:false, orientation:'upright'}. Use this instead of text to specify formatting.
+
+Effect: replaces active font Notepad document; independent text undo; font marked modified.
+
+Returns: `{success:true}; errors use isError`
+
+Notes:
+
+- Supply exactly one of text or document. Empty text clears the document. Unknown arguments are rejected.
+- Styled documents require version 1 and spans containing string text and object attrs. Serialized input is limited to 1 MiB.
+- No Python execution. Does not open the panel, save the font, or render hidden content. Success confirms document replacement, not proof completion.
+
+```python
+# Set plain text
+result = fontpr.set_notepad_content(text='Hamburgefontsiv 0123456789')
+```
+
+Source: FontLab MCP specification"""
+    ...
+
 def set_preferences(*, patch: dict[str, Any]) -> Any:
     """Patch FontLab application preferences using exact keys and value types from get_preferences. Persists changes and refreshes preference listeners. Validate meaning and enum/range constraints with explain first. Some settings require a restart. Credentials and unsupported keys cannot be changed. Preferences are not part of font Undo.
 
@@ -1355,4 +1704,4 @@ result = fontpr.write_aidus_file(root='scripts', path='generate.py', content='pr
 
 Source: FontLab MCP specification"""
     ...
-__all__ = ['Error', 'available', 'build_glyph', 'call', 'close_font', 'delete_all_kerning_classes', 'delete_all_kerning_pairs', 'delete_kerning_class', 'delete_kerning_pair', 'edit_glyph_nodes', 'edit_layer_hints', 'explain', 'geometry', 'get_active_font', 'get_active_glyphs', 'get_current_glyphs', 'get_font_info', 'get_font_metrics', 'get_glyph', 'get_glyph_metrics', 'get_glyph_nodes', 'get_kerning_pair', 'get_layer_hints', 'get_preferences', 'list_actions', 'list_aidus_files', 'list_fonts', 'list_glyphs', 'list_kerning_classes', 'list_kerning_pairs', 'list_tools', 'new_font', 'open_font', 'read_aidus_file', 'rename_kerning_class', 'run_actions', 'save_font', 'set_active_font', 'set_active_glyph', 'set_font_info', 'set_font_metrics', 'set_glyph', 'set_glyph_anchors', 'set_glyph_metrics', 'set_kerning_class', 'set_kerning_pair', 'set_preferences', 'write_aidus_file']
+__all__ = ['Error', 'available', 'build_glyph', 'call', 'close_font', 'compile_features', 'delete_all_kerning_classes', 'delete_all_kerning_pairs', 'delete_kerning_class', 'delete_kerning_pair', 'edit_glyph_components', 'edit_glyph_nodes', 'edit_layer_hints', 'explain', 'geometry', 'get_active_font', 'get_active_glyphs', 'get_current_glyphs', 'get_features', 'get_font_hinting', 'get_font_info', 'get_font_metrics', 'get_glyph', 'get_glyph_metrics', 'get_glyph_nodes', 'get_kerning_pair', 'get_layer_hints', 'get_lookups', 'get_mcp_settings', 'get_opentype_tables', 'get_preferences', 'get_vfj_schema', 'list_actions', 'list_aidus_files', 'list_fonts', 'list_glyphs', 'list_kerning_classes', 'list_kerning_pairs', 'list_tools', 'new_font', 'open_font', 'read_aidus_file', 'rename_kerning_class', 'run_actions', 'save_font', 'set_active_font', 'set_active_glyph', 'set_features', 'set_font_info', 'set_font_metrics', 'set_glyph', 'set_glyph_anchors', 'set_glyph_metrics', 'set_kerning_class', 'set_kerning_pair', 'set_lookups', 'set_mcp_settings', 'set_notepad_content', 'set_preferences', 'write_aidus_file']

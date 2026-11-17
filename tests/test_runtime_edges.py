@@ -84,7 +84,7 @@ def test_alias_imports_share_canonical_module_identity():
 def test_committed_native_coverage_has_no_missing_names():
     path = Path(__file__).parents[1] / "reports/native-coverage.json"
     report = json.loads(path.read_text())
-    assert report["unavailable"] == ["fontlabpr"]
+    assert report["unavailable"] == []
     assert len(report["modules"]) == 17
     assert all(not row["missing_names"] for row in report["modules"].values())
     assert all(not row["missing_class_members"] for row in report["modules"].values())

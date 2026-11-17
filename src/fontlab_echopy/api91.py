@@ -1,9 +1,10 @@
 # this_file: src/fontlab_echopy/api91.py
 """Python API changes in FontLab 9.1 (build 9812), recorded from the C++ source.
 
-The shipped stubs come from a FontLab 9.0 capture, so these members are not in
-them. This module records each new or removed name, its signature and its source
-location, and gives hasattr-based feature detection. It also gives two guarded
+The shipped stubs now come from a FontLab 9.1.9813 capture and declare these
+members (``fgBrush.size`` is gone). This module records each new or removed
+name, its signature and its source location, and gives hasattr-based feature
+detection for hosts that may still run 9.0. It also gives two guarded
 helpers for the clipboard JSON calls.
 
 Status: member presence and the QByteArray route are verified live on
@@ -14,8 +15,7 @@ FontLab 9.1.9812 (2026-11-16): every ``NEW_IN_9_1`` member exists by
 ``getObjectsFromJsonData`` crashes FontLab (SIGBUS in the native QByteArray
 converter). Behavior (``penParameters`` writes, ``expandStroke``, ``makeStroke``,
 presentation overrides, refresh calls) is read from the source and not
-live-verified. Promote entries into the generated stubs after a 9.1 capture
-(``examples/capture_in_fontlab.py``) and a fresh merge.
+live-verified.
 """
 
 from __future__ import annotations

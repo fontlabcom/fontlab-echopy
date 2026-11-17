@@ -4,7 +4,7 @@ this_file: PLAN.md
 
 ## FontLab 9.1 API promotion — 2026-11-16
 
-`fontlab_echopy.api91` records the 9.1.9812 changes from source. Next: capture 9.1 in FontLab, regenerate and refresh provenance, move the records into the generated stubs and manual class guidance, and keep `api91` as the version-change record with its QByteArray guard. Member presence, `fgBrush.size` absence and the QByteArray wrap round trip are verified live on 9.1.9812; live-verify the behavior of each record (`penParameters` writes, `expandStroke`, `makeStroke`, presentation overrides) before promotion.
+`fontlab_echopy.api91` records the 9.1.9812 changes from source. The stubs are now generated from a 9.1.9813 capture that declares every record; next, move the remaining records into manual class guidance and keep `api91` as the version-change record with its QByteArray guard. Member presence, `fgBrush.size` absence and the QByteArray wrap round trip are verified live on 9.1.9812; live-verify the behavior of each record (`penParameters` writes, `expandStroke`, `makeStroke`, presentation overrides) before promotion.
 
 
 ## Shared installer: remaining delivery qualification — 2026-11-15

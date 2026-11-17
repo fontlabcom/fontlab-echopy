@@ -2,6 +2,45 @@
 this_file: CHANGELOG.md
 ---
 
+## 2026-11-17 — Issue 257: Regenerated from a FontLab 9.1.9813 capture
+
+- Native modules (`fontlab`, `fontgate`, `fontpr`, `FL`) come from 9.1.9813;
+  PythonQt is retained from the earlier capture, because a fresh-session capture
+  registers only 5 `PythonQt.private` wrappers (the 9.0 capture had 221).
+  `pipeline --retain PythonQt` keeps those raw files, stubs, coverage rows and
+  identity rows byte-identical; `_retained_identities.json` holds the rows and
+  `_provenance.json` `retained_scopes` records their source capture
+  (`5a405eb5…e521e9`) and hash, which `verify-identities` checks.
+- `generated/`, the stubs, `_identities.json` (17 scopes, 1,219 native
+  spellings, `verify-identities` passes), `_provenance.json`, `reports/` and
+  `llms.txt` are regenerated offline with the four overlays (applied 26,000,
+  unmatched 0). Capture sha256 `432487810f3e…bec039a7`. `qt5.json` was reused;
+  Qt docs were not refetched.
+- `fontpr` gains 12 MCP tools with keyword-only signatures and MCP docs:
+  `compile_features`, `edit_glyph_components`, `get_features`,
+  `get_font_hinting`, `get_lookups`, `get_mcp_settings`, `get_opentype_tables`,
+  `get_vfj_schema`, `set_features`, `set_lookups`, `set_mcp_settings` and
+  `set_notepad_content`. The older note said 14. The MCP spec lists 58 tools;
+  `run_python` and `get_python_output` stay blocked and are not module
+  functions, so the 59 `fontpr` functions are the other 56 tools plus the
+  facade helpers `available`, `call` and `list_tools`.
+- Consumer check: no maintained consumer uses the fontgate members that 9.1.9813
+  no longer declares (`fgShape.angle`/`calligraphic`/`cap_type`/`join_type`/`width`,
+  `fgBrush.size`, the removed `fgOpt_*` options); read-only searches of App,
+  Fontport, Glyport, Scriptmix, Pens, GrabLab, Remopy and Fly found no use.
+- `fontlab` gains 84 members (sigma API, Python canvas painters,
+  `registerPythonTool`, smart corners, `expandStroke`, `penParameters`,
+  `propertyNames`, …). `fontgate` gains `fgCapParams`, ten `fgBrush` stroke
+  members, `fgOpt_OTExport.autohinterMode` and `fgShape.makeStroke`, and loses
+  `fgBrush.size`, `fgShape.angle`/`calligraphic`/`cap_type`/`join_type`/`width`,
+  `fgOpt_EOTExport.otExport`, `fgOpt_OTExport.useTTFAutohint`,
+  `fgOpt_UfoFontImport.removeOverlap`, `fgOpt_VfbImport.autoReplace` and
+  `fgOpt_WOFFExport.otExport`. `FL` keeps its names. `fontlabpr` no longer appears as unavailable.
+- `api91` records are now present in the capture; its tests check presence and
+  `fgBrush.size` absence. The manual `fgBrush` note lists the 9.1 members.
+  `llms` skips the new MRO and allocation-evidence docstring paragraphs.
+- Gate: 776 passed in 168 s (Python 3.11).
+
 ## 2026-11-17 — Issue 257: Proteus and MCP reference documentation
 
 - New `proteus-docs` command builds `enrichment/fontlab-proteus.json` from

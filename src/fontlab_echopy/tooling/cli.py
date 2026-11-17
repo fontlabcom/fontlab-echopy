@@ -75,9 +75,21 @@ def main(argv: list[str] | None = None) -> None:
         type=Path,
         help="Write current native/upstream/pipeline verification reports",
     )
+    run.add_argument(
+        "--retain",
+        action="append",
+        default=[],
+        help="Keep this top-level module's raw files, coverage and identities "
+        "from the earlier capture instead of regenerating it",
+    )
     args = parser.parse_args(argv)
     if args.command == "pipeline" and args.qt_overlay and not args.qt_cache:
         parser.error("--qt-overlay requires --qt-cache")
+    if args.command == "pipeline" and "PythonQt" in args.retain and args.qt_cache:
+        # enrich() reads PythonQt from the new capture, which retention removes.
+        parser.error("--retain PythonQt cannot be combined with --qt-cache")
+    if args.command == "pipeline" and any("." in name for name in args.retain):
+        parser.error("--retain takes top-level module names, such as PythonQt")
     if args.command == "docnames":
         from .docnames import export_docnames
 
@@ -153,20 +165,39 @@ def main(argv: list[str] | None = None) -> None:
             if args.capture
             else json.dumps(data, sort_keys=True).encode()
         )
-        result = {
-            "capture_identity": {
-                "sha256": hashlib.sha256(capture_bytes).hexdigest(),
-                "encoding": "original-utf8-file" if args.capture else "canonical-json",
-            },
-            "generation": generate(
-                data,
-                args.raw,
-                {
-                    "sha256": hashlib.sha256(capture_bytes).hexdigest(),
-                    "encoding": "original-utf8-file" if args.capture else "canonical-json",
-                },
-            ),
+        retained = None
+        kept_coverage: dict = {}
+        if args.retain:
+            old = json.loads((args.raw / "coverage.json").read_text())
+            unknown = sorted(set(args.retain) - set(old["modules"]))
+            if unknown:
+                parser.error(f"--retain: no earlier coverage for modules {unknown}")
+            kept_coverage = {
+                name: entry
+                for name, entry in old["modules"].items()
+                if name.partition(".")[0] in args.retain
+            }
+            data = dict(data, modules={
+                name: entry for name, entry in data["modules"].items()
+                if name not in args.retain
+            })
+        identity = {
+            "sha256": hashlib.sha256(capture_bytes).hexdigest(),
+            "encoding": "original-utf8-file" if args.capture else "canonical-json",
         }
+        generation = generate(data, args.raw, identity, tuple(args.retain))
+        if args.retain:
+            from .identities import retain_scopes
+
+            # Written only after generation succeeds; merge below replaces the manifest.
+            retained = retain_scopes(args.output, args.retain)
+            generation["modules"].update(kept_coverage)
+            generation["modules"] = dict(sorted(generation["modules"].items()))
+            generation["retained_scopes"] = retained
+            (args.raw / "coverage.json").write_text(
+                json.dumps(generation, indent=2, sort_keys=True) + "\n"
+            )
+        result = {"capture_identity": identity, "generation": generation}
         overlays = list(args.overlay)
         upstream_report = None
         if args.qt_cache:
@@ -180,6 +211,10 @@ def main(argv: list[str] | None = None) -> None:
         provenance_path = args.output / "_provenance.json"
         provenance = json.loads(provenance_path.read_text())
         provenance["capture_identity"] = result["capture_identity"]
+        if retained is not None:
+            provenance["retained_scopes"] = retained
+        else:
+            provenance.pop("retained_scopes", None)
         if upstream_report is not None:
             provenance["qt_enrichment"] = upstream_report
         provenance_path.write_text(

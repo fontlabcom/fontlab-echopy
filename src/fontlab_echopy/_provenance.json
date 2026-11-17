@@ -1,15 +1,15 @@
 {
   "capture_identity": {
     "encoding": "original-utf8-file",
-    "sha256": "5a405eb5a8888bc217c9653b606013439483a9ead5c0b9b1b478172c18e521e9"
+    "sha256": "432487810f3e4ba931591705c9d0edd4a5202af03c06cf882c5f3972bec039a7"
   },
   "merge": {
-    "applied": 25972,
+    "applied": 26000,
     "unmatched": []
   },
   "merged_outputs": {
     "FL.py": "c49764a49b40b62f2e6e883d6796c6a145ff5f095f0f9ec4c622d14f108c702a",
-    "FL.pyi": "5c4845d6e88f445c8e9a42dc0d02b46a87e8ac67ccf263600dacc2447aa898bd",
+    "FL.pyi": "934603c35ae7e017c673c05f665d0eb78ae5a7d26d3ee948350d8c8f6644602b",
     "PythonQt/BoolResult.py": "012ad997a44161056c843b197ee9616d67a0a6d357d3ffd8e4fdf334201fab5c",
     "PythonQt/BoolResult.pyi": "825f6d678ce706bc66426f82e8e67ba09fff886b7a838ffaca095202285ff3fa",
     "PythonQt/Config.py": "4cd0a6c15713f6ad7b1656ea70bf67478222c06ed8da67c2955748605fe0491c",
@@ -38,14 +38,27 @@
     "PythonQt/private.pyi": "fa2e0552574dfcc70299958478588b20b19f3d04bc2eddd31b8626f9a7a59795",
     "_patch_extensions.py": "907bb6ff1749b8511f43fccda767c9f6b81aacbe76389ad5c8df692dc1e85f5a",
     "fontgate.py": "16796fe6044fe23dcc74f61e38e155c71e4de753a00754d88c6dea8d282f7326",
-    "fontgate.pyi": "f439922e5c0ad358655e0b6672c4277faeffd54cf4def96c1b41bc63d4ec60b0",
+    "fontgate.pyi": "c8a2771b00736b66dcef413623ac1581649a634ff5d64ddcc950686d68149994",
     "fontlab.py": "bb9bd0abf17d4f1ec66f4e375f67a43f39ca5e39817fdbce538bb5ae58cf5498",
-    "fontlab.pyi": "2e96b3ccef0a69593e4d2c1341c8838273293748628d76c326aff1f78d7764a4",
+    "fontlab.pyi": "02f276365fa3a7c873eeab0bfbeab3d9aab1ac87d60b20177614c836b44b8e89",
     "fontpr.py": "8b8ac880f4deeff73082041c3a3d2cc9c65deeca08357b9f9d0b7a4f7a9ce6ab",
-    "fontpr.pyi": "e52309ea4a4f2975b734606c8a7ce46454ae22265ebcf4db67b8a01f36e67cfd"
+    "fontpr.pyi": "90c872ce8222d2593742c3d34bd4166cc7053c6c4480366ab4c47e655426c012"
   },
   "native_coverage": {
     "modules": {
+      "FL": {
+        "class_inspection_errors": {},
+        "class_members": 208,
+        "classes": 30,
+        "declared_names": 136,
+        "inspection_errors": [],
+        "missing_class_members": {},
+        "missing_names": [],
+        "native_names": 136,
+        "source_aliases": {
+          "WS_TABSTOP ": "WS_TABSTOP_"
+        }
+      },
       "PythonQt": {
         "class_inspection_errors": {},
         "class_members": 0,
@@ -205,18 +218,18 @@
       },
       "fontgate": {
         "class_inspection_errors": {},
-        "class_members": 1337,
-        "classes": 120,
-        "declared_names": 125,
+        "class_members": 1345,
+        "classes": 121,
+        "declared_names": 126,
         "inspection_errors": [],
         "missing_class_members": {},
         "missing_names": [],
-        "native_names": 125,
+        "native_names": 126,
         "source_aliases": {}
       },
       "fontlab": {
         "class_inspection_errors": {},
-        "class_members": 4856,
+        "class_members": 4940,
         "classes": 73,
         "declared_names": 110,
         "inspection_errors": [],
@@ -228,32 +241,26 @@
           "flObjectsList<flShape>": "flObjectsList_flShape_"
         }
       },
-      "fontlabpr": {
-        "class_inspection_errors": {},
-        "class_members": 0,
-        "classes": 0,
-        "declared_names": 0,
-        "inspection_errors": [],
-        "missing_class_members": {},
-        "missing_names": [],
-        "native_names": 0,
-        "source_aliases": {}
-      },
       "fontpr": {
         "class_inspection_errors": {},
         "class_members": 3,
         "classes": 1,
-        "declared_names": 48,
+        "declared_names": 60,
         "inspection_errors": [],
         "missing_class_members": {},
         "missing_names": [],
-        "native_names": 48,
+        "native_names": 60,
         "source_aliases": {}
       }
     },
-    "unavailable": [
-      "fontlabpr"
-    ]
+    "retained_scopes": {
+      "PythonQt": {
+        "capture_sha256": "5a405eb5a8888bc217c9653b606013439483a9ead5c0b9b1b478172c18e521e9",
+        "manifest": "_retained_identities.json",
+        "manifest_sha256": "7eab0beda0912afe9077b95a355d533d905a3cef7a369cf7d66a6023152a59d7"
+      }
+    },
+    "unavailable": []
   },
   "overlays": [
     {
@@ -262,15 +269,15 @@
     },
     {
       "file": "fontlab-proteus.json",
-      "sha256": "ec2e4e74bf9da85ebebe0ba84219cb1944a3c9c316803eb03bfc9a850c735e77"
+      "sha256": "92bc45349cdeebb3230e16879a816550b6377036304a5415685a8cc567f7aa84"
     },
     {
       "file": "fontpr-mcp.json",
-      "sha256": "d0217b859184cfb25873717f702920838b8b4ece9526e394f75201d9f7e48d61"
+      "sha256": "c9188ed5a18a3b25b288dc315015a5ee222256cbf3021217ee465633b0629776"
     },
     {
       "file": "manual.json",
-      "sha256": "4644d49ddb372ee7434c95c6a0050875f54ebd6aa3505a94fb91a9c616ba55c0"
+      "sha256": "60013333f0017219fdfc344057538051969202abe875479a2be428070e424165"
     }
   ],
   "qt_enrichment": {
@@ -2901,6 +2908,13 @@
       "url": "https://files.pythonhosted.org/packages/b9/b0/38ba6691d4ee56d25f4c261e3d1e775b8760e30d4f5e0b62574d110299af/PySide2-5.15.2.1-5.15.2-cp27-cp27m-macosx_10_13_intel.whl",
       "version": "5.15.2.1",
       "wheel": "PySide2-5.15.2.1-5.15.2-cp27-cp27m-macosx_10_13_intel.whl"
+    }
+  },
+  "retained_scopes": {
+    "PythonQt": {
+      "capture_sha256": "5a405eb5a8888bc217c9653b606013439483a9ead5c0b9b1b478172c18e521e9",
+      "manifest": "_retained_identities.json",
+      "manifest_sha256": "7eab0beda0912afe9077b95a355d533d905a3cef7a369cf7d66a6023152a59d7"
     }
   },
   "schema_version": 1,

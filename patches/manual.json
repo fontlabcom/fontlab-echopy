@@ -231,7 +231,7 @@
     "source": "generated/fontgate.py: fgComponent captured declaration"
   },
   "fontgate.fgBrush": {
-    "doc": "A brush. The captured declaration exposes the attributes `kind`, `size` and `solid`, and the methods `asDict`, `asTuple`, `black`, `isBlack`, `isTransparent` and `transparent`. It is created as `fgBrush()`, as a copy `fgBrush(fgBrush)`, as `fgBrush(fgColor)` for a solid brush with the default size (1, 0), or as `fgBrush(fgColor, fgPoint)` for a solid brush with a size.",
+    "doc": "A stroke brush. The captured declaration exposes the attributes `kind`, `solid`, `thickness`, `contrast`, `rotation`, `proportion`, `join_type`, `miter_limit`, `tolerance`, `remove_overlap`, `cap0` and `cap1`, and the methods `asDict`, `asTuple`, `black`, `isBlack`, `isTransparent` and `transparent`. FontLab 9.1 removed the old size attribute; use `thickness` and the other stroke members.",
     "source": "generated/fontgate.py: fgBrush captured declaration"
   },
   "fontgate.fgCmapRecord": {

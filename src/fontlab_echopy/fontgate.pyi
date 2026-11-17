@@ -109,6 +109,7 @@ fgOpt_Optimize: fgOpt_Optimize options page
 fgBitmap: Bitmap representation
 fgBitmaps: list of  fgBitmap objects
 fgBitmapsData: BitmapsData representation
+fgCapParams: fgCapParams representation
 fgBrush: Brush representation
 fgColor: Color representation
 fgCurve: Curve representation
@@ -127,6 +128,7 @@ Supplemental documentation:
 Low-level FontLab font data API. fgFont provides glyphs, naming data, features and kerning; fgGlyph provides glyph data. Feature data is exposed by fgFont.features; there is no captured module-level fgFeatures class."""
 from __future__ import annotations
 from typing import Any
+import builtins as _echopy_builtins
 
 class fgAnchor:
     """Anchor representation
@@ -139,13 +141,19 @@ Constructors:
 
 Native bases: object
 
+Captured native MRO: fgAnchor, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature.
+
 Supplemental documentation:
 A font-data anchor with `name`, `x` and `y` attributes. `position` exposes its coordinates as an fgPoint. `draw()` sends the anchor to a segment pen; `drawPoints()` uses a point pen. Consult the retained constructors for copying and named coordinate forms.
 
 Source: generated/fontgate.py: fgAnchor captured declaration"""
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
 
     def copy(self, arg0: fgAnchor) -> Any:
@@ -195,13 +203,19 @@ class fgAnchors:
 
 Native bases: object
 
+Captured native MRO: fgAnchors, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature.
+
 Supplemental documentation:
 A list of anchor objects. The captured declaration exposes `append`, `asList`, `clean`, `del_` and `insert`. The native spelling of `del_` is del, which the capture says to reach through getattr on the native object.
 
 Source: generated/fontgate.py: fgAnchors captured declaration"""
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
 
     def append(self, *args: Any, **kwargs: Any) -> Any:
@@ -235,13 +249,19 @@ Constructors:
 
 Native bases: object
 
+Captured native MRO: fgAxes, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature.
+
 Supplemental documentation:
 An axes list representation with a `masters` attribute holding the masters (fgMasters). It is created as `fgAxes()` or as a copy `fgAxes(fgAxes)`.
 
 Source: generated/fontgate.py: fgAxes captured declaration"""
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
     masters: Any
     '(fgMasters) - masters'
@@ -254,13 +274,19 @@ Constructors:
 
 Native bases: object
 
+Captured native MRO: fgAxis, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature.
+
 Supplemental documentation:
 An axis. The captured declaration exposes the attributes `blendMap`, `map`, `name`, `shortName` and `type`. It is created as `fgAxis('name')`, which sets the name.
 
 Source: generated/fontgate.py: fgAxis captured declaration"""
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
     blendMap: Any
     '(list(Point))'
@@ -282,10 +308,16 @@ Constructors:
   fgBitmap(width, height, bitsPerPixel)
   fgBitmap(width, height, rowBytes, bitsPerPixel, bytesarray)
 
-Native bases: object"""
+Native bases: object
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+Captured native MRO: fgBitmap, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature."""
+
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
 
     def asDict(self, *args: Any, **kwargs: Any) -> Any:
@@ -365,13 +397,19 @@ class fgBitmaps:
 
 Native bases: object
 
+Captured native MRO: fgBitmaps, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature.
+
 Supplemental documentation:
 A list of bitmap objects. The captured declaration exposes `append`, `asList`, `clean`, `del_` and `insert`. The native spelling of `del_` is del, which the capture says to reach through getattr on the native object.
 
 Source: generated/fontgate.py: fgBitmaps captured declaration"""
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
 
     def append(self, *args: Any, **kwargs: Any) -> Any:
@@ -403,10 +441,16 @@ Constructors:
   fgBitmapsData() - default
   fgBitmapsData(fgBitmapsData) - copy
 
-Native bases: object"""
+Native bases: object
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+Captured native MRO: fgBitmapsData, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature."""
+
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
 
     def OK(self) -> bool:
@@ -486,13 +530,19 @@ Constructors:
 
 Native bases: object
 
+Captured native MRO: fgBrush, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature.
+
 Supplemental documentation:
-A brush. The captured declaration exposes the attributes `kind`, `size` and `solid`, and the methods `asDict`, `asTuple`, `black`, `isBlack`, `isTransparent` and `transparent`. It is created as `fgBrush()`, as a copy `fgBrush(fgBrush)`, as `fgBrush(fgColor)` for a solid brush with the default size (1, 0), or as `fgBrush(fgColor, fgPoint)` for a solid brush with a size.
+A stroke brush. The captured declaration exposes the attributes `kind`, `solid`, `thickness`, `contrast`, `rotation`, `proportion`, `join_type`, `miter_limit`, `tolerance`, `remove_overlap`, `cap0` and `cap1`, and the methods `asDict`, `asTuple`, `black`, `isBlack`, `isTransparent` and `transparent`. FontLab 9.1 removed the old size attribute; use `thickness` and the other stroke members.
 
 Source: generated/fontgate.py: fgBrush captured declaration"""
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
 
     def asDict(self, *args: Any, **kwargs: Any) -> Any:
@@ -503,7 +553,8 @@ Source: generated/fontgate.py: fgBrush captured declaration"""
         """represent object as tuple"""
         ...
 
-    def black(self) -> fgBrush:
+    @_echopy_builtins.staticmethod
+    def black() -> fgBrush:
         """fgBrush black() - get black solid brush"""
         ...
 
@@ -515,28 +566,53 @@ Source: generated/fontgate.py: fgBrush captured declaration"""
         """bool isTransparent() - return true if brush is transparent"""
         ...
 
-    def transparent(self) -> fgBrush:
+    @_echopy_builtins.staticmethod
+    def transparent() -> fgBrush:
         """fgBrush transparent() - get transparent solid brush"""
         ...
+    cap0: Any
+    'fgCapParams start cap (copy; assign back after editing)'
+    cap1: Any
+    'fgCapParams end cap (copy; assign back after editing)'
+    contrast: Any
+    '(float) stroke contrast, 1.0 = none'
+    join_type: Any
+    '(int) 0 = bevel, 1 = round, 2 = miter'
     kind: Any
     "('Empty'/'Solid'/'Gradient') brush type "
-    size: Any
-    '(fgPoint) brush size by x and y axis'
+    miter_limit: Any
+    '(float) miter limit'
+    proportion: Any
+    '(float) nib proportion, 0..1 (0.5 = round/square nib)'
+    remove_overlap: Any
+    '(bool) remove overlap of the expanded stroke'
+    rotation: Any
+    '(float) nib rotation in degrees'
     solid: Any
     '(fgColor) brush color '
+    thickness: Any
+    '(float) stroke thickness'
+    tolerance: Any
+    '(float) stroke approximation tolerance'
 
 class fgCMaps:
     """list of fgCmapRecord objects
 
 Native bases: object
 
+Captured native MRO: fgCMaps, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature.
+
 Supplemental documentation:
 A list of character map objects. The captured declaration exposes `append`, `asList`, `clean`, `del_` and `insert`. The native spelling of `del_` is del, which the capture says to reach through getattr on the native object.
 
 Source: generated/fontgate.py: fgCMaps captured declaration"""
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
 
     def append(self, *args: Any, **kwargs: Any) -> Any:
@@ -561,6 +637,34 @@ Native spelling: del; access it through getattr on the native object."""
         """Native fontgate.fgCMaps.insert; argument details are not documented."""
         ...
 
+class fgCapParams:
+    """fgCapParams representation
+
+Native bases: object
+
+Captured native MRO: fgCapParams, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature."""
+
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+        ...
+
+    def asDict(self, *args: Any, **kwargs: Any) -> Any:
+        """represent object as dictionary"""
+        ...
+
+    def asTuple(self, *args: Any, **kwargs: Any) -> Any:
+        """represent object as tuple"""
+        ...
+    curvature: Any
+    offset: Any
+    rotation: Any
+    shaping: Any
+    type: Any
+
 class fgCaret:
     """Caret representation
 
@@ -571,13 +675,19 @@ fgCaret((fgOtValue/float/int, 'name')) - by coordinate and name
 
 Native bases: object
 
+Captured native MRO: fgCaret, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature.
+
 Supplemental documentation:
 A caret with a string `name` and a coordinate `v` (fgOtValue). It is created as `fgCaret()`, as a copy `fgCaret(fgCaret)` or from a coordinate and name as `fgCaret((fgOtValue/float/int, 'name'))`.
 
 Source: generated/fontgate.py: fgCaret captured declaration"""
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
     name: Any
     '(string) name'
@@ -589,13 +699,19 @@ class fgCarets:
 
 Native bases: object
 
+Captured native MRO: fgCarets, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature.
+
 Supplemental documentation:
 A list of caret objects. The captured declaration exposes `append`, `asList`, `clean`, `del_` and `insert`. The native spelling of `del_` is del, which the capture says to reach through getattr on the native object.
 
 Source: generated/fontgate.py: fgCarets captured declaration"""
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
 
     def append(self, *args: Any, **kwargs: Any) -> Any:
@@ -625,13 +741,19 @@ class fgCmapRecord:
 
 Native bases: object
 
+Captured native MRO: fgCmapRecord, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature.
+
 Supplemental documentation:
 A cmap record. The captured declaration exposes the attributes `eid`, `format`, `lid`, `nid`, `pagename`, `pid` and `type`, and the methods `asDict` and `asTuple`.
 
 Source: generated/fontgate.py: fgCmapRecord captured declaration"""
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
 
     def asDict(self, *args: Any, **kwargs: Any) -> Any:
@@ -661,13 +783,19 @@ Constructors:
 
 Native bases: object
 
+Captured native MRO: fgCoding, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature.
+
 Supplemental documentation:
 Coding data. The captured declaration exposes the attributes `cmaps`, `codepageRange`, `encoding`, `encodingType`, `importedEncoding` and `unicodeRange`. It is created as `fgCoding()`, as a copy `fgCoding(fgCoding)` or as `fgCoding(bool [unicodeRange], bool [codepageRange], fgCMaps cmaps, fgEncoding encoding, fgEncoding importedEncoding, 'encDefault'/'encStandard'/'encCustom')`.
 
 Source: generated/fontgate.py: fgCoding captured declaration"""
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
     cmaps: Any
     '(fgCMaps)'
@@ -690,10 +818,16 @@ Constructors:  fgColor() - default
   fgColor(float hueValue) - by hue value  fgColor(r, g, b) - by r, g, b, float values from 0 to 1.0
   fgColor(r, g, b, a) - by r, g, b, a float values from 0 to 1.0
 
-Native bases: object"""
+Native bases: object
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+Captured native MRO: fgColor, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature."""
+
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
 
     def A(self) -> int:
@@ -720,15 +854,18 @@ Native bases: object"""
         """represent object as tuple"""
         ...
 
-    def black(self) -> fgColor:
+    @_echopy_builtins.staticmethod
+    def black() -> fgColor:
         """fgColor black() - get black color"""
         ...
 
-    def fromInt(self, r: Any, g: Any, a: Any=...) -> fgColor:
+    @_echopy_builtins.staticmethod
+    def fromInt(r: Any, g: Any, a: Any=...) -> fgColor:
         """fgColor fromInt(r, g, b[, a=255]) - get color by int rgb(a) values (0..255)"""
         ...
 
-    def fromLab(self, l: Any, a: Any, b: Any) -> fgColor:
+    @_echopy_builtins.staticmethod
+    def fromLab(l: Any, a: Any, b: Any) -> fgColor:
         """fgColor fromLab(l, a, b) - get color by float lab values"""
         ...
 
@@ -772,7 +909,8 @@ Native bases: object"""
         """setHue(h[, s=1.0[, l = 0.5]]) - set by hsl float values"""
         ...
 
-    def transparent(self) -> fgColor:
+    @_echopy_builtins.staticmethod
+    def transparent() -> fgColor:
         """fgColor transparent() - get transparent color"""
         ...
 
@@ -798,13 +936,19 @@ Constructors:
 
 Native bases: object
 
+Captured native MRO: fgComponent, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature.
+
 Supplemental documentation:
 A component. The captured declaration exposes the attributes `baseGlyph`, `box`, `hasFullMatrix`, `index`, `matrix`, `offset` and `scale`, and the methods `draw`, `drawPoints` and `move`. `draw` takes a segment pen, `drawPoints` takes a point pen, and `move` takes float dx and dy. It is created as `fgComponent()`, as a copy `fgComponent(fgComponent)` or as `fgComponent('name', fgMatrix)`.
 
 Source: generated/fontgate.py: fgComponent captured declaration"""
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
 
     def draw(self, object: Any) -> Any:
@@ -833,10 +977,16 @@ Source: generated/fontgate.py: fgComponent captured declaration"""
 class fgComponents:
     """list of fgComponent objects
 
-Native bases: object"""
+Native bases: object
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+Captured native MRO: fgComponents, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature."""
+
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
 
     def append(self, *args: Any, **kwargs: Any) -> Any:
@@ -878,13 +1028,19 @@ Constructors:
 
 Native bases: object
 
+Captured native MRO: fgContour, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature.
+
 Supplemental documentation:
 A contour in the fontgate data model. The captured declaration exposes `nodes`, `getNodes`, `getNode`, `countNodes` and `open`. Consult the native declarations for supported calling conventions.
 
 Source: generated/fontgate.py: fgContour captured declaration"""
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
 
     def appendNode(self, arg0: fgNode) -> Any:
@@ -1006,13 +1162,19 @@ class fgContours:
 
 Native bases: object
 
+Captured native MRO: fgContours, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature.
+
 Supplemental documentation:
 A list of contour objects. The captured declaration exposes `append`, `asList`, `clean`, `del_` and `insert`. The native spelling of `del_` is del, which the capture says to reach through getattr on the native object.
 
 Source: generated/fontgate.py: fgContours captured declaration"""
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
 
     def append(self, *args: Any, **kwargs: Any) -> Any:
@@ -1050,10 +1212,16 @@ Constructors:
   fgCurve( fgPoint, fgPoint, fgPoint, fgPoint )
   fgCurve( fgCurve, float t0, float t1 )
 
-Native bases: object"""
+Native bases: object
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+Captured native MRO: fgCurve, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature."""
+
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
 
     def asDict(self, *args: Any, **kwargs: Any) -> Any:
@@ -1169,13 +1337,19 @@ Constructors:
 
 Native bases: object
 
+Captured native MRO: fgCuspPoint, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature.
+
 Supplemental documentation:
 A cusp point. The captured declaration exposes the attributes `hlink0`, `hlink1`, `index`, `middleH`, `middleV`, `p`, `vlink0` and `vlink1`. It is created as `fgCuspPoint()` or as a copy `fgCuspPoint(fgCuspPoint)`.
 
 Source: generated/fontgate.py: fgCuspPoint captured declaration"""
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
 
     def middleH(self) -> bool:
@@ -1203,13 +1377,19 @@ class fgCuspPoints:
 
 Native bases: object
 
+Captured native MRO: fgCuspPoints, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature.
+
 Supplemental documentation:
 A list of cusp point objects. The captured declaration exposes `append`, `asList`, `clean`, `del_` and `insert`. The native spelling of `del_` is del, which the capture says to reach through getattr on the native object.
 
 Source: generated/fontgate.py: fgCuspPoints captured declaration"""
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
 
     def append(self, *args: Any, **kwargs: Any) -> Any:
@@ -1244,13 +1424,19 @@ Constructors:
 
 Native bases: object
 
+Captured native MRO: fgDesignPosition, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature.
+
 Supplemental documentation:
 A design position whose `data` attribute is a list of doubles. It is created as `fgDesignPosition()`, as a copy `fgDesignPosition(fgDesignPosition)` or from an axis count as `fgDesignPosition(axisCount)`.
 
 Source: generated/fontgate.py: fgDesignPosition captured declaration"""
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
     data: Any
     '(list(double)) - data'
@@ -1266,13 +1452,19 @@ Constructors:
 
 Native bases: object
 
+Captured native MRO: fgDeviceRecord, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature.
+
 Supplemental documentation:
 A device record with int attributes `ppm` and `correction`. It is created as `fgDeviceRecord()`, as a copy `fgDeviceRecord(fgDeviceRecord)`, from a tuple `fgDeviceRecord(tuple(int ppm, int correction))` or as `fgDeviceRecord(int ppm, int correction)`.
 
 Source: generated/fontgate.py: fgDeviceRecord captured declaration"""
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
     correction: Any
     '(int)'
@@ -1284,13 +1476,19 @@ class fgDeviceRecords:
 
 Native bases: object
 
+Captured native MRO: fgDeviceRecords, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature.
+
 Supplemental documentation:
 A list of device record objects. The captured declaration exposes `append`, `asList`, `clean`, `del_` and `insert`. The native spelling of `del_` is del, which the capture says to reach through getattr on the native object.
 
 Source: generated/fontgate.py: fgDeviceRecords captured declaration"""
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
 
     def append(self, *args: Any, **kwargs: Any) -> Any:
@@ -1318,10 +1516,16 @@ Native spelling: del; access it through getattr on the native object."""
 class fgExtMapIntTofgShape:
     """fgExtMapIntTofgShape dictionary
 
-Native bases: object"""
+Native bases: object
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+Captured native MRO: fgExtMapIntTofgShape, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature."""
+
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
 
     def asDict(self, *args: Any, **kwargs: Any) -> Any:
@@ -1349,10 +1553,16 @@ Native spelling: del; access it through getattr on the native object."""
 class fgExtMapUCharToUChar:
     """fgExtMapUCharToUChar dictionary
 
-Native bases: object"""
+Native bases: object
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+Captured native MRO: fgExtMapUCharToUChar, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature."""
+
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
 
     def asDict(self, *args: Any, **kwargs: Any) -> Any:
@@ -1380,10 +1590,16 @@ Native spelling: del; access it through getattr on the native object."""
 class fgExtMapUIntToString:
     """fgExtMapUIntToString dictionary
 
-Native bases: object"""
+Native bases: object
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+Captured native MRO: fgExtMapUIntToString, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature."""
+
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
 
     def asDict(self, *args: Any, **kwargs: Any) -> Any:
@@ -1411,10 +1627,16 @@ Native spelling: del; access it through getattr on the native object."""
 class fgExtMapUShortToShort:
     """fgExtMapUShortToShort dictionary
 
-Native bases: object"""
+Native bases: object
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+Captured native MRO: fgExtMapUShortToShort, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature."""
+
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
 
     def asDict(self, *args: Any, **kwargs: Any) -> Any:
@@ -1442,10 +1664,16 @@ Native spelling: del; access it through getattr on the native object."""
 class fgFlagsDict:
     """bool flags diactionary
 
-Native bases: object"""
+Native bases: object
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+Captured native MRO: fgFlagsDict, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature."""
+
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
 
     def asDict(self, *args: Any, **kwargs: Any) -> Any:
@@ -1479,13 +1707,19 @@ Constructors:
 
 Native bases: object
 
+Captured native MRO: fgFont, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature.
+
 Supplemental documentation:
 A font data object. The captured declaration exposes `glyphs`, `info`, `features`, `kerning` and `axes`. Access naming information through `info`; the captured fgFont has no family attribute. Consult each native member declaration for its return type and calling convention.
 
 Source: generated/fontgate.py: fgFont captured declaration"""
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
 
     def addGlyph(self, arg0: fgGlyph) -> fgGlyph:
@@ -1639,10 +1873,16 @@ Constructors:
   fgFontGateData() - default
   fgFontGateData(fgFontGateData) - copy
 
-Native bases: object"""
+Native bases: object
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+Captured native MRO: fgFontGateData, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature."""
+
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
 
     def OK(self) -> bool:
@@ -1762,10 +2002,16 @@ Constructors:
   fgFontHinting() - default
   fgFontHinting(fgFontHinting) - copy
 
-Native bases: object"""
+Native bases: object
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+Captured native MRO: fgFontHinting, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature."""
+
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
 
     def generateStemsProgram(self, upm: Any, keepValues: bool) -> Any:
@@ -1855,10 +2101,16 @@ class fgFontInfo:
 
 No constructors - it's the direct member of the fgFont object
 
-Native bases: object"""
+Native bases: object
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+Captured native MRO: fgFontInfo, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature."""
+
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
     ascender: Any
     'Ascender value'
@@ -2060,10 +2312,16 @@ Native bases: object"""
 class fgFontInfoDict:
     """Font info dictionaries
 
-Native bases: object"""
+Native bases: object
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+Captured native MRO: fgFontInfoDict, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature."""
+
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
     flags: Any
     hinting: Any
@@ -2080,13 +2338,19 @@ Constructors:  fgGaspRecord() - default
 
 Native bases: object
 
+Captured native MRO: fgGaspRecord, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature.
+
 Supplemental documentation:
 A gasp record. The captured declaration exposes the attributes `rangeMaxpPPEM` and the behavior constants `DOGRAY`, `GRIDFIT`, `SYMMETRIC_GRIDFIT` and `SYMMETRIC_SMOOTHING`, and the methods `addSymmetry`, `rangeGaspBehavior` and `set`. It is created as `fgGaspRecord()`, as a copy `fgGaspRecord(fgGaspRecord)` or as `fgGaspRecord(int rangeMaxPPEM, int rangeGaspBehavior)`.
 
 Source: generated/fontgate.py: fgGaspRecord captured declaration"""
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
 
     def addSymmetry(self, *args: Any, **kwargs: Any) -> Any:
@@ -2116,13 +2380,19 @@ class fgGaspRecords:
 
 Native bases: object
 
+Captured native MRO: fgGaspRecords, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature.
+
 Supplemental documentation:
 A list of gasp record objects. The captured declaration exposes `append`, `asList`, `clean`, `del_` and `insert`. The native spelling of `del_` is del, which the capture says to reach through getattr on the native object.
 
 Source: generated/fontgate.py: fgGaspRecords captured declaration"""
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
 
     def append(self, *args: Any, **kwargs: Any) -> Any:
@@ -2157,6 +2427,12 @@ Constructors:
 
 Native bases: object
 
+Captured native MRO: fgGlyph, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature.
+
 Supplemental documentation:
 A glyph data object. The captured declaration exposes `name`, `unicode`, `unicodes`, `width`, `anchors` and `components`. Outlines are associated with layer data rather than a contours attribute.
 
@@ -2168,8 +2444,8 @@ Example::
 
 Source: generated/fontgate.py: fgGlyph captured declaration"""
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
 
     def addUnicode(self, unicode: Any) -> Any:
@@ -2373,10 +2649,16 @@ Constructors:
   fgGlyphData() - default
   fgGlyphData(fgGlyphData) - copy
 
-Native bases: object"""
+Native bases: object
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+Captured native MRO: fgGlyphData, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature."""
+
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
 
     def OK(self) -> bool:
@@ -2452,13 +2734,19 @@ class fgGlyphDict:
 
 Native bases: object
 
+Captured native MRO: fgGlyphDict, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature.
+
 Supplemental documentation:
 Glyph dictionaries. The captured declaration exposes the attributes `flags`, `lib`, `tags` and `values`.
 
 Source: generated/fontgate.py: fgGlyphDict captured declaration"""
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
     flags: Any
     lib: Any
@@ -2474,13 +2762,19 @@ Constructors:
 
 Native bases: object
 
+Captured native MRO: fgGlyphIDsSet, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature.
+
 Supplemental documentation:
 A set of glyph ids. The captured declaration exposes `asList`, `clean`, `contains` (which returns a bool) and `del_`. It is created as `fgGlyphIDsSet()` or as a copy `fgGlyphIDsSet(fgGlyphIDsSet)`. The native spelling of `del_` is del, which the capture says to reach through getattr on the native object.
 
 Source: generated/fontgate.py: fgGlyphIDsSet captured declaration"""
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
 
     def asList(self) -> Any:
@@ -2506,13 +2800,19 @@ class fgGlyphs:
 
 Native bases: object
 
+Captured native MRO: fgGlyphs, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature.
+
 Supplemental documentation:
 A list of glyph objects. The captured declaration exposes `append`, `asList`, `clean`, `del_` and `insert`. The native spelling of `del_` is del, which the capture says to reach through getattr on the native object.
 
 Source: generated/fontgate.py: fgGlyphs captured declaration"""
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
 
     def append(self, *args: Any, **kwargs: Any) -> Any:
@@ -2545,10 +2845,16 @@ Constructors:
   fgGlyphsR(fgGlyphsR) - copy
   fgGlyphsR(fgGlyphs) - create from list(fgGlyph)
 
-Native bases: object"""
+Native bases: object
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+Captured native MRO: fgGlyphsR, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature."""
+
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
 
     def find(self, *args: Any, **kwargs: Any) -> Any:
@@ -2590,13 +2896,19 @@ Constructors:
 
 Native bases: object
 
+Captured native MRO: fgGroup, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature.
+
 Supplemental documentation:
 A kerning or metrics group with an int `id`, a string `name` and a `mode`. The captured mode values are `'FeaClassGroupMode'`, `'KernLeftGroupMode'`, `'KernRightGroupMode'` and `'KernBothSideGroupMode'`. The captured declaration exposes `isBoth`, `isFeaGroup`, `isLeft` and `isRight`. It is created as `fgGroup()`, as a copy `fgGroup(fgGroup)` or as `fgGroup(('name', [ids], mode, 'mainglyphname'))`.
 
 Source: generated/fontgate.py: fgGroup captured declaration"""
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
 
     def isBoth(self, *args: Any, **kwargs: Any) -> Any:
@@ -2628,10 +2940,16 @@ Constructors:
   fgGroups() - default
   fgGroups(fgDataOwnerData) - parametric
 
-Native bases: object"""
+Native bases: object
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+Captured native MRO: fgGroups, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature."""
+
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
 
     def asDict(self) -> Any:
@@ -2697,13 +3015,19 @@ Constructors:
 
 Native bases: object
 
+Captured native MRO: fgGuide, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature.
+
 Supplemental documentation:
 A guide. The captured declaration exposes the attributes `color`, `horizontal`, `index`, `name`, `p0`, `p1`, `position` and `vertical`, and the method `copy`. It is created as `fgGuide()`, as a copy `fgGuide(fgGuide)`, as `fgGuide(float pos[, bool horizontal = false])` or as `fgGuide(fgPoint p0, fgPoint p1[, name=''[, horizonta=false[, color=fgColor]]])`.
 
 Source: generated/fontgate.py: fgGuide captured declaration"""
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
 
     def copy(self) -> fgGuide:
@@ -2729,10 +3053,16 @@ Source: generated/fontgate.py: fgGuide captured declaration"""
 class fgGuides:
     """list of fgGuide objects
 
-Native bases: object"""
+Native bases: object
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+Captured native MRO: fgGuides, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature."""
+
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
 
     def append(self, *args: Any, **kwargs: Any) -> Any:
@@ -2773,10 +3103,16 @@ Constructors:
   fgHint(fgHint) - copy
   fgHint(name= , v= , dv= , point0= , point1= , p0= , p1= , points0= , points1= , horizontal= )
 
-Native bases: object"""
+Native bases: object
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+Captured native MRO: fgHint, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature."""
+
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
 
     def copy(self, *args: Any, **kwargs: Any) -> Any:
@@ -2815,13 +3151,19 @@ Constructors:
 
 Native bases: object
 
+Captured native MRO: fgHintCommand, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature.
+
 Supplemental documentation:
 A hint command. The captured declaration exposes the attributes `code`, `index`, `pointName` and `subrIndex`. It is created as `fgHintCommand()`, as a copy `fgHintCommand(fgHintCommand)` or as `fgHintCommand(code, index)`, where the possible values for code are 'none'/'hintH'/'hintV'/'replace'.
 
 Source: generated/fontgate.py: fgHintCommand captured declaration"""
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
     code: Any
     "('none'/'hintH'/'hintV'/'replace') code"
@@ -2835,10 +3177,16 @@ Source: generated/fontgate.py: fgHintCommand captured declaration"""
 class fgHintCommands:
     """list of fgHintCommand objects
 
-Native bases: object"""
+Native bases: object
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+Captured native MRO: fgHintCommands, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature."""
+
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
 
     def append(self, *args: Any, **kwargs: Any) -> Any:
@@ -2866,10 +3214,16 @@ Native spelling: del; access it through getattr on the native object."""
 class fgHints:
     """list of fgHint objects
 
-Native bases: object"""
+Native bases: object
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+Captured native MRO: fgHints, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature."""
+
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
 
     def append(self, *args: Any, **kwargs: Any) -> Any:
@@ -2921,10 +3275,16 @@ Native spelling: del; access it through getattr on the native object."""
 class fgIntDict:
     """int dictionary
 
-Native bases: object"""
+Native bases: object
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+Captured native MRO: fgIntDict, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature."""
+
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
 
     def asDict(self, *args: Any, **kwargs: Any) -> Any:
@@ -2957,13 +3317,19 @@ Constructors:
 
 Native bases: object
 
+Captured native MRO: fgKerning, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature.
+
 Supplemental documentation:
 The kerning table of a font. The captured declaration exposes `get` and `set` for a value addressed by a pair or by a tuple of two names, `has_key`, `keys`, `values`, `items`, `asDict`, `remove` and `clear`, and the group operations `addGroup`, `deleteGroup`, `deleteAllGroups`, `renameGroup` and `hasGroupKerning`. It also exposes `getPlainPairs`, `getPlainPairsDict`, `setPlainPairs`, `scale` and the `groups` attribute.
 
 Source: generated/fontgate.py: fgKerning captured declaration"""
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
 
     def addGroup(self, *args: Any, **kwargs: Any) -> Any:
@@ -3047,13 +3413,19 @@ Constructors:
 
 Native bases: object
 
+Captured native MRO: fgKerningGroups, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature.
+
 Supplemental documentation:
 A dictionary of kerning groups. The captured declaration exposes `has_key`, `keys`, `values`, `items`, `asDict`, `clear`, `remove` and `rename`. Each item is a group name with a list of glyph names and a mode.
 
 Source: generated/fontgate.py: fgKerningGroups captured declaration"""
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
 
     def asDict(self, *args: Any, **kwargs: Any) -> Any:
@@ -3097,13 +3469,19 @@ Constructors:  fgKerningObject() - default
 
 Native bases: object
 
+Captured native MRO: fgKerningObject, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature.
+
 Supplemental documentation:
 One side of a kerning pair: a glyph or a group. The captured declaration exposes `id` (the glyph or group name) and `mode` (glyphMode or groupMode), with `asDict` and `asTuple`. Consult the retained constructor documentation for the supported creation forms.
 
 Source: generated/fontgate.py: fgKerningObject captured declaration"""
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
 
     def asDict(self, *args: Any, **kwargs: Any) -> Any:
@@ -3130,13 +3508,19 @@ Constructors:  fgKerningObjectPair() - default
 
 Native bases: object
 
+Captured native MRO: fgKerningObjectPair, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature.
+
 Supplemental documentation:
 A kerning pair made of a `left` and a `right` kerning object, each a glyph or a group, with `asDict` and `asTuple`. Consult the retained constructor documentation for the supported creation forms, which take names, kerning objects or a tuple of two kerning objects.
 
 Source: generated/fontgate.py: fgKerningObjectPair captured declaration"""
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
 
     def asDict(self, *args: Any, **kwargs: Any) -> Any:
@@ -3165,13 +3549,19 @@ Math operation:
 
 Native bases: object
 
+Captured native MRO: fgLayer, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature.
+
 Supplemental documentation:
 A font-data layer exposing `name`, `anchors`, `guides` and `hints`. The captured declarations identify those collections as fgAnchors, fgGuides and fgHints. `countContours()` and `countShapes()` report contour and shape counts; `addContour()` adds an fgContour and returns an fgContour. Consult the member documentation for transformation and bounding-box arguments.
 
 Source: generated/fontgate.py: fgLayer captured declaration"""
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
 
     def addContour(self, arg0: fgContour) -> fgContour:
@@ -3283,10 +3673,16 @@ Source: generated/fontgate.py: fgLayer captured declaration"""
 class fgLayers:
     """list of fgLayer objects
 
-Native bases: object"""
+Native bases: object
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+Captured native MRO: fgLayers, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature."""
+
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
 
     def append(self, *args: Any, **kwargs: Any) -> Any:
@@ -3316,13 +3712,19 @@ class fgLib:
 
 Native bases: object
 
+Captured native MRO: fgLib, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature.
+
 Supplemental documentation:
 A dictionary with font- or glyph-related data. The captured declaration exposes the methods `clear`, `get`, `hasKey`, `items`, `keys` and `update`.
 
 Source: generated/fontgate.py: fgLib captured declaration"""
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
 
     def clear(self, *args: Any, **kwargs: Any) -> Any:
@@ -3352,10 +3754,16 @@ Source: generated/fontgate.py: fgLib captured declaration"""
 class fgMapBytes:
     """Raw data dictionary
 
-Native bases: object"""
+Native bases: object
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+Captured native MRO: fgMapBytes, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature."""
+
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
 
     def asDict(self, *args: Any, **kwargs: Any) -> Any:
@@ -3390,13 +3798,19 @@ Constructors:
 
 Native bases: object
 
+Captured native MRO: fgMaster, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature.
+
 Supplemental documentation:
 A master. The captured declaration exposes the attributes `name`, `penColor` and `position`. It is created as `fgMaster()`, as a copy `fgMaster(fgMaster)` or as `fgMaster('name')`.
 
 Source: generated/fontgate.py: fgMaster captured declaration"""
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
     name: Any
     '(string) - name'
@@ -3410,13 +3824,19 @@ class fgMasters:
 
 Native bases: object
 
+Captured native MRO: fgMasters, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature.
+
 Supplemental documentation:
 A list of fgMaster objects. The captured declaration exposes `append`, `asList`, `clean`, `del_` and `insert`. The native spelling of `del_` is del, which the capture says to reach through getattr on the native object.
 
 Source: generated/fontgate.py: fgMasters captured declaration"""
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
 
     def append(self, *args: Any, **kwargs: Any) -> Any:
@@ -3455,13 +3875,19 @@ Math operation:
 
 Native bases: object
 
+Captured native MRO: fgMatrix, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature.
+
 Supplemental documentation:
 A transformation matrix with the attributes `m11`, `m12`, `m21`, `m22`, `dx` and `dy`. The captured declaration exposes `asDict`, `asTuple`, `assign`, `determinant`, `invert`, `inverted`, `invertible`, `noMove`, `noRotate`, `noScale`, `scale`, `slant` and `standard`. It is created as `fgMatrix()`, as a copy `fgMatrix(fgMatrix)` or as `fgMatrix(m11, m12, m21, m22, dx, dy)`; two matrices combine with `fgMatrix * fgMatrix`.
 
 Source: generated/fontgate.py: fgMatrix captured declaration"""
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
 
     def asDict(self, *args: Any, **kwargs: Any) -> Any:
@@ -3527,13 +3953,19 @@ class fgMaxP:
 
 Native bases: object
 
+Captured native MRO: fgMaxP, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature.
+
 Supplemental documentation:
 The maxp table values. The captured declaration exposes the attributes `maxFunctionDefs`, `maxInstructionDefs`, `maxStackElements`, `maxStorage`, `maxTwilightPoints` and `maxZones`, and the methods `asDict` and `asTuple`.
 
 Source: generated/fontgate.py: fgMaxP captured declaration"""
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
 
     def asDict(self, *args: Any, **kwargs: Any) -> Any:
@@ -3559,13 +3991,19 @@ Constructors:
 
 Native bases: object
 
+Captured native MRO: fgMetricsClass, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature.
+
 Supplemental documentation:
 A metrics class. The captured declaration exposes the attributes `glyphs`, `keyGlyphName`, `left`, `name`, `right` and `width`, and the method `hasGlyph`. It is created as `fgMetricsClass()` or as a copy `fgMetricsClass(fgMetricsClass)`.
 
 Source: generated/fontgate.py: fgMetricsClass captured declaration"""
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
 
     def hasGlyph(self, *args: Any, **kwargs: Any) -> Any:
@@ -3589,10 +4027,16 @@ Source: generated/fontgate.py: fgMetricsClass captured declaration"""
 class fgMetricsClasses:
     """list of fgMetricsClass objects
 
-Native bases: object"""
+Native bases: object
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+Captured native MRO: fgMetricsClasses, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature."""
+
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
 
     def append(self, *args: Any, **kwargs: Any) -> Any:
@@ -3620,10 +4064,16 @@ Native spelling: del; access it through getattr on the native object."""
 class fgNametable:
     """NameTable - unicode->name translation and vice versa
 
-Native bases: object"""
+Native bases: object
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+Captured native MRO: fgNametable, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature."""
+
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
 
     def easyCompare(self, *args: Any, **kwargs: Any) -> Any:
@@ -3662,10 +4112,16 @@ Math operation:
   fgNode - fgNode
   fgNode * float
 
-Native bases: object"""
+Native bases: object
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+Captured native MRO: fgNode, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature."""
+
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
 
     def isCurve(self) -> bool:
@@ -3733,10 +4189,16 @@ Native bases: object"""
 class fgNodes:
     """list of fgNode objects
 
-Native bases: object"""
+Native bases: object
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+Captured native MRO: fgNodes, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature."""
+
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
 
     def append(self, *args: Any, **kwargs: Any) -> Any:
@@ -3768,10 +4230,16 @@ Constructors:
   fgOTLayout(fgDataOwnerData)
   fgOTLayout(fgFont)
 
-Native bases: object"""
+Native bases: object
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+Captured native MRO: fgOTLayout, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature."""
+
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
 
     def clear(self) -> Any:
@@ -3809,10 +4277,16 @@ Native bases: object"""
 class fgOpt_AutoMetrics:
     """fgOpt_AutoMetrics options page
 
-Native bases: object"""
+Native bases: object
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+Captured native MRO: fgOpt_AutoMetrics, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature."""
+
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
     close: Any
     left: Any
@@ -3821,22 +4295,33 @@ Native bases: object"""
 class fgOpt_EOTExport:
     """fgOpt_EOTExport options page
 
-Native bases: object"""
+Native bases: object
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+Captured native MRO: fgOpt_EOTExport, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature."""
+
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
     doCompression: Any
     doXORCryptData: Any
-    otExport: Any
 
 class fgOpt_ExpandKerning:
     """fgOpt_ExpandKerning options page
 
-Native bases: object"""
+Native bases: object
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+Captured native MRO: fgOpt_ExpandKerning, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature."""
+
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
     applyToAssistance: Any
     codepage: Any
@@ -3851,10 +4336,16 @@ Native bases: object"""
 class fgOpt_Font:
     """fgOpt_Font options page
 
-Native bases: object"""
+Native bases: object
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+Captured native MRO: fgOpt_Font, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature."""
+
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
     autoMetrics: Any
     buildPclt: Any
@@ -3874,10 +4365,16 @@ Native bases: object"""
 class fgOpt_KerningOptions:
     """fgOpt_KerningOptions options page
 
-Native bases: object"""
+Native bases: object
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+Captured native MRO: fgOpt_KerningOptions, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature."""
+
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
     saveTheOnlySubtableInKernTable: Any
     useScriptInfoForOneSubtableCutting: Any
@@ -3885,10 +4382,16 @@ Native bases: object"""
 class fgOpt_OTExport:
     """fgOpt_OTExport options page
 
-Native bases: object"""
+Native bases: object
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+Captured native MRO: fgOpt_OTExport, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature."""
+
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
     CBDT: Any
     COLR: Any
@@ -3898,7 +4401,9 @@ Native bases: object"""
     autoWinAscDesc: Any
     autohint: Any
     autohintGlyphs: Any
+    autohinterMode: Any
     autohintingMode: Any
+    'Compatibility alias for autohinterMode'
     autotrace: Any
     cff: Any
     cff_adobe: Any
@@ -3929,7 +4434,6 @@ Native bases: object"""
     subrize: Any
     t1autohint: Any
     ttfautohint: Any
-    useTTFAutohint: Any
     writeBinaryHinting: Any
     writeBitmaps: Any
     writeDeviceMetrics: Any
@@ -3942,10 +4446,16 @@ Native bases: object"""
 class fgOpt_OTExportFeaFile:
     """fgOpt_OTExportFeaFile options page
 
-Native bases: object"""
+Native bases: object
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+Captured native MRO: fgOpt_OTExportFeaFile, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature."""
+
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
     doWriteGDEF: Any
     inlineLookups: Any
@@ -3957,10 +4467,16 @@ Native bases: object"""
 class fgOpt_OTImport:
     """fgOpt_OTImport options page
 
-Native bases: object"""
+Native bases: object
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+Captured native MRO: fgOpt_OTImport, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature."""
+
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
     convertCurves: Any
     convertNames: Any
@@ -3979,10 +4495,16 @@ Native bases: object"""
 class fgOpt_Optimize:
     """fgOpt_Optimize options page
 
-Native bases: object"""
+Native bases: object
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+Captured native MRO: fgOpt_Optimize, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature."""
+
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
     align: Any
     reduce: Any
@@ -3990,10 +4512,16 @@ Native bases: object"""
 class fgOpt_T1Autohint:
     """fgOpt_T1Autohint options page
 
-Native bases: object"""
+Native bases: object
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+Captured native MRO: fgOpt_T1Autohint, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature."""
+
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
     hHinting: Any
     hStems: Any
@@ -4013,10 +4541,16 @@ Native bases: object"""
 class fgOpt_T1Export:
     """fgOpt_T1Export options page
 
-Native bases: object"""
+Native bases: object
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+Captured native MRO: fgOpt_T1Export, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature."""
+
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
     AFM: Any
     ASCII: Any
@@ -4041,10 +4575,16 @@ Native bases: object"""
 class fgOpt_T1Import:
     """fgOpt_T1Import options page
 
-Native bases: object"""
+Native bases: object
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+Captured native MRO: fgOpt_T1Import, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature."""
+
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
     decompose: Any
     familyGrouping: Any
@@ -4055,10 +4595,16 @@ Native bases: object"""
 class fgOpt_TTAutohint:
     """fgOpt_TTAutohint options page
 
-Native bases: object"""
+Native bases: object
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+Captured native MRO: fgOpt_TTAutohint, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature."""
+
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
     allow3Stems: Any
     allowDeltas: Any
@@ -4073,10 +4619,16 @@ Native bases: object"""
 class fgOpt_TTFAutohint:
     """fgOpt_TTFAutohint options page
 
-Native bases: object"""
+Native bases: object
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+Captured native MRO: fgOpt_TTFAutohint, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature."""
+
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
     TTFA_info: Any
     adjust_subglyphs: Any
@@ -4104,10 +4656,16 @@ Native bases: object"""
 class fgOpt_UfoFontExport:
     """fgOpt_UfoFontExport options page
 
-Native bases: object"""
+Native bases: object
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+Captured native MRO: fgOpt_UfoFontExport, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature."""
+
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
     base64: Any
     compress: Any
@@ -4117,35 +4675,51 @@ Native bases: object"""
 class fgOpt_UfoFontImport:
     """fgOpt_UfoFontImport options page
 
-Native bases: object"""
+Native bases: object
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+Captured native MRO: fgOpt_UfoFontImport, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature."""
+
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
     compileFeatures: Any
     fixOrdering: Any
     readLayoutTTX: Any
-    removeOverlap: Any
 
 class fgOpt_VfbExport:
     """fgOpt_VfbExport options page
 
-Native bases: object"""
+Native bases: object
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+Captured native MRO: fgOpt_VfbExport, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature."""
+
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
     saveEncoding: Any
 
 class fgOpt_VfbImport:
     """fgOpt_VfbImport options page
 
-Native bases: object"""
+Native bases: object
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+Captured native MRO: fgOpt_VfbImport, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature."""
+
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
-    autoReplace: Any
     compileFeatures: Any
     fixOrdering: Any
     separateMasters: Any
@@ -4153,20 +4727,31 @@ Native bases: object"""
 class fgOpt_WOFFExport:
     """fgOpt_WOFFExport options page
 
-Native bases: object"""
+Native bases: object
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+Captured native MRO: fgOpt_WOFFExport, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature."""
+
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
-    otExport: Any
 
 class fgOptions:
     """FontGate options
 
-Native bases: object"""
+Native bases: object
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+Captured native MRO: fgOptions, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature."""
+
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
     eotexport: Any
     font: Any
@@ -4187,10 +4772,16 @@ Constructors:
   fgOtInfo() - default
   fgOtInfo(fgOtInfo) - copy
 
-Native bases: object"""
+Native bases: object
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+Captured native MRO: fgOtInfo, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature."""
+
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
     glyphClass: Any
     "('Unspecified'/'Simple'/'Ligature'/'Mark'/'Component')"
@@ -4215,13 +4806,19 @@ Math operation:
 
 Native bases: object
 
+Captured native MRO: fgOtValue, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature.
+
 Supplemental documentation:
 An OpenType value. The captured declaration exposes the attributes `coordinate`, `deviceTable` and `point_index`. It is created as `fgOtValue()`, as a copy `fgOtValue(fgOtValue)`, from a float as `fgOtValue(float)` or from an int or long as `fgOtValue(int/long)`. The captured math operations are `fgOtValue + fgOtValue`, `fgOtValue - fgOtValue` and `fgOtValue * float`.
 
 Source: generated/fontgate.py: fgOtValue captured declaration"""
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
     coordinate: Any
     '(float)'
@@ -4238,10 +4835,16 @@ Constructors:
   fgPackages(fgPackages) - copy
   fgPackages('pathToFontFileOrFolder')
 
-Native bases: object"""
+Native bases: object
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+Captured native MRO: fgPackages, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature."""
+
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
 
     def add(self, object: Any) -> Any:
@@ -4281,13 +4884,19 @@ Constructors:
 
 Native bases: object
 
+Captured native MRO: fgPen, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature.
+
 Supplemental documentation:
 A pen with a bool `smooth` attribute. The captured declaration exposes `beginPath`, `closePath`, `curveTo`, `curveToOne`, `endPath`, `lineTo`, `moveTo` and `qCurveToOne`. It is created as `fgPen(fgGlyph)` or as a copy `fgPen(fgPen)`.
 
 Source: generated/fontgate.py: fgPen captured declaration"""
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
 
     def beginPath(self) -> Any:
@@ -4346,13 +4955,19 @@ Math Operations:
 
 Native bases: object
 
+Captured native MRO: fgPoint, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature.
+
 Supplemental documentation:
 A two-dimensional point. The captured declaration exposes the coordinates `x` and `y` and the native vector operations. The captured fgPoint has no point type attribute. Read `x` and `y` or use `asTuple` to inspect coordinates.
 
 Source: generated/fontgate.py: fgPoint captured declaration"""
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
 
     def angleDiff(self, arg0: fgPoint) -> fgPoint:
@@ -4492,10 +5107,16 @@ Math Operations:
   fgPointU >> fgPointU - True if first point is greater or equal to second
   fgPointU ^ fgPointU - scalar product
 
-Native bases: object"""
+Native bases: object
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+Captured native MRO: fgPointU, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature."""
+
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
 
     def angleDiff(self, arg0: fgPoint) -> fgPoint:
@@ -4638,10 +5259,16 @@ Math Operations:
   fgRect & fgRect
   fgRect | fgRect
 
-Native bases: object"""
+Native bases: object
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+Captured native MRO: fgRect, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature."""
+
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
 
     def adjust(self, x1: float, y1: float, x2: float, y2: float) -> Any:
@@ -4797,10 +5424,16 @@ Native bases: object"""
 class fgRendered:
     """fgRendered representation
 
-Native bases: object"""
+Native bases: object
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+Captured native MRO: fgRendered, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature."""
+
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
 
     def asDict(self, *args: Any, **kwargs: Any) -> Any:
@@ -4831,13 +5464,19 @@ Math Operations:
 
 Native bases: object
 
+Captured native MRO: fgShape, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature.
+
 Supplemental documentation:
 A font-data shape whose `contours` attribute holds fgContours. `countContours()` and `countNodes()` report outline counts; `addContour()` adds an fgContour. `matrix` exposes an fgMatrix, while `name` and `opacity` describe the shape.
 
 Source: generated/fontgate.py: fgShape captured declaration"""
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
 
     def addContour(self, arg0: fgContour) -> fgContour:
@@ -4908,6 +5547,10 @@ Source: generated/fontgate.py: fgShape captured declaration"""
         """bool/Nothing isCompatible(fgShape)"""
         ...
 
+    def makeStroke(self, *args: Any, **kwargs: Any) -> Any:
+        """fgShape/None makeStroke([cap0, cap1]); returns a detached filled outline"""
+        ...
+
     def removeOverlap(self) -> int:
         """int removeOverlap()"""
         ...
@@ -4927,18 +5570,10 @@ Source: generated/fontgate.py: fgShape captured declaration"""
     def transform(self, arg0: fgMatrix) -> Any:
         """transform(fgMatrix)"""
         ...
-    angle: Any
-    '(float)'
     body: Any
     '(fgBrush)'
-    calligraphic: Any
-    '(bool)'
-    cap_type: Any
-    '(int)'
     contours: Any
     '(fgContours)'
-    join_type: Any
-    '(int)'
     matrix: Any
     '(fgMatrix)'
     name: Any
@@ -4949,16 +5584,20 @@ Source: generated/fontgate.py: fgShape captured declaration"""
     '(fgBrush)'
     picture: Any
     '(fgBitmap)'
-    width: Any
-    '(float)'
 
 class fgShapes:
     """list of fgShape objects
 
-Native bases: object"""
+Native bases: object
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+Captured native MRO: fgShapes, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature."""
+
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
 
     def append(self, *args: Any, **kwargs: Any) -> Any:
@@ -4993,13 +5632,19 @@ Constructors:
 
 Native bases: object
 
+Captured native MRO: fgStem, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature.
+
 Supplemental documentation:
 A stem described by a string `name`, a float `value` and a `program` dict of int to int. The captured declaration exposes `clear`, `fillProgram`, `ppm` and `setProgram`. It is created as `fgStem()`, as a copy `fgStem(fgStem)` or as `fgStem(value)`.
 
 Source: generated/fontgate.py: fgStem captured declaration"""
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
 
     def clear(self) -> Any:
@@ -5027,10 +5672,16 @@ Source: generated/fontgate.py: fgStem captured declaration"""
 class fgStems:
     """list of fgStem objects
 
-Native bases: object"""
+Native bases: object
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+Captured native MRO: fgStems, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature."""
+
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
 
     def append(self, *args: Any, **kwargs: Any) -> Any:
@@ -5058,10 +5709,16 @@ Native spelling: del; access it through getattr on the native object."""
 class fgStringDict:
     """string dictionary
 
-Native bases: object"""
+Native bases: object
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+Captured native MRO: fgStringDict, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature."""
+
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
 
     def asDict(self, *args: Any, **kwargs: Any) -> Any:
@@ -5093,10 +5750,16 @@ Constructors:
   fgTTInterpreter() - default
   fgTTInterpreter(fgTTInterpreter) - copy
 
-Native bases: object"""
+Native bases: object
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+Captured native MRO: fgTTInterpreter, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature."""
+
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
 
 class fgTrueTypeData:
@@ -5106,10 +5769,16 @@ Constructors:
   fgTrueTypeData() - default
   fgTrueTypeData(fgTrueTypeData) - copy
 
-Native bases: object"""
+Native bases: object
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+Captured native MRO: fgTrueTypeData, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature."""
+
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
 
     def OK(self) -> bool:
@@ -5184,8 +5853,8 @@ Native bases: object"""
         """'gdsOK'/'gdsInvalid' status()"""
         ...
 
-    def transform(self, arg0: fgMatrix) -> Any:
-        """transform(fgMatrix) - transform data"""
+    def transform(self, arg0: fgMatrix, bool: Any) -> Any:
+        """transform(fgMatrix, bool) - unsupported; raises NotImplementedError without changing data"""
         ...
 
     def updateBoundingBox(self) -> Any:
@@ -5245,10 +5914,16 @@ Constructors:
   fgTrueTypePoint(fgPoint)
   fgTrueTypePoint(bool on, int x, int y)
 
-Native bases: object"""
+Native bases: object
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+Captured native MRO: fgTrueTypePoint, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature."""
+
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
 
     def asDict(self, *args: Any, **kwargs: Any) -> Any:
@@ -5300,10 +5975,16 @@ Native bases: object"""
 class fgTrueTypePoints:
     """list of fgTrueTypePoint objects
 
-Native bases: object"""
+Native bases: object
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+Captured native MRO: fgTrueTypePoints, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature."""
+
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
 
     def append(self, *args: Any, **kwargs: Any) -> Any:
@@ -5331,10 +6012,16 @@ Native spelling: del; access it through getattr on the native object."""
 class fgValuesDict:
     """float values dictionary
 
-Native bases: object"""
+Native bases: object
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+Captured native MRO: fgValuesDict, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature."""
+
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
 
     def asDict(self, *args: Any, **kwargs: Any) -> Any:
@@ -5362,10 +6049,16 @@ Native spelling: del; access it through getattr on the native object."""
 class fgVdmxRecord:
     """fgVdmxRecord representation
 
-Native bases: object"""
+Native bases: object
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+Captured native MRO: fgVdmxRecord, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature."""
+
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
 
     def asDict(self, *args: Any, **kwargs: Any) -> Any:
@@ -5382,10 +6075,16 @@ Native bases: object"""
 class fgVdmxRecords:
     """list of fgVdmxRecord objects
 
-Native bases: object"""
+Native bases: object
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+Captured native MRO: fgVdmxRecords, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature."""
+
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
 
     def append(self, *args: Any, **kwargs: Any) -> Any:
@@ -5419,10 +6118,16 @@ Constructors:
   fgVector(fgPoint q0[, fgPoint q1]) - from one or two points
   fgVector(fgPoint, float l, float a)
 
-Native bases: object"""
+Native bases: object
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+Captured native MRO: fgVector, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature."""
+
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
 
     def angle(self) -> float:
@@ -5492,10 +6197,16 @@ Native bases: object"""
 class fgVectorBool:
     """[char] vector
 
-Native bases: object"""
+Native bases: object
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+Captured native MRO: fgVectorBool, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature."""
+
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
 
     def append(self, *args: Any, **kwargs: Any) -> Any:
@@ -5523,10 +6234,16 @@ Native spelling: del; access it through getattr on the native object."""
 class fgVectorChar:
     """[char] vector
 
-Native bases: object"""
+Native bases: object
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+Captured native MRO: fgVectorChar, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature."""
+
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
 
     def append(self, *args: Any, **kwargs: Any) -> Any:
@@ -5554,10 +6271,16 @@ Native spelling: del; access it through getattr on the native object."""
 class fgVectorDouble:
     """[double] vector
 
-Native bases: object"""
+Native bases: object
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+Captured native MRO: fgVectorDouble, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature."""
+
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
 
     def append(self, *args: Any, **kwargs: Any) -> Any:
@@ -5585,10 +6308,16 @@ Native spelling: del; access it through getattr on the native object."""
 class fgVectorInt:
     """[int] vector
 
-Native bases: object"""
+Native bases: object
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+Captured native MRO: fgVectorInt, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature."""
+
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
 
     def append(self, *args: Any, **kwargs: Any) -> Any:
@@ -5616,10 +6345,16 @@ Native spelling: del; access it through getattr on the native object."""
 class fgVectorPoint:
     """[fgPoint] vector
 
-Native bases: object"""
+Native bases: object
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+Captured native MRO: fgVectorPoint, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature."""
+
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
 
     def append(self, *args: Any, **kwargs: Any) -> Any:
@@ -5647,10 +6382,16 @@ Native spelling: del; access it through getattr on the native object."""
 class fgVectorUInt16:
     """[uint16_t] vector
 
-Native bases: object"""
+Native bases: object
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+Captured native MRO: fgVectorUInt16, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature."""
+
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
 
     def append(self, *args: Any, **kwargs: Any) -> Any:
@@ -5678,10 +6419,16 @@ Native spelling: del; access it through getattr on the native object."""
 class fgVectorUInt32:
     """[uint32t] vector
 
-Native bases: object"""
+Native bases: object
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+Captured native MRO: fgVectorUInt32, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature."""
+
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
 
     def append(self, *args: Any, **kwargs: Any) -> Any:
@@ -5715,13 +6462,19 @@ Constructors:
 
 Native bases: object
 
+Captured native MRO: fgZone, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature.
+
 Supplemental documentation:
 A zone described by a string `name`, float `position` and `width`, a bool `top` and a `program` dict of int to int. The captured declaration exposes `clear`, `getIntValues`, `v0` and `v1`. It is created as `fgZone()` or as a copy `fgZone(fgZone)`.
 
 Source: generated/fontgate.py: fgZone captured declaration"""
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
 
     def clear(self) -> Any:
@@ -5753,10 +6506,16 @@ Source: generated/fontgate.py: fgZone captured declaration"""
 class fgZones:
     """list of fgZone objects
 
-Native bases: object"""
+Native bases: object
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+Captured native MRO: fgZones, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature."""
+
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
 
     def append(self, *args: Any, **kwargs: Any) -> Any:
@@ -5784,14 +6543,20 @@ Native spelling: del; access it through getattr on the native object."""
 class pyfgDataOwnerData:
     """pyfgDataOwnerData objects
 
-Native bases: object"""
+Native bases: object
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+Captured native MRO: pyfgDataOwnerData, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature."""
+
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
 fgCURVE: int
 fgLINE: int
 fgMOVE: int
 fgOFFCURVE: int
 options: fgOptions
-__all__ = ['fgAnchor', 'fgAnchors', 'fgAxes', 'fgAxis', 'fgBitmap', 'fgBitmaps', 'fgBitmapsData', 'fgBrush', 'fgCMaps', 'fgCURVE', 'fgCaret', 'fgCarets', 'fgCmapRecord', 'fgCoding', 'fgColor', 'fgComponent', 'fgComponents', 'fgContour', 'fgContours', 'fgCurve', 'fgCuspPoint', 'fgCuspPoints', 'fgDesignPosition', 'fgDeviceRecord', 'fgDeviceRecords', 'fgExtMapIntTofgShape', 'fgExtMapUCharToUChar', 'fgExtMapUIntToString', 'fgExtMapUShortToShort', 'fgFlagsDict', 'fgFont', 'fgFontGateData', 'fgFontHinting', 'fgFontInfo', 'fgFontInfoDict', 'fgGaspRecord', 'fgGaspRecords', 'fgGlyph', 'fgGlyphData', 'fgGlyphDict', 'fgGlyphIDsSet', 'fgGlyphs', 'fgGlyphsR', 'fgGroup', 'fgGroups', 'fgGuide', 'fgGuides', 'fgHint', 'fgHintCommand', 'fgHintCommands', 'fgHints', 'fgIntDict', 'fgKerning', 'fgKerningGroups', 'fgKerningObject', 'fgKerningObjectPair', 'fgLINE', 'fgLayer', 'fgLayers', 'fgLib', 'fgMOVE', 'fgMapBytes', 'fgMaster', 'fgMasters', 'fgMatrix', 'fgMaxP', 'fgMetricsClass', 'fgMetricsClasses', 'fgNametable', 'fgNode', 'fgNodes', 'fgOFFCURVE', 'fgOTLayout', 'fgOpt_AutoMetrics', 'fgOpt_EOTExport', 'fgOpt_ExpandKerning', 'fgOpt_Font', 'fgOpt_KerningOptions', 'fgOpt_OTExport', 'fgOpt_OTExportFeaFile', 'fgOpt_OTImport', 'fgOpt_Optimize', 'fgOpt_T1Autohint', 'fgOpt_T1Export', 'fgOpt_T1Import', 'fgOpt_TTAutohint', 'fgOpt_TTFAutohint', 'fgOpt_UfoFontExport', 'fgOpt_UfoFontImport', 'fgOpt_VfbExport', 'fgOpt_VfbImport', 'fgOpt_WOFFExport', 'fgOptions', 'fgOtInfo', 'fgOtValue', 'fgPackages', 'fgPen', 'fgPoint', 'fgPointU', 'fgRect', 'fgRendered', 'fgShape', 'fgShapes', 'fgStem', 'fgStems', 'fgStringDict', 'fgTTInterpreter', 'fgTrueTypeData', 'fgTrueTypePoint', 'fgTrueTypePoints', 'fgValuesDict', 'fgVdmxRecord', 'fgVdmxRecords', 'fgVector', 'fgVectorBool', 'fgVectorChar', 'fgVectorDouble', 'fgVectorInt', 'fgVectorPoint', 'fgVectorUInt16', 'fgVectorUInt32', 'fgZone', 'fgZones', 'options', 'pyfgDataOwnerData']
+__all__ = ['fgAnchor', 'fgAnchors', 'fgAxes', 'fgAxis', 'fgBitmap', 'fgBitmaps', 'fgBitmapsData', 'fgBrush', 'fgCMaps', 'fgCURVE', 'fgCapParams', 'fgCaret', 'fgCarets', 'fgCmapRecord', 'fgCoding', 'fgColor', 'fgComponent', 'fgComponents', 'fgContour', 'fgContours', 'fgCurve', 'fgCuspPoint', 'fgCuspPoints', 'fgDesignPosition', 'fgDeviceRecord', 'fgDeviceRecords', 'fgExtMapIntTofgShape', 'fgExtMapUCharToUChar', 'fgExtMapUIntToString', 'fgExtMapUShortToShort', 'fgFlagsDict', 'fgFont', 'fgFontGateData', 'fgFontHinting', 'fgFontInfo', 'fgFontInfoDict', 'fgGaspRecord', 'fgGaspRecords', 'fgGlyph', 'fgGlyphData', 'fgGlyphDict', 'fgGlyphIDsSet', 'fgGlyphs', 'fgGlyphsR', 'fgGroup', 'fgGroups', 'fgGuide', 'fgGuides', 'fgHint', 'fgHintCommand', 'fgHintCommands', 'fgHints', 'fgIntDict', 'fgKerning', 'fgKerningGroups', 'fgKerningObject', 'fgKerningObjectPair', 'fgLINE', 'fgLayer', 'fgLayers', 'fgLib', 'fgMOVE', 'fgMapBytes', 'fgMaster', 'fgMasters', 'fgMatrix', 'fgMaxP', 'fgMetricsClass', 'fgMetricsClasses', 'fgNametable', 'fgNode', 'fgNodes', 'fgOFFCURVE', 'fgOTLayout', 'fgOpt_AutoMetrics', 'fgOpt_EOTExport', 'fgOpt_ExpandKerning', 'fgOpt_Font', 'fgOpt_KerningOptions', 'fgOpt_OTExport', 'fgOpt_OTExportFeaFile', 'fgOpt_OTImport', 'fgOpt_Optimize', 'fgOpt_T1Autohint', 'fgOpt_T1Export', 'fgOpt_T1Import', 'fgOpt_TTAutohint', 'fgOpt_TTFAutohint', 'fgOpt_UfoFontExport', 'fgOpt_UfoFontImport', 'fgOpt_VfbExport', 'fgOpt_VfbImport', 'fgOpt_WOFFExport', 'fgOptions', 'fgOtInfo', 'fgOtValue', 'fgPackages', 'fgPen', 'fgPoint', 'fgPointU', 'fgRect', 'fgRendered', 'fgShape', 'fgShapes', 'fgStem', 'fgStems', 'fgStringDict', 'fgTTInterpreter', 'fgTrueTypeData', 'fgTrueTypePoint', 'fgTrueTypePoints', 'fgValuesDict', 'fgVdmxRecord', 'fgVdmxRecords', 'fgVector', 'fgVectorBool', 'fgVectorChar', 'fgVectorDouble', 'fgVectorInt', 'fgVectorPoint', 'fgVectorUInt16', 'fgVectorUInt32', 'fgZone', 'fgZones', 'options', 'pyfgDataOwnerData']

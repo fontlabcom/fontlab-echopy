@@ -30,7 +30,13 @@ METHODS
   Layer(int layer_index) - returns position for the "layer_index" master
   SetLayer(int layer_index, Point position) - sets "position" position for the "layer_index" master
 
-Native bases: object"""
+Native bases: object
+
+Captured native MRO: Anchor, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature."""
 
     def __init__(self, /, *args: Any, **kwargs: Any) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
@@ -91,7 +97,13 @@ METHODS
   TextOut(Point p, string s) | (x, y, string s) - draws the string s in the position p or (x, y)
   PutImage(Image i, Point p) | (Image i, Pioint p, int mode) - puts Image i at the selected point
 
-Native bases: object"""
+Native bases: object
+
+Captured native MRO: Canvas, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature."""
 
     def __init__(self, /, *args: Any, **kwargs: Any) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
@@ -174,7 +186,13 @@ OPERATIONS:
 
 METHODS
 
-Native bases: object"""
+Native bases: object
+
+Captured native MRO: CmapTable, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature."""
 
     def __init__(self, /, *args: Any, **kwargs: Any) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
@@ -209,7 +227,13 @@ METHODS
   Get() | (Font f) - creates a glyph from component applying delta and scale transformations. Font parameter is not needed when component has a parent
   Paste() - appends component to a parent glyph as a set of outlines. Component must have a parent
 
-Native bases: object"""
+Native bases: object
+
+Captured native MRO: Component, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature."""
 
     def __init__(self, /, *args: Any, **kwargs: Any) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
@@ -264,7 +288,13 @@ METHODS
   Run()                       - run the dialog
   End()|End(integer returnvalue) - end the dialog
 
-Native bases: object"""
+Native bases: object
+
+Captured native MRO: Dialog, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature."""
 
     def __init__(self, /, *args: Any, **kwargs: Any) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
@@ -327,7 +357,13 @@ Native bases: object"""
 class Encoding:
     """Encoding
 
-Native bases: object"""
+Native bases: object
+
+Captured native MRO: Encoding, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature."""
 
     def __init__(self, /, *args: Any, **kwargs: Any) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
@@ -364,7 +400,13 @@ Native bases: object"""
 class EncodingRecord:
     """EncodingRecord
 
-Native bases: object"""
+Native bases: object
+
+Captured native MRO: EncodingRecord, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature."""
 
     def __init__(self, /, *args: Any, **kwargs: Any) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
@@ -390,7 +432,13 @@ OPERATIONS:
 
 METHODS
 
-Native bases: object"""
+Native bases: object
+
+Captured native MRO: Feature, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature."""
 
     def __init__(self, /, *args: Any, **kwargs: Any) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
@@ -399,7 +447,13 @@ Native bases: object"""
 class Features:
     """OT Features array
 
-Native bases: object"""
+Native bases: object
+
+Captured native MRO: Features, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature."""
 
     def __init__(self, /, *args: Any, **kwargs: Any) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
@@ -527,7 +581,13 @@ METHODS
   MergeFonts(Font source[, flags]) - appends all glyphs from the source font. Check mfXXXX constants for options
   SetClassFlags(int class_index, bool left, bool right) - allows to set 'left' and 'right' properties of the kerning class   SetClassFlags(int class_index, bool lsb, bool rsb, bool width) - allows to set 'lsb', 'rsb' and 'width' properties of the metrics class   GetClassLeft(int class_index) - returns the 'left' property of the class  GetClassRight(int class_index) - returns the 'right' property of the class  GetClassMetricsFlags(int class_index) - returns the tuple containing LSB, RSB and Width flags of the metrics class
 
-Native bases: object"""
+Native bases: object
+
+Captured native MRO: Font, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature."""
 
     def __init__(self, /, *args: Any, **kwargs: Any) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
@@ -741,7 +801,13 @@ METHODS
          LoadEPS(string filename) - reads EPS from filename and returns Glyph object. Use Assign method to replace current glyph with the loaded outline
   R([Point], float force)
 
-Native bases: object"""
+Native bases: object
+
+Captured native MRO: Glyph, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature."""
 
     def __init__(self, /, *args: Any, **kwargs: Any) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
@@ -1033,7 +1099,13 @@ METHODS
   Transform(Matrix m) - applies Matrix transformation to the Guide (see Matrix().__doc__)
   TransformLayer(Matrix m, layernum) - applies Matrix transformation to the selected layer of the Guide
 
-Native bases: object"""
+Native bases: object
+
+Captured native MRO: Guide, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature."""
 
     def __init__(self, /, *args: Any, **kwargs: Any) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
@@ -1072,7 +1144,13 @@ METHODS
   Transform(Matrix m) - applies Matrix transformation to the Hint (see Matrix().__doc__)
   TransformLayer(Matrix m, layernum) - applies Matrix transformation to the selected layer of the Hint
 
-Native bases: object"""
+Native bases: object
+
+Captured native MRO: Hint, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature."""
 
     def __init__(self, /, *args: Any, **kwargs: Any) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
@@ -1113,7 +1191,13 @@ OPERATIONS:
 METHODS
   
 
-Native bases: object"""
+Native bases: object
+
+Captured native MRO: Image, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature."""
 
     def __init__(self, /, *args: Any, **kwargs: Any) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
@@ -1154,7 +1238,13 @@ Native bases: object"""
 class KerningArray:
     """KerningArray(void)
 
-Native bases: object"""
+Native bases: object
+
+Captured native MRO: KerningArray, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature."""
 
     def __init__(self, /, *args: Any, **kwargs: Any) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
@@ -1190,7 +1280,13 @@ OPERATIONS:
 
 METHODS
 
-Native bases: object"""
+Native bases: object
+
+Captured native MRO: KerningPair, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature."""
 
     def __init__(self, /, *args: Any, **kwargs: Any) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
@@ -1215,7 +1311,13 @@ OPERATIONS:
 METHODS
   ToHint() - transforms link to Hint (and returns it as a result) using parent as a source of node coordinates. Parent must exist
 
-Native bases: object"""
+Native bases: object
+
+Captured native MRO: Link, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature."""
 
     def __init__(self, /, *args: Any, **kwargs: Any) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
@@ -1255,7 +1357,13 @@ METHODS
   Mul(float s) - mutiplies Matrix's parameters to s value
   Transform(Matrix m) - applies Matrix m transformation to the current Matrix
 
-Native bases: object"""
+Native bases: object
+
+Captured native MRO: Matrix, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature."""
 
     def __init__(self, /, *args: Any, **kwargs: Any) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
@@ -1323,7 +1431,13 @@ METHODS
   ExpandLayer(masterindex) - copies positions of all points in the master 'masterindex' to other masters
   Transform(Matrix m) - applies Matrix transformation to the Node (see Matrix().__doc__)
 
-Native bases: object"""
+Native bases: object
+
+Captured native MRO: Node, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature."""
 
     def __init__(self, /, *args: Any, **kwargs: Any) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
@@ -1397,7 +1511,13 @@ METHODS
   Mul(float s) - mutiplies Point's position to s value
   Transform(Matrix m) - applies Matrix transformation to the Point (see Matrix().__doc__)
 
-Native bases: object"""
+Native bases: object
+
+Captured native MRO: Point, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature."""
 
     def __init__(self, /, *args: Any, **kwargs: Any) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
@@ -1464,7 +1584,13 @@ METHODS
   Check(Point p) - returns True if p is insude current rectangle
   Validate() - corrents rectangle's orientation
 
-Native bases: object"""
+Native bases: object
+
+Captured native MRO: Rect, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature."""
 
     def __init__(self, /, *args: Any, **kwargs: Any) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
@@ -1508,7 +1634,13 @@ Check(Point p) - returns True if p is insude current rectangle"""
 class TTGasp:
     """TTGasp
 
-Native bases: object"""
+Native bases: object
+
+Captured native MRO: TTGasp, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature."""
 
     def __init__(self, /, *args: Any, **kwargs: Any) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
@@ -1532,7 +1664,13 @@ OPERATIONS:
 
 METHODS
 
-Native bases: object"""
+Native bases: object
+
+Captured native MRO: TTPoint, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature."""
 
     def __init__(self, /, *args: Any, **kwargs: Any) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
@@ -1544,7 +1682,13 @@ Native bases: object"""
 class TTVdmx:
     """TTVdmx
 
-Native bases: object"""
+Native bases: object
+
+Captured native MRO: TTVdmx, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature."""
 
     def __init__(self, /, *args: Any, **kwargs: Any) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
@@ -1571,7 +1715,13 @@ OPERATIONS:
 
 METHODS
 
-Native bases: object"""
+Native bases: object
+
+Captured native MRO: TrueTypeTable, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature."""
 
     def __init__(self, /, *args: Any, **kwargs: Any) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
@@ -1580,7 +1730,13 @@ Native bases: object"""
 class Uni:
     """Uni(Int value)
 
-Native bases: object"""
+Native bases: object
+
+Captured native MRO: Uni, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature."""
 
     def __init__(self, /, *args: Any, **kwargs: Any) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
@@ -1590,7 +1746,13 @@ Native bases: object"""
 class VSSGaspArray:
     """VSSGaspArray
 
-Native bases: object"""
+Native bases: object
+
+Captured native MRO: VSSGaspArray, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature."""
 
     def __init__(self, /, *args: Any, **kwargs: Any) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
@@ -1611,7 +1773,13 @@ Native bases: object"""
 class VSSTTPointArray:
     """VSSTTPointArray
 
-Native bases: object"""
+Native bases: object
+
+Captured native MRO: VSSTTPointArray, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature."""
 
     def __init__(self, /, *args: Any, **kwargs: Any) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
@@ -1632,7 +1800,13 @@ Native bases: object"""
 class VSSVdmxArray:
     """VSSVdmxArray
 
-Native bases: object"""
+Native bases: object
+
+Captured native MRO: VSSVdmxArray, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature."""
 
     def __init__(self, /, *args: Any, **kwargs: Any) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
@@ -1653,7 +1827,13 @@ Native bases: object"""
 class WeightVector:
     """WeightVector
 
-Native bases: object"""
+Native bases: object
+
+Captured native MRO: WeightVector, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature."""
 
     def __init__(self, /, *args: Any, **kwargs: Any) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""

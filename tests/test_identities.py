@@ -211,3 +211,76 @@ def test_derive_when_capture_lacks_names_arrays_then_declarations_supply_them(tm
     assert scope["names"] == ["Node", "VERSION", "get_value"]
     assert scope["classes"]["Node"]["members"] == ["move", "raise", "x"]
     assert manifest["native_spellings"]["fontlab.Node.raise"] == "fontlab.Node.raise_"
+
+
+def test_pipeline_when_module_retained_then_old_rows_kept_and_tampering_fails(tmp_path):
+    """--retain keeps one module's raw files and identities from the earlier capture."""
+    first = tmp_path / "a.json"
+    first.write_text(json.dumps(CAPTURE))
+    raw, output = tmp_path / "raw", tmp_path / "merged"
+    main(["pipeline", "--capture", str(first), "--raw", str(raw), "--output", str(output)])
+    old_raw = (raw / "fontlab.py").read_bytes()
+    old_row = json.loads((output / MANIFEST).read_text())["scopes"]["fontlab"]
+    newer = json.loads(json.dumps(CAPTURE))
+    newer["modules"]["fontlab"]["namespace"]["names"].remove("Node")
+    newer["modules"]["fontlab"]["namespace"]["classes"].pop()
+    newer["modules"]["fontlabpr"] = {"available": True, "namespace": {"names": []}}
+    second = tmp_path / "b.json"
+    second.write_text(json.dumps(newer))
+    main(["pipeline", "--capture", str(second), "--raw", str(raw), "--output", str(output),
+          "--retain", "fontlab"])
+    assert (raw / "fontlab.py").read_bytes() == old_raw, "retained raw module was regenerated"
+    manifest = verify_identities(second, output)
+    assert manifest["scopes"]["fontlab"] == old_row
+    assert manifest["scopes"]["fontlabpr"]["available"] is True, "other modules use the new capture"
+    old_sha = hashlib.sha256(first.read_bytes()).hexdigest()
+    assert manifest["retained_scopes"]["fontlab"]["capture_sha256"] == old_sha
+    coverage = json.loads((raw / "coverage.json").read_text())
+    assert "fontlab" in coverage["modules"] and "retained_scopes" in coverage
+    kept = output / "_retained_identities.json"
+    kept.write_text(kept.read_text().replace('"x"', '"y"'))
+    with pytest.raises(ValueError, match="does not match the hash"):
+        verify_identities(second, output)
+
+
+def test_verify_when_native_scope_tampered_with_module_retained_then_fails(tmp_path):
+    """Retaining one module must not weaken the check of scopes from the new capture."""
+    first = tmp_path / "a.json"
+    first.write_text(json.dumps(CAPTURE))
+    raw, output = tmp_path / "raw", tmp_path / "merged"
+    main(["pipeline", "--capture", str(first), "--raw", str(raw), "--output", str(output)])
+    newer = json.loads(json.dumps(CAPTURE))
+    newer["modules"]["fontlabpr"] = {"available": True, "namespace": {"names": []}}
+    second = tmp_path / "b.json"
+    second.write_text(json.dumps(newer))
+    main(["pipeline", "--capture", str(second), "--raw", str(raw), "--output", str(output),
+          "--retain", "fontlab"])
+    verify_identities(second, output)
+    manifest = json.loads((output / MANIFEST).read_text())
+    manifest["scopes"]["fontlabpr"]["available"] = False
+    (output / MANIFEST).write_text(json.dumps(manifest))
+    with pytest.raises(ValueError):
+        verify_identities(second, output)
+
+
+@pytest.mark.parametrize(
+    ("extra", "message"),
+    [
+        (["--retain", "PythonQt", "--qt-cache", "cache"], "cannot be combined with --qt-cache"),
+        (["--retain", "PythonQt.private"], "top-level module names"),
+        (["--retain", "nosuch"], "no earlier coverage"),
+    ],
+)
+def test_pipeline_when_retain_invalid_then_argument_error_and_nothing_written(
+    tmp_path, capsys, extra, message
+):
+    """Bad --retain values fail before generation and leave no retained file."""
+    first = tmp_path / "a.json"
+    first.write_text(json.dumps(CAPTURE))
+    raw, output = tmp_path / "raw", tmp_path / "merged"
+    main(["pipeline", "--capture", str(first), "--raw", str(raw), "--output", str(output)])
+    with pytest.raises(SystemExit):
+        main(["pipeline", "--capture", str(first), "--raw", str(raw), "--output", str(output),
+              *[str(tmp_path / x) if x == "cache" else x for x in extra]])
+    assert message in capsys.readouterr().err
+    assert not (output / "_retained_identities.json").exists()

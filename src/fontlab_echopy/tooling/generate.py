@@ -175,12 +175,16 @@ def module_source(name: str, scope: dict[str, Any], available: bool) -> str:
 
 
 def generate(
-    data: dict[str, Any], output: Path, capture_identity: dict[str, str] | None = None
+    data: dict[str, Any],
+    output: Path,
+    capture_identity: dict[str, str] | None = None,
+    keep: tuple[str, ...] = (),
 ) -> dict[str, Any]:
     """Write source plus a name-coverage manifest; never modify overlay files.
 
     ``capture_identity`` (the capture's SHA-256) travels with the raw output so
-    merge can record which capture the merged package documents.
+    merge can record which capture the merged package documents. ``keep`` names
+    top-level modules whose existing raw files stay untouched (retained scopes).
     """
     for name, scope, _package, _available in scopes(data):
         _validate_scope_names(name, scope)
@@ -189,6 +193,9 @@ def generate(
     if capture_identity is not None:
         report["capture_identity"] = capture_identity
     written = set()
+    for top in keep:
+        written.update(output.joinpath(top).rglob("*.py"))
+        written.add(output / (top + ".py"))
     for name, scope, package, available in scopes(data):
         relative = Path(*name.split(".")) / "__init__.py" if package else Path(*name.split(".")).with_suffix(".py")
         path = output / relative

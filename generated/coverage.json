@@ -1,5 +1,22 @@
 {
+  "capture_identity": {
+    "encoding": "original-utf8-file",
+    "sha256": "432487810f3e4ba931591705c9d0edd4a5202af03c06cf882c5f3972bec039a7"
+  },
   "modules": {
+    "FL": {
+      "class_inspection_errors": {},
+      "class_members": 208,
+      "classes": 30,
+      "declared_names": 136,
+      "inspection_errors": [],
+      "missing_class_members": {},
+      "missing_names": [],
+      "native_names": 136,
+      "source_aliases": {
+        "WS_TABSTOP ": "WS_TABSTOP_"
+      }
+    },
     "PythonQt": {
       "class_inspection_errors": {},
       "class_members": 0,
@@ -159,18 +176,18 @@
     },
     "fontgate": {
       "class_inspection_errors": {},
-      "class_members": 1337,
-      "classes": 120,
-      "declared_names": 125,
+      "class_members": 1345,
+      "classes": 121,
+      "declared_names": 126,
       "inspection_errors": [],
       "missing_class_members": {},
       "missing_names": [],
-      "native_names": 125,
+      "native_names": 126,
       "source_aliases": {}
     },
     "fontlab": {
       "class_inspection_errors": {},
-      "class_members": 4856,
+      "class_members": 4940,
       "classes": 73,
       "declared_names": 110,
       "inspection_errors": [],
@@ -182,30 +199,24 @@
         "flObjectsList<flShape>": "flObjectsList_flShape_"
       }
     },
-    "fontlabpr": {
-      "class_inspection_errors": {},
-      "class_members": 0,
-      "classes": 0,
-      "declared_names": 0,
-      "inspection_errors": [],
-      "missing_class_members": {},
-      "missing_names": [],
-      "native_names": 0,
-      "source_aliases": {}
-    },
     "fontpr": {
       "class_inspection_errors": {},
       "class_members": 3,
       "classes": 1,
-      "declared_names": 48,
+      "declared_names": 60,
       "inspection_errors": [],
       "missing_class_members": {},
       "missing_names": [],
-      "native_names": 48,
+      "native_names": 60,
       "source_aliases": {}
     }
   },
-  "unavailable": [
-    "fontlabpr"
-  ]
+  "retained_scopes": {
+    "PythonQt": {
+      "capture_sha256": "5a405eb5a8888bc217c9653b606013439483a9ead5c0b9b1b478172c18e521e9",
+      "manifest": "_retained_identities.json",
+      "manifest_sha256": "7eab0beda0912afe9077b95a355d533d905a3cef7a369cf7d66a6023152a59d7"
+    }
+  },
+  "unavailable": []
 }

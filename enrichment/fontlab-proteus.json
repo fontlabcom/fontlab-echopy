@@ -543,6 +543,10 @@
   "reference": "Clears only the font-specific ID fields (`id`, `pid`, `glyphIndex`), while keeping any attached custom data. Useful when transferring symbols between fonts: clear the old font's IDs, then call `computeID(newFont)` to resolve them in the new font.",
   "reference_source": "FontLab Proteus API documentation"
  },
+ "fontlab.fgSymbol.clearPresentationOverride": {
+  "reference": "Clears both the named master/layer and explicit location, restoring inheritance from the current context.",
+  "reference_source": "FontLab Proteus API documentation"
+ },
  "fontlab.fgSymbol.compare": {
   "reference": "Returns `True` if this symbol and the given symbol identify the same character — same Unicode value or same glyph ID, depending on what is set. Use this to search a symbol list for a specific character.",
   "reference_source": "FontLab Proteus API documentation"
@@ -575,6 +579,10 @@
   "reference": "The zero-based index of the glyph in the font's glyph array. Set after `computeID()` succeeds.",
   "reference_source": "FontLab Proteus API documentation"
  },
+ "fontlab.fgSymbol.hasLocation": {
+  "reference": "Whether this occurrence has an explicit location. An explicitly empty location still returns `True`; use `clearPresentationOverride()` to restore inheritance.",
+  "reference_source": "FontLab Proteus API documentation"
+ },
  "fontlab.fgSymbol.hasName": {
   "reference": "`True` if a glyph name has been explicitly assigned.",
   "reference_source": "FontLab Proteus API documentation"
@@ -599,6 +607,10 @@
   "reference": "For ligature components, the index of this symbol within its ligature cluster (0-based). `-1` if this is not a ligature component.",
   "reference_source": "FontLab Proteus API documentation"
  },
+ "fontlab.fgSymbol.location": {
+  "reference": "Copy of the explicit design coordinates for this occurrence. Read axis values with `symbol.location[\"wt\"]`. Use `setLocation()` to apply changes.",
+  "reference_source": "FontLab Proteus API documentation"
+ },
  "fontlab.fgSymbol.name": {
   "reference": "The glyph name for this symbol (e.g. `\"A\"`, `\"uni00E9\"`, `\"ligature_fi\"`). Empty if only a Unicode or ID has been set.",
   "reference_source": "FontLab Proteus API documentation"
@@ -609,6 +621,14 @@
  },
  "fontlab.fgSymbol.setData": {
   "reference": "Stores the value `d` under `DataCode`. You can store any Python value that Qt can wrap in a `QVariant` — numbers, strings, and lists all work.",
+  "reference_source": "FontLab Proteus API documentation"
+ },
+ "fontlab.fgSymbol.setLayerOverride": {
+  "reference": "Selects a named master/layer for this occurrence and clears any explicit location. An empty name restores inheritance.",
+  "reference_source": "FontLab Proteus API documentation"
+ },
+ "fontlab.fgSymbol.setLocation": {
+  "reference": "Sets explicit design coordinates for this occurrence and clears the named master/layer override. Copies the supplied location.",
   "reference_source": "FontLab Proteus API documentation"
  },
  "fontlab.fgSymbol.setSterile": {
@@ -837,6 +857,10 @@
  },
  "fontlab.flAxis.designMin": {
   "reference": "The minimum value in internal design space. If you're not using a non-linear map, this equals `minimal`",
+  "reference_source": "FontLab Proteus API documentation"
+ },
+ "fontlab.flAxis.extrapolate": {
+  "reference": "Defaults to `False`. Allows the Variations widget and panel to reach 25% beyond each end of the design range, without changing declared or exported axis bounds. Saved with the font.",
   "reference_source": "FontLab Proteus API documentation"
  },
  "fontlab.flAxis.getRange": {
@@ -2123,6 +2147,10 @@
   "reference": "Return both sidebearings as a tuple `(left, right)`.",
   "reference_source": "FontLab Proteus API documentation"
  },
+ "fontlab.flGlyph.glyphMark": {
+  "reference": "Stored glyph-only colour mark. Reads and writes do not import geometry or change layer flags. The setter also synchronizes the FontGate mark, but does not create an Undo step or notify the UI.",
+  "reference_source": "FontLab Proteus API documentation"
+ },
  "fontlab.flGlyph.glyphName": {
   "reference": "Return the canonical glyph name as a string. Usually the same as `glyph.name` but guaranteed to be non-null.",
   "reference_source": "FontLab Proteus API documentation"
@@ -2339,6 +2367,10 @@
   "reference": "Canvas proxy for a rendered glyph.\n\n## What is flGlyphInfo?\n\n`flGlyphInfo` is the top-level entry point into the canvas info system. When a glyph is displayed in the metrics view or glyph editor, FontLab wraps it in an `flGlyphInfo` that knows everything about how it appears on screen: its bounding rectangle in pixels, its screen position, whether it is currently active for editing, and where all its shapes, contours, and nodes are.\n\nThis is the class you reach for when writing interactive tools or canvas decorators. `canvas.activeGlyphInfo()` is the single most important call for tool code — it gives you the live rendering context for whatever glyph the user is currently editing.\n\n`flGlyphInfo` is the root of the canvas info hierarchy:\n\n```\nflGlyphInfo              ← top-level proxy for one rendered glyph slot\n  ├── flLayerInfo        ← canvas proxy for a layer (bounding rect)\n  └── (via shapes/contours)\n        flShapeInfo      ← shape-level: move, hit-test, composite queries\n          └── flContourInfo  ← per-contour: node list, parametric hover point\n                └── flNodeInfo  ← per-node: move in glyph space, repaint rect\n```\n\nThe base info classes (`flSearchInfo`, `flGraphicsInfo`) hold shared infrastructure — distance values and canvas transform matrices — and are described in their own files.\n\n## When do you use it?\n\n`canvas.activeGlyphInfo()` is the single most useful call for interactive tool code. It gives you the currently-being-edited glyph's canvas context — its screen position, bounds, and the full tree of shapes, contours, and nodes with canvas coordinates.\n\n## Tutorial\n\nThe standard flow in any canvas tool starts with getting the `flGlyphInfo` for the active glyph, then querying it for shapes, contours, or nodes near the mouse position.\n\n```python\nfrom PythonQt.QtCore import QPointF\nimport fontlab as fl\n\n# ============================================================\n# Step 1: Get the active glyph info from the canvas.\n# This works in both the glyph editor and the metrics view.\n# ============================================================\n\nws     = fl.flWorkspace.instance()\ncanvas = ws.getActiveCanvas()\nif canvas is None:\n    print(\"Open a glyph window first.\")\n    raise SystemExit\n\ngi = canvas.activeGlyphInfo()\nif gi is None:\n    print(\"No glyph is currently active for editing.\")\n    raise SystemExit\n\nprint(f\"Active glyph:      '{gi.name}'\")\nprint(f\"Is active:          {gi.isActive}\")\nprint(f\"Canvas bounds:      {gi.brectOnCanvas}\")\nprint(f\"Body rect (UPM):    {gi.bodyRectOnCanvas}\")\nprint(f\"Null glyph:         {gi.isNullGlyph}\")\n\n# ============================================================\n# Step 2: Hit-test — did the user click inside the glyph?\n# This is the fastest way to answer \"is this click on ink?\"\n# ============================================================\n\nmouse_pos = QPointF(250, 400)   # canvas-space click position\nhit = gi.hitToShape(mouse_pos)\nprint(f\"\\nPoint ({mouse_pos.x():.0f}, {mouse_pos.y():.0f}) inside glyph: {hit}\")\n\n# ============================================================\n# Step 3: Find the nearest shape to a mouse position.\n# ============================================================\n\ntop_shape = gi.getTopHitShape(mouse_pos)\nif top_shape:\n    print(f\"Top hit shape canvas bounds: {top_shape.brectOnCanvas()}\")\n\n# ============================================================\n# Step 4: Find nearby contours (the magnetic snap pattern).\n# This is how knife tools and add-node tools find the curve\n# to snap to.\n# ============================================================\n\nnearby = gi.getNearbyContours(mouse_pos, 30.0, \"\")\nif nearby:\n    nearest = min(nearby, key=lambda c: c.dist)\n    print(f\"\\nNearest contour at {nearest.dist:.1f}px from mouse\")\n    print(f\"  Parametric position (exT): {nearest.paramExT():.3f}\")\n    nodes = nearest.getNodesInfo()\n    print(f\"  Contour has {len(nodes)} node(s)\")\n\n# ============================================================\n# Step 5: Access the model data through .glyph.\n# ============================================================\n\nglyph = gi.glyph\nlayer = glyph.layers[0]\nprint(f\"\\nGlyph '{glyph.name}' has {len(layer.shapes)} shape(s) \"\n      f\"on layer '{layer.name}'\")\n```\n\n## Common Scripting Patterns\n\n### Check if a canvas point hits any glyph content\n\n```python\nfrom PythonQt.QtCore import QPointF\nimport fontlab as fl\n\nws = fl.flWorkspace.instance()\ngi = ws.getActiveCanvas().activeGlyphInfo() if ws.getActiveCanvas() else None\nif gi:\n    click = QPointF(300, 400)\n    if gi.hitToShape(click):\n        print(\"Click hit glyph ink.\")\n    elif gi.brectOnCanvas.contains(click):\n        print(\"Click is in the glyph box but not on ink.\")\n    else:\n        print(\"Click is outside the glyph box entirely.\")\n```\n\n### Get all selected nodes from the active glyph\n\n```python\nimport fontlab as fl\n\nws = fl.flWorkspace.instance()\ngi = ws.getActiveCanvas().activeGlyphInfo() if ws.getActiveCanvas() else None\nif gi:\n    selected = gi.selectedNodes()\n    print(f\"Selected nodes ({len(selected)}):\")\n    for ni in selected:\n        pt = ni.getGlyphPoint(True)   # rounded to integers\n        print(f\"  type={ni.node.type}  ({pt.x():.0f}, {pt.y():.0f})\")\n```\n\n### Read kerning offset for a glyph in the metrics view\n\n```python\nimport fontlab as fl\n\nws     = fl.flWorkspace.instance()\ncanvas = ws.getActiveCanvas()\nif canvas:\n    gi = canvas.activeGlyphInfo()\n    if gi:\n        kern_offset = gi.kerningOffset(True)\n        print(f\"'{gi.name}' kerning offset: {kern_offset:.0f} units\")\n```",
   "reference_source": "FontLab Proteus API documentation"
  },
+ "fontlab.flGlyphInfo.activeLayer": {
+  "reference": "The real layer resolved for this occurrence; no editable layer for an interpolated presentation.",
+  "reference_source": "FontLab Proteus API documentation"
+ },
  "fontlab.flGlyphInfo.applyTransform": {
   "reference": "Commits the accumulated canvas transform to the glyph model and resets the transform. Call this to make temporary interactive transforms permanent.",
   "reference_source": "FontLab Proteus API documentation"
@@ -2387,12 +2419,20 @@
   "reference": "The ink (actual contour) bounding rectangle of this glyph in canvas coordinates.",
   "reference_source": "FontLab Proteus API documentation"
  },
+ "fontlab.flGlyphInfo.hasPresentationOverride": {
+  "reference": "Whether this occurrence explicitly selects a layer or location.",
+  "reference_source": "FontLab Proteus API documentation"
+ },
  "fontlab.flGlyphInfo.hitToShape": {
   "reference": "Returns `True` if the given canvas point falls inside any filled shape of this glyph. The fastest way to answer \"did the user click inside the glyph?\".",
   "reference_source": "FontLab Proteus API documentation"
  },
  "fontlab.flGlyphInfo.isActive": {
   "reference": "`True` if this is the glyph currently open for editing in the glyph editor.",
+  "reference_source": "FontLab Proteus API documentation"
+ },
+ "fontlab.flGlyphInfo.isEditable": {
+  "reference": "Whether the resolved layer permits editing, independent of the canvas's across-glyph policy.",
   "reference_source": "FontLab Proteus API documentation"
  },
  "fontlab.flGlyphInfo.isNullGlyph": {
@@ -2665,6 +2705,10 @@
  },
  "fontlab.flInstance.slv": {
   "reference": "The OS/2 style-linking value as a raw integer. This encodes bold/italic/regular flags in the OS/2 `fsSelection` field",
+  "reference_source": "FontLab Proteus API documentation"
+ },
+ "fontlab.flInstance.tfn": {
+  "reference": "Stored typographic family override. An empty string inherits the source font's family; this getter does not resolve that fallback or change `sgn`.",
   "reference_source": "FontLab Proteus API documentation"
  },
  "fontlab.flInstance.tsn": {
@@ -4441,6 +4485,10 @@
  },
  "fontlab.flObject.name": {
   "reference": "The human-readable name of this object. For a glyph this is the glyph name; for a layer it is the master name; for a shape you can assign any label you like. Setting this property does not affect the object's unique `id`.",
+  "reference_source": "FontLab Proteus API documentation"
+ },
+ "fontlab.flObject.propertyNames": {
+  "reference": "Returns a sorted snapshot of the dynamic property keys, including explicitly stored zero values. Pair with `getProperty(key)` to inspect values.",
   "reference_source": "FontLab Proteus API documentation"
  },
  "fontlab.flObject.refCnt": {
@@ -6359,6 +6407,10 @@
   "reference": "The live-stroke pen: controls brush/color, width, join, miter limit, and basic caps. `Qt.NoPen` disables the stroke. For independent start/end caps and other native stroke settings, use `penParameters`.",
   "reference_source": "FontLab Proteus API documentation"
  },
+ "fontlab.flShape.penParameters": {
+  "reference": "Read/write native stroke settings, including thickness, proportion, contrast, rotation, cap0/cap1, join, and miter limit. See Stroke scripting below for units, defaults, and replacement semantics.",
+  "reference_source": "FontLab Proteus API documentation"
+ },
  "fontlab.flShape.prepareTransformationData": {
   "reference": "Caches the current geometry so that interactive transformations (rotate, scale) work smoothly. Must be called before applying a transform to this shape.",
   "reference_source": "FontLab Proteus API documentation"
@@ -6747,6 +6799,10 @@
   "reference": "An extended position value along the line's axis, used for non-H/V guides",
   "reference_source": "FontLab Proteus API documentation"
  },
+ "fontlab.flSnapLine.extension": {
+  "reference": "Existing extension node, preserving its native ID and model. `None` means no extension. Read-only; also inherited by `flGuideLine`.",
+  "reference_source": "FontLab Proteus API documentation"
+ },
  "fontlab.flSnapLine.getHashCode": {
   "reference": "Returns the snap hash for this specific line instance. Uniquely identifies this line in the snapping system's cache.",
   "reference_source": "FontLab Proteus API documentation"
@@ -6833,6 +6889,10 @@
  },
  "fontlab.flSnapObject.isExluded": {
   "reference": "`True` if this object is excluded from snap calculations. (Note: the misspelling \"Exluded\" matches the source code.)",
+  "reference_source": "FontLab Proteus API documentation"
+ },
+ "fontlab.flSnapObject.isGhost": {
+  "reference": "Actual native ghost-hint flag, independent of `snapFlags` and width sign. Also inherited by `flSnapLine` and `flGuideLine`.",
   "reference_source": "FontLab Proteus API documentation"
  },
  "fontlab.flSnapObject.isHint": {
@@ -7381,6 +7441,10 @@
  },
  "fontlab.flWorkspace.getActiveTextBlock": {
   "reference": "Returns the text block item that is currently active in the metrics or text window.",
+  "reference_source": "FontLab Proteus API documentation"
+ },
+ "fontlab.flWorkspace.getActiveTextBlockModel": {
+  "reference": "Returns the exact active item's typed text-block model, or `None` when no item is active. Use this reader from Python: the legacy graphics-item getter depends on PythonQt wrapper availability. Does not select or activate a block.",
   "reference_source": "FontLab Proteus API documentation"
  },
  "fontlab.flWorkspace.getBoundingRect": {

@@ -208,6 +208,14 @@ fontlab-echopy verify-identities path/to/native.json src/fontlab_echopy
 Both refuse a capture other than the generation input recorded in
 `_provenance.json`, and fail when two native names map to one source name.
 
+`pipeline --retain PythonQt` regenerates every other module from the new
+capture but keeps PythonQt's raw files, stubs, coverage and identity rows from
+the earlier one. Its rows go to `_retained_identities.json`, and
+`_provenance.json` `retained_scopes` records their source capture and hash;
+`verify-identities` fails if that file changes. Use it when a capture is
+incomplete for one module, such as a fresh session that has not yet registered
+the `PythonQt.private` wrappers.
+
 The pipeline never edits overlays. Regenerating raw output also leaves merged
 output untouched until merge. Manual overlays take precedence over upstream
 material. Unmatched overlay targets are reported instead of silently counted.

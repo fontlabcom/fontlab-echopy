@@ -4,17 +4,15 @@ this_file: TODO.md
 
 ## Issue 257 follow-ups — 2026-11-17
 
-- [ ] Run `verify-identities` against the raw capture after the next capture; `_identities.json` was carried over from the previous capture (it does not depend on docstrings) and was not re-derived.
-- [ ] Next capture: confirm `fontlabpr` is gone from `generated/coverage.json`, `reports/*.json` and `_identities.json` (these records still show its old absence).
+- [ ] Recapture `PythonQt.private` after exercising FontLab actions in the session: the 9.1.9813 capture lists 5 classes there (the 9.0 capture had 221); then drop `--retain PythonQt` and regenerate PythonQt from that recapture.
+- [ ] Refresh `reports/qt-enrichment.json` and the `qt_enrichment` provenance record with a cached `--qt-cache` run; this regeneration reused `enrichment/qt5.json` offline.
 - [ ] Document the 43 `fontgate` classes that still have placeholder leads; the Proteus articles cover only `fontlab`.
 - [ ] Review the 82 unplaced Proteus entries in the `proteus-docs` report (names the capture lacks).
 - [ ] Update fontlab-python-docs pages and `api-sources.lock.json` that still name `fontlabpr` and the removed shim files.
-- [ ] Recheck the 14 MCP tools that the capture lacks (`get_features`, `set_lookups`, …) on FontLab 9.1 and recapture `fontpr`.
 
 ## FontLab 9.1 API — 2026-11-16
 
 - [ ] live-verify 9.1 JSON/stroke/inktrap declarations in `fontlab_echopy.api91` on FontLab 9.1.9812 (serialized native lane, owned fixture): presence and the QByteArray round trip pass; `penParameters` writes, `expandStroke`, `makeStroke`, `inktrap_len`, presentation overrides and the refresh call remain.
-- [ ] Run `examples/capture_in_fontlab.py` on 9.1.9812, regenerate `generated/` and the stubs, refresh identities/provenance, then promote the `api91` records into the stubs and `patches/manual.json`.
 - [ ] Check the pyfontgate source for fgBrush/fgCapParams/fgShape.makeStroke signatures; it is not in the local C++ snapshot.
 
 
@@ -89,7 +87,7 @@ this_file: TODO.md
 - [ ] Qualify the reviewed documentation source through ordinary main Actions and exact source/output lineage.
 - [ ] Retain private Pages configuration and publication holds while native and owner-install gates remain separate.
 - [ ] Qualify the six consumed C14 class overlays in a type checker or IDE that reads the installed `.pyi` stubs (hover and completion show the supplemental text); the installed wheel and sdist stubs and offline `help()` are verified by `tests/test_installed_class_overlays.py`. Inside FontLab 9 the classes are the native builtins, so `help()`, `__doc__` and the editor show native text only (live reports 32 and 32b); that is by design, not a defect.
-- [ ] `generated/coverage.json` lacks `capture_identity`; regenerate with `generate` from a fresh native capture (shipped identity `5a405eb5a8888bc217c9653b606013439483a9ead5c0b9b1b478172c18e521e9`), then remove the manual README-merge restore of `capture_identity` in `_provenance.json`.
+- [ ] `generated/coverage.json` now carries `capture_identity` (9.1.9813 capture); remove the manual README-merge restore of `capture_identity` in `_provenance.json` if it is no longer needed.
 - [ ] Licence (Issue 250, owner Q5): `pyproject.toml` reads `Apache-2.0 AND LGPL-3.0-only AND GFDL-1.3-only`. The LGPL/GFDL terms come from PySide2-derived declarations, which the owner keeps as marked third-party. Check that every FontLab-authored file under `src/`, `tools/`, `enrichment/` and `tests/` is Apache-2.0 (no SPDX headers exist today: add them), and that `NOTICE` and `licenses/` mark exactly the PySide2-derived declaration files as third-party. `licenses/Qt-LICENSE.COMMERCIAL` stays a third-party text.
 - [ ] Echopy provenance: since Issue 257 `_provenance.json` `merged_outputs` hashes `FL.py` and `FL.pyi`, and a standalone merge keeps `capture_identity`. Remaining check: confirm both FL files ship in the built wheel and sdist (accepted earlier as M-1 by reviewer2).
 - [ ] Native check (D46): after the row-61 rewording, decide between a documentation-only close and a live recheck of the 7 classes whose overlays show 0/7 in an IDE.

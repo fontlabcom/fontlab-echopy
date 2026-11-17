@@ -18,6 +18,65 @@ from typing import Any
 from .generate import _source_names, scopes, source_name
 
 MANIFEST = "_identities.json"
+# Identity rows of top-level modules kept from an earlier capture (pipeline --retain).
+RETAINED = "_retained_identities.json"
+
+
+def _top(name: str) -> str:
+    return name.partition(".")[0]
+
+
+def retain_scopes(package: Path, tops: list[str]) -> dict[str, Any]:
+    """Extract retained modules' rows from the shipped, verified manifest.
+
+    The source capture of each retained module is the one recorded for it
+    earlier (a previous retention) or else the package's capture identity,
+    which the shipped manifest must match. Returns the provenance entry.
+    """
+    package = Path(package)
+    provenance = json.loads((package / "_provenance.json").read_text())
+    shipped = json.loads((package / MANIFEST).read_text())
+    previous = provenance.get("retained_scopes", {})
+    if shipped["capture_sha256"] != provenance.get("capture_identity", {}).get("sha256"):
+        raise ValueError(f"{MANIFEST} does not match the recorded capture identity")
+    kept = {
+        "scopes": {k: v for k, v in shipped["scopes"].items() if _top(k) in tops},
+        "native_spellings": {
+            k: v for k, v in shipped["native_spellings"].items() if _top(k) in tops
+        },
+    }
+    missing = [top for top in tops if top not in kept["scopes"]]
+    if missing:
+        raise ValueError(f"{MANIFEST} has no rows for retained modules {missing}")
+    text = _encode(kept)
+    (package / RETAINED).write_text(text, encoding="utf-8")
+    digest = hashlib.sha256(text.encode()).hexdigest()
+    return {
+        top: {
+            "capture_sha256": previous.get(top, {}).get(
+                "capture_sha256", shipped["capture_sha256"]
+            ),
+            "manifest": RETAINED,
+            "manifest_sha256": digest,
+        }
+        for top in tops
+    }
+
+
+def _retained(package: Path, retained: dict[str, Any]) -> dict[str, Any]:
+    """Load retained rows; their file hash must equal the recorded one."""
+    if not retained:
+        return {"scopes": {}, "native_spellings": {}}
+    data = (package / RETAINED).read_bytes()
+    digest = hashlib.sha256(data).hexdigest()
+    for top, info in retained.items():
+        if info.get("manifest_sha256") != digest:
+            raise ValueError(f"{RETAINED} does not match the hash recorded for {top}")
+    kept = json.loads(data)
+    stray = {_top(k) for k in [*kept["scopes"], *kept["native_spellings"]]} - set(retained)
+    if stray or set(retained) - {_top(k) for k in kept["scopes"]}:
+        raise ValueError(f"{RETAINED} rows do not match the retained modules")
+    return kept
 
 
 def _scope_names(namespace: dict[str, Any]) -> list[str]:
@@ -62,10 +121,14 @@ def derive_identities(capture: Path | bytes, package: Path) -> dict[str, Any]:
             f"capture {digest} is not the generation input {built_from}"
         )
     modules = json.loads(data)["modules"]
-    result: dict[str, Any] = {}
-    spellings: dict[str, str] = {}
+    retained = provenance.get("retained_scopes", {})
+    kept = _retained(package, retained)
+    result: dict[str, Any] = dict(kept["scopes"])
+    spellings: dict[str, str] = dict(kept["native_spellings"])
     for scope, namespace, _package, available in scopes(json.loads(data)):
         top, _, child = scope.partition(".")
+        if top in retained:  # documented from the earlier capture recorded above
+            continue
         entry = modules[top]
         kind = entry["subpackages"][child].get("kind", "module") if child else "module"
         row: dict[str, Any] = {
@@ -99,7 +162,9 @@ def derive_identities(capture: Path | bytes, package: Path) -> dict[str, Any]:
                 spellings[scope + "." + name] = scope + "." + source
         result[scope] = row
     enrichment = provenance.get("qt_enrichment", {})
+    extra = {"retained_scopes": retained} if retained else {}
     return {
+        **extra,
         "schema_version": 1,
         "producer": "fontlab_echopy.tooling.identities",
         "capture_sha256": digest,

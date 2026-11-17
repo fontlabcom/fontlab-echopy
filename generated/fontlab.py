@@ -3,13 +3,14 @@
 'Python interface for FontLab data objects\n\nCurveEx: CurveEx representation\nExportControl: ExportControl representation\nFaBasicPtr: FaBasicPtr representation\nInterval: Interval representation\nPaintBrush: PaintBrush representation\nTransformFrame: TransformFrame representation\nfgSymbol: fgSymbol representation\nfgSymbolList: fgSymbolList representation\nflAbstractEditor: flAbstractEditor representation\nflAbstractVectorNode: flAbstractVectorNode representation\nflAnchor: flAnchor representation\nflAuditInfo: flAuditInfo representation\nflAxis: flAxis representation\nflBasicTool: flBasicTool representation\nflCanvas: flCanvas representation\nflContour: flContour representation\nflContourInfo: flContourInfo representation\nflEvent: flEvent representation\nflExpression: flExpression representation\nflGlyph: flGlyph representation\nflGlyphInfo: flGlyphInfo representation\nflGraphicsInfo: flGraphicsInfo representation\nflGuideLine: flGuideLine representation\nflHintingParameters: flHintingParameters representation\nflInstance: flInstance representation\nflItems: flItems representation\nflLayer: flLayer representation\nflLayerInfo: flLayerInfo representation\nflLocation: flLocation representation\nLocationValue: LocationValue representation\nflMarkerPoint: flMarkerPoint representation\nflMouseEvent: flMouseEvent representation\nflModelProducer: flModelProducer representation\nflNode: flNode representation\nflNodeInfo: flNodeInfo representation\nflObject: flObject representation\nflPackage: flPackage representation\nflPaper: flPaper representation\nflPinPoint: flPinPoint representation\nflPreferences: flPreferences representation\nflProperty: flProperty representation\nflPropertyDouble: flPropertyDouble representation\nflPropertyPoint: flPropertyPoint representation\nflSearchInfo: flSearchInfo representation\nflShape: flShape representation\nflShapeBuilder: flShapeBuilder representation\nflShapeData: flShapeData representation\nflShapeInfo: flShapeInfo representation\nflSnapLine: flSnapLine representation\nflSnapObject: flSnapObject representation\nflStem: flStem representation\nflZone: flZone representation\nflSticker: flSticker representation\nflTextBlock: flTextBlock representation\nflTransform: flTransform representation\nflVectorNode: flVectorNode representation\nflVisualItem: flVisualItem representation\nflWorkspace: flWorkspace representation\nFontMetrics: FontMetrics representation\nGlyphComponent: GlyphComponent representation\nflTTHCommand: flTTHCommand representation\nYPanelManager: YPanelManager representation\nYPanelWidget: YPanelWidget representation\nInfo: Font Info data\nFontLayer: FontLayer object\nflObjectsList<flGuideLine>: flObjectsList<flGuideLine> doc\nflObjectsList<flShape>: flObjectsList<flShape> doc\nflSnaps: snap object constants\nflModel: flModel representation\nPaintBrushShape: Data wrapper\nSmartCornerParameters: Data wrapper\nAccentInfo: Data wrapper\nflLayerAttributes: Data wrapper'
 from __future__ import annotations
 from typing import Any
+import builtins as _echopy_builtins
 from fontlab_echopy._runtime import bind as _bind, unavailable as _unavailable
 
 class AccentInfo:
-    'Data wrapper\n\nNative bases: object'
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        'Native constructor; consult class documentation for supported overloads.'
-        _unavailable('fontlab.AccentInfo')
+    'Data wrapper\n\nNative bases: object\n\nCaptured native MRO: AccentInfo, object\n\nNative __new__ allocation evidence (not an __init__ overload):\n(*args, **kwargs)\nCreate and return a new object.  See help(type) for accurate signature.'
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        'Initialize self.  See help(type(self)) for accurate signature.'
+        _unavailable('fontlab.AccentInfo.__init__')
 
     def asDict(self, *args: Any, **kwargs: Any) -> Any:
         'represent object as dictionary'
@@ -23,10 +24,10 @@ class AccentInfo:
     offset: Any
 
 class CurveEx:
-    'CurveEx representation\n\nConstructors:\n  CurveEx() - default\n  CurveEx(QPointF p0, QPointF p1[, int leftIdx=0[, int _rightIdx=0]])\n  CurveEx(QPointF p0, QPointF p1, QPointF p2, QPointF p3)\n  CurveEx( list(QPointF) )\n\nNative bases: object'
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        'Native constructor; consult class documentation for supported overloads.'
-        _unavailable('fontlab.CurveEx')
+    'CurveEx representation\n\nConstructors:\n  CurveEx() - default\n  CurveEx(QPointF p0, QPointF p1[, int leftIdx=0[, int _rightIdx=0]])\n  CurveEx(QPointF p0, QPointF p1, QPointF p2, QPointF p3)\n  CurveEx( list(QPointF) )\n\nNative bases: object\n\nCaptured native MRO: CurveEx, object\n\nNative __new__ allocation evidence (not an __init__ overload):\n(*args, **kwargs)\nCreate and return a new object.  See help(type) for accurate signature.'
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        'Initialize self.  See help(type(self)) for accurate signature.'
+        _unavailable('fontlab.CurveEx.__init__')
 
     def applyTransform(self, tx: QTransform) -> None:
         'void applyTransform(QTransform& tx)'
@@ -90,10 +91,10 @@ class CurveEx:
     'int'
 
 class ExportControl:
-    'ExportControl representation\n\nConstructors:\n\nNative bases: object'
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        'Native constructor; consult class documentation for supported overloads.'
-        _unavailable('fontlab.ExportControl')
+    'ExportControl representation\n\nConstructors:\n\nNative bases: object\n\nCaptured native MRO: ExportControl, object\n\nNative __new__ allocation evidence (not an __init__ overload):\n(*args, **kwargs)\nCreate and return a new object.  See help(type) for accurate signature.'
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        'Initialize self.  See help(type(self)) for accurate signature.'
+        _unavailable('fontlab.ExportControl.__init__')
 
     def init(self) -> Any:
         'init()'
@@ -127,10 +128,10 @@ class ExportControl:
     'string'
 
 class FaBasicPtr:
-    'FaBasicPtr representation\n\nConstructors:\n\nNative bases: object'
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        'Native constructor; consult class documentation for supported overloads.'
-        _unavailable('fontlab.FaBasicPtr')
+    'FaBasicPtr representation\n\nConstructors:\n\nNative bases: object\n\nCaptured native MRO: FaBasicPtr, object\n\nNative __new__ allocation evidence (not an __init__ overload):\n(*args, **kwargs)\nCreate and return a new object.  See help(type) for accurate signature.'
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        'Initialize self.  See help(type(self)) for accurate signature.'
+        _unavailable('fontlab.FaBasicPtr.__init__')
 
     def fix(self) -> Any:
         'flGlyph/Nothing fix()'
@@ -156,17 +157,17 @@ class FaBasicPtr:
     'QPointF  '
 
 class FontLayer:
-    'FontLayer object\n\nNative bases: object'
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        'Native constructor; consult class documentation for supported overloads.'
-        _unavailable('fontlab.FontLayer')
+    'FontLayer object\n\nNative bases: object\n\nCaptured native MRO: FontLayer, object\n\nNative __new__ allocation evidence (not an __init__ overload):\n(*args, **kwargs)\nCreate and return a new object.  See help(type) for accurate signature.'
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        'Initialize self.  See help(type(self)) for accurate signature.'
+        _unavailable('fontlab.FontLayer.__init__')
 
 
 class FontMetrics:
-    'FontMetrics representation\n\nConstructors:\n  FontMetrics() - default\n  FontMetrics(FontMetrics)\n  FontMetrics(double upm)\n  FontMetrics(fg::Package *p)\n  FontMetrics(flPackage p, string layer_name)\n\nNative bases: object'
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        'Native constructor; consult class documentation for supported overloads.'
-        _unavailable('fontlab.FontMetrics')
+    'FontMetrics representation\n\nConstructors:\n  FontMetrics() - default\n  FontMetrics(FontMetrics)\n  FontMetrics(double upm)\n  FontMetrics(fg::Package *p)\n  FontMetrics(flPackage p, string layer_name)\n\nNative bases: object\n\nCaptured native MRO: FontMetrics, object\n\nNative __new__ allocation evidence (not an __init__ overload):\n(*args, **kwargs)\nCreate and return a new object.  See help(type) for accurate signature.'
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        'Initialize self.  See help(type(self)) for accurate signature.'
+        _unavailable('fontlab.FontMetrics.__init__')
 
     def init(self) -> Any:
         'init()'
@@ -186,10 +187,10 @@ class FontMetrics:
     'double'
 
 class GlyphComponent:
-    'GlyphComponent representation\n\nConstructors:\n  GlyphComponent() - default\n  GlyphComponent(GlyphComponent)\n  GlyphComponent(uint id)\n  GlyphComponent(string name)\n  GlyphComponent(uint id, QTransform tx, double w, bool ua)\n\nNative bases: object'
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        'Native constructor; consult class documentation for supported overloads.'
-        _unavailable('fontlab.GlyphComponent')
+    'GlyphComponent representation\n\nConstructors:\n  GlyphComponent() - default\n  GlyphComponent(GlyphComponent)\n  GlyphComponent(uint id)\n  GlyphComponent(string name)\n  GlyphComponent(uint id, QTransform tx, double w, bool ua)\n\nNative bases: object\n\nCaptured native MRO: GlyphComponent, object\n\nNative __new__ allocation evidence (not an __init__ overload):\n(*args, **kwargs)\nCreate and return a new object.  See help(type) for accurate signature.'
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        'Initialize self.  See help(type(self)) for accurate signature.'
+        _unavailable('fontlab.GlyphComponent.__init__')
 
     name_id: Any
     'uint'
@@ -201,10 +202,10 @@ class GlyphComponent:
     'double'
 
 class Info:
-    'Font Info data\n\nNative bases: object'
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        'Native constructor; consult class documentation for supported overloads.'
-        _unavailable('fontlab.Info')
+    'Font Info data\n\nNative bases: object\n\nCaptured native MRO: Info, object\n\nNative __new__ allocation evidence (not an __init__ overload):\n(*args, **kwargs)\nCreate and return a new object.  See help(type) for accurate signature.'
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        'Initialize self.  See help(type(self)) for accurate signature.'
+        _unavailable('fontlab.Info.__init__')
 
     ascender: Any
     'Ascender value. This should be a integer or float'
@@ -222,6 +223,8 @@ class Info:
     'Family ID number. Corresponds to the ffFamID in the FOND resource. This should be a integer'
     macintoshFONDName: Any
     'Font name for the FOND resource. This should be a string'
+    nametablePath: Any
+    'Font-wide custom .nam path. Empty or None selects standard mapping; assignment reloads the mapping.'
     note: Any
     'Arbitrary note about the font. This should be a string'
     openTypeGaspRangeRecords: Any
@@ -336,6 +339,8 @@ class Info:
     'Descender value. Corresponds to the OpenType vhea table vertTypoDescender field. This should be a integer'
     openTypeVheaVertTypoLineGap: Any
     'Line gap value. Corresponds to the OpenType vhea table vertTypoLineGap field. This should be a integer'
+    otherData: Any
+    'Other font-info settings as a dictionary snapshot. Assign a dictionary to patch settings; nametablePath is font-wide, other entries use the current master.'
     panose: Any
     'PANOSE identification. Should be a string containing 10 space-separated numbers'
     postscriptBlueFuzz: Any
@@ -400,10 +405,10 @@ class Info:
     "The year the font was created. This attribute is deprecated as of version 2. It's presence should not be relied upon by authoring tools. However, it may occur in a font's info so authoring tools should preserve it if present. This should be a integer"
 
 class Interval:
-    'Interval representation\n\nConstructors:\n\nNative bases: object'
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        'Native constructor; consult class documentation for supported overloads.'
-        _unavailable('fontlab.Interval')
+    'Interval representation\n\nConstructors:\n\nNative bases: object\n\nCaptured native MRO: Interval, object\n\nNative __new__ allocation evidence (not an __init__ overload):\n(*args, **kwargs)\nCreate and return a new object.  See help(type) for accurate signature.'
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        'Initialize self.  See help(type(self)) for accurate signature.'
+        _unavailable('fontlab.Interval.__init__')
 
     def isEmpty(self) -> bool:
         'bool isEmpty()'
@@ -439,17 +444,17 @@ class Interval:
     'double t1'
 
 class LocationValue:
-    'LocationValue representation\n\nConstructors:\n  LocationValue(flLocation)\n  LocationValue(double)\n\nNative bases: object'
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        'Native constructor; consult class documentation for supported overloads.'
-        _unavailable('fontlab.LocationValue')
+    'LocationValue representation\n\nConstructors:\n  LocationValue(flLocation)\n  LocationValue(double)\n\nNative bases: object\n\nCaptured native MRO: LocationValue, object\n\nNative __new__ allocation evidence (not an __init__ overload):\n(*args, **kwargs)\nCreate and return a new object.  See help(type) for accurate signature.'
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        'Initialize self.  See help(type(self)) for accurate signature.'
+        _unavailable('fontlab.LocationValue.__init__')
 
 
 class PaintBrush:
-    'PaintBrush representation\n\nConstructors:\n\nNative bases: object'
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        'Native constructor; consult class documentation for supported overloads.'
-        _unavailable('fontlab.PaintBrush')
+    'PaintBrush representation\n\nConstructors:\n\nNative bases: object\n\nCaptured native MRO: PaintBrush, object\n\nNative __new__ allocation evidence (not an __init__ overload):\n(*args, **kwargs)\nCreate and return a new object.  See help(type) for accurate signature.'
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        'Initialize self.  See help(type(self)) for accurate signature.'
+        _unavailable('fontlab.PaintBrush.__init__')
 
     def assign(self, PaintBrush: Any) -> None:
         'void assign(PaintBrush)'
@@ -477,10 +482,10 @@ class PaintBrush:
     'double'
 
 class PaintBrushShape:
-    'Data wrapper\n\nNative bases: object'
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        'Native constructor; consult class documentation for supported overloads.'
-        _unavailable('fontlab.PaintBrushShape')
+    'Data wrapper\n\nNative bases: object\n\nCaptured native MRO: PaintBrushShape, object\n\nNative __new__ allocation evidence (not an __init__ overload):\n(*args, **kwargs)\nCreate and return a new object.  See help(type) for accurate signature.'
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        'Initialize self.  See help(type(self)) for accurate signature.'
+        _unavailable('fontlab.PaintBrushShape.__init__')
 
     def asDict(self, *args: Any, **kwargs: Any) -> Any:
         'represent object as dictionary'
@@ -497,10 +502,10 @@ class PaintBrushShape:
     data: Any
 
 class SmartCornerParameters:
-    'Data wrapper\n\nNative bases: object'
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        'Native constructor; consult class documentation for supported overloads.'
-        _unavailable('fontlab.SmartCornerParameters')
+    'Data wrapper\n\nNative bases: object\n\nCaptured native MRO: SmartCornerParameters, object\n\nNative __new__ allocation evidence (not an __init__ overload):\n(*args, **kwargs)\nCreate and return a new object.  See help(type) for accurate signature.'
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        'Initialize self.  See help(type(self)) for accurate signature.'
+        _unavailable('fontlab.SmartCornerParameters.__init__')
 
     def asDict(self, *args: Any, **kwargs: Any) -> Any:
         'represent object as dictionary'
@@ -511,12 +516,13 @@ class SmartCornerParameters:
         _unavailable('fontlab.SmartCornerParameters.asTuple')
 
     curvature: Any
+    inktrap_len: Any
 
 class TransformFrame:
-    'TransformFrame representation\n\nConstructors:\n\nNative bases: object'
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        'Native constructor; consult class documentation for supported overloads.'
-        _unavailable('fontlab.TransformFrame')
+    'TransformFrame representation\n\nConstructors:\n\nNative bases: object\n\nCaptured native MRO: TransformFrame, object\n\nNative __new__ allocation evidence (not an __init__ overload):\n(*args, **kwargs)\nCreate and return a new object.  See help(type) for accurate signature.'
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        'Initialize self.  See help(type(self)) for accurate signature.'
+        _unavailable('fontlab.TransformFrame.__init__')
 
     def boundingRect(self) -> QRectF:
         'QRectF boundingRect()'
@@ -530,7 +536,8 @@ class TransformFrame:
         'void doTransformation(int code, QPointF value)'
         _unavailable('fontlab.TransformFrame.doTransformation')
 
-    def expandPolygon(self, polygon: QPolygonF) -> QPolygonF:
+    @_echopy_builtins.staticmethod
+    def expandPolygon(polygon: QPolygonF) -> QPolygonF:
         'QPolygonF expandPolygon(QPolygonF polygon)'
         _unavailable('fontlab.TransformFrame.expandPolygon')
 
@@ -650,10 +657,10 @@ class TransformFrame:
     'QPointF'
 
 class YPanelManager:
-    'PythonQtInstanceWrapper object\n\nNative bases: PythonQtInstanceWrapper'
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        'Native constructor; consult class documentation for supported overloads.'
-        _unavailable('fontlab.YPanelManager')
+    'PythonQtInstanceWrapper object\n\nNative bases: PythonQtInstanceWrapper\n\nCaptured native MRO: YPanelManager, PythonQtInstanceWrapper, object\n\nNative __new__ allocation evidence (not an __init__ overload):\n(*args, **kwargs)\nCreate and return a new object.  See help(type) for accurate signature.'
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        'Initialize self.  See help(type(self)) for accurate signature.'
+        _unavailable('fontlab.YPanelManager.__init__')
 
     def blockSignals(self, b: Any) -> bool:
         'X.blockSignals(b) -> bool'
@@ -838,10 +845,10 @@ class YPanelManager:
     objectName: Any
 
 class YPanelWidget:
-    'PythonQtInstanceWrapper object\n\nNative bases: PythonQtInstanceWrapper'
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        'Native constructor; consult class documentation for supported overloads.'
-        _unavailable('fontlab.YPanelWidget')
+    'PythonQtInstanceWrapper object\n\nNative bases: PythonQtInstanceWrapper\n\nCaptured native MRO: YPanelWidget, PythonQtInstanceWrapper, object\n\nNative __new__ allocation evidence (not an __init__ overload):\n(*args, **kwargs)\nCreate and return a new object.  See help(type) for accurate signature.'
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        'Initialize self.  See help(type(self)) for accurate signature.'
+        _unavailable('fontlab.YPanelWidget.__init__')
 
     def actionEvent(self, event: Any) -> Any:
         'X.actionEvent(event)'
@@ -1946,10 +1953,10 @@ class YPanelWidget:
     y: Any
 
 class fgSymbol:
-    "fgSymbol representation\n\nConstructors:\n  fgSymbol() - default\n  fgSymbol(fgSymbol) - copy\n  fgSymbol(unicode)\n  fgSymbol('name')\n  fgSymbol(id, fgFont)\n  fgSymbol(glyph_id, package_id)\n  fgSymbol(unicode, 'name', id)\n\nNative bases: object"
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        'Native constructor; consult class documentation for supported overloads.'
-        _unavailable('fontlab.fgSymbol')
+    "fgSymbol representation\n\nConstructors:\n  fgSymbol() - default\n  fgSymbol(fgSymbol) - copy\n  fgSymbol(unicode)\n  fgSymbol('name')\n  fgSymbol(id, fgFont)\n  fgSymbol(glyph_id, package_id)\n  fgSymbol(unicode, 'name', id)\n\nNative bases: object\n\nCaptured native MRO: fgSymbol, object\n\nNative __new__ allocation evidence (not an __init__ overload):\n(*args, **kwargs)\nCreate and return a new object.  See help(type) for accurate signature."
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        'Initialize self.  See help(type(self)) for accurate signature.'
+        _unavailable('fontlab.fgSymbol.__init__')
 
     def clear(self) -> Any:
         'clear()'
@@ -1962,6 +1969,10 @@ class fgSymbol:
     def clearID(self) -> Any:
         'clearID()'
         _unavailable('fontlab.fgSymbol.clearID')
+
+    def clearPresentationOverride(self) -> Any:
+        'clearPresentationOverride()'
+        _unavailable('fontlab.fgSymbol.clearPresentationOverride')
 
     def compare(self, arg0: fgSymbol) -> bool:
         'bool compare(fgSymbol)'
@@ -1991,6 +2002,14 @@ class fgSymbol:
         'setData(DataCode, QVariant d)'
         _unavailable('fontlab.fgSymbol.setData')
 
+    def setLayerOverride(self, string: Any) -> Any:
+        'setLayerOverride(string)'
+        _unavailable('fontlab.fgSymbol.setLayerOverride')
+
+    def setLocation(self, arg0: flLocation) -> Any:
+        'setLocation(flLocation)'
+        _unavailable('fontlab.fgSymbol.setLocation')
+
     def setSterile(self) -> Any:
         'setSterile()'
         _unavailable('fontlab.fgSymbol.setSterile')
@@ -2002,6 +2021,8 @@ class fgSymbol:
     'bool'
     glyphIndex: Any
     'int'
+    hasLocation: Any
+    'bool'
     hasName: Any
     'bool'
     hasUnicode: Any
@@ -2012,6 +2033,8 @@ class fgSymbol:
     'string'
     ligatureIndex: Any
     'int'
+    location: Any
+    'flLocation'
     name: Any
     'QString'
     pid: Any
@@ -2024,10 +2047,10 @@ class fgSymbol:
     'uint'
 
 class fgSymbolList:
-    'fgSymbolList representation\n\nConstructors:\n  fgSymbolList() - default\n  fgSymbolList(fgSymbolList) - copy\n  fgSymbolList(list(fgSymbol))\n  fgSymbolList(string[, bool advancedProcessing = false])\n  fgSymbolList(fgSymbolList, int len)\n  fgSymbolList(fgFont, fgGlyphIDsSet)\n  fgSymbolList(fgFont, list(glyph_id))\n\nNative bases: object'
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        'Native constructor; consult class documentation for supported overloads.'
-        _unavailable('fontlab.fgSymbolList')
+    'fgSymbolList representation\n\nConstructors:\n  fgSymbolList() - default\n  fgSymbolList(fgSymbolList) - copy\n  fgSymbolList(list(fgSymbol))\n  fgSymbolList(string[, bool advancedProcessing = false])\n  fgSymbolList(fgSymbolList, int len)\n  fgSymbolList(fgFont, fgGlyphIDsSet)\n  fgSymbolList(fgFont, list(glyph_id))\n\nNative bases: object\n\nCaptured native MRO: fgSymbolList, object\n\nNative __new__ allocation evidence (not an __init__ overload):\n(*args, **kwargs)\nCreate and return a new object.  See help(type) for accurate signature.'
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        'Initialize self.  See help(type(self)) for accurate signature.'
+        _unavailable('fontlab.fgSymbolList.__init__')
 
     def append(self, fgSymbolList: Any) -> Any:
         'append(fgSymbol | fgSymbolList)'
@@ -2159,10 +2182,10 @@ class fgSymbolList:
 
 
 class flAbstractEditor:
-    'flAbstractEditor representation\n\nConstructors:\n  flAbstractEditor()\n  flAbstractEditor(flObject)\n\nNative bases: object'
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        'Native constructor; consult class documentation for supported overloads.'
-        _unavailable('fontlab.flAbstractEditor')
+    'flAbstractEditor representation\n\nConstructors:\n  flAbstractEditor()\n  flAbstractEditor(flObject)\n\nNative bases: object\n\nCaptured native MRO: flAbstractEditor, object\n\nNative __new__ allocation evidence (not an __init__ overload):\n(*args, **kwargs)\nCreate and return a new object.  See help(type) for accurate signature.'
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        'Initialize self.  See help(type(self)) for accurate signature.'
+        _unavailable('fontlab.flAbstractEditor.__init__')
 
     def activate(self) -> Any:
         'activate()'
@@ -2192,11 +2215,13 @@ class flAbstractEditor:
         'Clone the object'
         _unavailable('fontlab.flAbstractEditor.clone')
 
-    def cloneObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def cloneObject(*args: Any, **kwargs: Any) -> Any:
         'flObject cloneObject(const flObject&); '
         _unavailable('fontlab.flAbstractEditor.cloneObject')
 
-    def createObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def createObject(*args: Any, **kwargs: Any) -> Any:
         'flObject/Nothing createObject(int);    '
         _unavailable('fontlab.flAbstractEditor.createObject')
 
@@ -2232,7 +2257,8 @@ class flAbstractEditor:
         'hasHistoryState(uint history_ix)'
         _unavailable('fontlab.flAbstractEditor.hasHistoryState')
 
-    def haveObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def haveObject(*args: Any, **kwargs: Any) -> Any:
         'bool haveObject(uint);                 '
         _unavailable('fontlab.flAbstractEditor.haveObject')
 
@@ -2248,13 +2274,18 @@ class flAbstractEditor:
         'initialHistoryIx()'
         _unavailable('fontlab.flAbstractEditor.initialHistoryState')
 
-    def instanceType(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def instanceType(*args: Any, **kwargs: Any) -> Any:
         'int instanceType();                    '
         _unavailable('fontlab.flAbstractEditor.instanceType')
 
     def isEqual(self, arg0: flObject) -> Any:
         'isEqual(flObject)'
         _unavailable('fontlab.flAbstractEditor.isEqual')
+
+    def propertyNames(self, *args: Any, **kwargs: Any) -> Any:
+        'propertyNames(): sorted snapshot of dynamic property keys'
+        _unavailable('fontlab.flAbstractEditor.propertyNames')
 
     def release(self) -> Any:
         'release()'
@@ -2323,10 +2354,10 @@ class flAbstractEditor:
     'QWidget*'
 
 class flAbstractVectorNode:
-    'flAbstractVectorNode representation\n\nConstructors:\n  flAbstractVectorNode(flAbstractVectorNode)\n  flAbstractVectorNode(flObject)\n\nNative bases: object'
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        'Native constructor; consult class documentation for supported overloads.'
-        _unavailable('fontlab.flAbstractVectorNode')
+    'flAbstractVectorNode representation\n\nConstructors:\n  flAbstractVectorNode(flAbstractVectorNode)\n  flAbstractVectorNode(flObject)\n\nNative bases: object\n\nCaptured native MRO: flAbstractVectorNode, object\n\nNative __new__ allocation evidence (not an __init__ overload):\n(*args, **kwargs)\nCreate and return a new object.  See help(type) for accurate signature.'
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        'Initialize self.  See help(type(self)) for accurate signature.'
+        _unavailable('fontlab.flAbstractVectorNode.__init__')
 
     def angleTo(self, p: QPointF) -> float:
         'double angleTo(QPointF p)'
@@ -2388,7 +2419,8 @@ class flAbstractVectorNode:
         'flNode cloneMapped(QTransform)'
         _unavailable('fontlab.flAbstractVectorNode.cloneMapped')
 
-    def cloneObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def cloneObject(*args: Any, **kwargs: Any) -> Any:
         'flObject cloneObject(const flObject&); '
         _unavailable('fontlab.flAbstractVectorNode.cloneObject')
 
@@ -2412,7 +2444,8 @@ class flAbstractVectorNode:
         'copyFrom(Node[, withSelected=False])'
         _unavailable('fontlab.flAbstractVectorNode.copyFrom')
 
-    def createObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def createObject(*args: Any, **kwargs: Any) -> Any:
         'flObject/Nothing createObject(int);    '
         _unavailable('fontlab.flAbstractVectorNode.createObject')
 
@@ -2456,7 +2489,8 @@ class flAbstractVectorNode:
         'hasHistoryState(uint history_ix)'
         _unavailable('fontlab.flAbstractVectorNode.hasHistoryState')
 
-    def haveObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def haveObject(*args: Any, **kwargs: Any) -> Any:
         'bool haveObject(uint);                 '
         _unavailable('fontlab.flAbstractVectorNode.haveObject')
 
@@ -2476,7 +2510,8 @@ class flAbstractVectorNode:
         'initialHistoryIx()'
         _unavailable('fontlab.flAbstractVectorNode.initialHistoryState')
 
-    def instanceType(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def instanceType(*args: Any, **kwargs: Any) -> Any:
         'int instanceType();                    '
         _unavailable('fontlab.flAbstractVectorNode.instanceType')
 
@@ -2551,6 +2586,10 @@ class flAbstractVectorNode:
     def prevNode(self, nodeType: Any = ...) -> Any:
         'Node/None prevNode([string nodeType= [, int searchDepth=1]])'
         _unavailable('fontlab.flAbstractVectorNode.prevNode')
+
+    def propertyNames(self, *args: Any, **kwargs: Any) -> Any:
+        'propertyNames(): sorted snapshot of dynamic property keys'
+        _unavailable('fontlab.flAbstractVectorNode.propertyNames')
 
     def release(self) -> Any:
         'release()'
@@ -2731,10 +2770,10 @@ class flAbstractVectorNode:
     'The y coordinate of the node'
 
 class flAnchor:
-    'flAnchor representation\n\nConstructors:\n  flAnchor() - default\n  flAnchor(flAnchor) - copy\n  flAnchor(flObject)\n\nNative bases: object'
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        'Native constructor; consult class documentation for supported overloads.'
-        _unavailable('fontlab.flAnchor')
+    'flAnchor representation\n\nConstructors:\n  flAnchor() - default\n  flAnchor(flAnchor) - copy\n  flAnchor(flObject)\n\nNative bases: object\n\nCaptured native MRO: flAnchor, object\n\nNative __new__ allocation evidence (not an __init__ overload):\n(*args, **kwargs)\nCreate and return a new object.  See help(type) for accurate signature.'
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        'Initialize self.  See help(type(self)) for accurate signature.'
+        _unavailable('fontlab.flAnchor.__init__')
 
     def added(self) -> Any:
         'added()'
@@ -2764,11 +2803,13 @@ class flAnchor:
         'Clone the object'
         _unavailable('fontlab.flAnchor.clone')
 
-    def cloneObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def cloneObject(*args: Any, **kwargs: Any) -> Any:
         'flObject cloneObject(const flObject&); '
         _unavailable('fontlab.flAnchor.cloneObject')
 
-    def createObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def createObject(*args: Any, **kwargs: Any) -> Any:
         'flObject/Nothing createObject(int);    '
         _unavailable('fontlab.flAnchor.createObject')
 
@@ -2804,7 +2845,8 @@ class flAnchor:
         'bool hasObject(flObject)'
         _unavailable('fontlab.flAnchor.hasObject')
 
-    def haveObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def haveObject(*args: Any, **kwargs: Any) -> Any:
         'bool haveObject(uint);                 '
         _unavailable('fontlab.flAnchor.haveObject')
 
@@ -2820,13 +2862,18 @@ class flAnchor:
         'initialHistoryIx()'
         _unavailable('fontlab.flAnchor.initialHistoryState')
 
-    def instanceType(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def instanceType(*args: Any, **kwargs: Any) -> Any:
         'int instanceType();                    '
         _unavailable('fontlab.flAnchor.instanceType')
 
     def isEqual(self, arg0: flObject) -> Any:
         'isEqual(flObject)'
         _unavailable('fontlab.flAnchor.isEqual')
+
+    def propertyNames(self, *args: Any, **kwargs: Any) -> Any:
+        'propertyNames(): sorted snapshot of dynamic property keys'
+        _unavailable('fontlab.flAnchor.propertyNames')
 
     def release(self) -> Any:
         'release()'
@@ -2908,10 +2955,10 @@ class flAnchor:
     'object type'
 
 class flAuditInfo:
-    'flAuditInfo representation\n\nConstructors:\n  flAuditInfo()\n  flAuditInfo(flObject)\n  flAuditInfo(flAuditInfo)\n  flAuditInfo(FaBasic, QTransform)\n\nNative bases: object'
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        'Native constructor; consult class documentation for supported overloads.'
-        _unavailable('fontlab.flAuditInfo')
+    'flAuditInfo representation\n\nConstructors:\n  flAuditInfo()\n  flAuditInfo(flObject)\n  flAuditInfo(flAuditInfo)\n  flAuditInfo(FaBasic, QTransform)\n\nNative bases: object\n\nCaptured native MRO: flAuditInfo, object\n\nNative __new__ allocation evidence (not an __init__ overload):\n(*args, **kwargs)\nCreate and return a new object.  See help(type) for accurate signature.'
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        'Initialize self.  See help(type(self)) for accurate signature.'
+        _unavailable('fontlab.flAuditInfo.__init__')
 
     def changed(self) -> Any:
         'changed()'
@@ -2937,11 +2984,13 @@ class flAuditInfo:
         'Clone the object'
         _unavailable('fontlab.flAuditInfo.clone')
 
-    def cloneObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def cloneObject(*args: Any, **kwargs: Any) -> Any:
         'flObject cloneObject(const flObject&); '
         _unavailable('fontlab.flAuditInfo.cloneObject')
 
-    def createObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def createObject(*args: Any, **kwargs: Any) -> Any:
         'flObject/Nothing createObject(int);    '
         _unavailable('fontlab.flAuditInfo.createObject')
 
@@ -2977,7 +3026,8 @@ class flAuditInfo:
         'hasHistoryState(uint history_ix)'
         _unavailable('fontlab.flAuditInfo.hasHistoryState')
 
-    def haveObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def haveObject(*args: Any, **kwargs: Any) -> Any:
         'bool haveObject(uint);                 '
         _unavailable('fontlab.flAuditInfo.haveObject')
 
@@ -2993,13 +3043,18 @@ class flAuditInfo:
         'initialHistoryIx()'
         _unavailable('fontlab.flAuditInfo.initialHistoryState')
 
-    def instanceType(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def instanceType(*args: Any, **kwargs: Any) -> Any:
         'int instanceType();                    '
         _unavailable('fontlab.flAuditInfo.instanceType')
 
     def isEqual(self, arg0: flObject) -> Any:
         'isEqual(flObject)'
         _unavailable('fontlab.flAuditInfo.isEqual')
+
+    def propertyNames(self, *args: Any, **kwargs: Any) -> Any:
+        'propertyNames(): sorted snapshot of dynamic property keys'
+        _unavailable('fontlab.flAuditInfo.propertyNames')
 
     def release(self) -> Any:
         'release()'
@@ -3070,12 +3125,13 @@ class flAuditInfo:
     'object type'
 
 class flAxis:
-    'flAxis representation\n\nConstructors:\n  flAxis() - default\n  flAxis(string name)\n  flAxis(string name, string tag, string short_name)\n\nNative bases: object'
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        'Native constructor; consult class documentation for supported overloads.'
-        _unavailable('fontlab.flAxis')
+    'flAxis representation\n\nConstructors:\n  flAxis() - default\n  flAxis(string name)\n  flAxis(string name, string tag, string short_name)\n\nNative bases: object\n\nCaptured native MRO: flAxis, object\n\nNative __new__ allocation evidence (not an __init__ overload):\n(*args, **kwargs)\nCreate and return a new object.  See help(type) for accurate signature.'
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        'Initialize self.  See help(type(self)) for accurate signature.'
+        _unavailable('fontlab.flAxis.__init__')
 
-    def _has_axis_name(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def _has_axis_name(*args: Any, **kwargs: Any) -> Any:
         'QString _check_axis_name(QList<flAxis> axes, int exclude, strin gname)'
         _unavailable('fontlab.flAxis._has_axis_name')
 
@@ -3099,15 +3155,18 @@ class flAxis:
         'string instances2string()'
         _unavailable('fontlab.flAxis.instances2string')
 
-    def isWeight(self, s: Any) -> bool:
+    @_echopy_builtins.staticmethod
+    def isWeight(s: Any) -> bool:
         'bool isWeight(string s)'
         _unavailable('fontlab.flAxis.isWeight')
 
-    def isWidth(self, s: Any) -> bool:
+    @_echopy_builtins.staticmethod
+    def isWidth(s: Any) -> bool:
         'bool isWidth(string s)'
         _unavailable('fontlab.flAxis.isWidth')
 
-    def locationName(self, axes: list[flAxis], location: flLocation) -> str:
+    @_echopy_builtins.staticmethod
+    def locationName(axes: list[flAxis], location: flLocation) -> str:
         'QString locationName(QList<flAxis> axes, flLocation location)'
         _unavailable('fontlab.flAxis.locationName')
 
@@ -3151,11 +3210,13 @@ class flAxis:
         'void updateTag()'
         _unavailable('fontlab.flAxis.updateTag')
 
-    def valueWeight(self, location: flLocation, value: float) -> float:
+    @_echopy_builtins.staticmethod
+    def valueWeight(location: flLocation, value: float) -> float:
         'double valueWeight(flLocation location, double value)'
         _unavailable('fontlab.flAxis.valueWeight')
 
-    def valueWidth(self, location: flLocation, value: float) -> float:
+    @_echopy_builtins.staticmethod
+    def valueWidth(location: flLocation, value: float) -> float:
         'double valueWidth(flLocation location, double value)'
         _unavailable('fontlab.flAxis.valueWidth')
 
@@ -3167,6 +3228,8 @@ class flAxis:
     'double'
     designMin: Any
     'double'
+    extrapolate: Any
+    'bool'
     hidden: Any
     'bool'
     map: Any
@@ -3185,10 +3248,10 @@ class flAxis:
     'string'
 
 class flBasicTool:
-    'flBasicTool representation\n\nConstructors:\n  flBasicTool()\n  flBasicTool(flObject)\n  flBasicTool(flBasicTool)\n\nNative bases: object'
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        'Native constructor; consult class documentation for supported overloads.'
-        _unavailable('fontlab.flBasicTool')
+    'flBasicTool representation\n\nConstructors:\n  flBasicTool()\n  flBasicTool(flObject)\n  flBasicTool(flBasicTool)\n\nNative bases: object\n\nCaptured native MRO: flBasicTool, object\n\nNative __new__ allocation evidence (not an __init__ overload):\n(*args, **kwargs)\nCreate and return a new object.  See help(type) for accurate signature.'
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        'Initialize self.  See help(type(self)) for accurate signature.'
+        _unavailable('fontlab.flBasicTool.__init__')
 
     def activateTool(self) -> Any:
         'activateTool()'
@@ -3218,11 +3281,13 @@ class flBasicTool:
         'Clone the object'
         _unavailable('fontlab.flBasicTool.clone')
 
-    def cloneObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def cloneObject(*args: Any, **kwargs: Any) -> Any:
         'flObject cloneObject(const flObject&); '
         _unavailable('fontlab.flBasicTool.cloneObject')
 
-    def createObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def createObject(*args: Any, **kwargs: Any) -> Any:
         'flObject/Nothing createObject(int);    '
         _unavailable('fontlab.flBasicTool.createObject')
 
@@ -3258,7 +3323,8 @@ class flBasicTool:
         'hasHistoryState(uint history_ix)'
         _unavailable('fontlab.flBasicTool.hasHistoryState')
 
-    def haveObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def haveObject(*args: Any, **kwargs: Any) -> Any:
         'bool haveObject(uint);                 '
         _unavailable('fontlab.flBasicTool.haveObject')
 
@@ -3274,13 +3340,18 @@ class flBasicTool:
         'initialHistoryIx()'
         _unavailable('fontlab.flBasicTool.initialHistoryState')
 
-    def instanceType(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def instanceType(*args: Any, **kwargs: Any) -> Any:
         'int instanceType();                    '
         _unavailable('fontlab.flBasicTool.instanceType')
 
     def isEqual(self, arg0: flObject) -> Any:
         'isEqual(flObject)'
         _unavailable('fontlab.flBasicTool.isEqual')
+
+    def propertyNames(self, *args: Any, **kwargs: Any) -> Any:
+        'propertyNames(): sorted snapshot of dynamic property keys'
+        _unavailable('fontlab.flBasicTool.propertyNames')
 
     def release(self) -> Any:
         'release()'
@@ -3351,10 +3422,10 @@ class flBasicTool:
     'object type'
 
 class flCanvas:
-    'flCanvas representation\n\nConstructors:\n  flCanvas()\n  flCanvas(flCanvas)\n  flCanvas(flObject)\n  flCanvas(id)\n\nNative bases: object'
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        'Native constructor; consult class documentation for supported overloads.'
-        _unavailable('fontlab.flCanvas')
+    'flCanvas representation\n\nConstructors:\n  flCanvas()\n  flCanvas(flCanvas)\n  flCanvas(flObject)\n  flCanvas(id)\n\nNative bases: object\n\nCaptured native MRO: flCanvas, object\n\nNative __new__ allocation evidence (not an __init__ overload):\n(*args, **kwargs)\nCreate and return a new object.  See help(type) for accurate signature.'
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        'Initialize self.  See help(type(self)) for accurate signature.'
+        _unavailable('fontlab.flCanvas.__init__')
 
     def _finalize_smart_angles(self) -> bool:
         'bool _finalize_smart_angles()'
@@ -3395,6 +3466,10 @@ class flCanvas:
     def appendDecorator(self, arg0: flVisualItem, DecoratorOrder: Any) -> None:
         'void appendDecorator(flVisualItem, DecoratorOrder)'
         _unavailable('fontlab.flCanvas.appendDecorator')
+
+    def appendPythonPainter(self, callback: Any, order: Any = ...) -> Any:
+        'appendPythonPainter(callback, order=UnderOwner) -> token. callback(painter, canvas) draws in viewport coordinates; painter is valid only during the callback.'
+        _unavailable('fontlab.flCanvas.appendPythonPainter')
 
     def availableRect(self) -> QRectF:
         'QRectF availableRect()'
@@ -3448,7 +3523,8 @@ class flCanvas:
         'Clone the object'
         _unavailable('fontlab.flCanvas.clone')
 
-    def cloneObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def cloneObject(*args: Any, **kwargs: Any) -> Any:
         'flObject cloneObject(const flObject&); '
         _unavailable('fontlab.flCanvas.cloneObject')
 
@@ -3468,11 +3544,13 @@ class flCanvas:
         'fgSymbolList createFrame(fgSymbolList list, QPointF position)'
         _unavailable('fontlab.flCanvas.createFrame')
 
-    def createInstance(self) -> flCanvas:
+    @_echopy_builtins.staticmethod
+    def createInstance() -> flCanvas:
         'flCanvas createInstance()'
         _unavailable('fontlab.flCanvas.createInstance')
 
-    def createObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def createObject(*args: Any, **kwargs: Any) -> Any:
         'flObject/Nothing createObject(int);    '
         _unavailable('fontlab.flCanvas.createObject')
 
@@ -3540,7 +3618,8 @@ class flCanvas:
         'bool haveHoveredItem()'
         _unavailable('fontlab.flCanvas.haveHoveredItem')
 
-    def haveObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def haveObject(*args: Any, **kwargs: Any) -> Any:
         'bool haveObject(uint);                 '
         _unavailable('fontlab.flCanvas.haveObject')
 
@@ -3572,11 +3651,13 @@ class flCanvas:
         'initialHistoryIx()'
         _unavailable('fontlab.flCanvas.initialHistoryState')
 
-    def instanceAcceptEvents(self) -> int:
+    @_echopy_builtins.staticmethod
+    def instanceAcceptEvents() -> int:
         'int instanceAcceptEvents()'
         _unavailable('fontlab.flCanvas.instanceAcceptEvents')
 
-    def instanceType(self) -> int:
+    @_echopy_builtins.staticmethod
+    def instanceType() -> int:
         'int instanceType()'
         _unavailable('fontlab.flCanvas.instanceType')
 
@@ -3796,6 +3877,10 @@ class flCanvas:
         'flObject producer()'
         _unavailable('fontlab.flCanvas.producer')
 
+    def propertyNames(self, *args: Any, **kwargs: Any) -> Any:
+        'propertyNames(): sorted snapshot of dynamic property keys'
+        _unavailable('fontlab.flCanvas.propertyNames')
+
     def rectToUpdate(self) -> QRect:
         'QRect& rectToUpdate()'
         _unavailable('fontlab.flCanvas.rectToUpdate')
@@ -3847,6 +3932,10 @@ class flCanvas:
     def removeItem(self, arg0: flVisualItem) -> Any:
         'removeItem(flVisualItem)'
         _unavailable('fontlab.flCanvas.removeItem')
+
+    def removePythonPainter(self, token: Any) -> bool:
+        'removePythonPainter(token) -> bool'
+        _unavailable('fontlab.flCanvas.removePythonPainter')
 
     def removeTextBlock(self, arg0: flTextBlock) -> Any:
         'removeTextBlock(flTextBlock)'
@@ -4001,9 +4090,11 @@ class flCanvas:
         _unavailable('fontlab.flCanvas.zoomToReaded')
 
     Listeners: dict
+    OverOwner: int
     SetMetricsAuto: int
     SetMetricsDefault: int
     SetMetricsZero: int
+    UnderOwner: int
     flObjectFlags: dict
     hasChanges: Any
     'bool'
@@ -4055,10 +4146,10 @@ class flCanvas:
     'flWorkspace'
 
 class flContour:
-    'flContour representation\n\nConstructors:\n  flContour()\n  flContour(flObject)\n  flContour(flContour)\n  flContour(fgContour)\n  flContour(id)\n  flContour(list(Node)[, bool closed=false])\n  flContour(list(QPointF)[, flNode::NodeType=flNode::On[, bool closed=false]])\n  flContour(QRectF)\n  flContour(QLineF)\n\nNative bases: object'
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        'Native constructor; consult class documentation for supported overloads.'
-        _unavailable('fontlab.flContour')
+    'flContour representation\n\nConstructors:\n  flContour()\n  flContour(flObject)\n  flContour(flContour)\n  flContour(fgContour)\n  flContour(id)\n  flContour(list(Node)[, bool closed=false])\n  flContour(list(QPointF)[, flNode::NodeType=flNode::On[, bool closed=false]])\n  flContour(QRectF)\n  flContour(QLineF)\n\nNative bases: object\n\nCaptured native MRO: flContour, object\n\nNative __new__ allocation evidence (not an __init__ overload):\n(*args, **kwargs)\nCreate and return a new object.  See help(type) for accurate signature.'
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        'Initialize self.  See help(type(self)) for accurate signature.'
+        _unavailable('fontlab.flContour.__init__')
 
     def add(self, QPointF: Any) -> Any:
         'add(flNode | QPointF)'
@@ -4156,7 +4247,8 @@ class flContour:
         'flContour cloneMappedByT(QTransform tx, float t0, float t1)'
         _unavailable('fontlab.flContour.cloneMappedByT')
 
-    def cloneObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def cloneObject(*args: Any, **kwargs: Any) -> Any:
         'flObject cloneObject(const flObject&); '
         _unavailable('fontlab.flContour.cloneObject')
 
@@ -4188,7 +4280,8 @@ class flContour:
         'float convertTtoEx(float)'
         _unavailable('fontlab.flContour.convertTtoEx')
 
-    def createObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def createObject(*args: Any, **kwargs: Any) -> Any:
         'flObject/Nothing createObject(int);    '
         _unavailable('fontlab.flContour.createObject')
 
@@ -4360,7 +4453,8 @@ class flContour:
         'bool hasSelected(SelectionMode)'
         _unavailable('fontlab.flContour.hasSelected')
 
-    def haveObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def haveObject(*args: Any, **kwargs: Any) -> Any:
         'bool haveObject(uint);                 '
         _unavailable('fontlab.flContour.haveObject')
 
@@ -4400,7 +4494,8 @@ class flContour:
         'flNode insertSafeNodeTo(float t, float dst)'
         _unavailable('fontlab.flContour.insertSafeNodeTo')
 
-    def instanceType(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def instanceType(*args: Any, **kwargs: Any) -> Any:
         'int instanceType();                    '
         _unavailable('fontlab.flContour.instanceType')
 
@@ -4463,6 +4558,10 @@ class flContour:
     def pointf(self, index: int) -> QPointF:
         'QPointF pointf(int index)'
         _unavailable('fontlab.flContour.pointf')
+
+    def propertyNames(self, *args: Any, **kwargs: Any) -> Any:
+        'propertyNames(): sorted snapshot of dynamic property keys'
+        _unavailable('fontlab.flContour.propertyNames')
 
     def release(self) -> Any:
         'release()'
@@ -4698,10 +4797,10 @@ class flContour:
     'object type'
 
 class flContourInfo:
-    'flContourInfo representation\n\nConstructors:\n  flContourInfo()\n  flContourInfo(flObject)\n  flContourInfo(flContour, flSearchInfo)\n  flContourInfo(flContour, flShapeInfo)\n  flContourInfo(flContour, flContourInfo)\n  flContourInfo(flContour, QTransform)\n\nNative bases: object'
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        'Native constructor; consult class documentation for supported overloads.'
-        _unavailable('fontlab.flContourInfo')
+    'flContourInfo representation\n\nConstructors:\n  flContourInfo()\n  flContourInfo(flObject)\n  flContourInfo(flContour, flSearchInfo)\n  flContourInfo(flContour, flShapeInfo)\n  flContourInfo(flContour, flContourInfo)\n  flContourInfo(flContour, QTransform)\n\nNative bases: object\n\nCaptured native MRO: flContourInfo, object\n\nNative __new__ allocation evidence (not an __init__ overload):\n(*args, **kwargs)\nCreate and return a new object.  See help(type) for accurate signature.'
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        'Initialize self.  See help(type(self)) for accurate signature.'
+        _unavailable('fontlab.flContourInfo.__init__')
 
     def brectOnCanvas(self) -> QRectF:
         'QRectF brectOnCanvas()'
@@ -4731,7 +4830,8 @@ class flContourInfo:
         'Clone the object'
         _unavailable('fontlab.flContourInfo.clone')
 
-    def cloneObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def cloneObject(*args: Any, **kwargs: Any) -> Any:
         'flObject cloneObject(const flObject&); '
         _unavailable('fontlab.flContourInfo.cloneObject')
 
@@ -4743,11 +4843,13 @@ class flContourInfo:
         'combine(QTransform transform)'
         _unavailable('fontlab.flContourInfo.combine')
 
-    def createInstance(self) -> flContourInfo:
+    @_echopy_builtins.staticmethod
+    def createInstance() -> flContourInfo:
         'flContourInfo createInstance()'
         _unavailable('fontlab.flContourInfo.createInstance')
 
-    def createObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def createObject(*args: Any, **kwargs: Any) -> Any:
         'flObject/Nothing createObject(int);    '
         _unavailable('fontlab.flContourInfo.createObject')
 
@@ -4791,7 +4893,8 @@ class flContourInfo:
         'hasHistoryState(uint history_ix)'
         _unavailable('fontlab.flContourInfo.hasHistoryState')
 
-    def haveObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def haveObject(*args: Any, **kwargs: Any) -> Any:
         'bool haveObject(uint);                 '
         _unavailable('fontlab.flContourInfo.haveObject')
 
@@ -4807,7 +4910,8 @@ class flContourInfo:
         'initialHistoryIx()'
         _unavailable('fontlab.flContourInfo.initialHistoryState')
 
-    def instanceType(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def instanceType(*args: Any, **kwargs: Any) -> Any:
         'int instanceType();                    '
         _unavailable('fontlab.flContourInfo.instanceType')
 
@@ -4822,6 +4926,10 @@ class flContourInfo:
     def paramT(self) -> float:
         'double paramT()'
         _unavailable('fontlab.flContourInfo.paramT')
+
+    def propertyNames(self, *args: Any, **kwargs: Any) -> Any:
+        'propertyNames(): sorted snapshot of dynamic property keys'
+        _unavailable('fontlab.flContourInfo.propertyNames')
 
     def release(self) -> Any:
         'release()'
@@ -4902,10 +5010,10 @@ class flContourInfo:
     'object type'
 
 class flEvent:
-    'flEvent representation\n\nConstructors:\n  flEvent(flEvent)\n  flEvent(flEvent(EventType type[, int modifiers=-1])\n\nNative bases: object'
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        'Native constructor; consult class documentation for supported overloads.'
-        _unavailable('fontlab.flEvent')
+    'flEvent representation\n\nConstructors:\n  flEvent(flEvent)\n  flEvent(flEvent(EventType type[, int modifiers=-1])\n\nNative bases: object\n\nCaptured native MRO: flEvent, object\n\nNative __new__ allocation evidence (not an __init__ overload):\n(*args, **kwargs)\nCreate and return a new object.  See help(type) for accurate signature.'
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        'Initialize self.  See help(type(self)) for accurate signature.'
+        _unavailable('fontlab.flEvent.__init__')
 
     EventType: dict
     modifiers: Any
@@ -4914,10 +5022,10 @@ class flEvent:
     'EventType'
 
 class flExpression:
-    'flExpression representation\n\nConstructors:\n  flExpression()\n  flExpression(flObject)\n  flExpression(flExpression)\n  flExpression(string)\n\nNative bases: object'
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        'Native constructor; consult class documentation for supported overloads.'
-        _unavailable('fontlab.flExpression')
+    'flExpression representation\n\nConstructors:\n  flExpression()\n  flExpression(flObject)\n  flExpression(flExpression)\n  flExpression(string)\n\nNative bases: object\n\nCaptured native MRO: flExpression, object\n\nNative __new__ allocation evidence (not an __init__ overload):\n(*args, **kwargs)\nCreate and return a new object.  See help(type) for accurate signature.'
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        'Initialize self.  See help(type(self)) for accurate signature.'
+        _unavailable('fontlab.flExpression.__init__')
 
     def changed(self) -> Any:
         'changed()'
@@ -4947,11 +5055,13 @@ class flExpression:
         'Clone the object'
         _unavailable('fontlab.flExpression.clone')
 
-    def cloneObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def cloneObject(*args: Any, **kwargs: Any) -> Any:
         'flObject cloneObject(const flObject&); '
         _unavailable('fontlab.flExpression.cloneObject')
 
-    def createObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def createObject(*args: Any, **kwargs: Any) -> Any:
         'flObject/Nothing createObject(int);    '
         _unavailable('fontlab.flExpression.createObject')
 
@@ -4995,7 +5105,8 @@ class flExpression:
         'hasHistoryState(uint history_ix)'
         _unavailable('fontlab.flExpression.hasHistoryState')
 
-    def haveObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def haveObject(*args: Any, **kwargs: Any) -> Any:
         'bool haveObject(uint);                 '
         _unavailable('fontlab.flExpression.haveObject')
 
@@ -5011,7 +5122,8 @@ class flExpression:
         'initialHistoryIx()'
         _unavailable('fontlab.flExpression.initialHistoryState')
 
-    def instanceType(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def instanceType(*args: Any, **kwargs: Any) -> Any:
         'int instanceType();                    '
         _unavailable('fontlab.flExpression.instanceType')
 
@@ -5022,6 +5134,10 @@ class flExpression:
     def isNeedToComplete(self) -> bool:
         'bool isNeedToComplete()'
         _unavailable('fontlab.flExpression.isNeedToComplete')
+
+    def propertyNames(self, *args: Any, **kwargs: Any) -> Any:
+        'propertyNames(): sorted snapshot of dynamic property keys'
+        _unavailable('fontlab.flExpression.propertyNames')
 
     def release(self) -> Any:
         'release()'
@@ -5100,10 +5216,10 @@ class flExpression:
     'object type'
 
 class flGlyph:
-    'flGlyph representation\n\nConstructors:\n  flGlyph()\n  flGlyph(flGlyph)\n  flGlyph(flObject)\n  flGlyph(fgGlyph, fgFont)\n\nNative bases: object'
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        'Native constructor; consult class documentation for supported overloads.'
-        _unavailable('fontlab.flGlyph')
+    'flGlyph representation\n\nConstructors:\n  flGlyph()\n  flGlyph(flGlyph)\n  flGlyph(flObject)\n  flGlyph(fgGlyph, fgFont)\n\nNative bases: object\n\nCaptured native MRO: flGlyph, object\n\nNative __new__ allocation evidence (not an __init__ overload):\n(*args, **kwargs)\nCreate and return a new object.  See help(type) for accurate signature.'
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        'Initialize self.  See help(type(self)) for accurate signature.'
+        _unavailable('fontlab.flGlyph.__init__')
 
     def addLayer(self, back: Any = ...) -> None:
         'void addLayer(flLayer[, bool back = false])'
@@ -5145,7 +5261,12 @@ class flGlyph:
         'clearFlags()'
         _unavailable('fontlab.flGlyph.clearFlags')
 
-    def clearUpdateFgGlyphs(self) -> Any:
+    def clearSigmaData(self, *args: Any, **kwargs: Any) -> Any:
+        'clearSigmaData(): remove authored Sigma curves'
+        _unavailable('fontlab.flGlyph.clearSigmaData')
+
+    @_echopy_builtins.staticmethod
+    def clearUpdateFgGlyphs() -> Any:
         'clearUpdateFgGlyphs()'
         _unavailable('fontlab.flGlyph.clearUpdateFgGlyphs')
 
@@ -5153,15 +5274,18 @@ class flGlyph:
         'Clone the object'
         _unavailable('fontlab.flGlyph.clone')
 
-    def cloneObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def cloneObject(*args: Any, **kwargs: Any) -> Any:
         'flObject cloneObject(const flObject&); '
         _unavailable('fontlab.flGlyph.cloneObject')
 
-    def createInstance(self) -> flGlyph:
+    @_echopy_builtins.staticmethod
+    def createInstance() -> flGlyph:
         'flGlyph createInstance()'
         _unavailable('fontlab.flGlyph.createInstance')
 
-    def createObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def createObject(*args: Any, **kwargs: Any) -> Any:
         'flObject/Nothing createObject(int);    '
         _unavailable('fontlab.flGlyph.createObject')
 
@@ -5173,7 +5297,8 @@ class flGlyph:
         'deactivateAll()'
         _unavailable('fontlab.flGlyph.deactivateAll')
 
-    def ensureFgData(self, arg0: fgGlyph) -> fgFontGateData:
+    @_echopy_builtins.staticmethod
+    def ensureFgData(arg0: fgGlyph) -> fgFontGateData:
         'fgFontGateData ensureFgData(fgGlyph)'
         _unavailable('fontlab.flGlyph.ensureFgData')
 
@@ -5237,6 +5362,10 @@ class flGlyph:
         '(double l, double r) getSB(QTransform tr)'
         _unavailable('fontlab.flGlyph.getSB')
 
+    def getSigmaData(self, *args: Any, **kwargs: Any) -> Any:
+        'dict getSigmaData(): return editable Sigma metadata'
+        _unavailable('fontlab.flGlyph.getSigmaData')
+
     def glyphName(self) -> str:
         'QString glyphName()'
         _unavailable('fontlab.flGlyph.glyphName')
@@ -5249,11 +5378,13 @@ class flGlyph:
         'hasHistoryState(uint history_ix)'
         _unavailable('fontlab.flGlyph.hasHistoryState')
 
-    def hasInstance(self, arg0: fgGlyph) -> bool:
+    @_echopy_builtins.staticmethod
+    def hasInstance(arg0: fgGlyph) -> bool:
         'bool hasInstance(fgGlyph)'
         _unavailable('fontlab.flGlyph.hasInstance')
 
-    def haveObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def haveObject(*args: Any, **kwargs: Any) -> Any:
         'bool haveObject(uint);                 '
         _unavailable('fontlab.flGlyph.haveObject')
 
@@ -5277,11 +5408,16 @@ class flGlyph:
         'initialHistoryIx()'
         _unavailable('fontlab.flGlyph.initialHistoryState')
 
+    def initializeSigma(self, *args: Any, **kwargs: Any) -> Any:
+        'dict initializeSigma(): bind compatible master points for Sigma'
+        _unavailable('fontlab.flGlyph.initializeSigma')
+
     def inkBox(self, tx: Any = ...) -> QRectF:
         'QRectF inkBox([QTransform tx = QTransform()])'
         _unavailable('fontlab.flGlyph.inkBox')
 
-    def instanceType(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def instanceType(*args: Any, **kwargs: Any) -> Any:
         'int instanceType();                    '
         _unavailable('fontlab.flGlyph.instanceType')
 
@@ -5297,7 +5433,8 @@ class flGlyph:
         'bool isUnbindedDependecies()'
         _unavailable('fontlab.flGlyph.isUnbindedDependecies')
 
-    def linkInstances(self, arg0: flGlyph, arg1: fgGlyph) -> bool:
+    @_echopy_builtins.staticmethod
+    def linkInstances(arg0: flGlyph, arg1: fgGlyph) -> bool:
         'bool linkInstances(flGlyph, fgGlyph)'
         _unavailable('fontlab.flGlyph.linkInstances')
 
@@ -5316,6 +5453,10 @@ class flGlyph:
     def prepareTransformationData(self) -> Any:
         'prepareTransformationData()'
         _unavailable('fontlab.flGlyph.prepareTransformationData')
+
+    def propertyNames(self, *args: Any, **kwargs: Any) -> Any:
+        'propertyNames(): sorted snapshot of dynamic property keys'
+        _unavailable('fontlab.flGlyph.propertyNames')
 
     def release(self) -> Any:
         'release()'
@@ -5389,6 +5530,10 @@ class flGlyph:
         'bool setSB(double l, double r, bool move_guidelines, bool all_layers, QTransform tr)'
         _unavailable('fontlab.flGlyph.setSB')
 
+    def setSigmaData(self, *args: Any, **kwargs: Any) -> Any:
+        'setSigmaData(dict): validate and apply Sigma metadata as an undoable edit'
+        _unavailable('fontlab.flGlyph.setSigmaData')
+
     def setTag(self, arg0: str, bool: Any) -> None:
         'void setTag(QString, bool)'
         _unavailable('fontlab.flGlyph.setTag')
@@ -5413,7 +5558,8 @@ class flGlyph:
         'void updateAudit(list(int))'
         _unavailable('fontlab.flGlyph.updateAudit')
 
-    def updateFgGlyph(self, id: int) -> Any:
+    @_echopy_builtins.staticmethod
+    def updateFgGlyph(id: int) -> Any:
         'updateFgGlyph(uint id)'
         _unavailable('fontlab.flGlyph.updateFgGlyph')
 
@@ -5421,7 +5567,8 @@ class flGlyph:
         'bool updateSidebearings(bool nofify)'
         _unavailable('fontlab.flGlyph.updateSidebearings')
 
-    def updatedFgGlyphs(self) -> Any:
+    @_echopy_builtins.staticmethod
+    def updatedFgGlyphs() -> Any:
         'list(uint32_t) updatedFgGlyphs()'
         _unavailable('fontlab.flGlyph.updatedFgGlyphs')
 
@@ -5454,6 +5601,8 @@ class flGlyph:
     fgPackage: Any
     'fgFont'
     flObjectFlags: dict
+    glyphMark: Any
+    'int: glyph-only mark; does not change layer marks or record history'
     glyphRect: Any
     'QRectF'
     hasBody: Any
@@ -5516,10 +5665,10 @@ class flGlyph:
     'object type'
 
 class flGlyphInfo:
-    'flGlyphInfo representation\n\nConstructors:\n  flGlyphInfo()\n  flGlyphInfo(flObject)\n  flGlyphInfo(flGlyphInfo)\n  flGlyphInfo(flGlyph, QTransform)\n  flGlyphInfo(fgSymbol, fgGlyph, fgFont)\n\nNative bases: object'
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        'Native constructor; consult class documentation for supported overloads.'
-        _unavailable('fontlab.flGlyphInfo')
+    'flGlyphInfo representation\n\nConstructors:\n  flGlyphInfo()\n  flGlyphInfo(flObject)\n  flGlyphInfo(flGlyphInfo)\n  flGlyphInfo(flGlyph, QTransform)\n  flGlyphInfo(fgSymbol, fgGlyph, fgFont)\n\nNative bases: object\n\nCaptured native MRO: flGlyphInfo, object\n\nNative __new__ allocation evidence (not an __init__ overload):\n(*args, **kwargs)\nCreate and return a new object.  See help(type) for accurate signature.'
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        'Initialize self.  See help(type(self)) for accurate signature.'
+        _unavailable('fontlab.flGlyphInfo.__init__')
 
     def applyTransform(self) -> Any:
         'applyTransform()'
@@ -5549,11 +5698,16 @@ class flGlyphInfo:
         'clearFlags()'
         _unavailable('fontlab.flGlyphInfo.clearFlags')
 
+    def clearPresentationOverride(self) -> bool:
+        'bool clearPresentationOverride()'
+        _unavailable('fontlab.flGlyphInfo.clearPresentationOverride')
+
     def clone(self, *args: Any, **kwargs: Any) -> Any:
         'Clone the object'
         _unavailable('fontlab.flGlyphInfo.clone')
 
-    def cloneObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def cloneObject(*args: Any, **kwargs: Any) -> Any:
         'flObject cloneObject(const flObject&); '
         _unavailable('fontlab.flGlyphInfo.cloneObject')
 
@@ -5561,7 +5715,8 @@ class flGlyphInfo:
         'createBoundingBox()'
         _unavailable('fontlab.flGlyphInfo.createBoundingBox')
 
-    def createObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def createObject(*args: Any, **kwargs: Any) -> Any:
         'flObject/Nothing createObject(int);    '
         _unavailable('fontlab.flGlyphInfo.createObject')
 
@@ -5601,7 +5756,8 @@ class flGlyphInfo:
         'hasHistoryState(uint history_ix)'
         _unavailable('fontlab.flGlyphInfo.hasHistoryState')
 
-    def haveObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def haveObject(*args: Any, **kwargs: Any) -> Any:
         'bool haveObject(uint);                 '
         _unavailable('fontlab.flGlyphInfo.haveObject')
 
@@ -5621,7 +5777,8 @@ class flGlyphInfo:
         'initialHistoryIx()'
         _unavailable('fontlab.flGlyphInfo.initialHistoryState')
 
-    def instanceType(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def instanceType(*args: Any, **kwargs: Any) -> Any:
         'int instanceType();                    '
         _unavailable('fontlab.flGlyphInfo.instanceType')
 
@@ -5632,6 +5789,10 @@ class flGlyphInfo:
     def kerningOffset(self, useKerning: bool) -> float:
         'double kerningOffset(bool useKerning)'
         _unavailable('fontlab.flGlyphInfo.kerningOffset')
+
+    def propertyNames(self, *args: Any, **kwargs: Any) -> Any:
+        'propertyNames(): sorted snapshot of dynamic property keys'
+        _unavailable('fontlab.flGlyphInfo.propertyNames')
 
     def release(self) -> Any:
         'release()'
@@ -5648,6 +5809,10 @@ class flGlyphInfo:
     def restoreHistoryState(self, history_ix: int) -> Any:
         'restoreHistoryState(uint history_ix)'
         _unavailable('fontlab.flGlyphInfo.restoreHistoryState')
+
+    def setActiveLayer(self, arg0: flLayer) -> bool:
+        'bool setActiveLayer(flLayer)'
+        _unavailable('fontlab.flGlyphInfo.setActiveLayer')
 
     def setBoundAscender(self, double: Any) -> Any:
         'setBoundAscender(double)'
@@ -5677,6 +5842,10 @@ class flGlyphInfo:
         'setKerningOffset(double offs)'
         _unavailable('fontlab.flGlyphInfo.setKerningOffset')
 
+    def setLocation(self, arg0: flLocation) -> bool:
+        'bool setLocation(flLocation)'
+        _unavailable('fontlab.flGlyphInfo.setLocation')
+
     def setProperty(self, *args: Any, **kwargs: Any) -> Any:
         "setProperty('key', value) - set object property by 'key' or number "
         _unavailable('fontlab.flGlyphInfo.setProperty')
@@ -5697,6 +5866,8 @@ class flGlyphInfo:
         'update()'
         _unavailable('fontlab.flGlyphInfo.update')
 
+    activeLayer: Any
+    'flLayer'
     bodyRectOnCanvas: Any
     'QRectF'
     boundingBox: Any
@@ -5718,11 +5889,15 @@ class flGlyphInfo:
     'bool'
     hasHistoryStates: Any
     'bool'
+    hasPresentationOverride: Any
+    'bool'
     id: Any
     'object id'
     isActive: Any
     'bool'
     isChanged: Any
+    'bool'
+    isEditable: Any
     'bool'
     isNull: Any
     'bool'
@@ -5760,10 +5935,10 @@ class flGlyphInfo:
     'object type'
 
 class flGraphicsInfo:
-    'flGraphicsInfo representation\n\nConstructors:\n  flGraphicsInfo()\n  flGraphicsInfo(flObject)\n  flGraphicsInfo(flGraphicsInfo)\n\nNative bases: object'
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        'Native constructor; consult class documentation for supported overloads.'
-        _unavailable('fontlab.flGraphicsInfo')
+    'flGraphicsInfo representation\n\nConstructors:\n  flGraphicsInfo()\n  flGraphicsInfo(flObject)\n  flGraphicsInfo(flGraphicsInfo)\n\nNative bases: object\n\nCaptured native MRO: flGraphicsInfo, object\n\nNative __new__ allocation evidence (not an __init__ overload):\n(*args, **kwargs)\nCreate and return a new object.  See help(type) for accurate signature.'
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        'Initialize self.  See help(type(self)) for accurate signature.'
+        _unavailable('fontlab.flGraphicsInfo.__init__')
 
     def changed(self) -> Any:
         'changed()'
@@ -5789,11 +5964,13 @@ class flGraphicsInfo:
         'Clone the object'
         _unavailable('fontlab.flGraphicsInfo.clone')
 
-    def cloneObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def cloneObject(*args: Any, **kwargs: Any) -> Any:
         'flObject cloneObject(const flObject&); '
         _unavailable('fontlab.flGraphicsInfo.cloneObject')
 
-    def createObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def createObject(*args: Any, **kwargs: Any) -> Any:
         'flObject/Nothing createObject(int);    '
         _unavailable('fontlab.flGraphicsInfo.createObject')
 
@@ -5825,7 +6002,8 @@ class flGraphicsInfo:
         'hasHistoryState(uint history_ix)'
         _unavailable('fontlab.flGraphicsInfo.hasHistoryState')
 
-    def haveObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def haveObject(*args: Any, **kwargs: Any) -> Any:
         'bool haveObject(uint);                 '
         _unavailable('fontlab.flGraphicsInfo.haveObject')
 
@@ -5841,13 +6019,18 @@ class flGraphicsInfo:
         'initialHistoryIx()'
         _unavailable('fontlab.flGraphicsInfo.initialHistoryState')
 
-    def instanceType(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def instanceType(*args: Any, **kwargs: Any) -> Any:
         'int instanceType();                    '
         _unavailable('fontlab.flGraphicsInfo.instanceType')
 
     def isEqual(self, arg0: flObject) -> Any:
         'isEqual(flObject)'
         _unavailable('fontlab.flGraphicsInfo.isEqual')
+
+    def propertyNames(self, *args: Any, **kwargs: Any) -> Any:
+        'propertyNames(): sorted snapshot of dynamic property keys'
+        _unavailable('fontlab.flGraphicsInfo.propertyNames')
 
     def release(self) -> Any:
         'release()'
@@ -5916,10 +6099,10 @@ class flGraphicsInfo:
     'object type'
 
 class flGuideLine:
-    'flGuideLine representation\n\nConstructors:\n  flGuideLine()\n  flGuideLine(flObject)\n  flGuideLine(flGuideLine)\n  flGuideLine(double angle, QPointF canvas_point, uint=flSnaps::Vector, SnapObjectsStyle=gsPageGuideline)\n  flGuideLine(QLineF line, uint=flSnaps::Vector, SnapObjectsStyle=gsPageGuideline)\n  flGuideLine(QPointF center, QPointF vector_point, uint =flSnaps::Vector, SnapObjectsStyle=gsPageGuideline)\n\nNative bases: object'
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        'Native constructor; consult class documentation for supported overloads.'
-        _unavailable('fontlab.flGuideLine')
+    'flGuideLine representation\n\nConstructors:\n  flGuideLine()\n  flGuideLine(flObject)\n  flGuideLine(flGuideLine)\n  flGuideLine(double angle, QPointF canvas_point, uint=flSnaps::Vector, SnapObjectsStyle=gsPageGuideline)\n  flGuideLine(QLineF line, uint=flSnaps::Vector, SnapObjectsStyle=gsPageGuideline)\n  flGuideLine(QPointF center, QPointF vector_point, uint =flSnaps::Vector, SnapObjectsStyle=gsPageGuideline)\n\nNative bases: object\n\nCaptured native MRO: flGuideLine, object\n\nNative __new__ allocation evidence (not an __init__ overload):\n(*args, **kwargs)\nCreate and return a new object.  See help(type) for accurate signature.'
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        'Initialize self.  See help(type(self)) for accurate signature.'
+        _unavailable('fontlab.flGuideLine.__init__')
 
     def applyTransform(self, arg0: QTransform) -> None:
         'void applyTransform(QTransform)'
@@ -5949,23 +6132,28 @@ class flGuideLine:
         'Clone the object'
         _unavailable('fontlab.flGuideLine.clone')
 
-    def cloneObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def cloneObject(*args: Any, **kwargs: Any) -> Any:
         'flObject cloneObject(const flObject&); '
         _unavailable('fontlab.flGuideLine.cloneObject')
 
-    def counterPaper(self) -> int:
+    @_echopy_builtins.staticmethod
+    def counterPaper() -> int:
         'int counterPaper()'
         _unavailable('fontlab.flGuideLine.counterPaper')
 
-    def createInstance(self) -> flGuideLine:
+    @_echopy_builtins.staticmethod
+    def createInstance() -> flGuideLine:
         'flGuideLine createInstance()'
         _unavailable('fontlab.flGuideLine.createInstance')
 
-    def createObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def createObject(*args: Any, **kwargs: Any) -> Any:
         'flObject/Nothing createObject(int);    '
         _unavailable('fontlab.flGuideLine.createObject')
 
-    def createPowerGuides(self, arg0: fgFont, arg1: flLayer, horizontal: bool, vertical: bool, use_glyph_guides: Any = ...) -> bool:
+    @_echopy_builtins.staticmethod
+    def createPowerGuides(arg0: fgFont, arg1: flLayer, horizontal: bool, vertical: bool, use_glyph_guides: Any = ...) -> bool:
         'bool createPowerGuides(fgFont, flLayer, bool horizontal, bool vertical, bool diagonal[, bool use_glyph_guides=true[, bool use_font_guides = true]])'
         _unavailable('fontlab.flGuideLine.createPowerGuides')
 
@@ -5985,7 +6173,8 @@ class flGuideLine:
         'flag(uint f)'
         _unavailable('fontlab.flGuideLine.flag')
 
-    def getHashCode(self, arg0: QPointF, angle: float) -> int:
+    @_echopy_builtins.staticmethod
+    def getHashCode(arg0: QPointF, angle: float) -> int:
         'long getHashCode(QPointF, double angle)'
         _unavailable('fontlab.flGuideLine.getHashCode')
 
@@ -6009,7 +6198,8 @@ class flGuideLine:
         'hasHistoryState(uint history_ix)'
         _unavailable('fontlab.flGuideLine.hasHistoryState')
 
-    def haveObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def haveObject(*args: Any, **kwargs: Any) -> Any:
         'bool haveObject(uint);                 '
         _unavailable('fontlab.flGuideLine.haveObject')
 
@@ -6025,7 +6215,8 @@ class flGuideLine:
         'initialHistoryIx()'
         _unavailable('fontlab.flGuideLine.initialHistoryState')
 
-    def instanceType(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def instanceType(*args: Any, **kwargs: Any) -> Any:
         'int instanceType();                    '
         _unavailable('fontlab.flGuideLine.instanceType')
 
@@ -6033,7 +6224,8 @@ class flGuideLine:
         'isEqual(flObject)'
         _unavailable('fontlab.flGuideLine.isEqual')
 
-    def isGuideLine(self, arg0: flObject) -> bool:
+    @_echopy_builtins.staticmethod
+    def isGuideLine(arg0: flObject) -> bool:
         'bool isGuideLine(flObject)'
         _unavailable('fontlab.flGuideLine.isGuideLine')
 
@@ -6041,7 +6233,8 @@ class flGuideLine:
         'bool isHorizontal([double a=1])'
         _unavailable('fontlab.flGuideLine.isHorizontal')
 
-    def isSnapLine(self, arg0: flObject) -> bool:
+    @_echopy_builtins.staticmethod
+    def isSnapLine(arg0: flObject) -> bool:
         'bool isSnapLine(flObject)'
         _unavailable('fontlab.flGuideLine.isSnapLine')
 
@@ -6052,6 +6245,10 @@ class flGuideLine:
     def offsetTo(self, arg0: QPointF, mode: int) -> QPointF:
         'QPointF offsetTo(QPointF, uint mode)'
         _unavailable('fontlab.flGuideLine.offsetTo')
+
+    def propertyNames(self, *args: Any, **kwargs: Any) -> Any:
+        'propertyNames(): sorted snapshot of dynamic property keys'
+        _unavailable('fontlab.flGuideLine.propertyNames')
 
     def release(self) -> Any:
         'release()'
@@ -6101,7 +6298,8 @@ class flGuideLine:
         'uint snapFlag(uint role)'
         _unavailable('fontlab.flGuideLine.snapFlag')
 
-    def sortGuideLines(self, ascending: Any = ...) -> Any:
+    @_echopy_builtins.staticmethod
+    def sortGuideLines(ascending: Any = ...) -> Any:
         'list(flGuideLine) sortGuideLines(list(flGuideLine)[, bool ascending = true])'
         _unavailable('fontlab.flGuideLine.sortGuideLines')
 
@@ -6131,6 +6329,8 @@ class flGuideLine:
     'QLineF'
     extPosition: Any
     'double'
+    extension: Any
+    'flNode: existing extension node, or None if absent (read-only)'
     flObjectFlags: dict
     hasChanges: Any
     'bool'
@@ -6152,6 +6352,8 @@ class flGuideLine:
     'bool'
     isExluded: Any
     'bool'
+    isGhost: Any
+    'bool: actual ghost-hint flag (read-only)'
     isHint: Any
     'bool'
     isInUse: Any
@@ -6200,10 +6402,10 @@ class flGuideLine:
     'QPointF'
 
 class flHintingParameters:
-    'flHintingParameters representation\n\nConstructors:\n  flHintingParameters() - default\n\nNative bases: object'
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        'Native constructor; consult class documentation for supported overloads.'
-        _unavailable('fontlab.flHintingParameters')
+    'flHintingParameters representation\n\nConstructors:\n  flHintingParameters() - default\n\nNative bases: object\n\nCaptured native MRO: flHintingParameters, object\n\nNative __new__ allocation evidence (not an __init__ overload):\n(*args, **kwargs)\nCreate and return a new object.  See help(type) for accurate signature.'
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        'Initialize self.  See help(type(self)) for accurate signature.'
+        _unavailable('fontlab.flHintingParameters.__init__')
 
     def init(self) -> Any:
         'init()'
@@ -6247,10 +6449,10 @@ class flHintingParameters:
     'int'
 
 class flInstance:
-    'flInstance representation\n\nConstructors:\n  flInstance()\n  flInstance(string name, string tsn, flLocation location)\n\nNative bases: object'
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        'Native constructor; consult class documentation for supported overloads.'
-        _unavailable('fontlab.flInstance')
+    'flInstance representation\n\nConstructors:\n  flInstance()\n  flInstance(string name, string tsn, flLocation location)\n\nNative bases: object\n\nCaptured native MRO: flInstance, object\n\nNative __new__ allocation evidence (not an __init__ overload):\n(*args, **kwargs)\nCreate and return a new object.  See help(type) for accurate signature.'
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        'Initialize self.  See help(type(self)) for accurate signature.'
+        _unavailable('fontlab.flInstance.__init__')
 
     def autoSGN(self, *args: Any, **kwargs: Any) -> Any:
         'string autoSGN(const string &tfn)'
@@ -6282,6 +6484,8 @@ class flInstance:
     'string'
     slv: Any
     'int'
+    tfn: Any
+    'string: family override; empty inherits the source family'
     tsn: Any
     'string'
     weight: Any
@@ -6292,604 +6496,753 @@ class flInstance:
     'string'
 
 class flItems:
-    'flItems representation\n\nConstructors:\n  flItems()\n\nNative bases: object'
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        'Native constructor; consult class documentation for supported overloads.'
-        _unavailable('fontlab.flItems')
+    'flItems representation\n\nConstructors:\n  flItems()\n\nNative bases: object\n\nCaptured native MRO: flItems, object\n\nNative __new__ allocation evidence (not an __init__ overload):\n(*args, **kwargs)\nCreate and return a new object.  See help(type) for accurate signature.'
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        'Initialize self.  See help(type(self)) for accurate signature.'
+        _unavailable('fontlab.flItems.__init__')
 
-    def appendRecentFile(self, arg0: str, file_name: str) -> Any:
+    @_echopy_builtins.staticmethod
+    def appendRecentFile(arg0: str, file_name: str) -> Any:
         'appendRecentFile(QString, QString file_name)'
         _unavailable('fontlab.flItems.appendRecentFile')
 
-    def buildRecentList(self, arg0: str) -> Any:
+    @_echopy_builtins.staticmethod
+    def buildRecentList(arg0: str) -> Any:
         'QStringList/Nothing buildRecentList(QString)'
         _unavailable('fontlab.flItems.buildRecentList')
 
-    def clearRecentFiles(self, arg0: str) -> Any:
+    @_echopy_builtins.staticmethod
+    def clearRecentFiles(arg0: str) -> Any:
         'clearRecentFiles(QString )'
         _unavailable('fontlab.flItems.clearRecentFiles')
 
-    def createObject(self, type: int, key: flObject) -> flObject:
+    @_echopy_builtins.staticmethod
+    def createObject(type: int, key: flObject) -> flObject:
         'flObject createObject(int type, flObject key)'
         _unavailable('fontlab.flItems.createObject')
 
-    def getCursor(self, CursorId: Any) -> QCursor:
+    @_echopy_builtins.staticmethod
+    def getCursor(CursorId: Any) -> QCursor:
         'QCursor getCursor(CursorId)'
         _unavailable('fontlab.flItems.getCursor')
 
-    def getCursorId(self, arg0: str, hot_x: int, hot_y: int) -> Any:
+    @_echopy_builtins.staticmethod
+    def getCursorId(arg0: str, hot_x: int, hot_y: int) -> Any:
         'CursorId getCursorId(QString, int hot_x, int hot_y)'
         _unavailable('fontlab.flItems.getCursorId')
 
-    def guidelinesEditingEnabled(self) -> bool:
+    @_echopy_builtins.staticmethod
+    def guidelinesEditingEnabled() -> bool:
         'bool guidelinesEditingEnabled()'
         _unavailable('fontlab.flItems.guidelinesEditingEnabled')
 
-    def init(self) -> Any:
+    @_echopy_builtins.staticmethod
+    def init() -> Any:
         'init()'
         _unavailable('fontlab.flItems.init')
 
-    def instance(self) -> flItems:
+    @_echopy_builtins.staticmethod
+    def instance() -> flItems:
         'flItems instance()'
         _unavailable('fontlab.flItems.instance')
 
-    def notifyActivateGlyph(self, arg0: flGlyphInfo) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyActivateGlyph(arg0: flGlyphInfo) -> Any:
         'notifyActivateGlyph(flGlyphInfo)'
         _unavailable('fontlab.flItems.notifyActivateGlyph')
 
-    def notifyAnchorsChanged(self) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyAnchorsChanged() -> Any:
         'notifyAnchorsChanged()'
         _unavailable('fontlab.flItems.notifyAnchorsChanged')
 
-    def notifyApplyTranformFrame(self) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyApplyTranformFrame() -> Any:
         'notifyApplyTranformFrame()'
         _unavailable('fontlab.flItems.notifyApplyTranformFrame')
 
-    def notifyAuditHovered(self, id: int) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyAuditHovered(id: int) -> Any:
         'notifyAuditHovered(uint id)'
         _unavailable('fontlab.flItems.notifyAuditHovered')
 
-    def notifyAutoShapseChanges(self, arg0: flLayer) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyAutoShapseChanges(arg0: flLayer) -> Any:
         'notifyAutoShapseChanges(flLayer)'
         _unavailable('fontlab.flItems.notifyAutoShapseChanges')
 
-    def notifyAvailableToSelectNodes(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyAvailableToSelectNodes(*args: Any, **kwargs: Any) -> Any:
         'notifyAvailableToSelectNodes( list(list(flNodeInfo)) )'
         _unavailable('fontlab.flItems.notifyAvailableToSelectNodes')
 
-    def notifyBrushModeSelected(self, smart: int) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyBrushModeSelected(smart: int) -> Any:
         'notifyBrushModeSelected(int smart)'
         _unavailable('fontlab.flItems.notifyBrushModeSelected')
 
-    def notifyBrushSelected(self, PaintBrush: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyBrushSelected(PaintBrush: Any) -> Any:
         'notifyBrushSelected(PaintBrush)'
         _unavailable('fontlab.flItems.notifyBrushSelected')
 
-    def notifyBrushSet(self) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyBrushSet() -> Any:
         'notifyBrushSet()'
         _unavailable('fontlab.flItems.notifyBrushSet')
 
-    def notifyCancelTranformFrame(self) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyCancelTranformFrame() -> Any:
         'notifyCancelTranformFrame()'
         _unavailable('fontlab.flItems.notifyCancelTranformFrame')
 
-    def notifyCanvasAttached(self, arg0: flCanvas) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyCanvasAttached(arg0: flCanvas) -> Any:
         'notifyCanvasAttached(flCanvas)'
         _unavailable('fontlab.flItems.notifyCanvasAttached')
 
-    def notifyCanvasEnterFocus(self, arg0: flCanvas) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyCanvasEnterFocus(arg0: flCanvas) -> Any:
         'notifyCanvasEnterFocus(flCanvas)'
         _unavailable('fontlab.flItems.notifyCanvasEnterFocus')
 
-    def notifyCanvasLeaveFocus(self, arg0: flCanvas) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyCanvasLeaveFocus(arg0: flCanvas) -> Any:
         'notifyCanvasLeaveFocus(flCanvas)'
         _unavailable('fontlab.flItems.notifyCanvasLeaveFocus')
 
-    def notifyCanvasRemoved(self, arg0: flCanvas) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyCanvasRemoved(arg0: flCanvas) -> Any:
         'notifyCanvasRemoved(flCanvas)'
         _unavailable('fontlab.flItems.notifyCanvasRemoved')
 
-    def notifyChangesApplied(self, recursive: Any = ...) -> Any:
-        'notifyChangesApplied([QString title, flObject object / list(flObject)[, bool recursive=false]])'
+    @_echopy_builtins.staticmethod
+    def notifyChangesApplied(recursive: Any = ...) -> Any:
+        'notifyChangesApplied([QString title, flObject object / list(flObject)[, bool recursive=true]])'
         _unavailable('fontlab.flItems.notifyChangesApplied')
 
-    def notifyClipboardChanged(self) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyClipboardChanged() -> Any:
         'notifyClipboardChanged()'
         _unavailable('fontlab.flItems.notifyClipboardChanged')
 
-    def notifyColorSet(self, arg0: QColor, b: bool) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyColorSet(arg0: QColor, b: bool) -> Any:
         'notifyColorSet(QColor, bool b)'
         _unavailable('fontlab.flItems.notifyColorSet')
 
-    def notifyCommandSelected(self) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyCommandSelected() -> Any:
         'notifyCommandSelected()'
         _unavailable('fontlab.flItems.notifyCommandSelected')
 
-    def notifyCurrentPaperChanged(self, arg0: flPaper) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyCurrentPaperChanged(arg0: flPaper) -> Any:
         'notifyCurrentPaperChanged(flPaper)'
         _unavailable('fontlab.flItems.notifyCurrentPaperChanged')
 
-    def notifyDropDone(self, canvas: flCanvas) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyDropDone(canvas: flCanvas) -> Any:
         'notifyDropDone(flCanvas& canvas)'
         _unavailable('fontlab.flItems.notifyDropDone')
 
-    def notifyEditActionFinished(self) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyEditActionFinished() -> Any:
         'notifyEditActionFinished()'
         _unavailable('fontlab.flItems.notifyEditActionFinished')
 
-    def notifyEditActionStarted(self) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyEditActionStarted() -> Any:
         'notifyEditActionStarted()'
         _unavailable('fontlab.flItems.notifyEditActionStarted')
 
-    def notifyEditModeChanged(self, mode: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyEditModeChanged(mode: Any) -> Any:
         'notifyEditModeChanged(EditMode mode)'
         _unavailable('fontlab.flItems.notifyEditModeChanged')
 
-    def notifyEditingChanged(self, arg0: flAbstractEditor) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyEditingChanged(arg0: flAbstractEditor) -> Any:
         'notifyEditingChanged(flAbstractEditor)'
         _unavailable('fontlab.flItems.notifyEditingChanged')
 
-    def notifyEditingFinished(self) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyEditingFinished() -> Any:
         'notifyEditingFinished()'
         _unavailable('fontlab.flItems.notifyEditingFinished')
 
-    def notifyFeaturesChanged(self, package_id: int, binary: bool) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyFeaturesChanged(package_id: int, binary: bool) -> Any:
         'notifyFeaturesChanged(uint package_id, bool binary)'
         _unavailable('fontlab.flItems.notifyFeaturesChanged')
 
-    def notifyFontPanelActivated(self, b: bool) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyFontPanelActivated(b: bool) -> Any:
         'notifyFontPanelActivated(bool b)'
         _unavailable('fontlab.flItems.notifyFontPanelActivated')
 
-    def notifyFontSelected(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyFontSelected(*args: Any, **kwargs: Any) -> Any:
         'notifyFontSelected(uint id);'
         _unavailable('fontlab.flItems.notifyFontSelected')
 
-    def notifyFrameSelected(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyFrameSelected(*args: Any, **kwargs: Any) -> Any:
         'notifyFrameSelected(list(flNodeInfo))'
         _unavailable('fontlab.flItems.notifyFrameSelected')
 
-    def notifyGalleryChanged(self, arg0: flObject) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyGalleryChanged(arg0: flObject) -> Any:
         'notifyGalleryChanged(flObject)'
         _unavailable('fontlab.flItems.notifyGalleryChanged')
 
-    def notifyGlyphActivated(self, arg0: flGlyphInfo) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyGlyphActivated(arg0: flGlyphInfo) -> Any:
         'notifyGlyphActivated(flGlyphInfo)'
         _unavailable('fontlab.flItems.notifyGlyphActivated')
 
-    def notifyGlyphDeactivated(self) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyGlyphDeactivated() -> Any:
         'notifyGlyphDeactivated()'
         _unavailable('fontlab.flItems.notifyGlyphDeactivated')
 
-    def notifyGlyphDoubleClick(self, arg0: flGlyphInfo) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyGlyphDoubleClick(arg0: flGlyphInfo) -> Any:
         'notifyGlyphDoubleClick(flGlyphInfo)'
         _unavailable('fontlab.flItems.notifyGlyphDoubleClick')
 
-    def notifyGlyphIdSelected(self, packageId: int, glyphId: int, replace: bool) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyGlyphIdSelected(packageId: int, glyphId: int, replace: bool) -> Any:
         'notifyGlyphIdSelected(uint packageId, uint glyphId, bool replace)'
         _unavailable('fontlab.flItems.notifyGlyphIdSelected')
 
-    def notifyGlyphMaximized(self, arg0: flGlyphInfo) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyGlyphMaximized(arg0: flGlyphInfo) -> Any:
         'notifyGlyphMaximized(flGlyphInfo)'
         _unavailable('fontlab.flItems.notifyGlyphMaximized')
 
-    def notifyGlyphPinPointChanged(self, pin_point: Any = ...) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyGlyphPinPointChanged(pin_point: Any = ...) -> Any:
         'notifyGlyphPinPointChanged([flPinPoint pin_point = flnull[, flGlyphInfo glyph_info = flnull]])'
         _unavailable('fontlab.flItems.notifyGlyphPinPointChanged')
 
-    def notifyGlyphPinPointCreated(self, arg0: flGlyphInfo) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyGlyphPinPointCreated(arg0: flGlyphInfo) -> Any:
         'notifyGlyphPinPointCreated(flGlyphInfo)'
         _unavailable('fontlab.flItems.notifyGlyphPinPointCreated')
 
-    def notifyGlyphUpdated(self, packageId: int, glyphId: int) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyGlyphUpdated(packageId: int, glyphId: int) -> Any:
         'notifyGlyphUpdated(uint packageId, uint glyphId)'
         _unavailable('fontlab.flItems.notifyGlyphUpdated')
 
-    def notifyGlyphWindowInactive(self) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyGlyphWindowInactive() -> Any:
         'notifyGlyphWindowInactive()'
         _unavailable('fontlab.flItems.notifyGlyphWindowInactive')
 
-    def notifyGlyphsUpdated(self, packageId: int, glyphIds: set[Any]) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyGlyphsUpdated(packageId: int, glyphIds: set[Any]) -> Any:
         'notifyGlyphsUpdated(uint packageId, QSet<uint32_t> glyphIds)'
         _unavailable('fontlab.flItems.notifyGlyphsUpdated')
 
-    def notifyGraphEdgeSelectionChanged(self, arg0: flObject) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyGraphEdgeSelectionChanged(arg0: flObject) -> Any:
         'notifyGraphEdgeSelectionChanged(flObject)'
         _unavailable('fontlab.flItems.notifyGraphEdgeSelectionChanged')
 
-    def notifyGuidelinesChanged(self, arg0: flCanvas) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyGuidelinesChanged(arg0: flCanvas) -> Any:
         'notifyGuidelinesChanged(flCanvas)'
         _unavailable('fontlab.flItems.notifyGuidelinesChanged')
 
-    def notifyGuidelinesSelected(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyGuidelinesSelected(*args: Any, **kwargs: Any) -> Any:
         'notifyGuidelinesSelected(list(flGuideLine))'
         _unavailable('fontlab.flItems.notifyGuidelinesSelected')
 
-    def notifyHidePanels(self) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyHidePanels() -> Any:
         'notifyHidePanels()'
         _unavailable('fontlab.flItems.notifyHidePanels')
 
-    def notifyHistoryChanged(self) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyHistoryChanged() -> Any:
         'notifyHistoryChanged()'
         _unavailable('fontlab.flItems.notifyHistoryChanged')
 
-    def notifyKeyHash(self) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyKeyHash() -> Any:
         'notifyKeyHash()'
         _unavailable('fontlab.flItems.notifyKeyHash')
 
-    def notifyKeyRepeat(self, key: int) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyKeyRepeat(key: int) -> Any:
         'notifyKeyRepeat(int key)'
         _unavailable('fontlab.flItems.notifyKeyRepeat')
 
-    def notifyKeySlash(self) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyKeySlash() -> Any:
         'notifyKeySlash()'
         _unavailable('fontlab.flItems.notifyKeySlash')
 
-    def notifyLayerActivated(self, arg0: flLayer) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyLayerActivated(arg0: flLayer) -> Any:
         'notifyLayerActivated(flLayer)'
         _unavailable('fontlab.flItems.notifyLayerActivated')
 
-    def notifyModelChanged(self) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyModelChanged() -> Any:
         'notifyModelChanged()'
         _unavailable('fontlab.flItems.notifyModelChanged')
 
-    def notifyNodeChanged(self, arg0: flNodeInfo) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyNodeChanged(arg0: flNodeInfo) -> Any:
         'notifyNodeChanged(flNodeInfo)'
         _unavailable('fontlab.flItems.notifyNodeChanged')
 
-    def notifyNodesSelected(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyNodesSelected(*args: Any, **kwargs: Any) -> Any:
         'notifyNodesSelected(list(flNodeInfo))'
         _unavailable('fontlab.flItems.notifyNodesSelected')
 
-    def notifyPackageAdded(self, arg0: flPackage) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyPackageAdded(arg0: flPackage) -> Any:
         'notifyPackageAdded(flPackage)'
         _unavailable('fontlab.flItems.notifyPackageAdded')
 
-    def notifyPackageClosed(self, arg0: flPackage) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyPackageClosed(arg0: flPackage) -> Any:
         'notifyPackageClosed(flPackage)'
         _unavailable('fontlab.flItems.notifyPackageClosed')
 
-    def notifyPackageContentUpdated(self, id: int) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyPackageContentUpdated(id: int) -> Any:
         'notifyPackageContentUpdated(uint id)'
         _unavailable('fontlab.flItems.notifyPackageContentUpdated')
 
-    def notifyPackageReaded(self, arg0: flPackage) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyPackageReaded(arg0: flPackage) -> Any:
         'notifyPackageReaded(flPackage)'
         _unavailable('fontlab.flItems.notifyPackageReaded')
 
-    def notifyPackageRemoved(self, arg0: flPackage) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyPackageRemoved(arg0: flPackage) -> Any:
         'notifyPackageRemoved(flPackage)'
         _unavailable('fontlab.flItems.notifyPackageRemoved')
 
-    def notifyPackageUpdated(self, id: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyPackageUpdated(id: Any) -> Any:
         'notifyPackageUpdated(flPackage | uint id)'
         _unavailable('fontlab.flItems.notifyPackageUpdated')
 
-    def notifyPackagesRemoved(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyPackagesRemoved(*args: Any, **kwargs: Any) -> Any:
         'notifyPackagesRemoved(list(flObject))'
         _unavailable('fontlab.flItems.notifyPackagesRemoved')
 
-    def notifyPackagesUpdated(self) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyPackagesUpdated() -> Any:
         'notifyPackagesUpdated()'
         _unavailable('fontlab.flItems.notifyPackagesUpdated')
 
-    def notifyPinPointChanged(self, pin_point: Any = ...) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyPinPointChanged(pin_point: Any = ...) -> Any:
         'notifyPinPointChanged([flPinPoint pin_point = flnull[, flShapeInfo shape_info = flnull]])'
         _unavailable('fontlab.flItems.notifyPinPointChanged')
 
-    def notifyPinPointCreated(self, arg0: flShapeInfo) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyPinPointCreated(arg0: flShapeInfo) -> Any:
         'notifyPinPointCreated(flShapeInfo)'
         _unavailable('fontlab.flItems.notifyPinPointCreated')
 
-    def notifyPinPointSelectionChanged(self) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyPinPointSelectionChanged() -> Any:
         'notifyPinPointSelectionChanged()'
         _unavailable('fontlab.flItems.notifyPinPointSelectionChanged')
 
-    def notifyPinSelected(self, id: int) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyPinSelected(id: int) -> Any:
         'notifyPinSelected(uint id)'
         _unavailable('fontlab.flItems.notifyPinSelected')
 
-    def notifyPreferencesChanged(self) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyPreferencesChanged() -> Any:
         'notifyPreferencesChanged()'
         _unavailable('fontlab.flItems.notifyPreferencesChanged')
 
-    def notifyProjectClosed(self) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyProjectClosed() -> Any:
         'notifyProjectClosed()'
         _unavailable('fontlab.flItems.notifyProjectClosed')
 
-    def notifyProjectReaded(self, file_name: str) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyProjectReaded(file_name: str) -> Any:
         'notifyProjectReaded(QString file_name)'
         _unavailable('fontlab.flItems.notifyProjectReaded')
 
-    def notifyProjectSaved(self, file_name: str) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyProjectSaved(file_name: str) -> Any:
         'notifyProjectSaved(QString file_name)'
         _unavailable('fontlab.flItems.notifyProjectSaved')
 
-    def notifyPropertiesChanged(self, arg0: flObject) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyPropertiesChanged(arg0: flObject) -> Any:
         'notifyPropertiesChanged(flObject)'
         _unavailable('fontlab.flItems.notifyPropertiesChanged')
 
-    def notifyRenderingBegin(self, info: str) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyRenderingBegin(info: str) -> Any:
         'notifyRenderingBegin(QString info)'
         _unavailable('fontlab.flItems.notifyRenderingBegin')
 
-    def notifyRenderingFinished(self, success: bool) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyRenderingFinished(success: bool) -> Any:
         'notifyRenderingFinished(bool success)'
         _unavailable('fontlab.flItems.notifyRenderingFinished')
 
-    def notifyReplaceGlyphsByFgId(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyReplaceGlyphsByFgId(*args: Any, **kwargs: Any) -> Any:
         'notifyReplaceGlyphsByFgId(list(unsigned long), int replace_count)'
         _unavailable('fontlab.flItems.notifyReplaceGlyphsByFgId')
 
-    def notifyRequestChangeCurrentClipboard(self, xml: str) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyRequestChangeCurrentClipboard(xml: str) -> Any:
         'notifyRequestChangeCurrentClipboard(QString xml)'
         _unavailable('fontlab.flItems.notifyRequestChangeCurrentClipboard')
 
-    def notifyRequestNewProject(self) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyRequestNewProject() -> Any:
         'notifyRequestNewProject()'
         _unavailable('fontlab.flItems.notifyRequestNewProject')
 
-    def notifyRequestOpenProject(self, file_name: str) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyRequestOpenProject(file_name: str) -> Any:
         'notifyRequestOpenProject(QString file_name)'
         _unavailable('fontlab.flItems.notifyRequestOpenProject')
 
-    def notifyRequestPasteAction(self) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyRequestPasteAction() -> Any:
         'notifyRequestPasteAction()'
         _unavailable('fontlab.flItems.notifyRequestPasteAction')
 
-    def notifyRequestShowWelcome(self) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyRequestShowWelcome() -> Any:
         'notifyRequestShowWelcome()'
         _unavailable('fontlab.flItems.notifyRequestShowWelcome')
 
-    def notifyRequestShowWorkspace(self) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyRequestShowWorkspace() -> Any:
         'notifyRequestShowWorkspace()'
         _unavailable('fontlab.flItems.notifyRequestShowWorkspace')
 
-    def notifySCVItemsChanged(self) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifySCVItemsChanged() -> Any:
         'notifySCVItemsChanged()'
         _unavailable('fontlab.flItems.notifySCVItemsChanged')
 
-    def notifyScrollToGlyph(self, arg0: flGlyphInfo) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyScrollToGlyph(arg0: flGlyphInfo) -> Any:
         'notifyScrollToGlyph(flGlyphInfo)'
         _unavailable('fontlab.flItems.notifyScrollToGlyph')
 
-    def notifySelectionChanged(self) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifySelectionChanged() -> Any:
         'notifySelectionChanged()'
         _unavailable('fontlab.flItems.notifySelectionChanged')
 
-    def notifyShapeActivated(self, arg0: flShapeInfo) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyShapeActivated(arg0: flShapeInfo) -> Any:
         'notifyShapeActivated(flShapeInfo)'
         _unavailable('fontlab.flItems.notifyShapeActivated')
 
-    def notifyShapeDeactivated(self) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyShapeDeactivated() -> Any:
         'notifyShapeDeactivated()'
         _unavailable('fontlab.flItems.notifyShapeDeactivated')
 
-    def notifyShowPanels(self) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyShowPanels() -> Any:
         'notifyShowPanels()'
         _unavailable('fontlab.flItems.notifyShowPanels')
 
-    def notifySnapLineChanged(self, arg0: flGuideLine) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifySnapLineChanged(arg0: flGuideLine) -> Any:
         'notifySnapLineChanged(flGuideLine)'
         _unavailable('fontlab.flItems.notifySnapLineChanged')
 
-    def notifySnapLinesChanged(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifySnapLinesChanged(*args: Any, **kwargs: Any) -> Any:
         'notifySnapLinesChanged(list(flGuideLine))'
         _unavailable('fontlab.flItems.notifySnapLinesChanged')
 
-    def notifyStaplerPreviewEnabled(self, enbl: bool) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyStaplerPreviewEnabled(enbl: bool) -> Any:
         'notifyStaplerPreviewEnabled(bool enbl)'
         _unavailable('fontlab.flItems.notifyStaplerPreviewEnabled')
 
-    def notifyStickerCreated(self) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyStickerCreated() -> Any:
         'notifyStickerCreated()'
         _unavailable('fontlab.flItems.notifyStickerCreated')
 
-    def notifyStopButtonClicked(self) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyStopButtonClicked() -> Any:
         'notifyStopButtonClicked()'
         _unavailable('fontlab.flItems.notifyStopButtonClicked')
 
-    def notifyTextBlockAdded(self, arg0: flTextBlock) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyTextBlockAdded(arg0: flTextBlock) -> Any:
         'notifyTextBlockAdded(flTextBlock)'
         _unavailable('fontlab.flItems.notifyTextBlockAdded')
 
-    def notifyTextBlockItemActivated(self, check_tools: Any = ...) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyTextBlockItemActivated(check_tools: Any = ...) -> Any:
         'notifyTextBlockItemActivated(flTextBlockItem[, bool check_tools = true])'
         _unavailable('fontlab.flItems.notifyTextBlockItemActivated')
 
-    def notifyTextBlockItemChanged(self, arg0: flTextBlockItem) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyTextBlockItemChanged(arg0: flTextBlockItem) -> Any:
         'notifyTextBlockItemChanged(flTextBlockItem)'
         _unavailable('fontlab.flItems.notifyTextBlockItemChanged')
 
-    def notifyTextBlockItemDeactivated(self, arg0: flTextBlockItem) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyTextBlockItemDeactivated(arg0: flTextBlockItem) -> Any:
         'notifyTextBlockItemDeactivated(flTextBlockItem)'
         _unavailable('fontlab.flItems.notifyTextBlockItemDeactivated')
 
-    def notifyTextBlockItemMaximized(self, arg0: flTextBlockItem) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyTextBlockItemMaximized(arg0: flTextBlockItem) -> Any:
         'notifyTextBlockItemMaximized(flTextBlockItem)'
         _unavailable('fontlab.flItems.notifyTextBlockItemMaximized')
 
-    def notifyTextBlockItemNormalized(self, arg0: flTextBlockItem) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyTextBlockItemNormalized(arg0: flTextBlockItem) -> Any:
         'notifyTextBlockItemNormalized(flTextBlockItem)'
         _unavailable('fontlab.flItems.notifyTextBlockItemNormalized')
 
-    def notifyTextBlockItemsSelectionChanged(self, arg0: flCanvas) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyTextBlockItemsSelectionChanged(arg0: flCanvas) -> Any:
         'notifyTextBlockItemsSelectionChanged(flCanvas)'
         _unavailable('fontlab.flItems.notifyTextBlockItemsSelectionChanged')
 
-    def notifyTextBlockRemoved(self, arg0: flTextBlock) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyTextBlockRemoved(arg0: flTextBlock) -> Any:
         'notifyTextBlockRemoved(flTextBlock)'
         _unavailable('fontlab.flItems.notifyTextBlockRemoved')
 
-    def notifyToolChanged(self, tool: flBasicTool) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyToolChanged(tool: flBasicTool) -> Any:
         'notifyToolChanged(flBasicTool& tool)'
         _unavailable('fontlab.flItems.notifyToolChanged')
 
-    def notifyTransformDataChanged(self, TransformFrame: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyTransformDataChanged(TransformFrame: Any) -> Any:
         'notifyTransformDataChanged(TransformFrame)'
         _unavailable('fontlab.flItems.notifyTransformDataChanged')
 
-    def notifyTransformFrameChanged(self, arg0: flObject) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyTransformFrameChanged(arg0: flObject) -> Any:
         'notifyTransformFrameChanged(flObject)'
         _unavailable('fontlab.flItems.notifyTransformFrameChanged')
 
-    def notifyTransformFrameFinished(self, arg0: flObject) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyTransformFrameFinished(arg0: flObject) -> Any:
         'notifyTransformFrameFinished(flObject)'
         _unavailable('fontlab.flItems.notifyTransformFrameFinished')
 
-    def notifyTransformFrameStarted(self, arg0: flObject) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyTransformFrameStarted(arg0: flObject) -> Any:
         'notifyTransformFrameStarted(flObject)'
         _unavailable('fontlab.flItems.notifyTransformFrameStarted')
 
-    def notifyTransformStarted(self) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyTransformStarted() -> Any:
         'notifyTransformStarted()'
         _unavailable('fontlab.flItems.notifyTransformStarted')
 
-    def notifyUpdateHistory(self) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyUpdateHistory() -> Any:
         'notifyUpdateHistory()'
         _unavailable('fontlab.flItems.notifyUpdateHistory')
 
-    def notifyUpdateStaplers(self) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyUpdateStaplers() -> Any:
         'notifyUpdateStaplers()'
         _unavailable('fontlab.flItems.notifyUpdateStaplers')
 
-    def notifyViewportChanged(self, old_viewport: QWidget, new_viewport: QWidget) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyViewportChanged(old_viewport: QWidget, new_viewport: QWidget) -> Any:
         'notifyViewportChanged(QWidget* old_viewport, QWidget* new_viewport)'
         _unavailable('fontlab.flItems.notifyViewportChanged')
 
-    def notifyWorkspaceClosed(self, arg0: flWorkspace) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyWorkspaceClosed(arg0: flWorkspace) -> Any:
         'notifyWorkspaceClosed(flWorkspace)'
         _unavailable('fontlab.flItems.notifyWorkspaceClosed')
 
-    def notifyWorkspaceHasChanges(self, c: bool) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyWorkspaceHasChanges(c: bool) -> Any:
         'notifyWorkspaceHasChanges(bool c)'
         _unavailable('fontlab.flItems.notifyWorkspaceHasChanges')
 
-    def notifyWorkspaceInitialized(self, arg0: flWorkspace) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyWorkspaceInitialized(arg0: flWorkspace) -> Any:
         'notifyWorkspaceInitialized(flWorkspace)'
         _unavailable('fontlab.flItems.notifyWorkspaceInitialized')
 
-    def notifyZoomChanged(self, canvas: flCanvas) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyZoomChanged(canvas: flCanvas) -> Any:
         'notifyZoomChanged(flCanvas& canvas)'
         _unavailable('fontlab.flItems.notifyZoomChanged')
 
-    def requestActivateNodesTool(self) -> Any:
+    @_echopy_builtins.staticmethod
+    def requestActivateNodesTool() -> Any:
         'requestActivateNodesTool()'
         _unavailable('fontlab.flItems.requestActivateNodesTool')
 
-    def requestActivateShapeTool(self) -> Any:
+    @_echopy_builtins.staticmethod
+    def requestActivateShapeTool() -> Any:
         'requestActivateShapeTool()'
         _unavailable('fontlab.flItems.requestActivateShapeTool')
 
-    def requestActivateTransformTool(self) -> Any:
+    @_echopy_builtins.staticmethod
+    def requestActivateTransformTool() -> Any:
         'requestActivateTransformTool()'
         _unavailable('fontlab.flItems.requestActivateTransformTool')
 
-    def requestCheckHistoryInitIndex(self, arg0: flGlyphInfo) -> Any:
+    @_echopy_builtins.staticmethod
+    def requestCheckHistoryInitIndex(arg0: flGlyphInfo) -> Any:
         'requestCheckHistoryInitIndex(flGlyphInfo)'
         _unavailable('fontlab.flItems.requestCheckHistoryInitIndex')
 
-    def requestContent(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def requestContent(*args: Any, **kwargs: Any) -> Any:
         'requestContent(fgSymbolList characters, int cursorLocation'
         _unavailable('fontlab.flItems.requestContent')
 
-    def requestFontInfoDlg(self) -> Any:
+    @_echopy_builtins.staticmethod
+    def requestFontInfoDlg() -> Any:
         'requestFontInfoDlg()'
         _unavailable('fontlab.flItems.requestFontInfoDlg')
 
-    def requestGlyphActivate(self, pid: int, gid: int) -> Any:
+    @_echopy_builtins.staticmethod
+    def requestGlyphActivate(pid: int, gid: int) -> Any:
         'requestGlyphActivate(uint pid, uint gid)'
         _unavailable('fontlab.flItems.requestGlyphActivate')
 
-    def requestGlyphDeactivate(self) -> Any:
+    @_echopy_builtins.staticmethod
+    def requestGlyphDeactivate() -> Any:
         'requestGlyphDeactivate()'
         _unavailable('fontlab.flItems.requestGlyphDeactivate')
 
-    def requestGlyphReactivated(self) -> Any:
+    @_echopy_builtins.staticmethod
+    def requestGlyphReactivated() -> Any:
         'requestGlyphReactivated()'
         _unavailable('fontlab.flItems.requestGlyphReactivated')
 
-    def requestLoadingFont(self, font_source: str) -> Any:
+    @_echopy_builtins.staticmethod
+    def requestLoadingFont(font_source: str) -> Any:
         'requestLoadingFont(QString font_source)'
         _unavailable('fontlab.flItems.requestLoadingFont')
 
-    def requestPackageAcceptFonts(self, arg0: flPackage) -> Any:
+    @_echopy_builtins.staticmethod
+    def requestPackageAcceptFonts(arg0: flPackage) -> Any:
         'requestPackageAcceptFonts(flPackage)'
         _unavailable('fontlab.flItems.requestPackageAcceptFonts')
 
-    def requestPackageBorn(self, arg0: flPackage) -> Any:
+    @_echopy_builtins.staticmethod
+    def requestPackageBorn(arg0: flPackage) -> Any:
         'requestPackageBorn(flPackage)'
         _unavailable('fontlab.flItems.requestPackageBorn')
 
-    def requestPackagePostProcess(self, arg0: flPackage, encoding: str) -> Any:
+    @_echopy_builtins.staticmethod
+    def requestPackagePostProcess(arg0: flPackage, encoding: str) -> Any:
         'requestPackagePostProcess(flPackage, QString encoding)'
         _unavailable('fontlab.flItems.requestPackagePostProcess')
 
-    def requestPermissionsForDragGuidelineByNode(self, canvas_pos: QPointF, modifiers: int) -> bool:
+    @_echopy_builtins.staticmethod
+    def requestPermissionsForDragGuidelineByNode(canvas_pos: QPointF, modifiers: int) -> bool:
         'bool requestPermissionsForDragGuidelineByNode(QPointF canvas_pos, uint modifiers)'
         _unavailable('fontlab.flItems.requestPermissionsForDragGuidelineByNode')
 
-    def requestProgressMessage(self, message: str) -> Any:
+    @_echopy_builtins.staticmethod
+    def requestProgressMessage(message: str) -> Any:
         'requestProgressMessage(QString message)'
         _unavailable('fontlab.flItems.requestProgressMessage')
 
-    def requestProgressRange(self, v: int) -> Any:
+    @_echopy_builtins.staticmethod
+    def requestProgressRange(v: int) -> Any:
         'requestProgressRange(int v)'
         _unavailable('fontlab.flItems.requestProgressRange')
 
-    def requestProgressShow(self, b: bool) -> Any:
+    @_echopy_builtins.staticmethod
+    def requestProgressShow(b: bool) -> Any:
         'requestProgressShow(bool b)'
         _unavailable('fontlab.flItems.requestProgressShow')
 
-    def requestProgressValue(self, v: int) -> Any:
+    @_echopy_builtins.staticmethod
+    def requestProgressValue(v: int) -> Any:
         'requestProgressValue(int v)'
         _unavailable('fontlab.flItems.requestProgressValue')
 
-    def requestSaveBar(self, b: bool) -> Any:
+    @_echopy_builtins.staticmethod
+    def requestSaveBar(b: bool) -> Any:
         'requestSaveBar(bool b)'
         _unavailable('fontlab.flItems.requestSaveBar')
 
-    def requestSaveBarValue(self, v: int) -> Any:
+    @_echopy_builtins.staticmethod
+    def requestSaveBarValue(v: int) -> Any:
         'requestSaveBarValue(int v)'
         _unavailable('fontlab.flItems.requestSaveBarValue')
 
-    def requestSubContent(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def requestSubContent(*args: Any, **kwargs: Any) -> Any:
         'requestSubContent(fgSymbolList characters, int cursorLocation'
         _unavailable('fontlab.flItems.requestSubContent')
 
-    def requestUpdateActiveShape(self, arg0: flShapeInfo) -> Any:
+    @_echopy_builtins.staticmethod
+    def requestUpdateActiveShape(arg0: flShapeInfo) -> Any:
         'requestUpdateActiveShape(flShapeInfo)'
         _unavailable('fontlab.flItems.requestUpdateActiveShape')
 
-    def resetToolCursor(self) -> Any:
+    @_echopy_builtins.staticmethod
+    def resetToolCursor() -> Any:
         'resetToolCursor()'
         _unavailable('fontlab.flItems.resetToolCursor')
 
-    def setCursor(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def setCursor(*args: Any, **kwargs: Any) -> Any:
         'setCursor(CursorId cursor_id);'
         _unavailable('fontlab.flItems.setCursor')
 
-    def setEllipseCurvature(self, d: float) -> Any:
+    @_echopy_builtins.staticmethod
+    def setEllipseCurvature(d: float) -> Any:
         'setEllipseCurvature(double d)'
         _unavailable('fontlab.flItems.setEllipseCurvature')
 
-    def setEllipseData(self, p0: QPointF, p1: QPointF) -> Any:
+    @_echopy_builtins.staticmethod
+    def setEllipseData(p0: QPointF, p1: QPointF) -> Any:
         'setEllipseData(QPointF p0, QPointF p1)'
         _unavailable('fontlab.flItems.setEllipseData')
 
-    def setGuidelinesEditingEnabled(self, b: bool) -> Any:
+    @_echopy_builtins.staticmethod
+    def setGuidelinesEditingEnabled(b: bool) -> Any:
         'setGuidelinesEditingEnabled(bool b)'
         _unavailable('fontlab.flItems.setGuidelinesEditingEnabled')
 
-    def setMeterData(self, p0: QPointF, p1: QPointF) -> Any:
+    @_echopy_builtins.staticmethod
+    def setMeterData(p0: QPointF, p1: QPointF) -> Any:
         'setMeterData(QPointF p0, QPointF p1)'
         _unavailable('fontlab.flItems.setMeterData')
 
-    def setParameterName(self, arg0: flObject, arg1: str) -> Any:
+    @_echopy_builtins.staticmethod
+    def setParameterName(arg0: flObject, arg1: str) -> Any:
         'setParameterName(flObject, QString)'
         _unavailable('fontlab.flItems.setParameterName')
 
-    def setTransformation(self, code: int, value: QPointF) -> Any:
+    @_echopy_builtins.staticmethod
+    def setTransformation(code: int, value: QPointF) -> Any:
         'setTransformation(int code, QPointF value)'
         _unavailable('fontlab.flItems.setTransformation')
 
@@ -6897,11 +7250,13 @@ class flItems:
         'list(flObject) shapeBuilders()'
         _unavailable('fontlab.flItems.shapeBuilders')
 
-    def strToType(self, arg0: str) -> int:
+    @_echopy_builtins.staticmethod
+    def strToType(arg0: str) -> int:
         'int strToType(QString)'
         _unavailable('fontlab.flItems.strToType')
 
-    def typeToStr(self, type: int) -> str:
+    @_echopy_builtins.staticmethod
+    def typeToStr(type: int) -> str:
         'QString typeToStr(int type)'
         _unavailable('fontlab.flItems.typeToStr')
 
@@ -6929,17 +7284,17 @@ class flItems:
     'flObject'
 
 class flLayer:
-    "flLayer representation\n\nConstructors:\n  flLayer()\n  flLayer(flObject)\n  flLayer(flGlyph)\n  flLayer('title')\n\nNative bases: object"
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        'Native constructor; consult class documentation for supported overloads.'
-        _unavailable('fontlab.flLayer')
+    "flLayer representation\n\nConstructors:\n  flLayer()\n  flLayer(flObject)\n  flLayer(flGlyph)\n  flLayer('title')\n\nNative bases: object\n\nCaptured native MRO: flLayer, object\n\nNative __new__ allocation evidence (not an __init__ overload):\n(*args, **kwargs)\nCreate and return a new object.  See help(type) for accurate signature."
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        'Initialize self.  See help(type(self)) for accurate signature.'
+        _unavailable('fontlab.flLayer.__init__')
 
     def addAnchor(self, arg0: flPinPoint) -> Any:
         'addAnchor(flPinPoint)'
         _unavailable('fontlab.flLayer.addAnchor')
 
-    def addComponent(self, component: flComponent) -> Any:
-        'addComponent(flComponent component)'
+    def addComponent(self, *args: Any, **kwargs: Any) -> Any:
+        'addComponent(name or (name, QTransform)) creates a live component shape. Use notifyChangesApplied before and after for Undo.'
         _unavailable('fontlab.flLayer.addComponent')
 
     def addShape(self, arg0: flShape) -> flShape:
@@ -6955,7 +7310,7 @@ class flLayer:
         _unavailable('fontlab.flLayer.appendGuidelines')
 
     def applyTransform(self, *args: Any, **kwargs: Any) -> Any:
-        'applyTransform([QTransform transform])'
+        'applyTransform(QTransform transform [, bool contours, bool metrics, bool guides, bool anchors])'
         _unavailable('fontlab.flLayer.applyTransform')
 
     def assignFgLayer(self, arg0: fgLayer, doGuides: bool, doHints: bool, doAnchors: bool, doShapes: bool, doTTH: bool) -> Any:
@@ -6986,7 +7341,8 @@ class flLayer:
         'checkInitHistoryState(uint history_ix)'
         _unavailable('fontlab.flLayer.checkInitHistoryState')
 
-    def checkTags(self, glyph_tags: set[str], item_tags: str) -> bool:
+    @_echopy_builtins.staticmethod
+    def checkTags(glyph_tags: set[str], item_tags: str) -> bool:
         'bool checkTags(QSet<QString> glyph_tags, QString item_tags)'
         _unavailable('fontlab.flLayer.checkTags')
 
@@ -7026,7 +7382,8 @@ class flLayer:
         '(flLayer, list(flObject)) cloneCustom(uint)'
         _unavailable('fontlab.flLayer.cloneCustom')
 
-    def cloneObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def cloneObject(*args: Any, **kwargs: Any) -> Any:
         'flObject cloneObject(const flObject&); '
         _unavailable('fontlab.flLayer.cloneObject')
 
@@ -7050,11 +7407,13 @@ class flLayer:
         'flPinPoint createAnchor(string name, QPointF p, int location)'
         _unavailable('fontlab.flLayer.createAnchor')
 
-    def createInstance(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def createInstance(*args: Any, **kwargs: Any) -> Any:
         'Native fontlab.flLayer.createInstance; argument details are not documented.'
         _unavailable('fontlab.flLayer.createInstance')
 
-    def createObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def createObject(*args: Any, **kwargs: Any) -> Any:
         'flObject/Nothing createObject(int);    '
         _unavailable('fontlab.flLayer.createObject')
 
@@ -7182,7 +7541,8 @@ class flLayer:
         'bool hasShapeData(flShapeData)'
         _unavailable('fontlab.flLayer.hasShapeData')
 
-    def haveObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def haveObject(*args: Any, **kwargs: Any) -> Any:
         'bool haveObject(uint);                 '
         _unavailable('fontlab.flLayer.haveObject')
 
@@ -7214,7 +7574,8 @@ class flLayer:
         'flShape insertShape(int index, flShape shape)'
         _unavailable('fontlab.flLayer.insertShape')
 
-    def instanceType(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def instanceType(*args: Any, **kwargs: Any) -> Any:
         'int instanceType();                    '
         _unavailable('fontlab.flLayer.instanceType')
 
@@ -7245,6 +7606,10 @@ class flLayer:
     def prepareTransformationData(self) -> Any:
         'prepareTransformationData()'
         _unavailable('fontlab.flLayer.prepareTransformationData')
+
+    def propertyNames(self, *args: Any, **kwargs: Any) -> Any:
+        'propertyNames(): sorted snapshot of dynamic property keys'
+        _unavailable('fontlab.flLayer.propertyNames')
 
     def release(self) -> Any:
         'release()'
@@ -7338,8 +7703,8 @@ class flLayer:
         'setFlag(uint f [, bool value])'
         _unavailable('fontlab.flLayer.setFlag')
 
-    def setGlyphComponents(self, result: list[Any], width: float, package: flPackage, colorize: bool, flags: int) -> bool:
-        'bool setGlyphComponents(QList<GlyphComponent> result, double width, flPackage package, bool colorize, uint flags)'
+    def setGlyphComponents(self, components: Any, width: Any, package: Any, colorize: Any, arg4: flags = 0) -> Any:
+        'setGlyphComponents(components, width, package, colorize, flags=0) -> bool. Replaces shapes; components are GlyphComponent objects or (name_id, transform, width_scale, use_anchors) tuples.'
         _unavailable('fontlab.flLayer.setGlyphComponents')
 
     def setProperty(self, *args: Any, **kwargs: Any) -> Any:
@@ -7551,10 +7916,10 @@ class flLayer:
     'QColor'
 
 class flLayerAttributes:
-    'Data wrapper\n\nNative bases: object'
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        'Native constructor; consult class documentation for supported overloads.'
-        _unavailable('fontlab.flLayerAttributes')
+    'Data wrapper\n\nNative bases: object\n\nCaptured native MRO: flLayerAttributes, object\n\nNative __new__ allocation evidence (not an __init__ overload):\n(*args, **kwargs)\nCreate and return a new object.  See help(type) for accurate signature.'
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        'Initialize self.  See help(type(self)) for accurate signature.'
+        _unavailable('fontlab.flLayerAttributes.__init__')
 
     def asDict(self, *args: Any, **kwargs: Any) -> Any:
         'represent object as dictionary'
@@ -7572,10 +7937,10 @@ class flLayerAttributes:
     wireframeColor: Any
 
 class flLayerInfo:
-    'flLayerInfo representation\n\nConstructors:\n  flLayerInfo()\n  flLayerInfo(flObject)\n  flLayerInfo(flLayerInfo)\n  flLayerInfo(flLayer, QTransform)\n  flLayerInfo(flLayer, flObject glyph_info, QTransform)\n\nNative bases: object'
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        'Native constructor; consult class documentation for supported overloads.'
-        _unavailable('fontlab.flLayerInfo')
+    'flLayerInfo representation\n\nConstructors:\n  flLayerInfo()\n  flLayerInfo(flObject)\n  flLayerInfo(flLayerInfo)\n  flLayerInfo(flLayer, QTransform)\n  flLayerInfo(flLayer, flObject glyph_info, QTransform)\n\nNative bases: object\n\nCaptured native MRO: flLayerInfo, object\n\nNative __new__ allocation evidence (not an __init__ overload):\n(*args, **kwargs)\nCreate and return a new object.  See help(type) for accurate signature.'
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        'Initialize self.  See help(type(self)) for accurate signature.'
+        _unavailable('fontlab.flLayerInfo.__init__')
 
     def brectOnCanvas(self) -> QRectF:
         'QRectF brectOnCanvas()'
@@ -7605,7 +7970,8 @@ class flLayerInfo:
         'Clone the object'
         _unavailable('fontlab.flLayerInfo.clone')
 
-    def cloneObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def cloneObject(*args: Any, **kwargs: Any) -> Any:
         'flObject cloneObject(const flObject&); '
         _unavailable('fontlab.flLayerInfo.cloneObject')
 
@@ -7613,11 +7979,13 @@ class flLayerInfo:
         'combine(QTransform transform)'
         _unavailable('fontlab.flLayerInfo.combine')
 
-    def createInstance(self) -> flLayerInfo:
+    @_echopy_builtins.staticmethod
+    def createInstance() -> flLayerInfo:
         'flLayerInfo createInstance()'
         _unavailable('fontlab.flLayerInfo.createInstance')
 
-    def createObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def createObject(*args: Any, **kwargs: Any) -> Any:
         'flObject/Nothing createObject(int);    '
         _unavailable('fontlab.flLayerInfo.createObject')
 
@@ -7649,7 +8017,8 @@ class flLayerInfo:
         'hasHistoryState(uint history_ix)'
         _unavailable('fontlab.flLayerInfo.hasHistoryState')
 
-    def haveObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def haveObject(*args: Any, **kwargs: Any) -> Any:
         'bool haveObject(uint);                 '
         _unavailable('fontlab.flLayerInfo.haveObject')
 
@@ -7665,13 +8034,18 @@ class flLayerInfo:
         'initialHistoryIx()'
         _unavailable('fontlab.flLayerInfo.initialHistoryState')
 
-    def instanceType(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def instanceType(*args: Any, **kwargs: Any) -> Any:
         'int instanceType();                    '
         _unavailable('fontlab.flLayerInfo.instanceType')
 
     def isEqual(self, arg0: flObject) -> Any:
         'isEqual(flObject)'
         _unavailable('fontlab.flLayerInfo.isEqual')
+
+    def propertyNames(self, *args: Any, **kwargs: Any) -> Any:
+        'propertyNames(): sorted snapshot of dynamic property keys'
+        _unavailable('fontlab.flLayerInfo.propertyNames')
 
     def release(self) -> Any:
         'release()'
@@ -7746,17 +8120,17 @@ class flLayerInfo:
     'object type'
 
 class flLocation:
-    'flLocation representation\n\nConstructors:\n  flLocation(flLocation)\n  flLocation()\n\nNative bases: object'
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        'Native constructor; consult class documentation for supported overloads.'
-        _unavailable('fontlab.flLocation')
+    'flLocation representation\n\nConstructors:\n  flLocation(flLocation)\n  flLocation()\n\nNative bases: object\n\nCaptured native MRO: flLocation, object\n\nNative __new__ allocation evidence (not an __init__ overload):\n(*args, **kwargs)\nCreate and return a new object.  See help(type) for accurate signature.'
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        'Initialize self.  See help(type(self)) for accurate signature.'
+        _unavailable('fontlab.flLocation.__init__')
 
 
 class flMarkerPoint:
-    'flMarkerPoint representation\n\nConstructors:\n  flMarkerPoint()\n  flMarkerPoint(flObject)\n  flMarkerPoint(flMarkerPoint)\n  flMarkerPoint(double marker_pos, uint markerFlags, flSnaps::MarkerKey key)\n\nNative bases: object'
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        'Native constructor; consult class documentation for supported overloads.'
-        _unavailable('fontlab.flMarkerPoint')
+    'flMarkerPoint representation\n\nConstructors:\n  flMarkerPoint()\n  flMarkerPoint(flObject)\n  flMarkerPoint(flMarkerPoint)\n  flMarkerPoint(double marker_pos, uint markerFlags, flSnaps::MarkerKey key)\n\nNative bases: object\n\nCaptured native MRO: flMarkerPoint, object\n\nNative __new__ allocation evidence (not an __init__ overload):\n(*args, **kwargs)\nCreate and return a new object.  See help(type) for accurate signature.'
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        'Initialize self.  See help(type(self)) for accurate signature.'
+        _unavailable('fontlab.flMarkerPoint.__init__')
 
     def changed(self) -> Any:
         'changed()'
@@ -7782,15 +8156,18 @@ class flMarkerPoint:
         'Clone the object'
         _unavailable('fontlab.flMarkerPoint.clone')
 
-    def cloneObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def cloneObject(*args: Any, **kwargs: Any) -> Any:
         'flObject cloneObject(const flObject&); '
         _unavailable('fontlab.flMarkerPoint.cloneObject')
 
-    def createInstance(self) -> flMarkerPoint:
+    @_echopy_builtins.staticmethod
+    def createInstance() -> flMarkerPoint:
         'flMarkerPoint createInstance()'
         _unavailable('fontlab.flMarkerPoint.createInstance')
 
-    def createObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def createObject(*args: Any, **kwargs: Any) -> Any:
         'flObject/Nothing createObject(int);    '
         _unavailable('fontlab.flMarkerPoint.createObject')
 
@@ -7822,7 +8199,8 @@ class flMarkerPoint:
         'hasHistoryState(uint history_ix)'
         _unavailable('fontlab.flMarkerPoint.hasHistoryState')
 
-    def haveObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def haveObject(*args: Any, **kwargs: Any) -> Any:
         'bool haveObject(uint);                 '
         _unavailable('fontlab.flMarkerPoint.haveObject')
 
@@ -7838,7 +8216,8 @@ class flMarkerPoint:
         'initialHistoryIx()'
         _unavailable('fontlab.flMarkerPoint.initialHistoryState')
 
-    def instanceType(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def instanceType(*args: Any, **kwargs: Any) -> Any:
         'int instanceType();                    '
         _unavailable('fontlab.flMarkerPoint.instanceType')
 
@@ -7849,6 +8228,10 @@ class flMarkerPoint:
     def markerFlag(self, role: int) -> int:
         'uint markerFlag(uint role)'
         _unavailable('fontlab.flMarkerPoint.markerFlag')
+
+    def propertyNames(self, *args: Any, **kwargs: Any) -> Any:
+        'propertyNames(): sorted snapshot of dynamic property keys'
+        _unavailable('fontlab.flMarkerPoint.propertyNames')
 
     def release(self) -> Any:
         'release()'
@@ -7929,40 +8312,48 @@ class flMarkerPoint:
     'object type'
 
 class flModel:
-    'flModel representation\n\nConstructors:\nNone, static only methods\n\nNative bases: object'
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        'Native constructor; consult class documentation for supported overloads.'
-        _unavailable('fontlab.flModel')
+    'flModel representation\n\nConstructors:\nNone, static only methods\n\nNative bases: object\n\nCaptured native MRO: flModel, object\n\nNative __new__ allocation evidence (not an __init__ overload):\n(*args, **kwargs)\nCreate and return a new object.  See help(type) for accurate signature.'
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        'Initialize self.  See help(type(self)) for accurate signature.'
+        _unavailable('fontlab.flModel.__init__')
 
-    def createObject(self, type: int) -> Any:
+    @_echopy_builtins.staticmethod
+    def createObject(type: int) -> Any:
         'flObject/Nothing createObject(int type)'
         _unavailable('fontlab.flModel.createObject')
 
-    def getClassMask(self, type: int) -> int:
+    @_echopy_builtins.staticmethod
+    def getClassMask(type: int) -> int:
         'int  getClassMask(int type)'
         _unavailable('fontlab.flModel.getClassMask')
 
-    def instance(self) -> flModel:
+    @_echopy_builtins.staticmethod
+    def instance() -> flModel:
         'flModel instance()'
         _unavailable('fontlab.flModel.instance')
 
-    def isClassMask(self, type: int) -> bool:
+    @_echopy_builtins.staticmethod
+    def isClassMask(type: int) -> bool:
         'bool isClassMask(int type)'
         _unavailable('fontlab.flModel.isClassMask')
 
-    def notifyGlyphChanged(self, fg_glyphId: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyGlyphChanged(fg_glyphId: Any) -> Any:
         'notifyGlyphChanged(unsigned long fg_glyphId)'
         _unavailable('fontlab.flModel.notifyGlyphChanged')
 
-    def notifyGlyphUpdate(self, fg_glyphId: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyGlyphUpdate(fg_glyphId: Any) -> Any:
         'notifyGlyphUpdate(unsigned long fg_glyphId)'
         _unavailable('fontlab.flModel.notifyGlyphUpdate')
 
-    def notifyGlyphsChanged(self, glyphs: set[Any]) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyGlyphsChanged(glyphs: set[Any]) -> Any:
         'notifyGlyphsChanged(QSet<uint32_t> glyphs)'
         _unavailable('fontlab.flModel.notifyGlyphsChanged')
 
-    def typeToStr(self, flObject: Any) -> str:
+    @_echopy_builtins.staticmethod
+    def typeToStr(flObject: Any) -> str:
         'QString typeToStr(int type | flObject)'
         _unavailable('fontlab.flModel.typeToStr')
 
@@ -7970,10 +8361,10 @@ class flModel:
     ObjectParameter: dict
 
 class flModelProducer:
-    'flModelProducer representation\n\nConstructors:\n  flModelProducer()\n  flModelProducer(flModelProducer)\n  flModelProducer(flObject)\n  flModelProducer(flCanvas)\n\nNative bases: object'
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        'Native constructor; consult class documentation for supported overloads.'
-        _unavailable('fontlab.flModelProducer')
+    'flModelProducer representation\n\nConstructors:\n  flModelProducer()\n  flModelProducer(flModelProducer)\n  flModelProducer(flObject)\n  flModelProducer(flCanvas)\n\nNative bases: object\n\nCaptured native MRO: flModelProducer, object\n\nNative __new__ allocation evidence (not an __init__ overload):\n(*args, **kwargs)\nCreate and return a new object.  See help(type) for accurate signature.'
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        'Initialize self.  See help(type(self)) for accurate signature.'
+        _unavailable('fontlab.flModelProducer.__init__')
 
     def changed(self) -> Any:
         'changed()'
@@ -7999,19 +8390,23 @@ class flModelProducer:
         'Clone the object'
         _unavailable('fontlab.flModelProducer.clone')
 
-    def cloneObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def cloneObject(*args: Any, **kwargs: Any) -> Any:
         'flObject cloneObject(const flObject&); '
         _unavailable('fontlab.flModelProducer.cloneObject')
 
-    def copyToClipboard(self, package_id: Any, objects: list[flObject]) -> Any:
+    @_echopy_builtins.staticmethod
+    def copyToClipboard(package_id: Any, objects: list[flObject]) -> Any:
         'copyToClipboard(objId package_id, QList<flObject> objects)'
         _unavailable('fontlab.flModelProducer.copyToClipboard')
 
-    def countGlyphsInData(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def countGlyphsInData(*args: Any, **kwargs: Any) -> Any:
         'int countGlyphsInData(QByteArray *data)'
         _unavailable('fontlab.flModelProducer.countGlyphsInData')
 
-    def createObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def createObject(*args: Any, **kwargs: Any) -> Any:
         'flObject/Nothing createObject(int);    '
         _unavailable('fontlab.flModelProducer.createObject')
 
@@ -8023,17 +8418,30 @@ class flModelProducer:
         'flag(uint f)'
         _unavailable('fontlab.flModelProducer.flag')
 
-    def getClipboardData(self, *args: Any, **kwargs: Any) -> Any:
-        'QByteArray getClipboardData(objId package_id, QList<flObject>)'
+    @_echopy_builtins.staticmethod
+    def getClipboardData(*args: Any, **kwargs: Any) -> Any:
+        'QByteArray getClipboardData(objId package_id, double upm, QList<flObject>)'
         _unavailable('fontlab.flModelProducer.getClipboardData')
 
-    def getObjectsFromClipboard(self) -> Any:
-        'flObjects/Nothing getObjectsFromClipboard()'
+    @_echopy_builtins.staticmethod
+    def getClipboardDataJson(*args: Any, **kwargs: Any) -> Any:
+        'QByteArray getClipboardDataJson(objId package_id, double upm, QList<flObject>)'
+        _unavailable('fontlab.flModelProducer.getClipboardDataJson')
+
+    @_echopy_builtins.staticmethod
+    def getObjectsFromClipboard() -> Any:
+        'list(flObject)/Nothing getObjectsFromClipboard()'
         _unavailable('fontlab.flModelProducer.getObjectsFromClipboard')
 
-    def getObjectsFromData(self, *args: Any, **kwargs: Any) -> Any:
-        'flObjects/Nothing getObjectsFromData(QByteArray *data)'
+    @_echopy_builtins.staticmethod
+    def getObjectsFromData(*args: Any, **kwargs: Any) -> Any:
+        'list(flObject)/Nothing getObjectsFromData(QByteArray *data)'
         _unavailable('fontlab.flModelProducer.getObjectsFromData')
+
+    @_echopy_builtins.staticmethod
+    def getObjectsFromJsonData(data: Any) -> Any:
+        'list(flObject)/Nothing getObjectsFromJsonData(QByteArray/bytes/bytearray/str data)'
+        _unavailable('fontlab.flModelProducer.getObjectsFromJsonData')
 
     def getProperties(self, *args: Any, **kwargs: Any) -> Any:
         "Get object's properties list"
@@ -8055,7 +8463,8 @@ class flModelProducer:
         'hasHistoryState(uint history_ix)'
         _unavailable('fontlab.flModelProducer.hasHistoryState')
 
-    def haveObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def haveObject(*args: Any, **kwargs: Any) -> Any:
         'bool haveObject(uint);                 '
         _unavailable('fontlab.flModelProducer.haveObject')
 
@@ -8071,13 +8480,18 @@ class flModelProducer:
         'initialHistoryIx()'
         _unavailable('fontlab.flModelProducer.initialHistoryState')
 
-    def instanceType(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def instanceType(*args: Any, **kwargs: Any) -> Any:
         'int instanceType();                    '
         _unavailable('fontlab.flModelProducer.instanceType')
 
     def isEqual(self, arg0: flObject) -> Any:
         'isEqual(flObject)'
         _unavailable('fontlab.flModelProducer.isEqual')
+
+    def propertyNames(self, *args: Any, **kwargs: Any) -> Any:
+        'propertyNames(): sorted snapshot of dynamic property keys'
+        _unavailable('fontlab.flModelProducer.propertyNames')
 
     def release(self) -> Any:
         'release()'
@@ -8144,10 +8558,10 @@ class flModelProducer:
     'object type'
 
 class flMouseEvent:
-    'flMouseEvent representation\n\nConstructors:\n  flMouseEvent(flMouseEvent)\n\nNative bases: object'
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        'Native constructor; consult class documentation for supported overloads.'
-        _unavailable('fontlab.flMouseEvent')
+    'flMouseEvent representation\n\nConstructors:\n  flMouseEvent(flMouseEvent)\n\nNative bases: object\n\nCaptured native MRO: flMouseEvent, object\n\nNative __new__ allocation evidence (not an __init__ overload):\n(*args, **kwargs)\nCreate and return a new object.  See help(type) for accurate signature.'
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        'Initialize self.  See help(type(self)) for accurate signature.'
+        _unavailable('fontlab.flMouseEvent.__init__')
 
     button: Any
     'Qt::MouseButton'
@@ -8171,10 +8585,10 @@ class flMouseEvent:
     'EventType'
 
 class flNode:
-    'flNode representation\n\nConstructors:\n  flNode()\n  flNode(Node) - make clone\n  flNode(QPointF position[, string nodeType="on"[, int nodeKind=None]])\n  flNode(double x, double y[, string nodeType="on"[, int nodeKind=None]])\n\nNative bases: object'
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        'Native constructor; consult class documentation for supported overloads.'
-        _unavailable('fontlab.flNode')
+    'flNode representation\n\nConstructors:\n  flNode()\n  flNode(Node) - make clone\n  flNode(QPointF position[, string nodeType="on"[, int nodeKind=None]])\n  flNode(double x, double y[, string nodeType="on"[, int nodeKind=None]])\n\nNative bases: object\n\nCaptured native MRO: flNode, object\n\nNative __new__ allocation evidence (not an __init__ overload):\n(*args, **kwargs)\nCreate and return a new object.  See help(type) for accurate signature.'
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        'Initialize self.  See help(type(self)) for accurate signature.'
+        _unavailable('fontlab.flNode.__init__')
 
     def angleTo(self, p: QPointF) -> float:
         'double angleTo(QPointF p)'
@@ -8236,7 +8650,8 @@ class flNode:
         'flNode cloneMapped(QTransform)'
         _unavailable('fontlab.flNode.cloneMapped')
 
-    def cloneObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def cloneObject(*args: Any, **kwargs: Any) -> Any:
         'flObject cloneObject(const flObject&); '
         _unavailable('fontlab.flNode.cloneObject')
 
@@ -8260,7 +8675,8 @@ class flNode:
         'copyFrom(Node[, withSelected=False])'
         _unavailable('fontlab.flNode.copyFrom')
 
-    def createObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def createObject(*args: Any, **kwargs: Any) -> Any:
         'flObject/Nothing createObject(int);    '
         _unavailable('fontlab.flNode.createObject')
 
@@ -8304,7 +8720,8 @@ class flNode:
         'hasHistoryState(uint history_ix)'
         _unavailable('fontlab.flNode.hasHistoryState')
 
-    def haveObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def haveObject(*args: Any, **kwargs: Any) -> Any:
         'bool haveObject(uint);                 '
         _unavailable('fontlab.flNode.haveObject')
 
@@ -8324,7 +8741,8 @@ class flNode:
         'initialHistoryIx()'
         _unavailable('fontlab.flNode.initialHistoryState')
 
-    def instanceType(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def instanceType(*args: Any, **kwargs: Any) -> Any:
         'int instanceType();                    '
         _unavailable('fontlab.flNode.instanceType')
 
@@ -8399,6 +8817,10 @@ class flNode:
     def prevNode(self, nodeType: Any = ...) -> Any:
         'Node/None prevNode([string nodeType= [, int searchDepth=1]])'
         _unavailable('fontlab.flNode.prevNode')
+
+    def propertyNames(self, *args: Any, **kwargs: Any) -> Any:
+        'propertyNames(): sorted snapshot of dynamic property keys'
+        _unavailable('fontlab.flNode.propertyNames')
 
     def release(self) -> Any:
         'release()'
@@ -8575,10 +8997,10 @@ class flNode:
     'The y coordinate of the node'
 
 class flNodeInfo:
-    'flNodeInfo representation\n\nConstructors:\n  flNodeInfo()\n  flNodeInfo(flObject)\n  flNodeInfo(flNodeInfo)\n  flNodeInfo(flNode, QTransform)\n  flNodeInfo(flNode, flObject contour_info)\n  flNodeInfo(flNode, flObject glyph_info, QTransform)\n  flNodeInfo(flNode, flNodeInfo)\n\nNative bases: object'
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        'Native constructor; consult class documentation for supported overloads.'
-        _unavailable('fontlab.flNodeInfo')
+    'flNodeInfo representation\n\nConstructors:\n  flNodeInfo()\n  flNodeInfo(flObject)\n  flNodeInfo(flNodeInfo)\n  flNodeInfo(flNode, QTransform)\n  flNodeInfo(flNode, flObject contour_info)\n  flNodeInfo(flNode, flObject glyph_info, QTransform)\n  flNodeInfo(flNode, flNodeInfo)\n\nNative bases: object\n\nCaptured native MRO: flNodeInfo, object\n\nNative __new__ allocation evidence (not an __init__ overload):\n(*args, **kwargs)\nCreate and return a new object.  See help(type) for accurate signature.'
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        'Initialize self.  See help(type(self)) for accurate signature.'
+        _unavailable('fontlab.flNodeInfo.__init__')
 
     def breakContourExpanded(self, extrapolate_d: Any = ...) -> bool:
         'bool breakContourExpanded([double extrapolate_d=0.5])'
@@ -8608,7 +9030,8 @@ class flNodeInfo:
         'Clone the object'
         _unavailable('fontlab.flNodeInfo.clone')
 
-    def cloneObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def cloneObject(*args: Any, **kwargs: Any) -> Any:
         'flObject cloneObject(const flObject&); '
         _unavailable('fontlab.flNodeInfo.cloneObject')
 
@@ -8620,11 +9043,13 @@ class flNodeInfo:
         'flContour contour()'
         _unavailable('fontlab.flNodeInfo.contour')
 
-    def createInstance(self) -> flNodeInfo:
+    @_echopy_builtins.staticmethod
+    def createInstance() -> flNodeInfo:
         'flNodeInfo createInstance()'
         _unavailable('fontlab.flNodeInfo.createInstance')
 
-    def createObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def createObject(*args: Any, **kwargs: Any) -> Any:
         'flObject/Nothing createObject(int);    '
         _unavailable('fontlab.flNodeInfo.createObject')
 
@@ -8672,7 +9097,8 @@ class flNodeInfo:
         'hasHistoryState(uint history_ix)'
         _unavailable('fontlab.flNodeInfo.hasHistoryState')
 
-    def haveObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def haveObject(*args: Any, **kwargs: Any) -> Any:
         'bool haveObject(uint);                 '
         _unavailable('fontlab.flNodeInfo.haveObject')
 
@@ -8688,7 +9114,8 @@ class flNodeInfo:
         'initialHistoryIx()'
         _unavailable('fontlab.flNodeInfo.initialHistoryState')
 
-    def instanceType(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def instanceType(*args: Any, **kwargs: Any) -> Any:
         'int instanceType();                    '
         _unavailable('fontlab.flNodeInfo.instanceType')
 
@@ -8699,6 +9126,10 @@ class flNodeInfo:
     def isValid(self) -> bool:
         'bool isValid()'
         _unavailable('fontlab.flNodeInfo.isValid')
+
+    def propertyNames(self, *args: Any, **kwargs: Any) -> Any:
+        'propertyNames(): sorted snapshot of dynamic property keys'
+        _unavailable('fontlab.flNodeInfo.propertyNames')
 
     def release(self) -> Any:
         'release()'
@@ -8797,10 +9228,10 @@ class flNodeInfo:
     'object type'
 
 class flObject:
-    'flObject representation\n\nConstructors:\n  flObject()\n  flObject(flObject)\n  flObject(uint id)\n\nNative bases: object'
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        'Native constructor; consult class documentation for supported overloads.'
-        _unavailable('fontlab.flObject')
+    'flObject representation\n\nConstructors:\n  flObject()\n  flObject(flObject)\n  flObject(uint id)\n\nNative bases: object\n\nCaptured native MRO: flObject, object\n\nNative __new__ allocation evidence (not an __init__ overload):\n(*args, **kwargs)\nCreate and return a new object.  See help(type) for accurate signature.'
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        'Initialize self.  See help(type(self)) for accurate signature.'
+        _unavailable('fontlab.flObject.__init__')
 
     def changed(self) -> Any:
         'changed()'
@@ -8826,11 +9257,13 @@ class flObject:
         'Clone the object'
         _unavailable('fontlab.flObject.clone')
 
-    def cloneObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def cloneObject(*args: Any, **kwargs: Any) -> Any:
         'flObject cloneObject(const flObject&); '
         _unavailable('fontlab.flObject.cloneObject')
 
-    def createObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def createObject(*args: Any, **kwargs: Any) -> Any:
         'flObject/Nothing createObject(int);    '
         _unavailable('fontlab.flObject.createObject')
 
@@ -8862,7 +9295,8 @@ class flObject:
         'hasHistoryState(uint history_ix)'
         _unavailable('fontlab.flObject.hasHistoryState')
 
-    def haveObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def haveObject(*args: Any, **kwargs: Any) -> Any:
         'bool haveObject(uint);                 '
         _unavailable('fontlab.flObject.haveObject')
 
@@ -8878,13 +9312,18 @@ class flObject:
         'initialHistoryIx()'
         _unavailable('fontlab.flObject.initialHistoryState')
 
-    def instanceType(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def instanceType(*args: Any, **kwargs: Any) -> Any:
         'int instanceType();                    '
         _unavailable('fontlab.flObject.instanceType')
 
     def isEqual(self, arg0: flObject) -> Any:
         'isEqual(flObject)'
         _unavailable('fontlab.flObject.isEqual')
+
+    def propertyNames(self, *args: Any, **kwargs: Any) -> Any:
+        'propertyNames(): sorted snapshot of dynamic property keys'
+        _unavailable('fontlab.flObject.propertyNames')
 
     def release(self) -> Any:
         'release()'
@@ -8951,10 +9390,10 @@ class flObject:
     'object type'
 
 class flObjectsList_flGuideLine_:
-    'flObjectsList<flGuideLine> doc\n\nNative bases: object'
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        'Native constructor; consult class documentation for supported overloads.'
-        _unavailable('fontlab.flObjectsList<flGuideLine>')
+    'flObjectsList<flGuideLine> doc\n\nNative bases: object\n\nCaptured native MRO: flObjectsList<flGuideLine>, object\n\nNative __new__ allocation evidence (not an __init__ overload):\n(*args, **kwargs)\nCreate and return a new object.  See help(type) for accurate signature.'
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        'Initialize self.  See help(type(self)) for accurate signature.'
+        _unavailable('fontlab.flObjectsList<flGuideLine>.__init__')
 
     def append(self, o: Any) -> None:
         'void append(T o)'
@@ -8992,7 +9431,8 @@ class flObjectsList_flGuideLine_:
         'Clone the object'
         _unavailable('fontlab.flObjectsList<flGuideLine>.clone')
 
-    def cloneObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def cloneObject(*args: Any, **kwargs: Any) -> Any:
         'flObject cloneObject(const flObject&); '
         _unavailable('fontlab.flObjectsList<flGuideLine>.cloneObject')
 
@@ -9000,7 +9440,8 @@ class flObjectsList_flGuideLine_:
         'bool contains(T o)'
         _unavailable('fontlab.flObjectsList<flGuideLine>.contains')
 
-    def createObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def createObject(*args: Any, **kwargs: Any) -> Any:
         'flObject/Nothing createObject(int);    '
         _unavailable('fontlab.flObjectsList<flGuideLine>.createObject')
 
@@ -9032,7 +9473,8 @@ class flObjectsList_flGuideLine_:
         'hasHistoryState(uint history_ix)'
         _unavailable('fontlab.flObjectsList<flGuideLine>.hasHistoryState')
 
-    def haveObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def haveObject(*args: Any, **kwargs: Any) -> Any:
         'bool haveObject(uint);                 '
         _unavailable('fontlab.flObjectsList<flGuideLine>.haveObject')
 
@@ -9056,13 +9498,18 @@ class flObjectsList_flGuideLine_:
         'void insert(int index, T o)'
         _unavailable('fontlab.flObjectsList<flGuideLine>.insert')
 
-    def instanceType(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def instanceType(*args: Any, **kwargs: Any) -> Any:
         'int instanceType();                    '
         _unavailable('fontlab.flObjectsList<flGuideLine>.instanceType')
 
     def isEqual(self, arg0: flObject) -> Any:
         'isEqual(flObject)'
         _unavailable('fontlab.flObjectsList<flGuideLine>.isEqual')
+
+    def propertyNames(self, *args: Any, **kwargs: Any) -> Any:
+        'propertyNames(): sorted snapshot of dynamic property keys'
+        _unavailable('fontlab.flObjectsList<flGuideLine>.propertyNames')
 
     def release(self) -> Any:
         'release()'
@@ -9142,10 +9589,10 @@ class flObjectsList_flGuideLine_:
     'object type'
 
 class flObjectsList_flShape_:
-    'flObjectsList<flShape> doc\n\nNative bases: object'
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        'Native constructor; consult class documentation for supported overloads.'
-        _unavailable('fontlab.flObjectsList<flShape>')
+    'flObjectsList<flShape> doc\n\nNative bases: object\n\nCaptured native MRO: flObjectsList<flShape>, object\n\nNative __new__ allocation evidence (not an __init__ overload):\n(*args, **kwargs)\nCreate and return a new object.  See help(type) for accurate signature.'
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        'Initialize self.  See help(type(self)) for accurate signature.'
+        _unavailable('fontlab.flObjectsList<flShape>.__init__')
 
     def append(self, o: Any) -> None:
         'void append(T o)'
@@ -9183,7 +9630,8 @@ class flObjectsList_flShape_:
         'Clone the object'
         _unavailable('fontlab.flObjectsList<flShape>.clone')
 
-    def cloneObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def cloneObject(*args: Any, **kwargs: Any) -> Any:
         'flObject cloneObject(const flObject&); '
         _unavailable('fontlab.flObjectsList<flShape>.cloneObject')
 
@@ -9191,7 +9639,8 @@ class flObjectsList_flShape_:
         'bool contains(T o)'
         _unavailable('fontlab.flObjectsList<flShape>.contains')
 
-    def createObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def createObject(*args: Any, **kwargs: Any) -> Any:
         'flObject/Nothing createObject(int);    '
         _unavailable('fontlab.flObjectsList<flShape>.createObject')
 
@@ -9223,7 +9672,8 @@ class flObjectsList_flShape_:
         'hasHistoryState(uint history_ix)'
         _unavailable('fontlab.flObjectsList<flShape>.hasHistoryState')
 
-    def haveObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def haveObject(*args: Any, **kwargs: Any) -> Any:
         'bool haveObject(uint);                 '
         _unavailable('fontlab.flObjectsList<flShape>.haveObject')
 
@@ -9247,13 +9697,18 @@ class flObjectsList_flShape_:
         'void insert(int index, T o)'
         _unavailable('fontlab.flObjectsList<flShape>.insert')
 
-    def instanceType(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def instanceType(*args: Any, **kwargs: Any) -> Any:
         'int instanceType();                    '
         _unavailable('fontlab.flObjectsList<flShape>.instanceType')
 
     def isEqual(self, arg0: flObject) -> Any:
         'isEqual(flObject)'
         _unavailable('fontlab.flObjectsList<flShape>.isEqual')
+
+    def propertyNames(self, *args: Any, **kwargs: Any) -> Any:
+        'propertyNames(): sorted snapshot of dynamic property keys'
+        _unavailable('fontlab.flObjectsList<flShape>.propertyNames')
 
     def release(self) -> Any:
         'release()'
@@ -9333,10 +9788,10 @@ class flObjectsList_flShape_:
     'object type'
 
 class flPackage:
-    'flPackage representation\n\nConstructors:\n  flPackage()\n  flPackage(flObject)\n  flPackage(fgFont)\n\nNative bases: object'
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        'Native constructor; consult class documentation for supported overloads.'
-        _unavailable('fontlab.flPackage')
+    'flPackage representation\n\nConstructors:\n  flPackage()\n  flPackage(flObject)\n  flPackage(fgFont)\n\nNative bases: object\n\nCaptured native MRO: flPackage, object\n\nNative __new__ allocation evidence (not an __init__ overload):\n(*args, **kwargs)\nCreate and return a new object.  See help(type) for accurate signature.'
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        'Initialize self.  See help(type(self)) for accurate signature.'
+        _unavailable('fontlab.flPackage.__init__')
 
     def activateGlyph(self, arg0: flGlyph) -> Any:
         'activateGlyph(flGlyph)'
@@ -9422,12 +9877,13 @@ class flPackage:
         'Clone the object'
         _unavailable('fontlab.flPackage.clone')
 
-    def cloneObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def cloneObject(*args: Any, **kwargs: Any) -> Any:
         'flObject cloneObject(const flObject&); '
         _unavailable('fontlab.flPackage.cloneObject')
 
-    def close(self, save: Any = False) -> Any:
-        'close(save=False) - Close the font'
+    def close(self, prompt: Any = True) -> Any:
+        'close(prompt=True) - Close the font, prompting for unsaved changes. Pass False to discard changes without prompting.'
         _unavailable('fontlab.flPackage.close')
 
     def collectNames(self, storage: Any) -> Any:
@@ -9442,7 +9898,8 @@ class flPackage:
         'convertZonesToGuidelines(flZones zonesT, flZones zonesB)'
         _unavailable('fontlab.flPackage.convertZonesToGuidelines')
 
-    def createObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def createObject(*args: Any, **kwargs: Any) -> Any:
         'flObject/Nothing createObject(int);    '
         _unavailable('fontlab.flPackage.createObject')
 
@@ -9582,7 +10039,8 @@ class flPackage:
         'hasHistoryState(uint history_ix)'
         _unavailable('fontlab.flPackage.hasHistoryState')
 
-    def hasInstaceFor(self, arg0: fgFont) -> bool:
+    @_echopy_builtins.staticmethod
+    def hasInstaceFor(arg0: fgFont) -> bool:
         'bool hasInstaceFor(fgFont)'
         _unavailable('fontlab.flPackage.hasInstaceFor')
 
@@ -9602,7 +10060,8 @@ class flPackage:
         'bool hasZones()'
         _unavailable('fontlab.flPackage.hasZones')
 
-    def haveObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def haveObject(*args: Any, **kwargs: Any) -> Any:
         'bool haveObject(uint);                 '
         _unavailable('fontlab.flPackage.haveObject')
 
@@ -9630,7 +10089,8 @@ class flPackage:
         'initialHistoryIx()'
         _unavailable('fontlab.flPackage.initialHistoryState')
 
-    def instanceType(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def instanceType(*args: Any, **kwargs: Any) -> Any:
         'int instanceType();                    '
         _unavailable('fontlab.flPackage.instanceType')
 
@@ -9694,7 +10154,12 @@ class flPackage:
         'string projectPackageName()'
         _unavailable('fontlab.flPackage.projectPackageName')
 
-    def readFromFile(self, *args: Any, **kwargs: Any) -> Any:
+    def propertyNames(self, *args: Any, **kwargs: Any) -> Any:
+        'propertyNames(): sorted snapshot of dynamic property keys'
+        _unavailable('fontlab.flPackage.propertyNames')
+
+    @_echopy_builtins.staticmethod
+    def readFromFile(*args: Any, **kwargs: Any) -> Any:
         'flPackage/Nothing readFromFile(string[, StorageInfo*=0])'
         _unavailable('fontlab.flPackage.readFromFile')
 
@@ -10057,10 +10522,10 @@ class flPackage:
     'double'
 
 class flPaper:
-    'flPaper representation\n\nConstructors:\n  flPaper()\n  flPaper(flPaper)\n  flPaper(flObject)\n  flPaper(QBrush)\n\nNative bases: object'
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        'Native constructor; consult class documentation for supported overloads.'
-        _unavailable('fontlab.flPaper')
+    'flPaper representation\n\nConstructors:\n  flPaper()\n  flPaper(flPaper)\n  flPaper(flObject)\n  flPaper(QBrush)\n\nNative bases: object\n\nCaptured native MRO: flPaper, object\n\nNative __new__ allocation evidence (not an __init__ overload):\n(*args, **kwargs)\nCreate and return a new object.  See help(type) for accurate signature.'
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        'Initialize self.  See help(type(self)) for accurate signature.'
+        _unavailable('fontlab.flPaper.__init__')
 
     def activeGlyphInfo(self) -> flObject:
         'flObject activeGlyphInfo()'
@@ -10090,15 +10555,18 @@ class flPaper:
         'Clone the object'
         _unavailable('fontlab.flPaper.clone')
 
-    def cloneObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def cloneObject(*args: Any, **kwargs: Any) -> Any:
         'flObject cloneObject(const flObject&); '
         _unavailable('fontlab.flPaper.cloneObject')
 
-    def createInstance(self) -> flPaper:
+    @_echopy_builtins.staticmethod
+    def createInstance() -> flPaper:
         'flPaper createInstance()'
         _unavailable('fontlab.flPaper.createInstance')
 
-    def createObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def createObject(*args: Any, **kwargs: Any) -> Any:
         'flObject/Nothing createObject(int);    '
         _unavailable('fontlab.flPaper.createObject')
 
@@ -10154,7 +10622,8 @@ class flPaper:
         'hasHistoryState(uint history_ix)'
         _unavailable('fontlab.flPaper.hasHistoryState')
 
-    def haveObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def haveObject(*args: Any, **kwargs: Any) -> Any:
         'bool haveObject(uint);                 '
         _unavailable('fontlab.flPaper.haveObject')
 
@@ -10170,7 +10639,8 @@ class flPaper:
         'initialHistoryIx()'
         _unavailable('fontlab.flPaper.initialHistoryState')
 
-    def instanceType(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def instanceType(*args: Any, **kwargs: Any) -> Any:
         'int instanceType();                    '
         _unavailable('fontlab.flPaper.instanceType')
 
@@ -10181,6 +10651,10 @@ class flPaper:
     def package(self) -> flObject:
         'flObject package()'
         _unavailable('fontlab.flPaper.package')
+
+    def propertyNames(self, *args: Any, **kwargs: Any) -> Any:
+        'propertyNames(): sorted snapshot of dynamic property keys'
+        _unavailable('fontlab.flPaper.propertyNames')
 
     def release(self) -> Any:
         'release()'
@@ -10255,10 +10729,10 @@ class flPaper:
     'object type'
 
 class flPinPoint:
-    'flPinPoint representation\n\nConstructors:\n  flPinPoint()\n  flPinPoint(flPinPoint)\n  flPinPoint(flObject)\n  flPinPoint(QPointF[, PinPointStyle=FreePosition])\n\nNative bases: object'
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        'Native constructor; consult class documentation for supported overloads.'
-        _unavailable('fontlab.flPinPoint')
+    'flPinPoint representation\n\nConstructors:\n  flPinPoint()\n  flPinPoint(flPinPoint)\n  flPinPoint(flObject)\n  flPinPoint(QPointF[, PinPointStyle=FreePosition])\n\nNative bases: object\n\nCaptured native MRO: flPinPoint, object\n\nNative __new__ allocation evidence (not an __init__ overload):\n(*args, **kwargs)\nCreate and return a new object.  See help(type) for accurate signature.'
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        'Initialize self.  See help(type(self)) for accurate signature.'
+        _unavailable('fontlab.flPinPoint.__init__')
 
     def changed(self) -> Any:
         'changed()'
@@ -10284,15 +10758,18 @@ class flPinPoint:
         'Clone the object'
         _unavailable('fontlab.flPinPoint.clone')
 
-    def cloneObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def cloneObject(*args: Any, **kwargs: Any) -> Any:
         'flObject cloneObject(const flObject&); '
         _unavailable('fontlab.flPinPoint.cloneObject')
 
-    def createInstance(self) -> flPinPoint:
+    @_echopy_builtins.staticmethod
+    def createInstance() -> flPinPoint:
         'flPinPoint createInstance()'
         _unavailable('fontlab.flPinPoint.createInstance')
 
-    def createObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def createObject(*args: Any, **kwargs: Any) -> Any:
         'flObject/Nothing createObject(int);    '
         _unavailable('fontlab.flPinPoint.createObject')
 
@@ -10324,7 +10801,8 @@ class flPinPoint:
         'hasHistoryState(uint history_ix)'
         _unavailable('fontlab.flPinPoint.hasHistoryState')
 
-    def haveObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def haveObject(*args: Any, **kwargs: Any) -> Any:
         'bool haveObject(uint);                 '
         _unavailable('fontlab.flPinPoint.haveObject')
 
@@ -10340,13 +10818,18 @@ class flPinPoint:
         'initialHistoryIx()'
         _unavailable('fontlab.flPinPoint.initialHistoryState')
 
-    def instanceType(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def instanceType(*args: Any, **kwargs: Any) -> Any:
         'int instanceType();                    '
         _unavailable('fontlab.flPinPoint.instanceType')
 
     def isEqual(self, arg0: flObject) -> Any:
         'isEqual(flObject)'
         _unavailable('fontlab.flPinPoint.isEqual')
+
+    def propertyNames(self, *args: Any, **kwargs: Any) -> Any:
+        'propertyNames(): sorted snapshot of dynamic property keys'
+        _unavailable('fontlab.flPinPoint.propertyNames')
 
     def release(self) -> Any:
         'release()'
@@ -10438,76 +10921,93 @@ class flPinPoint:
     'object type'
 
 class flPreferences:
-    'flPreferences representation\n\nConstructors:\n  flPreferences()\n\nNative bases: object'
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        'Native constructor; consult class documentation for supported overloads.'
-        _unavailable('fontlab.flPreferences')
+    'flPreferences representation\n\nConstructors:\n  flPreferences()\n\nNative bases: object\n\nCaptured native MRO: flPreferences, object\n\nNative __new__ allocation evidence (not an __init__ overload):\n(*args, **kwargs)\nCreate and return a new object.  See help(type) for accurate signature.'
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        'Initialize self.  See help(type(self)) for accurate signature.'
+        _unavailable('fontlab.flPreferences.__init__')
 
-    def doInterpolate(self) -> bool:
+    @_echopy_builtins.staticmethod
+    def doInterpolate() -> bool:
         'bool doInterpolate()'
         _unavailable('fontlab.flPreferences.doInterpolate')
 
-    def fontAuditTests(self) -> Any:
+    @_echopy_builtins.staticmethod
+    def fontAuditTests() -> Any:
         'list(int) fontAuditTests()'
         _unavailable('fontlab.flPreferences.fontAuditTests')
 
-    def instance(self) -> flPreferences:
+    @_echopy_builtins.staticmethod
+    def instance() -> flPreferences:
         'flPreferences instance()'
         _unavailable('fontlab.flPreferences.instance')
 
-    def load(self, arg0: dict[str, Any]) -> Any:
+    @_echopy_builtins.staticmethod
+    def load(arg0: dict[str, Any]) -> Any:
         'load(QVariantMap)'
         _unavailable('fontlab.flPreferences.load')
 
-    def namecaptionFont(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def namecaptionFont(*args: Any, **kwargs: Any) -> Any:
         'QFont  namecaptionFont (bool condensed)'
         _unavailable('fontlab.flPreferences.namecaptionFont')
 
-    def namecaptionFontFamilyName(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def namecaptionFontFamilyName(*args: Any, **kwargs: Any) -> Any:
         'string namecaptionFontFamilyName (bool condensed)'
         _unavailable('fontlab.flPreferences.namecaptionFontFamilyName')
 
-    def namecaptionFontId(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def namecaptionFontId(*args: Any, **kwargs: Any) -> Any:
         'int    namecaptionFontId (bool condensed)'
         _unavailable('fontlab.flPreferences.namecaptionFontId')
 
-    def options2tracer_precision(self) -> float:
+    @_echopy_builtins.staticmethod
+    def options2tracer_precision() -> float:
         'double options2tracer_precision()'
         _unavailable('fontlab.flPreferences.options2tracer_precision')
 
-    def options2tracer_smoothness(self) -> int:
+    @_echopy_builtins.staticmethod
+    def options2tracer_smoothness() -> int:
         'int options2tracer_smoothness()'
         _unavailable('fontlab.flPreferences.options2tracer_smoothness')
 
-    def save(self) -> dict[str, Any]:
+    @_echopy_builtins.staticmethod
+    def save() -> dict[str, Any]:
         'QVariantMap save()'
         _unavailable('fontlab.flPreferences.save')
 
-    def saveView(self) -> Any:
+    @_echopy_builtins.staticmethod
+    def saveView() -> Any:
         'saveView()'
         _unavailable('fontlab.flPreferences.saveView')
 
-    def setFontAuditTest(self, id: int, value: bool) -> Any:
+    @_echopy_builtins.staticmethod
+    def setFontAuditTest(id: int, value: bool) -> Any:
         'setFontAuditTest(int id, bool value)'
         _unavailable('fontlab.flPreferences.setFontAuditTest')
 
-    def setGridDistances(self, x: float, y: float) -> Any:
+    @_echopy_builtins.staticmethod
+    def setGridDistances(x: float, y: float) -> Any:
         'setGridDistances(double x, double y)'
         _unavailable('fontlab.flPreferences.setGridDistances')
 
-    def sourceMetricsSamples(self) -> str:
+    @_echopy_builtins.staticmethod
+    def sourceMetricsSamples() -> str:
         'QString sourceMetricsSamples()'
         _unavailable('fontlab.flPreferences.sourceMetricsSamples')
 
-    def tracer2options_precision(self, curve_fit: float) -> float:
+    @_echopy_builtins.staticmethod
+    def tracer2options_precision(curve_fit: float) -> float:
         'double tracer2options_precision(double curve_fit)'
         _unavailable('fontlab.flPreferences.tracer2options_precision')
 
-    def tracer2options_smoothness(self, straighten_angle: int) -> float:
+    @_echopy_builtins.staticmethod
+    def tracer2options_smoothness(straighten_angle: int) -> float:
         'double tracer2options_smoothness(int straighten_angle)'
         _unavailable('fontlab.flPreferences.tracer2options_smoothness')
 
-    def unicode2text(self, unc: int) -> str:
+    @_echopy_builtins.staticmethod
+    def unicode2text(unc: int) -> str:
         'QString unicode2text(uint unc)'
         _unavailable('fontlab.flPreferences.unicode2text')
 
@@ -10839,6 +11339,8 @@ class flPreferences:
     'int'
     editorInactiveWireframe: Any
     'bool'
+    editorIndependentGlyphMasters: Any
+    'bool'
     editorInertion: Any
     'bool'
     editorInstanceLayer: Any
@@ -11071,6 +11573,8 @@ class flPreferences:
     'int'
     fontsAutoSaveTimeInterval: Any
     'int'
+    generalActivateFontWindowOnOpen: Any
+    'bool'
     generalActivatePanels: Any
     'bool'
     generalBeta: Any
@@ -11082,6 +11586,8 @@ class flPreferences:
     generalDarkFont: Any
     'bool'
     generalDarkGlyph: Any
+    'bool'
+    generalHideWarningDialogs: Any
     'bool'
     generalSketchboard: Any
     'bool'
@@ -11394,10 +11900,10 @@ class flPreferences:
     'int'
 
 class flProperty:
-    'flProperty representation\n\nConstructors:\n\nNative bases: object'
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        'Native constructor; consult class documentation for supported overloads.'
-        _unavailable('fontlab.flProperty')
+    'flProperty representation\n\nConstructors:\n\nNative bases: object\n\nCaptured native MRO: flProperty, object\n\nNative __new__ allocation evidence (not an __init__ overload):\n(*args, **kwargs)\nCreate and return a new object.  See help(type) for accurate signature.'
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        'Initialize self.  See help(type(self)) for accurate signature.'
+        _unavailable('fontlab.flProperty.__init__')
 
     def changed(self) -> Any:
         'changed()'
@@ -11423,11 +11929,13 @@ class flProperty:
         'Clone the object'
         _unavailable('fontlab.flProperty.clone')
 
-    def cloneObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def cloneObject(*args: Any, **kwargs: Any) -> Any:
         'flObject cloneObject(const flObject&); '
         _unavailable('fontlab.flProperty.cloneObject')
 
-    def createObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def createObject(*args: Any, **kwargs: Any) -> Any:
         'flObject/Nothing createObject(int);    '
         _unavailable('fontlab.flProperty.createObject')
 
@@ -11459,7 +11967,8 @@ class flProperty:
         'hasHistoryState(uint history_ix)'
         _unavailable('fontlab.flProperty.hasHistoryState')
 
-    def haveObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def haveObject(*args: Any, **kwargs: Any) -> Any:
         'bool haveObject(uint);                 '
         _unavailable('fontlab.flProperty.haveObject')
 
@@ -11475,13 +11984,18 @@ class flProperty:
         'initialHistoryIx()'
         _unavailable('fontlab.flProperty.initialHistoryState')
 
-    def instanceType(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def instanceType(*args: Any, **kwargs: Any) -> Any:
         'int instanceType();                    '
         _unavailable('fontlab.flProperty.instanceType')
 
     def isEqual(self, arg0: flObject) -> Any:
         'isEqual(flObject)'
         _unavailable('fontlab.flProperty.isEqual')
+
+    def propertyNames(self, *args: Any, **kwargs: Any) -> Any:
+        'propertyNames(): sorted snapshot of dynamic property keys'
+        _unavailable('fontlab.flProperty.propertyNames')
 
     def release(self) -> Any:
         'release()'
@@ -11550,10 +12064,10 @@ class flProperty:
     'object type'
 
 class flPropertyDouble:
-    'flPropertyDouble representation\n\nConstructors:\n\nNative bases: object'
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        'Native constructor; consult class documentation for supported overloads.'
-        _unavailable('fontlab.flPropertyDouble')
+    'flPropertyDouble representation\n\nConstructors:\n\nNative bases: object\n\nCaptured native MRO: flPropertyDouble, object\n\nNative __new__ allocation evidence (not an __init__ overload):\n(*args, **kwargs)\nCreate and return a new object.  See help(type) for accurate signature.'
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        'Initialize self.  See help(type(self)) for accurate signature.'
+        _unavailable('fontlab.flPropertyDouble.__init__')
 
     def changed(self) -> Any:
         'changed()'
@@ -11579,11 +12093,13 @@ class flPropertyDouble:
         'Clone the object'
         _unavailable('fontlab.flPropertyDouble.clone')
 
-    def cloneObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def cloneObject(*args: Any, **kwargs: Any) -> Any:
         'flObject cloneObject(const flObject&); '
         _unavailable('fontlab.flPropertyDouble.cloneObject')
 
-    def createObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def createObject(*args: Any, **kwargs: Any) -> Any:
         'flObject/Nothing createObject(int);    '
         _unavailable('fontlab.flPropertyDouble.createObject')
 
@@ -11615,7 +12131,8 @@ class flPropertyDouble:
         'hasHistoryState(uint history_ix)'
         _unavailable('fontlab.flPropertyDouble.hasHistoryState')
 
-    def haveObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def haveObject(*args: Any, **kwargs: Any) -> Any:
         'bool haveObject(uint);                 '
         _unavailable('fontlab.flPropertyDouble.haveObject')
 
@@ -11631,13 +12148,18 @@ class flPropertyDouble:
         'initialHistoryIx()'
         _unavailable('fontlab.flPropertyDouble.initialHistoryState')
 
-    def instanceType(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def instanceType(*args: Any, **kwargs: Any) -> Any:
         'int instanceType();                    '
         _unavailable('fontlab.flPropertyDouble.instanceType')
 
     def isEqual(self, arg0: flObject) -> Any:
         'isEqual(flObject)'
         _unavailable('fontlab.flPropertyDouble.isEqual')
+
+    def propertyNames(self, *args: Any, **kwargs: Any) -> Any:
+        'propertyNames(): sorted snapshot of dynamic property keys'
+        _unavailable('fontlab.flPropertyDouble.propertyNames')
 
     def release(self) -> Any:
         'release()'
@@ -11708,10 +12230,10 @@ class flPropertyDouble:
     'double'
 
 class flPropertyPoint:
-    'flPropertyPoint representation\n\nConstructors:\n\nNative bases: object'
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        'Native constructor; consult class documentation for supported overloads.'
-        _unavailable('fontlab.flPropertyPoint')
+    'flPropertyPoint representation\n\nConstructors:\n\nNative bases: object\n\nCaptured native MRO: flPropertyPoint, object\n\nNative __new__ allocation evidence (not an __init__ overload):\n(*args, **kwargs)\nCreate and return a new object.  See help(type) for accurate signature.'
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        'Initialize self.  See help(type(self)) for accurate signature.'
+        _unavailable('fontlab.flPropertyPoint.__init__')
 
     def changed(self) -> Any:
         'changed()'
@@ -11737,11 +12259,13 @@ class flPropertyPoint:
         'Clone the object'
         _unavailable('fontlab.flPropertyPoint.clone')
 
-    def cloneObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def cloneObject(*args: Any, **kwargs: Any) -> Any:
         'flObject cloneObject(const flObject&); '
         _unavailable('fontlab.flPropertyPoint.cloneObject')
 
-    def createObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def createObject(*args: Any, **kwargs: Any) -> Any:
         'flObject/Nothing createObject(int);    '
         _unavailable('fontlab.flPropertyPoint.createObject')
 
@@ -11777,7 +12301,8 @@ class flPropertyPoint:
         'hasHistoryState(uint history_ix)'
         _unavailable('fontlab.flPropertyPoint.hasHistoryState')
 
-    def haveObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def haveObject(*args: Any, **kwargs: Any) -> Any:
         'bool haveObject(uint);                 '
         _unavailable('fontlab.flPropertyPoint.haveObject')
 
@@ -11793,13 +12318,18 @@ class flPropertyPoint:
         'initialHistoryIx()'
         _unavailable('fontlab.flPropertyPoint.initialHistoryState')
 
-    def instanceType(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def instanceType(*args: Any, **kwargs: Any) -> Any:
         'int instanceType();                    '
         _unavailable('fontlab.flPropertyPoint.instanceType')
 
     def isEqual(self, arg0: flObject) -> Any:
         'isEqual(flObject)'
         _unavailable('fontlab.flPropertyPoint.isEqual')
+
+    def propertyNames(self, *args: Any, **kwargs: Any) -> Any:
+        'propertyNames(): sorted snapshot of dynamic property keys'
+        _unavailable('fontlab.flPropertyPoint.propertyNames')
 
     def release(self) -> Any:
         'release()'
@@ -11873,10 +12403,10 @@ class flPropertyPoint:
     'object type'
 
 class flSearchInfo:
-    'flSearchInfo representation\n\nConstructors:\n  flSearchInfo()\n  flSearchInfo(flObject)\n  flSearchInfo(flSearchInfo)\n  flSearchInfo(QTransform)\n  flSearchInfo(QTransform, flObject glyph_info)\n\nNative bases: object'
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        'Native constructor; consult class documentation for supported overloads.'
-        _unavailable('fontlab.flSearchInfo')
+    'flSearchInfo representation\n\nConstructors:\n  flSearchInfo()\n  flSearchInfo(flObject)\n  flSearchInfo(flSearchInfo)\n  flSearchInfo(QTransform)\n  flSearchInfo(QTransform, flObject glyph_info)\n\nNative bases: object\n\nCaptured native MRO: flSearchInfo, object\n\nNative __new__ allocation evidence (not an __init__ overload):\n(*args, **kwargs)\nCreate and return a new object.  See help(type) for accurate signature.'
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        'Initialize self.  See help(type(self)) for accurate signature.'
+        _unavailable('fontlab.flSearchInfo.__init__')
 
     def changed(self) -> Any:
         'changed()'
@@ -11902,7 +12432,8 @@ class flSearchInfo:
         'Clone the object'
         _unavailable('fontlab.flSearchInfo.clone')
 
-    def cloneObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def cloneObject(*args: Any, **kwargs: Any) -> Any:
         'flObject cloneObject(const flObject&); '
         _unavailable('fontlab.flSearchInfo.cloneObject')
 
@@ -11910,7 +12441,8 @@ class flSearchInfo:
         'combine(QTransform transform)'
         _unavailable('fontlab.flSearchInfo.combine')
 
-    def createObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def createObject(*args: Any, **kwargs: Any) -> Any:
         'flObject/Nothing createObject(int);    '
         _unavailable('fontlab.flSearchInfo.createObject')
 
@@ -11942,7 +12474,8 @@ class flSearchInfo:
         'hasHistoryState(uint history_ix)'
         _unavailable('fontlab.flSearchInfo.hasHistoryState')
 
-    def haveObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def haveObject(*args: Any, **kwargs: Any) -> Any:
         'bool haveObject(uint);                 '
         _unavailable('fontlab.flSearchInfo.haveObject')
 
@@ -11958,13 +12491,18 @@ class flSearchInfo:
         'initialHistoryIx()'
         _unavailable('fontlab.flSearchInfo.initialHistoryState')
 
-    def instanceType(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def instanceType(*args: Any, **kwargs: Any) -> Any:
         'int instanceType();                    '
         _unavailable('fontlab.flSearchInfo.instanceType')
 
     def isEqual(self, arg0: flObject) -> Any:
         'isEqual(flObject)'
         _unavailable('fontlab.flSearchInfo.isEqual')
+
+    def propertyNames(self, *args: Any, **kwargs: Any) -> Any:
+        'propertyNames(): sorted snapshot of dynamic property keys'
+        _unavailable('fontlab.flSearchInfo.propertyNames')
 
     def release(self) -> Any:
         'release()'
@@ -12037,22 +12575,30 @@ class flSearchInfo:
     'object type'
 
 class flShape:
-    'flShape representation\n\nConstructors:\n  flShape()\n  flShape(flObject)\n  flShape(flShapeData)\n  flShape(flSticker)\n  flShape(QImage)\n  flShape(fgShape)\n  flShape(flShapeBuilder)\n\nNative bases: object'
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        'Native constructor; consult class documentation for supported overloads.'
-        _unavailable('fontlab.flShape')
+    'flShape representation\n\nConstructors:\n  flShape()\n  flShape(flObject)\n  flShape(flShapeData)\n  flShape(flSticker)\n  flShape(QImage)\n  flShape(fgShape)\n  flShape(flShapeBuilder)\n\nNative bases: object\n\nCaptured native MRO: flShape, object\n\nNative __new__ allocation evidence (not an __init__ overload):\n(*args, **kwargs)\nCreate and return a new object.  See help(type) for accurate signature.'
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        'Initialize self.  See help(type(self)) for accurate signature.'
+        _unavailable('fontlab.flShape.__init__')
 
     def activateBuilder(self) -> Any:
         'activateBuilder()'
         _unavailable('fontlab.flShape.activateBuilder')
 
-    def addContour(self, arg0: flContour) -> Any:
-        'addContour(flContour)'
+    def addContour(self, arg0: flContour, check_duplicate: Any = False, validate: Any = True) -> Any:
+        'addContour(flContour, check_duplicate=False, validate=True)'
         _unavailable('fontlab.flShape.addContour')
 
     def addContours(self, *args: Any, **kwargs: Any) -> Any:
         'addContours(list(flContour))'
         _unavailable('fontlab.flShape.addContours')
+
+    def addSmartCorner(self, node: flNode, radius: float = 20, smooth: bool = False) -> bool:
+        'bool addSmartCorner(flNode node, float radius=20, bool smooth=False) - add/update a live smart corner; negative radius creates an ink trap; manages the filter; reacquire source nodes afterwards'
+        _unavailable('fontlab.flShape.addSmartCorner')
+
+    def addSmartCorners(self, radius: float = 20, smooth: bool = False) -> int:
+        'int addSmartCorners(float radius=20, bool smooth=False) - add live smart corners at applicable nodes, skip existing corners, return count; manages/reuses the filter'
+        _unavailable('fontlab.flShape.addSmartCorners')
 
     def appendAnchor(self, node: flNode, guideline: flObject) -> Any:
         'appendAnchor(flAnchor) | void appendAnchor(flNode node, flObject guideline)'
@@ -12106,7 +12652,8 @@ class flShape:
         'Clone the object'
         _unavailable('fontlab.flShape.clone')
 
-    def cloneObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def cloneObject(*args: Any, **kwargs: Any) -> Any:
         'flObject cloneObject(const flObject&); '
         _unavailable('fontlab.flShape.cloneObject')
 
@@ -12130,11 +12677,13 @@ class flShape:
         'copyToFgShape(fgShape)'
         _unavailable('fontlab.flShape.copyToFgShape')
 
-    def createInstance(self) -> flShape:
+    @_echopy_builtins.staticmethod
+    def createInstance() -> flShape:
         'flShape createInstance()'
         _unavailable('fontlab.flShape.createInstance')
 
-    def createObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def createObject(*args: Any, **kwargs: Any) -> Any:
         'flObject/Nothing createObject(int);    '
         _unavailable('fontlab.flShape.createObject')
 
@@ -12161,6 +12710,10 @@ class flShape:
     def ensurePaths(self) -> Any:
         'ensurePaths()'
         _unavailable('fontlab.flShape.ensurePaths')
+
+    def expandStroke(self, *args: Any, **kwargs: Any) -> Any:
+        'bool expandStroke([bool outer_only]) - replace the stroke with its filled outline'
+        _unavailable('fontlab.flShape.expandStroke')
 
     def findNode(self, arg0: str) -> flNode:
         'flNode findNode(QString)'
@@ -12238,7 +12791,8 @@ class flShape:
         'bool hasSelected(SelectionMode)'
         _unavailable('fontlab.flShape.hasSelected')
 
-    def haveObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def haveObject(*args: Any, **kwargs: Any) -> Any:
         'bool haveObject(uint);                 '
         _unavailable('fontlab.flShape.haveObject')
 
@@ -12270,7 +12824,8 @@ class flShape:
         'QRectF inkBox([QTransform tx = QTransform()])'
         _unavailable('fontlab.flShape.inkBox')
 
-    def instanceType(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def instanceType(*args: Any, **kwargs: Any) -> Any:
         'int instanceType();                    '
         _unavailable('fontlab.flShape.instanceType')
 
@@ -12282,7 +12837,8 @@ class flShape:
         'isEqual(flObject)'
         _unavailable('fontlab.flShape.isEqual')
 
-    def isShape(self, arg0: flObject) -> bool:
+    @_echopy_builtins.staticmethod
+    def isShape(arg0: flObject) -> bool:
         'bool isShape(flObject)'
         _unavailable('fontlab.flShape.isShape')
 
@@ -12293,6 +12849,10 @@ class flShape:
     def prepareTransformationData(self) -> Any:
         'prepareTransformationData()'
         _unavailable('fontlab.flShape.prepareTransformationData')
+
+    def propertyNames(self, *args: Any, **kwargs: Any) -> Any:
+        'propertyNames(): sorted snapshot of dynamic property keys'
+        _unavailable('fontlab.flShape.propertyNames')
 
     def release(self) -> Any:
         'release()'
@@ -12373,6 +12933,10 @@ class flShape:
     def simpleShape(self) -> bool:
         'bool simpleShape()'
         _unavailable('fontlab.flShape.simpleShape')
+
+    def smartCornerSource(self) -> flShape:
+        'flShape smartCornerSource() - editable source of a Smart Corners filter, self for plain outlines, null for unsupported/locked shapes'
+        _unavailable('fontlab.flShape.smartCornerSource')
 
     def tag(self, *args: Any, **kwargs: Any) -> Any:
         'tag([string])'
@@ -12471,6 +13035,8 @@ class flShape:
     'QPainterPath'
     pen: Any
     'QPen'
+    penParameters: Any
+    'dict: stroke parameters (thickness, proportion, contrast, rotation, join, miter_limit, remove_overlap, cap0/cap1, cap_*0/1)'
     refCnt: Any
     'object references count'
     selected: Any
@@ -12489,10 +13055,10 @@ class flShape:
     'object type'
 
 class flShapeBuilder:
-    'flShapeBuilder representation\n\nConstructors:\n  flShapeBuilder()\n  flShapeBuilder(flShapeBuilder)\n  flShapeBuilder(flObject)\n\nNative bases: object'
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        'Native constructor; consult class documentation for supported overloads.'
-        _unavailable('fontlab.flShapeBuilder')
+    'flShapeBuilder representation\n\nConstructors:\n  flShapeBuilder()\n  flShapeBuilder(flShapeBuilder)\n  flShapeBuilder(flObject)\n\nNative bases: object\n\nCaptured native MRO: flShapeBuilder, object\n\nNative __new__ allocation evidence (not an __init__ overload):\n(*args, **kwargs)\nCreate and return a new object.  See help(type) for accurate signature.'
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        'Initialize self.  See help(type(self)) for accurate signature.'
+        _unavailable('fontlab.flShapeBuilder.__init__')
 
     def changed(self) -> Any:
         'changed()'
@@ -12518,11 +13084,13 @@ class flShapeBuilder:
         'Clone the object'
         _unavailable('fontlab.flShapeBuilder.clone')
 
-    def cloneObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def cloneObject(*args: Any, **kwargs: Any) -> Any:
         'flObject cloneObject(const flObject&); '
         _unavailable('fontlab.flShapeBuilder.cloneObject')
 
-    def createObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def createObject(*args: Any, **kwargs: Any) -> Any:
         'flObject/Nothing createObject(int);    '
         _unavailable('fontlab.flShapeBuilder.createObject')
 
@@ -12566,7 +13134,8 @@ class flShapeBuilder:
         'hasHistoryState(uint history_ix)'
         _unavailable('fontlab.flShapeBuilder.hasHistoryState')
 
-    def haveObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def haveObject(*args: Any, **kwargs: Any) -> Any:
         'bool haveObject(uint);                 '
         _unavailable('fontlab.flShapeBuilder.haveObject')
 
@@ -12586,7 +13155,8 @@ class flShapeBuilder:
         'initialHistoryIx()'
         _unavailable('fontlab.flShapeBuilder.initialHistoryState')
 
-    def instanceType(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def instanceType(*args: Any, **kwargs: Any) -> Any:
         'int instanceType();                    '
         _unavailable('fontlab.flShapeBuilder.instanceType')
 
@@ -12597,6 +13167,10 @@ class flShapeBuilder:
     def prepareTransformationData(self) -> Any:
         'prepareTransformationData()'
         _unavailable('fontlab.flShapeBuilder.prepareTransformationData')
+
+    def propertyNames(self, *args: Any, **kwargs: Any) -> Any:
+        'propertyNames(): sorted snapshot of dynamic property keys'
+        _unavailable('fontlab.flShapeBuilder.propertyNames')
 
     def release(self) -> Any:
         'release()'
@@ -12689,10 +13263,10 @@ class flShapeBuilder:
     'object type'
 
 class flShapeData:
-    'flShapeData representation\n\nConstructors:\n  flShapeData()\n  flShapeData(flObject)\n\nNative bases: object'
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        'Native constructor; consult class documentation for supported overloads.'
-        _unavailable('fontlab.flShapeData')
+    'flShapeData representation\n\nConstructors:\n  flShapeData()\n  flShapeData(flObject)\n\nNative bases: object\n\nCaptured native MRO: flShapeData, object\n\nNative __new__ allocation evidence (not an __init__ overload):\n(*args, **kwargs)\nCreate and return a new object.  See help(type) for accurate signature.'
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        'Initialize self.  See help(type(self)) for accurate signature.'
+        _unavailable('fontlab.flShapeData.__init__')
 
     def addContour(self, arg0: flContour) -> Any:
         'addContour(flContour)'
@@ -12746,11 +13320,13 @@ class flShapeData:
         'Clone the object'
         _unavailable('fontlab.flShapeData.clone')
 
-    def cloneObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def cloneObject(*args: Any, **kwargs: Any) -> Any:
         'flObject cloneObject(const flObject&); '
         _unavailable('fontlab.flShapeData.cloneObject')
 
-    def createObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def createObject(*args: Any, **kwargs: Any) -> Any:
         'flObject/Nothing createObject(int);    '
         _unavailable('fontlab.flShapeData.createObject')
 
@@ -12790,7 +13366,8 @@ class flShapeData:
         'hasHistoryState(uint history_ix)'
         _unavailable('fontlab.flShapeData.hasHistoryState')
 
-    def haveObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def haveObject(*args: Any, **kwargs: Any) -> Any:
         'bool haveObject(uint);                 '
         _unavailable('fontlab.flShapeData.haveObject')
 
@@ -12810,7 +13387,8 @@ class flShapeData:
         'initialHistoryIx()'
         _unavailable('fontlab.flShapeData.initialHistoryState')
 
-    def instanceType(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def instanceType(*args: Any, **kwargs: Any) -> Any:
         'int instanceType();                    '
         _unavailable('fontlab.flShapeData.instanceType')
 
@@ -12821,6 +13399,10 @@ class flShapeData:
     def prepareTransformationData(self) -> Any:
         'prepareTransformationData()'
         _unavailable('fontlab.flShapeData.prepareTransformationData')
+
+    def propertyNames(self, *args: Any, **kwargs: Any) -> Any:
+        'propertyNames(): sorted snapshot of dynamic property keys'
+        _unavailable('fontlab.flShapeData.propertyNames')
 
     def release(self) -> Any:
         'release()'
@@ -12937,10 +13519,10 @@ class flShapeData:
     'object type'
 
 class flShapeInfo:
-    'flShapeInfo representation\n\nConstructors:\n  flShapeInfo()\n  flShapeInfo(flObject)\n  flShapeInfo(flShapeInfo)\n  flShapeInfo(flShape, flSearchInfo)\n  flShapeInfo(flShape, QTransform)\n  flShapeInfo(flShape, QTransform, QList<flShapeInfo> composites)\n  flShapeInfo(flShape, QTransform, flObject glyph_info, QList<flShapeInfo> composites)\n  flShapeInfo(flShape, flLayer, QTransform)\n  flShapeInfo(flShape, flLayer, flObject glyph_info[, QTransform transform=QTransform()[, QList<flShapeInfo> composites=QList<flShapeInfo>()]])\n\nNative bases: object'
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        'Native constructor; consult class documentation for supported overloads.'
-        _unavailable('fontlab.flShapeInfo')
+    'flShapeInfo representation\n\nConstructors:\n  flShapeInfo()\n  flShapeInfo(flObject)\n  flShapeInfo(flShapeInfo)\n  flShapeInfo(flShape, flSearchInfo)\n  flShapeInfo(flShape, QTransform)\n  flShapeInfo(flShape, QTransform, QList<flShapeInfo> composites)\n  flShapeInfo(flShape, QTransform, flObject glyph_info, QList<flShapeInfo> composites)\n  flShapeInfo(flShape, flLayer, QTransform)\n  flShapeInfo(flShape, flLayer, flObject glyph_info[, QTransform transform=QTransform()[, QList<flShapeInfo> composites=QList<flShapeInfo>()]])\n\nNative bases: object\n\nCaptured native MRO: flShapeInfo, object\n\nNative __new__ allocation evidence (not an __init__ overload):\n(*args, **kwargs)\nCreate and return a new object.  See help(type) for accurate signature.'
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        'Initialize self.  See help(type(self)) for accurate signature.'
+        _unavailable('fontlab.flShapeInfo.__init__')
 
     def appendComposite(self, arg0: flShapeInfo) -> Any:
         'appendComposite(flShapeInfo)'
@@ -12978,7 +13560,8 @@ class flShapeInfo:
         'Clone the object'
         _unavailable('fontlab.flShapeInfo.clone')
 
-    def cloneObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def cloneObject(*args: Any, **kwargs: Any) -> Any:
         'flObject cloneObject(const flObject&); '
         _unavailable('fontlab.flShapeInfo.cloneObject')
 
@@ -12994,11 +13577,13 @@ class flShapeInfo:
         'bool contains(QPointF canvas_pos[, double s=1])'
         _unavailable('fontlab.flShapeInfo.contains')
 
-    def createInstance(self) -> flShapeInfo:
+    @_echopy_builtins.staticmethod
+    def createInstance() -> flShapeInfo:
         'flShapeInfo createInstance()'
         _unavailable('fontlab.flShapeInfo.createInstance')
 
-    def createObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def createObject(*args: Any, **kwargs: Any) -> Any:
         'flObject/Nothing createObject(int);    '
         _unavailable('fontlab.flShapeInfo.createObject')
 
@@ -13046,7 +13631,8 @@ class flShapeInfo:
         'hasHistoryState(uint history_ix)'
         _unavailable('fontlab.flShapeInfo.hasHistoryState')
 
-    def haveObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def haveObject(*args: Any, **kwargs: Any) -> Any:
         'bool haveObject(uint);                 '
         _unavailable('fontlab.flShapeInfo.haveObject')
 
@@ -13062,7 +13648,8 @@ class flShapeInfo:
         'initialHistoryIx()'
         _unavailable('fontlab.flShapeInfo.initialHistoryState')
 
-    def instanceType(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def instanceType(*args: Any, **kwargs: Any) -> Any:
         'int instanceType();                    '
         _unavailable('fontlab.flShapeInfo.instanceType')
 
@@ -13085,6 +13672,10 @@ class flShapeInfo:
     def ownerCompositeInfo(self) -> flShapeInfo:
         'flShapeInfo ownerCompositeInfo()'
         _unavailable('fontlab.flShapeInfo.ownerCompositeInfo')
+
+    def propertyNames(self, *args: Any, **kwargs: Any) -> Any:
+        'propertyNames(): sorted snapshot of dynamic property keys'
+        _unavailable('fontlab.flShapeInfo.propertyNames')
 
     def pushFrontComposite(self, arg0: flShapeInfo) -> Any:
         'pushFrontComposite(flShapeInfo)'
@@ -13187,10 +13778,10 @@ class flShapeInfo:
     'object type'
 
 class flSnapLine:
-    'flSnapLine representation\n\nConstructors:\n  flSnapLine()\n  flSnapLine(flObject)\n  flSnapLine(flSnapLine)\n\nNative bases: object'
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        'Native constructor; consult class documentation for supported overloads.'
-        _unavailable('fontlab.flSnapLine')
+    'flSnapLine representation\n\nConstructors:\n  flSnapLine()\n  flSnapLine(flObject)\n  flSnapLine(flSnapLine)\n\nNative bases: object\n\nCaptured native MRO: flSnapLine, object\n\nNative __new__ allocation evidence (not an __init__ overload):\n(*args, **kwargs)\nCreate and return a new object.  See help(type) for accurate signature.'
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        'Initialize self.  See help(type(self)) for accurate signature.'
+        _unavailable('fontlab.flSnapLine.__init__')
 
     def changed(self) -> Any:
         'changed()'
@@ -13216,11 +13807,13 @@ class flSnapLine:
         'Clone the object'
         _unavailable('fontlab.flSnapLine.clone')
 
-    def cloneObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def cloneObject(*args: Any, **kwargs: Any) -> Any:
         'flObject cloneObject(const flObject&); '
         _unavailable('fontlab.flSnapLine.cloneObject')
 
-    def createObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def createObject(*args: Any, **kwargs: Any) -> Any:
         'flObject/Nothing createObject(int);    '
         _unavailable('fontlab.flSnapLine.createObject')
 
@@ -13260,7 +13853,8 @@ class flSnapLine:
         'hasHistoryState(uint history_ix)'
         _unavailable('fontlab.flSnapLine.hasHistoryState')
 
-    def haveObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def haveObject(*args: Any, **kwargs: Any) -> Any:
         'bool haveObject(uint);                 '
         _unavailable('fontlab.flSnapLine.haveObject')
 
@@ -13276,7 +13870,8 @@ class flSnapLine:
         'initialHistoryIx()'
         _unavailable('fontlab.flSnapLine.initialHistoryState')
 
-    def instanceType(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def instanceType(*args: Any, **kwargs: Any) -> Any:
         'int instanceType();                    '
         _unavailable('fontlab.flSnapLine.instanceType')
 
@@ -13284,13 +13879,18 @@ class flSnapLine:
         'isEqual(flObject)'
         _unavailable('fontlab.flSnapLine.isEqual')
 
-    def isSnapLine(self, arg0: flObject) -> bool:
+    @_echopy_builtins.staticmethod
+    def isSnapLine(arg0: flObject) -> bool:
         'bool isSnapLine(flObject)'
         _unavailable('fontlab.flSnapLine.isSnapLine')
 
     def offsetTo(self, arg0: QPointF, mode: int) -> QPointF:
         'QPointF offsetTo(QPointF, uint mode)'
         _unavailable('fontlab.flSnapLine.offsetTo')
+
+    def propertyNames(self, *args: Any, **kwargs: Any) -> Any:
+        'propertyNames(): sorted snapshot of dynamic property keys'
+        _unavailable('fontlab.flSnapLine.propertyNames')
 
     def release(self) -> Any:
         'release()'
@@ -13366,6 +13966,8 @@ class flSnapLine:
     'QLineF'
     extPosition: Any
     'double'
+    extension: Any
+    'flNode: existing extension node, or None if absent (read-only)'
     flObjectFlags: dict
     hasChanges: Any
     'bool'
@@ -13385,6 +13987,8 @@ class flSnapLine:
     'bool'
     isExluded: Any
     'bool'
+    isGhost: Any
+    'bool: actual ghost-hint flag (read-only)'
     isHint: Any
     'bool'
     isInUse: Any
@@ -13429,10 +14033,10 @@ class flSnapLine:
     'QPointF'
 
 class flSnapObject:
-    'flSnapObject representation\n\nConstructors:\n  flSnapObject()\n  flSnapObject(flObject)\n  flSnapObject(flSnapObject)\n\nNative bases: object'
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        'Native constructor; consult class documentation for supported overloads.'
-        _unavailable('fontlab.flSnapObject')
+    'flSnapObject representation\n\nConstructors:\n  flSnapObject()\n  flSnapObject(flObject)\n  flSnapObject(flSnapObject)\n\nNative bases: object\n\nCaptured native MRO: flSnapObject, object\n\nNative __new__ allocation evidence (not an __init__ overload):\n(*args, **kwargs)\nCreate and return a new object.  See help(type) for accurate signature.'
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        'Initialize self.  See help(type(self)) for accurate signature.'
+        _unavailable('fontlab.flSnapObject.__init__')
 
     def changed(self) -> Any:
         'changed()'
@@ -13458,11 +14062,13 @@ class flSnapObject:
         'Clone the object'
         _unavailable('fontlab.flSnapObject.clone')
 
-    def cloneObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def cloneObject(*args: Any, **kwargs: Any) -> Any:
         'flObject cloneObject(const flObject&); '
         _unavailable('fontlab.flSnapObject.cloneObject')
 
-    def createObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def createObject(*args: Any, **kwargs: Any) -> Any:
         'flObject/Nothing createObject(int);    '
         _unavailable('fontlab.flSnapObject.createObject')
 
@@ -13502,7 +14108,8 @@ class flSnapObject:
         'hasHistoryState(uint history_ix)'
         _unavailable('fontlab.flSnapObject.hasHistoryState')
 
-    def haveObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def haveObject(*args: Any, **kwargs: Any) -> Any:
         'bool haveObject(uint);                 '
         _unavailable('fontlab.flSnapObject.haveObject')
 
@@ -13518,7 +14125,8 @@ class flSnapObject:
         'initialHistoryIx()'
         _unavailable('fontlab.flSnapObject.initialHistoryState')
 
-    def instanceType(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def instanceType(*args: Any, **kwargs: Any) -> Any:
         'int instanceType();                    '
         _unavailable('fontlab.flSnapObject.instanceType')
 
@@ -13529,6 +14137,10 @@ class flSnapObject:
     def offsetTo(self, arg0: QPointF, mode: int) -> QPointF:
         'QPointF offsetTo(QPointF, uint mode)'
         _unavailable('fontlab.flSnapObject.offsetTo')
+
+    def propertyNames(self, *args: Any, **kwargs: Any) -> Any:
+        'propertyNames(): sorted snapshot of dynamic property keys'
+        _unavailable('fontlab.flSnapObject.propertyNames')
 
     def release(self) -> Any:
         'release()'
@@ -13597,6 +14209,8 @@ class flSnapObject:
     'bool'
     isExluded: Any
     'bool'
+    isGhost: Any
+    'bool: actual ghost-hint flag (read-only)'
     isHint: Any
     'bool'
     isInUse: Any
@@ -13627,10 +14241,10 @@ class flSnapObject:
     'object type'
 
 class flSnaps:
-    'snap object constants\n\nNative bases: object'
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        'Native constructor; consult class documentation for supported overloads.'
-        _unavailable('fontlab.flSnaps')
+    'snap object constants\n\nNative bases: object\n\nCaptured native MRO: flSnaps, object\n\nNative __new__ allocation evidence (not an __init__ overload):\n(*args, **kwargs)\nCreate and return a new object.  See help(type) for accurate signature.'
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        'Initialize self.  See help(type(self)) for accurate signature.'
+        _unavailable('fontlab.flSnaps.__init__')
 
     FastGuidelines: dict
     MarkerFlags: dict
@@ -13641,10 +14255,10 @@ class flSnaps:
     ViewMode: dict
 
 class flStem:
-    'flStem representation\n\nConstructors:\n  flStem()\n  flStem(double _v[, QString _n = ])\n  flStem(fgStem)\n\nNative bases: object'
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        'Native constructor; consult class documentation for supported overloads.'
-        _unavailable('fontlab.flStem')
+    'flStem representation\n\nConstructors:\n  flStem()\n  flStem(double _v[, QString _n = ])\n  flStem(fgStem)\n\nNative bases: object\n\nCaptured native MRO: flStem, object\n\nNative __new__ allocation evidence (not an __init__ overload):\n(*args, **kwargs)\nCreate and return a new object.  See help(type) for accurate signature.'
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        'Initialize self.  See help(type(self)) for accurate signature.'
+        _unavailable('fontlab.flStem.__init__')
 
     def guaranteeName(self) -> Any:
         'guaranteeName()'
@@ -13678,10 +14292,10 @@ class flStem:
     'double'
 
 class flSticker:
-    'flSticker representation\n\nConstructors:\n  flSticker()\n  flSticker(flObject)\n  flSticker(flSticker)\n  flSticker(QString)\n\nNative bases: object'
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        'Native constructor; consult class documentation for supported overloads.'
-        _unavailable('fontlab.flSticker')
+    'flSticker representation\n\nConstructors:\n  flSticker()\n  flSticker(flObject)\n  flSticker(flSticker)\n  flSticker(QString)\n\nNative bases: object\n\nCaptured native MRO: flSticker, object\n\nNative __new__ allocation evidence (not an __init__ overload):\n(*args, **kwargs)\nCreate and return a new object.  See help(type) for accurate signature.'
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        'Initialize self.  See help(type(self)) for accurate signature.'
+        _unavailable('fontlab.flSticker.__init__')
 
     def changed(self) -> Any:
         'changed()'
@@ -13707,11 +14321,13 @@ class flSticker:
         'Clone the object'
         _unavailable('fontlab.flSticker.clone')
 
-    def cloneObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def cloneObject(*args: Any, **kwargs: Any) -> Any:
         'flObject cloneObject(const flObject&); '
         _unavailable('fontlab.flSticker.cloneObject')
 
-    def createObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def createObject(*args: Any, **kwargs: Any) -> Any:
         'flObject/Nothing createObject(int);    '
         _unavailable('fontlab.flSticker.createObject')
 
@@ -13743,7 +14359,8 @@ class flSticker:
         'hasHistoryState(uint history_ix)'
         _unavailable('fontlab.flSticker.hasHistoryState')
 
-    def haveObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def haveObject(*args: Any, **kwargs: Any) -> Any:
         'bool haveObject(uint);                 '
         _unavailable('fontlab.flSticker.haveObject')
 
@@ -13759,7 +14376,8 @@ class flSticker:
         'initialHistoryIx()'
         _unavailable('fontlab.flSticker.initialHistoryState')
 
-    def instanceType(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def instanceType(*args: Any, **kwargs: Any) -> Any:
         'int instanceType();                    '
         _unavailable('fontlab.flSticker.instanceType')
 
@@ -13770,6 +14388,10 @@ class flSticker:
     def move(self, arg0: QPointF) -> Any:
         'move(QPointF)'
         _unavailable('fontlab.flSticker.move')
+
+    def propertyNames(self, *args: Any, **kwargs: Any) -> Any:
+        'propertyNames(): sorted snapshot of dynamic property keys'
+        _unavailable('fontlab.flSticker.propertyNames')
 
     def release(self) -> Any:
         'release()'
@@ -13844,10 +14466,10 @@ class flSticker:
     'object type'
 
 class flTTHCommand:
-    'flTTHCommand representation\n\nConstructors:\n  flTTHCommand() - default\n\nNative bases: object'
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        'Native constructor; consult class documentation for supported overloads.'
-        _unavailable('fontlab.flTTHCommand')
+    'flTTHCommand representation\n\nConstructors:\n  flTTHCommand() - default\n\nNative bases: object\n\nCaptured native MRO: flTTHCommand, object\n\nNative __new__ allocation evidence (not an __init__ overload):\n(*args, **kwargs)\nCreate and return a new object.  See help(type) for accurate signature.'
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        'Initialize self.  See help(type(self)) for accurate signature.'
+        _unavailable('fontlab.flTTHCommand.__init__')
 
     def fromString(self, arg0: str, itr: Any) -> bool:
         'bool fromString(QString, itr)'
@@ -13893,10 +14515,10 @@ class flTTHCommand:
     'QList<QString>'
 
 class flTextBlock:
-    'flTextBlock representation\n\nConstructors:\n  flTextBlock()\n  flTextBlock(flObject)\n  flTextBlock(flTextBlock)\n  flTextBlock(flPackage, flTextObject[, int font_size=42[, int formatMode=tbfText[, QRectF canvas_rect=QRectF(0,0, 800,600)]]])\n\nNative bases: object'
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        'Native constructor; consult class documentation for supported overloads.'
-        _unavailable('fontlab.flTextBlock')
+    'flTextBlock representation\n\nConstructors:\n  flTextBlock()\n  flTextBlock(flObject)\n  flTextBlock(flTextBlock)\n  flTextBlock(flPackage, flTextObject[, int font_size=42[, int formatMode=tbfText[, QRectF canvas_rect=QRectF(0,0, 800,600)]]])\n\nNative bases: object\n\nCaptured native MRO: flTextBlock, object\n\nNative __new__ allocation evidence (not an __init__ overload):\n(*args, **kwargs)\nCreate and return a new object.  See help(type) for accurate signature.'
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        'Initialize self.  See help(type(self)) for accurate signature.'
+        _unavailable('fontlab.flTextBlock.__init__')
 
     def activeObjectChanged(self) -> flNotifier:
         'flNotifier activeObjectChanged()'
@@ -13938,15 +14560,18 @@ class flTextBlock:
         'Clone the object'
         _unavailable('fontlab.flTextBlock.clone')
 
-    def cloneObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def cloneObject(*args: Any, **kwargs: Any) -> Any:
         'flObject cloneObject(const flObject&); '
         _unavailable('fontlab.flTextBlock.cloneObject')
 
-    def createInstance(self) -> flTextBlock:
+    @_echopy_builtins.staticmethod
+    def createInstance() -> flTextBlock:
         'flTextBlock createInstance()'
         _unavailable('fontlab.flTextBlock.createInstance')
 
-    def createObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def createObject(*args: Any, **kwargs: Any) -> Any:
         'flObject/Nothing createObject(int);    '
         _unavailable('fontlab.flTextBlock.createObject')
 
@@ -14086,7 +14711,8 @@ class flTextBlock:
         'bool hasHoveredNodeEdit()'
         _unavailable('fontlab.flTextBlock.hasHoveredNodeEdit')
 
-    def haveObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def haveObject(*args: Any, **kwargs: Any) -> Any:
         'bool haveObject(uint);                 '
         _unavailable('fontlab.flTextBlock.haveObject')
 
@@ -14118,7 +14744,8 @@ class flTextBlock:
         'initialHistoryIx()'
         _unavailable('fontlab.flTextBlock.initialHistoryState')
 
-    def instanceType(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def instanceType(*args: Any, **kwargs: Any) -> Any:
         'int instanceType();                    '
         _unavailable('fontlab.flTextBlock.instanceType')
 
@@ -14177,6 +14804,10 @@ class flTextBlock:
     def parentTextBlock(self) -> flTextBlock:
         'flTextBlock parentTextBlock()'
         _unavailable('fontlab.flTextBlock.parentTextBlock')
+
+    def propertyNames(self, *args: Any, **kwargs: Any) -> Any:
+        'propertyNames(): sorted snapshot of dynamic property keys'
+        _unavailable('fontlab.flTextBlock.propertyNames')
 
     def reformat(self) -> Any:
         'reformat()'
@@ -14361,10 +14992,10 @@ class flTextBlock:
     'object type'
 
 class flTransform:
-    'flTransform representation\n\nConstructors:\n  flTransform()\n  flTransform(flTransform)\n  flTransform(flObject)\n  flTransform(QTransform)\n\nNative bases: object'
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        'Native constructor; consult class documentation for supported overloads.'
-        _unavailable('fontlab.flTransform')
+    'flTransform representation\n\nConstructors:\n  flTransform()\n  flTransform(flTransform)\n  flTransform(flObject)\n  flTransform(QTransform)\n\nNative bases: object\n\nCaptured native MRO: flTransform, object\n\nNative __new__ allocation evidence (not an __init__ overload):\n(*args, **kwargs)\nCreate and return a new object.  See help(type) for accurate signature.'
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        'Initialize self.  See help(type(self)) for accurate signature.'
+        _unavailable('fontlab.flTransform.__init__')
 
     def changed(self) -> Any:
         'changed()'
@@ -14390,11 +15021,13 @@ class flTransform:
         'Clone the object'
         _unavailable('fontlab.flTransform.clone')
 
-    def cloneObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def cloneObject(*args: Any, **kwargs: Any) -> Any:
         'flObject cloneObject(const flObject&); '
         _unavailable('fontlab.flTransform.cloneObject')
 
-    def createObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def createObject(*args: Any, **kwargs: Any) -> Any:
         'flObject/Nothing createObject(int);    '
         _unavailable('fontlab.flTransform.createObject')
 
@@ -14426,7 +15059,8 @@ class flTransform:
         'hasHistoryState(uint history_ix)'
         _unavailable('fontlab.flTransform.hasHistoryState')
 
-    def haveObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def haveObject(*args: Any, **kwargs: Any) -> Any:
         'bool haveObject(uint);                 '
         _unavailable('fontlab.flTransform.haveObject')
 
@@ -14442,7 +15076,8 @@ class flTransform:
         'initialHistoryIx()'
         _unavailable('fontlab.flTransform.initialHistoryState')
 
-    def instanceType(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def instanceType(*args: Any, **kwargs: Any) -> Any:
         'int instanceType();                    '
         _unavailable('fontlab.flTransform.instanceType')
 
@@ -14457,6 +15092,10 @@ class flTransform:
     def mapRect(self, QRect: Any) -> QRectF:
         'QRectF mapRect(QRectF | QRect)'
         _unavailable('fontlab.flTransform.mapRect')
+
+    def propertyNames(self, *args: Any, **kwargs: Any) -> Any:
+        'propertyNames(): sorted snapshot of dynamic property keys'
+        _unavailable('fontlab.flTransform.propertyNames')
 
     def release(self) -> Any:
         'release()'
@@ -14531,10 +15170,10 @@ class flTransform:
     'object type'
 
 class flVectorNode:
-    'flVectorNode representation\n\nConstructors:\n  flVectorNode(flObject)\n  flVectorNode(flVectorNode)\n  flVectorNode(flGuideLine, QPointF)\n\nNative bases: object'
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        'Native constructor; consult class documentation for supported overloads.'
-        _unavailable('fontlab.flVectorNode')
+    'flVectorNode representation\n\nConstructors:\n  flVectorNode(flObject)\n  flVectorNode(flVectorNode)\n  flVectorNode(flGuideLine, QPointF)\n\nNative bases: object\n\nCaptured native MRO: flVectorNode, object\n\nNative __new__ allocation evidence (not an __init__ overload):\n(*args, **kwargs)\nCreate and return a new object.  See help(type) for accurate signature.'
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        'Initialize self.  See help(type(self)) for accurate signature.'
+        _unavailable('fontlab.flVectorNode.__init__')
 
     def angleTo(self, p: QPointF) -> float:
         'double angleTo(QPointF p)'
@@ -14596,7 +15235,8 @@ class flVectorNode:
         'flNode cloneMapped(QTransform)'
         _unavailable('fontlab.flVectorNode.cloneMapped')
 
-    def cloneObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def cloneObject(*args: Any, **kwargs: Any) -> Any:
         'flObject cloneObject(const flObject&); '
         _unavailable('fontlab.flVectorNode.cloneObject')
 
@@ -14620,11 +15260,13 @@ class flVectorNode:
         'copyFrom(Node[, withSelected=False])'
         _unavailable('fontlab.flVectorNode.copyFrom')
 
-    def createInstance(self) -> flVectorNode:
+    @_echopy_builtins.staticmethod
+    def createInstance() -> flVectorNode:
         'flVectorNode createInstance()'
         _unavailable('fontlab.flVectorNode.createInstance')
 
-    def createObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def createObject(*args: Any, **kwargs: Any) -> Any:
         'flObject/Nothing createObject(int);    '
         _unavailable('fontlab.flVectorNode.createObject')
 
@@ -14668,7 +15310,8 @@ class flVectorNode:
         'hasHistoryState(uint history_ix)'
         _unavailable('fontlab.flVectorNode.hasHistoryState')
 
-    def haveObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def haveObject(*args: Any, **kwargs: Any) -> Any:
         'bool haveObject(uint);                 '
         _unavailable('fontlab.flVectorNode.haveObject')
 
@@ -14688,7 +15331,8 @@ class flVectorNode:
         'initialHistoryIx()'
         _unavailable('fontlab.flVectorNode.initialHistoryState')
 
-    def instanceType(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def instanceType(*args: Any, **kwargs: Any) -> Any:
         'int instanceType();                    '
         _unavailable('fontlab.flVectorNode.instanceType')
 
@@ -14744,7 +15388,8 @@ class flVectorNode:
         'bool isSmartAngle()'
         _unavailable('fontlab.flVectorNode.isSmartAngle')
 
-    def isVectorNode(self, arg0: flObject) -> bool:
+    @_echopy_builtins.staticmethod
+    def isVectorNode(arg0: flObject) -> bool:
         'bool isVectorNode(flObject)'
         _unavailable('fontlab.flVectorNode.isVectorNode')
 
@@ -14767,6 +15412,10 @@ class flVectorNode:
     def prevNode(self, nodeType: Any = ...) -> Any:
         'Node/None prevNode([string nodeType= [, int searchDepth=1]])'
         _unavailable('fontlab.flVectorNode.prevNode')
+
+    def propertyNames(self, *args: Any, **kwargs: Any) -> Any:
+        'propertyNames(): sorted snapshot of dynamic property keys'
+        _unavailable('fontlab.flVectorNode.propertyNames')
 
     def release(self) -> Any:
         'release()'
@@ -14956,10 +15605,10 @@ class flVectorNode:
     'The y coordinate of the node'
 
 class flVisualItem:
-    'flVisualItem representation\n\nConstructors:\n  flVisualItem()\n  flVisualItem(flVisualItem)\n  flVisualItem(flObject)\n  flVisualItem(objId id)\n\nNative bases: object'
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        'Native constructor; consult class documentation for supported overloads.'
-        _unavailable('fontlab.flVisualItem')
+    'flVisualItem representation\n\nConstructors:\n  flVisualItem()\n  flVisualItem(flVisualItem)\n  flVisualItem(flObject)\n  flVisualItem(objId id)\n\nNative bases: object\n\nCaptured native MRO: flVisualItem, object\n\nNative __new__ allocation evidence (not an __init__ overload):\n(*args, **kwargs)\nCreate and return a new object.  See help(type) for accurate signature.'
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        'Initialize self.  See help(type(self)) for accurate signature.'
+        _unavailable('fontlab.flVisualItem.__init__')
 
     def acceptEvents(self) -> int:
         'int acceptEvents()'
@@ -15025,7 +15674,8 @@ class flVisualItem:
         'Clone the object'
         _unavailable('fontlab.flVisualItem.clone')
 
-    def cloneObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def cloneObject(*args: Any, **kwargs: Any) -> Any:
         'flObject cloneObject(const flObject&); '
         _unavailable('fontlab.flVisualItem.cloneObject')
 
@@ -15037,7 +15687,8 @@ class flVisualItem:
         'bool containsItem(flVisualItem)'
         _unavailable('fontlab.flVisualItem.containsItem')
 
-    def createObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def createObject(*args: Any, **kwargs: Any) -> Any:
         'flObject/Nothing createObject(int);    '
         _unavailable('fontlab.flVisualItem.createObject')
 
@@ -15085,7 +15736,8 @@ class flVisualItem:
         'bool haveEditor(QPointF canvas_pos)'
         _unavailable('fontlab.flVisualItem.haveEditor')
 
-    def haveObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def haveObject(*args: Any, **kwargs: Any) -> Any:
         'bool haveObject(uint);                 '
         _unavailable('fontlab.flVisualItem.haveObject')
 
@@ -15105,11 +15757,13 @@ class flVisualItem:
         'initialHistoryIx()'
         _unavailable('fontlab.flVisualItem.initialHistoryState')
 
-    def instanceAcceptEvents(self) -> int:
+    @_echopy_builtins.staticmethod
+    def instanceAcceptEvents() -> int:
         'int instanceAcceptEvents()'
         _unavailable('fontlab.flVisualItem.instanceAcceptEvents')
 
-    def instanceType(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def instanceType(*args: Any, **kwargs: Any) -> Any:
         'int instanceType();                    '
         _unavailable('fontlab.flVisualItem.instanceType')
 
@@ -15160,6 +15814,10 @@ class flVisualItem:
     def preview(self) -> Any:
         'preview()'
         _unavailable('fontlab.flVisualItem.preview')
+
+    def propertyNames(self, *args: Any, **kwargs: Any) -> Any:
+        'propertyNames(): sorted snapshot of dynamic property keys'
+        _unavailable('fontlab.flVisualItem.propertyNames')
 
     def referencePoint(self) -> QPointF:
         'QPointF referencePoint()'
@@ -15269,10 +15927,10 @@ class flVisualItem:
     'bool'
 
 class flWorkspace:
-    'flWorkspace representation\n\nConstructors:\n  flWorkspace()\n  flWorkspace(flWorkspace)\n  flWorkspace(flObject)\n  flWorkspace(objId id)\n  flWorkspace(QString title)\n\nNative bases: object'
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        'Native constructor; consult class documentation for supported overloads.'
-        _unavailable('fontlab.flWorkspace')
+    'flWorkspace representation\n\nConstructors:\n  flWorkspace()\n  flWorkspace(flWorkspace)\n  flWorkspace(flObject)\n  flWorkspace(objId id)\n  flWorkspace(QString title)\n\nNative bases: object\n\nCaptured native MRO: flWorkspace, object\n\nNative __new__ allocation evidence (not an __init__ overload):\n(*args, **kwargs)\nCreate and return a new object.  See help(type) for accurate signature.'
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        'Initialize self.  See help(type(self)) for accurate signature.'
+        _unavailable('fontlab.flWorkspace.__init__')
 
     def activateEditor(self, arg0: flVisualItem, canvas_pos: QPointF) -> Any:
         'activateEditor(flVisualItem, QPointF canvas_pos)'
@@ -15330,7 +15988,8 @@ class flWorkspace:
         'Clone the object'
         _unavailable('fontlab.flWorkspace.clone')
 
-    def cloneObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def cloneObject(*args: Any, **kwargs: Any) -> Any:
         'flObject cloneObject(const flObject&); '
         _unavailable('fontlab.flWorkspace.cloneObject')
 
@@ -15350,7 +16009,8 @@ class flWorkspace:
         'createNewProject()'
         _unavailable('fontlab.flWorkspace.createNewProject')
 
-    def createObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def createObject(*args: Any, **kwargs: Any) -> Any:
         'flObject/Nothing createObject(int);    '
         _unavailable('fontlab.flWorkspace.createObject')
 
@@ -15402,6 +16062,10 @@ class flWorkspace:
         'flTextBlockItem/Nothing getActiveTextBlock()'
         _unavailable('fontlab.flWorkspace.getActiveTextBlock')
 
+    def getActiveTextBlockModel(self, *args: Any, **kwargs: Any) -> Any:
+        'flTextBlock/Nothing getActiveTextBlockModel(): model of the exact active text block'
+        _unavailable('fontlab.flWorkspace.getActiveTextBlockModel')
+
     def getBoundingRect(self) -> QRectF:
         'QRectF getBoundingRect()'
         _unavailable('fontlab.flWorkspace.getBoundingRect')
@@ -15446,7 +16110,8 @@ class flWorkspace:
         'bool haveActiveEditor()'
         _unavailable('fontlab.flWorkspace.haveActiveEditor')
 
-    def haveObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def haveObject(*args: Any, **kwargs: Any) -> Any:
         'bool haveObject(uint);                 '
         _unavailable('fontlab.flWorkspace.haveObject')
 
@@ -15466,11 +16131,13 @@ class flWorkspace:
         'initialHistoryIx()'
         _unavailable('fontlab.flWorkspace.initialHistoryState')
 
-    def instance(self) -> flWorkspace:
+    @_echopy_builtins.staticmethod
+    def instance() -> flWorkspace:
         'flWorkspace instance()'
         _unavailable('fontlab.flWorkspace.instance')
 
-    def instanceType(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def instanceType(*args: Any, **kwargs: Any) -> Any:
         'int instanceType();                    '
         _unavailable('fontlab.flWorkspace.instanceType')
 
@@ -15494,9 +16161,17 @@ class flWorkspace:
         'bool previewRender()'
         _unavailable('fontlab.flWorkspace.previewRender')
 
+    def propertyNames(self, *args: Any, **kwargs: Any) -> Any:
+        'propertyNames(): sorted snapshot of dynamic property keys'
+        _unavailable('fontlab.flWorkspace.propertyNames')
+
     def readProject(self, QString: Any) -> bool:
         'bool readProject(const QString)'
         _unavailable('fontlab.flWorkspace.readProject')
+
+    def registerPythonTool(self, *args: Any, **kwargs: Any) -> Any:
+        'registerPythonTool(name, icon or None, object) -> token. Optional activate/deactivate, mousePressed/Moved/Released, keyPressed/Released and paint callbacks.'
+        _unavailable('fontlab.flWorkspace.registerPythonTool')
 
     def release(self) -> Any:
         'release()'
@@ -15670,6 +16345,10 @@ class flWorkspace:
         'unblockUpdate()'
         _unavailable('fontlab.flWorkspace.unblockUpdate')
 
+    def unregisterPythonTool(self, token: Any) -> Any:
+        'unregisterPythonTool(token) -> bool. Removes palette/menu entries and deactivates the tool.'
+        _unavailable('fontlab.flWorkspace.unregisterPythonTool')
+
     def update(self) -> Any:
         'update()'
         _unavailable('fontlab.flWorkspace.update')
@@ -15734,10 +16413,10 @@ class flWorkspace:
     'QString'
 
 class flZone:
-    'flZone representation\n\nConstructors:\n  flZone()\n  flZone(double p, double w[, QString _n = ])\n  flZone(flZone)\n\nNative bases: object'
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        'Native constructor; consult class documentation for supported overloads.'
-        _unavailable('fontlab.flZone')
+    'flZone representation\n\nConstructors:\n  flZone()\n  flZone(double p, double w[, QString _n = ])\n  flZone(flZone)\n\nNative bases: object\n\nCaptured native MRO: flZone, object\n\nNative __new__ allocation evidence (not an __init__ overload):\n(*args, **kwargs)\nCreate and return a new object.  See help(type) for accurate signature.'
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        'Initialize self.  See help(type(self)) for accurate signature.'
+        _unavailable('fontlab.flZone.__init__')
 
     def guaranteeName(self, top: bool) -> Any:
         'guaranteeName(bool top)'
@@ -15861,10 +16540,7 @@ TextBlockFormat: dict
 TransformFrameControls: dict
 ViewPointAlignment: dict
 flTools: dict
-globals()['flObjectsList<flGuideLine>'] = flObjectsList_flGuideLine_
-globals()['flObjectsList<flShape>'] = flObjectsList_flShape_
 
+__echopy_source_aliases__ = {'flObjectsList<flGuideLine>': 'flObjectsList_flGuideLine_', 'flObjectsList<flShape>': 'flObjectsList_flShape_'}
 __all__ = ['AccentInfo', 'AcceptChanges', 'AllFonts', 'ApplicationPath', 'BinaryFormatVersion', 'BuilderFeatures', 'CountFonts', 'CreatePanel', 'CurrentFont', 'CurrentGlyph', 'CurveEx', 'DecoratorOrder', 'EditMode', 'ExportControl', 'FaBasicPtr', 'FontLayer', 'FontMetrics', 'GetFileName', 'GetPathName', 'GetProperty', 'GlyphComponent', 'GlyphInfoState', 'HintingDataType', 'Info', 'Interval', 'LightNodesMode', 'LocationValue', 'MainWindow', 'ObjectFlag', 'PaintBrush', 'PaintBrushShape', 'PanelManager', 'SelectionMode', 'SetCurrentFont', 'SetCurrentGlyph', 'SetProperty', 'ShapeCloneInfo', 'ShapeType', 'SmartCornerParameters', 'SnapAngleMode', 'SnapObjectsStyle', 'TestBuilder', 'TextBlockFormat', 'TransformFrame', 'TransformFrameControls', 'Update', 'UpdateActiveCanvas', 'UpdateAll', 'UpdateGlyphRect', 'ViewPointAlignment', 'YPanelManager', 'YPanelWidget', 'fgSymbol', 'fgSymbolList', 'flAbstractEditor', 'flAbstractVectorNode', 'flAnchor', 'flAuditInfo', 'flAxis', 'flBasicTool', 'flCanvas', 'flContour', 'flContourInfo', 'flEvent', 'flExpression', 'flGlyph', 'flGlyphInfo', 'flGraphicsInfo', 'flGuideLine', 'flHintingParameters', 'flInstance', 'flItems', 'flLayer', 'flLayerAttributes', 'flLayerInfo', 'flLocation', 'flMarkerPoint', 'flModel', 'flModelProducer', 'flMouseEvent', 'flNode', 'flNodeInfo', 'flObject', 'flObjectsList<flGuideLine>', 'flObjectsList<flShape>', 'flPackage', 'flPaper', 'flPinPoint', 'flPreferences', 'flProperty', 'flPropertyDouble', 'flPropertyPoint', 'flSearchInfo', 'flShape', 'flShapeBuilder', 'flShapeData', 'flShapeInfo', 'flSnapLine', 'flSnapObject', 'flSnaps', 'flStem', 'flSticker', 'flTTHCommand', 'flTextBlock', 'flTools', 'flTransform', 'flVectorNode', 'flVisualItem', 'flWorkspace', 'flZone']
-_bind(globals(), 'fontlab')
-flObjectsList_flGuideLine_ = globals()['flObjectsList<flGuideLine>']
-flObjectsList_flShape_ = globals()['flObjectsList<flShape>']
+_bind(globals(), 'fontlab', __echopy_source_aliases__)

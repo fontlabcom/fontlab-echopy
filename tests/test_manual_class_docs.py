@@ -212,7 +212,9 @@ def test_manual_class_guidance_merges_without_changing_native_declarations(
         if isinstance(before, ast.FunctionDef):
             assert ast.dump(before.args) == ast.dump(after.args)
             assert ast.dump(before.returns) == ast.dump(after.returns)
-            assert before.decorator_list == after.decorator_list
+            assert [ast.dump(d) for d in before.decorator_list] == [
+                ast.dump(d) for d in after.decorator_list
+            ]
         elif isinstance(before, ast.AnnAssign):
             assert ast.dump(before) == ast.dump(after)
 
@@ -262,7 +264,7 @@ def test_manual_class_guidance_type_words_match_captured_declaration(
 # classes that still hold only the generated stub. Raise MAINTAINED when guidance
 # is added; the totals must not move unless the captured declarations change.
 MAINTAINED = {"fontlab": 73, "fontgate": 46}
-TOTAL = {"fontlab": 73, "fontgate": 120}
+TOTAL = {"fontlab": 73, "fontgate": 121}
 MAINTAINED_MARK = "Supplemental documentation:"
 
 
@@ -330,14 +332,19 @@ def test_class_guidance_requires_at_least_one_backticked_member():
 
 def test_merge_when_raw_lacks_capture_identity_then_identity_and_identities_kept(tmp_path):
     """Re-merging the committed raw tree keeps the recorded capture and its identities."""
+    raw = tmp_path / "raw"
+    shutil.copytree(ROOT / "generated", raw)
+    coverage = json.loads((raw / "coverage.json").read_text())
+    coverage.pop("capture_identity", None)
+    (raw / "coverage.json").write_text(json.dumps(coverage) + "\n")
     out = tmp_path / "out"
-    merge(ROOT / "generated", out, [ROOT / "patches/manual.json"])
+    merge(raw, out, [ROOT / "patches/manual.json"])
     provenance_path = out / "_provenance.json"
     provenance = json.loads(provenance_path.read_text())
     provenance["capture_identity"] = {"sha256": "old"}
     provenance_path.write_text(json.dumps(provenance) + "\n")
     (out / "_identities.json").write_text('{"kept": true}\n')
-    merge(ROOT / "generated", out, [ROOT / "patches/manual.json"])
+    merge(raw, out, [ROOT / "patches/manual.json"])
     assert json.loads(provenance_path.read_text())["capture_identity"] == {"sha256": "old"}
     assert json.loads((out / "_identities.json").read_text()) == {"kept": True}
 

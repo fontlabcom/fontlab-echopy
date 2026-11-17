@@ -39,7 +39,15 @@ def summary(node: ast.AST) -> str:
         ):
             continue
         if not text or text.startswith(
-            ("Inherits from", "Constructors:", "Native bases:", "Source:", "#")
+            (
+                "Inherits from",
+                "Constructors:",
+                "Native bases:",
+                "Captured native MRO:",
+                "Native __new__ allocation evidence",
+                "Source:",
+                "#",
+            )
         ):
             continue
         if (

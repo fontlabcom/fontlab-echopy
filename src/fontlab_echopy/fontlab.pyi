@@ -122,6 +122,7 @@ High-level FontLab editing API. flGlyph contains drawing layers, flLayer contain
 Source: FontLab Proteus API documentation"""
 from __future__ import annotations
 from typing import Any
+import builtins as _echopy_builtins
 
 class AccentInfo:
     """Data wrapper
@@ -132,6 +133,12 @@ An accent-placement result returned by `flPackage.getAccentsInfo(layer, pin)`. I
 
 Native bases: object
 
+Captured native MRO: AccentInfo, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature.
+
 Supplemental documentation:
 A data wrapper with the attributes `layer` and `offset`. The captured declaration exposes `asDict` (represent the object as a dictionary) and `asTuple` (represent it as a tuple).
 
@@ -139,8 +146,8 @@ Source: FontLab Proteus API documentation
 
 Source: generated/fontlab.py: AccentInfo captured declaration"""
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
 
     def asDict(self, *args: Any, **kwargs: Any) -> Any:
@@ -280,6 +287,12 @@ Constructors:
 
 Native bases: object
 
+Captured native MRO: CurveEx, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature.
+
 Supplemental documentation:
 A curve segment record. The captured declaration exposes the end points `p0` and `p1`, the control points `bcp0` and `bcp1`, the control vectors `bcv0` and `bcv1`, the bounding rectangle `brect`, and the index attributes `leftIdx`, `rightIdx` and `contourIx`. Captured methods include `split`, `extremum`, `smooth`, `improve`, `fastLength` and `applyTransform`. Consult the retained constructor documentation for the supported point-based creation forms.
 
@@ -287,8 +300,8 @@ Source: FontLab Proteus API documentation
 
 Source: generated/fontlab.py: CurveEx captured declaration"""
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
 
     def applyTransform(self, tx: QTransform) -> None:
@@ -491,6 +504,12 @@ Constructors:
 
 Native bases: object
 
+Captured native MRO: ExportControl, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature.
+
 Supplemental documentation:
 An export control record. The captured declaration exposes the attributes `conflictMode`, `contentMode`, `contentName`, `destinationFolder`, `destinationMode`, `groupFamily`, `groupProfiles`, `profileId` and `profileName`, and the methods `init`, `load` and `store`. `load` returns a bool.
 
@@ -498,8 +517,8 @@ Source: FontLab Proteus API documentation
 
 Source: generated/fontlab.py: ExportControl captured declaration"""
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
 
     def init(self) -> Any:
@@ -651,6 +670,12 @@ Constructors:
 
 Native bases: object
 
+Captured native MRO: FaBasicPtr, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature.
+
 Supplemental documentation:
 A fix-pointer record. The captured declaration exposes the method `fix` and the attributes `canBeFixed`, `contour`, `id`, `location`, `nodeIndex`, `priority`, `report`, `title` and `vector`. Test `canBeFixed` before calling `fix`; the captured `fix` is declared as returning an flGlyph or nothing.
 
@@ -658,8 +683,8 @@ Source: FontLab Proteus API documentation
 
 Source: generated/fontlab.py: FaBasicPtr captured declaration"""
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
 
     def fix(self) -> Any:
@@ -697,6 +722,12 @@ For supported master access, use flPackage and its master-related members, or se
 
 Native bases: object
 
+Captured native MRO: FontLayer, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature.
+
 Supplemental documentation:
 A font layer object. The captured declaration exposes no named members, only a native constructor. Do not rely on any attribute of `FontLayer`; glyph layers belong to flLayer.
 
@@ -704,8 +735,8 @@ Source: FontLab Proteus API documentation
 
 Source: generated/fontlab.py: FontLayer captured declaration"""
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
 
 class FontMetrics:
@@ -841,6 +872,12 @@ Constructors:
 
 Native bases: object
 
+Captured native MRO: FontMetrics, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature.
+
 Supplemental documentation:
 Vertical metrics record for a font. The captured declaration exposes `upm`, `ascender`, `descender`, `lineGap`, `capsHeight` and `xHeight` as numeric (double) attributes, and `init` for initialisation. Consult the retained constructor documentation for the supported creation forms, which take a units-per-em value, an existing record, or a package with a layer name.
 
@@ -848,8 +885,8 @@ Source: FontLab Proteus API documentation
 
 Source: generated/fontlab.py: FontMetrics captured declaration"""
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
 
     def init(self) -> Any:
@@ -1035,6 +1072,12 @@ Constructors:
 
 Native bases: object
 
+Captured native MRO: GlyphComponent, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature.
+
 Supplemental documentation:
 A glyph component described by `name_id` (uint), `transform` (QTransform), `use_anchors` (bool) and `width_scale` (double). It is created as `GlyphComponent()`, as a copy `GlyphComponent(GlyphComponent)`, from an id `GlyphComponent(uint id)`, from a name `GlyphComponent(string name)` or as `GlyphComponent(uint id, QTransform tx, double w, bool ua)`.
 
@@ -1042,8 +1085,8 @@ Source: FontLab Proteus API documentation
 
 Source: generated/fontlab.py: GlyphComponent captured declaration"""
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
     name_id: Any
     'uint\n\nThe glyph ID of the base glyph being referenced. Use with `font.glyph(id)` to retrieve the actual `flGlyph`. If you created the component with a name string, `name_id` will be `0` until the component is resolved.\n\nSource: FontLab Proteus API documentation'
@@ -1427,6 +1470,12 @@ inside `masters[]`.
 
 Native bases: object
 
+Captured native MRO: Info, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature.
+
 Supplemental documentation:
 Font info. The captured declaration exposes `ascender`, `capHeight`, `copyright`, `descender`, `familyName`, `italicAngle`, `note`, `openTypeHeadCreated`, `openTypeHheaAscender`, `openTypeHheaDescender`, `openTypeHheaLineGap`, `openTypeNameDesigner`, `openTypeNameLicense`, `openTypeNameVersion` and `openTypeOS2Panose`. It is created with no captured constructor overloads.
 
@@ -1434,8 +1483,8 @@ Source: FontLab Proteus API documentation
 
 Source: generated/fontlab.py: Info captured declaration"""
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
     ascender: Any
     'Ascender value. This should be a integer or float'
@@ -1453,6 +1502,8 @@ Source: generated/fontlab.py: Info captured declaration"""
     'Family ID number. Corresponds to the ffFamID in the FOND resource. This should be a integer'
     macintoshFONDName: Any
     'Font name for the FOND resource. This should be a string'
+    nametablePath: Any
+    'Font-wide custom .nam path. Empty or None selects standard mapping; assignment reloads the mapping.'
     note: Any
     'Arbitrary note about the font. This should be a string'
     openTypeGaspRangeRecords: Any
@@ -1567,6 +1618,8 @@ Source: generated/fontlab.py: Info captured declaration"""
     'Descender value. Corresponds to the OpenType vhea table vertTypoDescender field. This should be a integer'
     openTypeVheaVertTypoLineGap: Any
     'Line gap value. Corresponds to the OpenType vhea table vertTypoLineGap field. This should be a integer'
+    otherData: Any
+    'Other font-info settings as a dictionary snapshot. Assign a dictionary to patch settings; nametablePath is font-wide, other entries use the current master.'
     panose: Any
     'PANOSE identification. Should be a string containing 10 space-separated numbers'
     postscriptBlueFuzz: Any
@@ -1730,6 +1783,12 @@ Constructors:
 
 Native bases: object
 
+Captured native MRO: Interval, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature.
+
 Supplemental documentation:
 A numeric interval with `t0` and `t1` (both double) and `d` and `key` attributes. The captured declaration exposes `isEmpty`, `middle`, `reversed`, `setT0T1`, `toAbsolute` and `toInterval`. Consult the retained constructor documentation for the supported creation forms.
 
@@ -1737,8 +1796,8 @@ Source: FontLab Proteus API documentation
 
 Source: generated/fontlab.py: Interval captured declaration"""
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
 
     def isEmpty(self) -> bool:
@@ -2122,6 +2181,12 @@ Constructors:
 
 Native bases: object
 
+Captured native MRO: LocationValue, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature.
+
 Supplemental documentation:
 A location value, `LocationValue`. The captured declaration exposes no named members, only the native constructors `LocationValue(flLocation)` and `LocationValue(double)`.
 
@@ -2129,8 +2194,8 @@ Source: FontLab Proteus API documentation
 
 Source: generated/fontlab.py: LocationValue captured declaration'''
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
 
 class PaintBrush:
@@ -2200,6 +2265,12 @@ Constructors:
 
 Native bases: object
 
+Captured native MRO: PaintBrush, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature.
+
 Supplemental documentation:
 A paint brush described by `angle`, `flatness` and `size` (all double) and a `shape` attribute. The captured declaration exposes `assign`, `init`, `render` and `toString`. Consult the retained constructor documentation for the supported creation forms.
 
@@ -2207,8 +2278,8 @@ Source: FontLab Proteus API documentation
 
 Source: generated/fontlab.py: PaintBrush captured declaration"""
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
 
     def assign(self, PaintBrush: Any) -> None:
@@ -2260,6 +2331,12 @@ The custom brush profile stored in `PaintBrush.shape`. This is a data object, no
 
 Native bases: object
 
+Captured native MRO: PaintBrushShape, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature.
+
 Supplemental documentation:
 A data wrapper for a brush shape. The captured declaration exposes the attributes `cap0`, `cap1`, `cap_length0`, `cap_length1` and `data`, and the methods `asDict` and `asTuple`, which represent the object as a dictionary or a tuple.
 
@@ -2267,8 +2344,8 @@ Source: FontLab Proteus API documentation
 
 Source: generated/fontlab.py: PaintBrushShape captured declaration"""
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
 
     def asDict(self, *args: Any, **kwargs: Any) -> Any:
@@ -2321,6 +2398,12 @@ For adding live corners to outlines, see flShape.
 
 Native bases: object
 
+Captured native MRO: SmartCornerParameters, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature.
+
 Supplemental documentation:
 A data wrapper with the single attribute `curvature`. The captured declaration exposes `asDict` (represent the object as a dictionary) and `asTuple` (represent it as a tuple).
 
@@ -2328,8 +2411,8 @@ Source: FontLab Proteus API documentation
 
 Source: generated/fontlab.py: SmartCornerParameters captured declaration"""
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
 
     def asDict(self, *args: Any, **kwargs: Any) -> Any:
@@ -2340,6 +2423,7 @@ Source: generated/fontlab.py: SmartCornerParameters captured declaration"""
         """represent object as tuple"""
         ...
     curvature: Any
+    inktrap_len: Any
 
 class TransformFrame:
     """Interactive Bounding Frame.
@@ -2525,6 +2609,12 @@ Constructors:
 
 Native bases: object
 
+Captured native MRO: TransformFrame, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature.
+
 Supplemental documentation:
 A transformation frame. The captured declaration exposes the transformation methods `translate`, `scale`, `rotate`, `rotate180`, `slant`, `flipHorizontal`, `flipVertical`, `horizontalReflection`, `verticalReflection` and `doTransformation`, the geometry methods `boundingRect`, `polygon`, `expandPolygon`, `getMapped`, `getTransform`, `initCenter` and `prepareTransformations`, the control methods `getControlPos`, `setControlPos` and `setProjectionPos`, the size and margin methods `bw`, `lh`, `mb`, `mh`, `ml`, `mr`, `mt`, `mw`, `rh` and `tw`, and the attributes `tl`, `tr`, `bl`, `br` and `cr`. It is created with no captured constructor overloads.
 
@@ -2532,8 +2622,8 @@ Source: FontLab Proteus API documentation
 
 Source: generated/fontlab.py: TransformFrame captured declaration"""
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
 
     def boundingRect(self) -> QRectF:
@@ -2548,7 +2638,8 @@ Source: generated/fontlab.py: TransformFrame captured declaration"""
         """void doTransformation(int code, QPointF value)"""
         ...
 
-    def expandPolygon(self, polygon: QPolygonF) -> QPolygonF:
+    @_echopy_builtins.staticmethod
+    def expandPolygon(polygon: QPolygonF) -> QPolygonF:
         """QPolygonF expandPolygon(QPolygonF polygon)
 
 Expands the given polygon outwards by the handle hit-test radius. Use this to generate the larger click target for handle interaction — the actual clickable area is slightly larger than the visual handle dot.
@@ -2777,6 +2868,12 @@ if panel:
 
 Native bases: PythonQtInstanceWrapper
 
+Captured native MRO: YPanelManager, PythonQtInstanceWrapper, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature.
+
 Supplemental documentation:
 A panel manager. The captured declaration exposes the signals `desktopClientRectChanged`, `panelClosed`, `toolbarOpened` and `toolbarClosed` and the method `showContextMenu`. It also carries the Qt object members `parent`, `children`, `findChild`, `findChildren`, `setParent`, `connect`, `disconnect`, `deleteLater` and `property`, and the attribute `objectName`. It is created with no captured constructor overloads.
 
@@ -2784,8 +2881,8 @@ Source: FontLab Proteus API documentation
 
 Source: generated/fontlab.py: YPanelManager captured declaration"""
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
 
     def blockSignals(self, b: Any) -> bool:
@@ -3069,6 +3166,12 @@ for panel in pm.panels:
 
 Native bases: PythonQtInstanceWrapper
 
+Captured native MRO: YPanelWidget, PythonQtInstanceWrapper, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature.
+
 Supplemental documentation:
 Panel widget. The captured declaration exposes `addAction`, `adjustSize`, `close`, `hide`, `show`, `move`, `resize`, `update`, `setEnabled`, `setVisible`, `isVisible`, `isEnabled`, `connect`, `disconnect`, `deleteLater`, `findChild`, `findChildren`, `className` and `grab`. It is created with no captured constructor overloads.
 
@@ -3076,8 +3179,8 @@ Source: FontLab Proteus API documentation
 
 Source: generated/fontlab.py: YPanelWidget captured declaration"""
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
 
     def actionEvent(self, event: Any) -> Any:
@@ -4341,6 +4444,12 @@ Constructors:
 
 Native bases: object
 
+Captured native MRO: fgSymbol, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature.
+
 Supplemental documentation:
 A glyph reference identified by `unicode`, `name`, `id` and `pid`, with the flags `hasName`, `hasUnicode` and `empty`. The captured declaration exposes `glyph` (returning a glyph for a font), `computeID`, `compare`, `clear`, and `data`, `setData`, `containsData` and `clearData` keyed by the `DataCode` attribute. Consult the retained constructor documentation for the supported creation forms. Caution: FontLab 9.0.9809 terminates when fgSymbol() is called with no arguments (Fontlab/fl#8632, open).
 
@@ -4348,8 +4457,8 @@ Source: FontLab Proteus API documentation
 
 Source: generated/fontlab.py: fgSymbol captured declaration"""
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
 
     def clear(self) -> Any:
@@ -4372,6 +4481,14 @@ Source: FontLab Proteus API documentation"""
         """clearID()
 
 Clears only the font-specific ID fields (`id`, `pid`, `glyphIndex`), while keeping any attached custom data. Useful when transferring symbols between fonts: clear the old font's IDs, then call `computeID(newFont)` to resolve them in the new font.
+
+Source: FontLab Proteus API documentation"""
+        ...
+
+    def clearPresentationOverride(self) -> Any:
+        """clearPresentationOverride()
+
+Clears both the named master/layer and explicit location, restoring inheritance from the current context.
 
 Source: FontLab Proteus API documentation"""
         ...
@@ -4432,6 +4549,22 @@ Stores the value `d` under `DataCode`. You can store any Python value that Qt ca
 Source: FontLab Proteus API documentation"""
         ...
 
+    def setLayerOverride(self, string: Any) -> Any:
+        """setLayerOverride(string)
+
+Selects a named master/layer for this occurrence and clears any explicit location. An empty name restores inheritance.
+
+Source: FontLab Proteus API documentation"""
+        ...
+
+    def setLocation(self, arg0: flLocation) -> Any:
+        """setLocation(flLocation)
+
+Sets explicit design coordinates for this occurrence and clears the named master/layer override. Copies the supplied location.
+
+Source: FontLab Proteus API documentation"""
+        ...
+
     def setSterile(self) -> Any:
         """setSterile()
 
@@ -4446,6 +4579,8 @@ Source: FontLab Proteus API documentation"""
     'bool\n\n`True` if no glyph has been assigned — both `unicode` is zero and `name` is empty. An empty symbol renders as a missing-glyph box.\n\nSource: FontLab Proteus API documentation'
     glyphIndex: Any
     "int\n\nThe zero-based index of the glyph in the font's glyph array. Set after `computeID()` succeeds.\n\nSource: FontLab Proteus API documentation"
+    hasLocation: Any
+    'bool\n\nWhether this occurrence has an explicit location. An explicitly empty location still returns `True`; use `clearPresentationOverride()` to restore inheritance.\n\nSource: FontLab Proteus API documentation'
     hasName: Any
     'bool\n\n`True` if a glyph name has been explicitly assigned.\n\nSource: FontLab Proteus API documentation'
     hasUnicode: Any
@@ -4456,6 +4591,8 @@ Source: FontLab Proteus API documentation"""
     'string\n\nRequested master/layer name, e.g. `"Light"`. Use `setLayerOverride()` when switching from a location: assigning this property alone preserves an existing location, which takes precedence. With no location and an empty name, the symbol inherits the current context.\n\nSource: FontLab Proteus API documentation'
     ligatureIndex: Any
     'int\n\nFor ligature components, the index of this symbol within its ligature cluster (0-based). `-1` if this is not a ligature component.\n\nSource: FontLab Proteus API documentation'
+    location: Any
+    'flLocation\n\nCopy of the explicit design coordinates for this occurrence. Read axis values with `symbol.location["wt"]`. Use `setLocation()` to apply changes.\n\nSource: FontLab Proteus API documentation'
     name: Any
     'QString\n\nThe glyph name for this symbol (e.g. `"A"`, `"uni00E9"`, `"ligature_fi"`). Empty if only a Unicode or ID has been set.\n\nSource: FontLab Proteus API documentation'
     pid: Any
@@ -4619,6 +4756,12 @@ Constructors:
 
 Native bases: object
 
+Captured native MRO: fgSymbolList, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature.
+
 Supplemental documentation:
 A list of symbols. The captured declaration exposes the list methods `append`, `insert`, `remove`, `replace`, `clear`, `at`, `last`, `mid`, `size`, `empty`, `assign`, `compare` and `equals`, the loading methods `set`, `setList`, `setGlyphsList`, `setIdList`, `setNamesList`, `setUnicodeList`, `setData`, `setString` and `setSterile`, and the reading and storage methods `data`, `string`, `symbols`, `computeString`, `store`, `restore`, `reserve`, `clearData`, `clearString` and `limitLineLength`. It is created with no captured constructor overloads.
 
@@ -4626,8 +4769,8 @@ Source: FontLab Proteus API documentation
 
 Source: generated/fontlab.py: fgSymbolList captured declaration"""
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
 
     def append(self, fgSymbolList: Any) -> Any:
@@ -4982,6 +5125,12 @@ Constructors:
 
 Native bases: object
 
+Captured native MRO: flAbstractEditor, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature.
+
 Supplemental documentation:
 Abstract editor. The captured declaration exposes `activate`, `deactivate` and `widget`. It is created with no captured constructor overloads. It also carries the shared object members `changed`, `clone`, `cloneObject`, `getProperty`, `setProperty`, `release`, `remove` and `update` and the shared attributes `id`, `name`, `type`, `isValid` and `isNull`.
 
@@ -4989,8 +5138,8 @@ Source: FontLab Proteus API documentation
 
 Source: generated/fontlab.py: flAbstractEditor captured declaration"""
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
 
     def activate(self) -> Any:
@@ -5025,11 +5174,13 @@ Source: FontLab Proteus API documentation"""
         """Clone the object"""
         ...
 
-    def cloneObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def cloneObject(*args: Any, **kwargs: Any) -> Any:
         """flObject cloneObject(const flObject&); """
         ...
 
-    def createObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def createObject(*args: Any, **kwargs: Any) -> Any:
         """flObject/Nothing createObject(int);    """
         ...
 
@@ -5069,7 +5220,8 @@ Source: FontLab Proteus API documentation"""
         """hasHistoryState(uint history_ix)"""
         ...
 
-    def haveObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def haveObject(*args: Any, **kwargs: Any) -> Any:
         """bool haveObject(uint);                 """
         ...
 
@@ -5085,12 +5237,17 @@ Source: FontLab Proteus API documentation"""
         """initialHistoryIx()"""
         ...
 
-    def instanceType(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def instanceType(*args: Any, **kwargs: Any) -> Any:
         """int instanceType();                    """
         ...
 
     def isEqual(self, arg0: flObject) -> Any:
         """isEqual(flObject)"""
+        ...
+
+    def propertyNames(self, *args: Any, **kwargs: Any) -> Any:
+        """propertyNames(): sorted snapshot of dynamic property keys"""
         ...
 
     def release(self) -> Any:
@@ -5297,6 +5454,12 @@ Constructors:
 
 Native bases: object
 
+Captured native MRO: flAbstractVectorNode, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature.
+
 Supplemental documentation:
 Abstract vector node. The captured declaration exposes `angleTo`, `canBeSmooth`, `canCollapse`, `collapseHandles`, `convertToCurve`, `convertToLine`, `moveBy`, `rotateBy`, `scaleBy`, `skewBy`, `makeStart`, `nextNode`, `prevNode`, `isCurve`, `isOn`, `isOff`, `isFirst`, `isLast`, `smooth`, `position`, `selected`, `x` and `y`. It is created with no captured constructor overloads. It also carries the shared object members `changed`, `clone`, `cloneObject`, `getProperty`, `setProperty`, `release`, `remove` and `update` and the shared attributes `id`, `name`, `type`, `isValid` and `isNull`.
 
@@ -5304,8 +5467,8 @@ Source: FontLab Proteus API documentation
 
 Source: generated/fontlab.py: flAbstractVectorNode captured declaration"""
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
 
     def angleTo(self, p: QPointF) -> float:
@@ -5368,7 +5531,8 @@ Source: generated/fontlab.py: flAbstractVectorNode captured declaration"""
         """flNode cloneMapped(QTransform)"""
         ...
 
-    def cloneObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def cloneObject(*args: Any, **kwargs: Any) -> Any:
         """flObject cloneObject(const flObject&); """
         ...
 
@@ -5392,7 +5556,8 @@ Source: generated/fontlab.py: flAbstractVectorNode captured declaration"""
         """copyFrom(Node[, withSelected=False])"""
         ...
 
-    def createObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def createObject(*args: Any, **kwargs: Any) -> Any:
         """flObject/Nothing createObject(int);    """
         ...
 
@@ -5436,7 +5601,8 @@ Source: generated/fontlab.py: flAbstractVectorNode captured declaration"""
         """hasHistoryState(uint history_ix)"""
         ...
 
-    def haveObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def haveObject(*args: Any, **kwargs: Any) -> Any:
         """bool haveObject(uint);                 """
         ...
 
@@ -5456,7 +5622,8 @@ Source: generated/fontlab.py: flAbstractVectorNode captured declaration"""
         """initialHistoryIx()"""
         ...
 
-    def instanceType(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def instanceType(*args: Any, **kwargs: Any) -> Any:
         """int instanceType();                    """
         ...
 
@@ -5530,6 +5697,10 @@ Source: generated/fontlab.py: flAbstractVectorNode captured declaration"""
 
     def prevNode(self, nodeType: Any=...) -> Any:
         """Node/None prevNode([string nodeType= [, int searchDepth=1]])"""
+        ...
+
+    def propertyNames(self, *args: Any, **kwargs: Any) -> Any:
+        """propertyNames(): sorted snapshot of dynamic property keys"""
         ...
 
     def release(self) -> Any:
@@ -6023,6 +6194,12 @@ Constructors:
 
 Native bases: object
 
+Captured native MRO: flAnchor, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature.
+
 Supplemental documentation:
 An editing anchor whose `name` identifies the object and whose `anchorPoint` holds its QPointF position. The captured declaration exposes `isGlobal`, `fixHorzDirection` and `fixVertDirection` as boolean attributes. Consult the retained constructor documentation for supported creation forms.
 
@@ -6030,8 +6207,8 @@ Source: FontLab Proteus API documentation
 
 Source: generated/fontlab.py: flAnchor captured declaration"""
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
 
     def added(self) -> Any:
@@ -6066,11 +6243,13 @@ Source: FontLab Proteus API documentation"""
         """Clone the object"""
         ...
 
-    def cloneObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def cloneObject(*args: Any, **kwargs: Any) -> Any:
         """flObject cloneObject(const flObject&); """
         ...
 
-    def createObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def createObject(*args: Any, **kwargs: Any) -> Any:
         """flObject/Nothing createObject(int);    """
         ...
 
@@ -6110,7 +6289,8 @@ Returns `True` if the given object is one of the things this anchor connects. Us
 Source: FontLab Proteus API documentation"""
         ...
 
-    def haveObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def haveObject(*args: Any, **kwargs: Any) -> Any:
         """bool haveObject(uint);                 """
         ...
 
@@ -6126,12 +6306,17 @@ Source: FontLab Proteus API documentation"""
         """initialHistoryIx()"""
         ...
 
-    def instanceType(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def instanceType(*args: Any, **kwargs: Any) -> Any:
         """int instanceType();                    """
         ...
 
     def isEqual(self, arg0: flObject) -> Any:
         """isEqual(flObject)"""
+        ...
+
+    def propertyNames(self, *args: Any, **kwargs: Any) -> Any:
+        """propertyNames(): sorted snapshot of dynamic property keys"""
         ...
 
     def release(self) -> Any:
@@ -6390,6 +6575,12 @@ Constructors:
 
 Native bases: object
 
+Captured native MRO: flAuditInfo, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature.
+
 Supplemental documentation:
 Audit information. The captured declaration exposes `glyphLocation`, and the attributes `basic`, `item`. It is created with no captured constructor overloads. It also carries the shared object members `changed`, `clone`, `cloneObject`, `getProperty`, `setProperty`, `release`, `remove` and `update` and the shared attributes `id`, `name`, `type`, `isValid` and `isNull`.
 
@@ -6397,8 +6588,8 @@ Source: FontLab Proteus API documentation
 
 Source: generated/fontlab.py: flAuditInfo captured declaration"""
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
 
     def changed(self) -> Any:
@@ -6425,11 +6616,13 @@ Source: generated/fontlab.py: flAuditInfo captured declaration"""
         """Clone the object"""
         ...
 
-    def cloneObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def cloneObject(*args: Any, **kwargs: Any) -> Any:
         """flObject cloneObject(const flObject&); """
         ...
 
-    def createObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def createObject(*args: Any, **kwargs: Any) -> Any:
         """flObject/Nothing createObject(int);    """
         ...
 
@@ -6469,7 +6662,8 @@ Source: FontLab Proteus API documentation"""
         """hasHistoryState(uint history_ix)"""
         ...
 
-    def haveObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def haveObject(*args: Any, **kwargs: Any) -> Any:
         """bool haveObject(uint);                 """
         ...
 
@@ -6485,12 +6679,17 @@ Source: FontLab Proteus API documentation"""
         """initialHistoryIx()"""
         ...
 
-    def instanceType(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def instanceType(*args: Any, **kwargs: Any) -> Any:
         """int instanceType();                    """
         ...
 
     def isEqual(self, arg0: flObject) -> Any:
         """isEqual(flObject)"""
+        ...
+
+    def propertyNames(self, *args: Any, **kwargs: Any) -> Any:
+        """propertyNames(): sorted snapshot of dynamic property keys"""
         ...
 
     def release(self) -> Any:
@@ -6667,6 +6866,12 @@ Constructors:
 
 Native bases: object
 
+Captured native MRO: flAxis, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature.
+
 Supplemental documentation:
 A variation axis. The captured declaration exposes the attributes `name`, `tag`, `shortName`, `minimal`, `default`, `maximum`, `designMin`, `designDef`, `designMax`, `hidden`, `map` and `playRange`, and methods including `checkValue`, `getRange`, `mappedValue`, `normalize`, `styleName`, `styleValue`, `valueWeight` and `valueWidth`. It is created as `flAxis()`, `flAxis(string name)` or `flAxis(string name, string tag, string short_name)`.
 
@@ -6674,11 +6879,12 @@ Source: FontLab Proteus API documentation
 
 Source: generated/fontlab.py: flAxis captured declaration"""
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
 
-    def _has_axis_name(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def _has_axis_name(*args: Any, **kwargs: Any) -> Any:
         """QString _check_axis_name(QList<flAxis> axes, int exclude, strin gname)
 
 Checks axis name uniqueness. When called for a boolean check, returns `True` if `name` is already used by any axis in the list (excluding the axis at index `exclude`). When called for a safe name, returns `name` unchanged if it is unique, or a modified version (e.g. `"Weight2"`) if it is already taken. Both overloads are registered under this single Python name.
@@ -6726,7 +6932,8 @@ Serializes the named-instance list to a compact string. Useful for debugging or 
 Source: FontLab Proteus API documentation"""
         ...
 
-    def isWeight(self, s: Any) -> bool:
+    @_echopy_builtins.staticmethod
+    def isWeight(s: Any) -> bool:
         """bool isWeight(string s)
 
 Returns `True` if the string `s` matches the OpenType weight axis tag (`wght`). Use this to identify which axis controls weight without hardcoding the string
@@ -6734,7 +6941,8 @@ Returns `True` if the string `s` matches the OpenType weight axis tag (`wght`). 
 Source: FontLab Proteus API documentation"""
         ...
 
-    def isWidth(self, s: Any) -> bool:
+    @_echopy_builtins.staticmethod
+    def isWidth(s: Any) -> bool:
         """bool isWidth(string s)
 
 Returns `True` if `s` matches the OpenType width axis tag (`wdth`)
@@ -6742,7 +6950,8 @@ Returns `True` if `s` matches the OpenType width axis tag (`wdth`)
 Source: FontLab Proteus API documentation"""
         ...
 
-    def locationName(self, axes: list[flAxis], location: flLocation) -> str:
+    @_echopy_builtins.staticmethod
+    def locationName(axes: list[flAxis], location: flLocation) -> str:
         """QString locationName(QList<flAxis> axes, flLocation location)
 
 Generates a human-readable name for a design-space location based on all the axis values it contains. For example, `{"wght": 700, "wdth": 75}` might produce `"Bold Condensed"`
@@ -6830,7 +7039,8 @@ Re-derives the 4-letter OpenType tag from the axis `name`. Call this after chang
 Source: FontLab Proteus API documentation"""
         ...
 
-    def valueWeight(self, location: flLocation, value: float) -> float:
+    @_echopy_builtins.staticmethod
+    def valueWeight(location: flLocation, value: float) -> float:
         """double valueWeight(flLocation location, double value)
 
 Maps a raw weight axis value to its CSS `font-weight` equivalent (100–900 scale). Useful for generating CSS from your variable font's design space
@@ -6838,7 +7048,8 @@ Maps a raw weight axis value to its CSS `font-weight` equivalent (100–900 scal
 Source: FontLab Proteus API documentation"""
         ...
 
-    def valueWidth(self, location: flLocation, value: float) -> float:
+    @_echopy_builtins.staticmethod
+    def valueWidth(location: flLocation, value: float) -> float:
         """double valueWidth(flLocation location, double value)
 
 Maps a raw width axis value to its CSS `font-stretch` percentage equivalent
@@ -6853,6 +7064,8 @@ Source: FontLab Proteus API documentation"""
     'double\n\nThe maximum value in internal design space\n\nSource: FontLab Proteus API documentation'
     designMin: Any
     "double\n\nThe minimum value in internal design space. If you're not using a non-linear map, this equals `minimal`\n\nSource: FontLab Proteus API documentation"
+    extrapolate: Any
+    'bool\n\nDefaults to `False`. Allows the Variations widget and panel to reach 25% beyond each end of the design range, without changing declared or exported axis bounds. Saved with the font.\n\nSource: FontLab Proteus API documentation'
     hidden: Any
     "bool\n\nWhen `True`, this axis is hidden from the user-facing axis list. Useful for internal-only axes that you don't want exposed in the exported font's UI\n\nSource: FontLab Proteus API documentation"
     map: Any
@@ -6979,6 +7192,12 @@ Constructors:
 
 Native bases: object
 
+Captured native MRO: flBasicTool, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature.
+
 Supplemental documentation:
 A basic tool. The captured declaration exposes `activateTool`, `deactivateTool`, and the attributes `cursorId`, `needDeactivateParent`. It is created with no captured constructor overloads. It also carries the shared object members `changed`, `clone`, `cloneObject`, `getProperty`, `setProperty`, `release`, `remove` and `update` and the shared attributes `id`, `name`, `type`, `isValid` and `isNull`.
 
@@ -6986,8 +7205,8 @@ Source: FontLab Proteus API documentation
 
 Source: generated/fontlab.py: flBasicTool captured declaration"""
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
 
     def activateTool(self) -> Any:
@@ -7022,11 +7241,13 @@ Source: FontLab Proteus API documentation"""
         """Clone the object"""
         ...
 
-    def cloneObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def cloneObject(*args: Any, **kwargs: Any) -> Any:
         """flObject cloneObject(const flObject&); """
         ...
 
-    def createObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def createObject(*args: Any, **kwargs: Any) -> Any:
         """flObject/Nothing createObject(int);    """
         ...
 
@@ -7066,7 +7287,8 @@ Source: FontLab Proteus API documentation"""
         """hasHistoryState(uint history_ix)"""
         ...
 
-    def haveObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def haveObject(*args: Any, **kwargs: Any) -> Any:
         """bool haveObject(uint);                 """
         ...
 
@@ -7082,12 +7304,17 @@ Source: FontLab Proteus API documentation"""
         """initialHistoryIx()"""
         ...
 
-    def instanceType(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def instanceType(*args: Any, **kwargs: Any) -> Any:
         """int instanceType();                    """
         ...
 
     def isEqual(self, arg0: flObject) -> Any:
         """isEqual(flObject)"""
+        ...
+
+    def propertyNames(self, *args: Any, **kwargs: Any) -> Any:
+        """propertyNames(): sorted snapshot of dynamic property keys"""
         ...
 
     def release(self) -> Any:
@@ -7395,6 +7622,12 @@ Constructors:
 
 Native bases: object
 
+Captured native MRO: flCanvas, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature.
+
 Supplemental documentation:
 Canvas. The captured declaration exposes `activateEditor`, `deactivateEditor`, `addTextBlock`, `clearTextBlocks`, `clearItems`, `appendDecorator`, `clearDecorators`, `hoveredItem`, `haveSelectedNodes`, `invertSelectedNodes`, `isActiveCanvas`, `isFocusedCanvas`, `ensureVisible`, `hide`, `currentHistoryState` and `hasHistoryState`. It is created with no captured constructor overloads. It also carries the shared object members `changed`, `clone`, `cloneObject`, `getProperty`, `setProperty`, `release`, `remove` and `update` and the shared attributes `id`, `name`, `type`, `isValid` and `isNull`.
 
@@ -7402,8 +7635,8 @@ Source: FontLab Proteus API documentation
 
 Source: generated/fontlab.py: flCanvas captured declaration"""
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
 
     def _finalize_smart_angles(self) -> bool:
@@ -7460,6 +7693,10 @@ Source: FontLab Proteus API documentation"""
 
     def appendDecorator(self, arg0: flVisualItem, DecoratorOrder: Any) -> None:
         """void appendDecorator(flVisualItem, DecoratorOrder)"""
+        ...
+
+    def appendPythonPainter(self, callback: Any, order: Any=...) -> Any:
+        """appendPythonPainter(callback, order=UnderOwner) -> token. callback(painter, canvas) draws in viewport coordinates; painter is valid only during the callback."""
         ...
 
     def availableRect(self) -> QRectF:
@@ -7526,7 +7763,8 @@ Source: FontLab Proteus API documentation"""
         """Clone the object"""
         ...
 
-    def cloneObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def cloneObject(*args: Any, **kwargs: Any) -> Any:
         """flObject cloneObject(const flObject&); """
         ...
 
@@ -7554,7 +7792,8 @@ Creates a text frame at the given canvas position.
 Source: FontLab Proteus API documentation"""
         ...
 
-    def createInstance(self) -> flCanvas:
+    @_echopy_builtins.staticmethod
+    def createInstance() -> flCanvas:
         """flCanvas createInstance()
 
 Creates a new canvas instance.
@@ -7562,7 +7801,8 @@ Creates a new canvas instance.
 Source: FontLab Proteus API documentation"""
         ...
 
-    def createObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def createObject(*args: Any, **kwargs: Any) -> Any:
         """flObject/Nothing createObject(int);    """
         ...
 
@@ -7650,7 +7890,8 @@ Returns `True` if the mouse cursor is hovering over an interactive item.
 Source: FontLab Proteus API documentation"""
         ...
 
-    def haveObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def haveObject(*args: Any, **kwargs: Any) -> Any:
         """bool haveObject(uint);                 """
         ...
 
@@ -7694,11 +7935,13 @@ Source: FontLab Proteus API documentation"""
         """initialHistoryIx()"""
         ...
 
-    def instanceAcceptEvents(self) -> int:
+    @_echopy_builtins.staticmethod
+    def instanceAcceptEvents() -> int:
         """int instanceAcceptEvents()"""
         ...
 
-    def instanceType(self) -> int:
+    @_echopy_builtins.staticmethod
+    def instanceType() -> int:
         """int instanceType()
 
 Returns the canvas type code.
@@ -8090,6 +8333,10 @@ Returns the model producer controlling what this canvas displays.
 Source: FontLab Proteus API documentation"""
         ...
 
+    def propertyNames(self, *args: Any, **kwargs: Any) -> Any:
+        """propertyNames(): sorted snapshot of dynamic property keys"""
+        ...
+
     def rectToUpdate(self) -> QRect:
         """QRect& rectToUpdate()
 
@@ -8172,6 +8419,10 @@ Source: FontLab Proteus API documentation"""
 Removes a visual item from the canvas.
 
 Source: FontLab Proteus API documentation"""
+        ...
+
+    def removePythonPainter(self, token: Any) -> bool:
+        """removePythonPainter(token) -> bool"""
         ...
 
     def removeTextBlock(self, arg0: flTextBlock) -> Any:
@@ -8434,9 +8685,11 @@ Restores the previously saved zoom level.
 Source: FontLab Proteus API documentation"""
         ...
     Listeners: dict
+    OverOwner: int
     SetMetricsAuto: int
     SetMetricsDefault: int
     SetMetricsZero: int
+    UnderOwner: int
     flObjectFlags: dict
     hasChanges: Any
     'bool'
@@ -8792,6 +9045,12 @@ Constructors:
 
 Native bases: object
 
+Captured native MRO: flContour, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature.
+
 Supplemental documentation:
 A closed or open path made of flNode objects. The captured declaration exposes `nodes` and `closed`. Obtain contours with the getContours method of a layer.
 
@@ -8805,8 +9064,8 @@ Source: FontLab Proteus API documentation
 
 Source: generated/fontlab.py: flContour captured declaration"""
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
 
     def add(self, QPointF: Any) -> Any:
@@ -8977,7 +9236,8 @@ Like `cloneMapped` but uses standard `t` coordinates to specify the range.
 Source: FontLab Proteus API documentation"""
         ...
 
-    def cloneObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def cloneObject(*args: Any, **kwargs: Any) -> Any:
         """flObject cloneObject(const flObject&); """
         ...
 
@@ -9037,7 +9297,8 @@ Converts a standard `t` value to the extended-parameter format `ex_t`.
 Source: FontLab Proteus API documentation"""
         ...
 
-    def createObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def createObject(*args: Any, **kwargs: Any) -> Any:
         """flObject/Nothing createObject(int);    """
         ...
 
@@ -9349,7 +9610,8 @@ Returns `True` if at least one node satisfying the given `SelectionMode` criteri
 Source: FontLab Proteus API documentation"""
         ...
 
-    def haveObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def haveObject(*args: Any, **kwargs: Any) -> Any:
         """bool haveObject(uint);                 """
         ...
 
@@ -9413,7 +9675,8 @@ Like `insertNodeTo`, but only inserts the node if it is at least `dst` em units 
 Source: FontLab Proteus API documentation"""
         ...
 
-    def instanceType(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def instanceType(*args: Any, **kwargs: Any) -> Any:
         """int instanceType();                    """
         ...
 
@@ -9531,6 +9794,10 @@ Source: FontLab Proteus API documentation"""
 A quick way to get the position of the on-curve node at `index` without retrieving the full node object.
 
 Source: FontLab Proteus API documentation"""
+        ...
+
+    def propertyNames(self, *args: Any, **kwargs: Any) -> Any:
+        """propertyNames(): sorted snapshot of dynamic property keys"""
         ...
 
     def release(self) -> Any:
@@ -10016,6 +10283,12 @@ Constructors:
 
 Native bases: object
 
+Captured native MRO: flContourInfo, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature.
+
 Supplemental documentation:
 Contour information. The captured declaration exposes `contour`, `shapeInfo`, `glyphInfo`, `getHitNode`, `getNodesInfo`, `cloneSelected`, `brectOnCanvas`, `combine`, `dist` and `transform`. It is created with no captured constructor overloads. It also carries the shared object members `changed`, `clone`, `cloneObject`, `getProperty`, `setProperty`, `release`, `remove` and `update` and the shared attributes `id`, `name`, `type`, `isValid` and `isNull`.
 
@@ -10023,8 +10296,8 @@ Source: FontLab Proteus API documentation
 
 Source: generated/fontlab.py: flContourInfo captured declaration"""
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
 
     def brectOnCanvas(self) -> QRectF:
@@ -10059,7 +10332,8 @@ Source: FontLab Proteus API documentation"""
         """Clone the object"""
         ...
 
-    def cloneObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def cloneObject(*args: Any, **kwargs: Any) -> Any:
         """flObject cloneObject(const flObject&); """
         ...
 
@@ -10075,7 +10349,8 @@ Source: FontLab Proteus API documentation"""
         """combine(QTransform transform)"""
         ...
 
-    def createInstance(self) -> flContourInfo:
+    @_echopy_builtins.staticmethod
+    def createInstance() -> flContourInfo:
         """flContourInfo createInstance()
 
 Factory. Creates a detached `flContourInfo`.
@@ -10083,7 +10358,8 @@ Factory. Creates a detached `flContourInfo`.
 Source: FontLab Proteus API documentation"""
         ...
 
-    def createObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def createObject(*args: Any, **kwargs: Any) -> Any:
         """flObject/Nothing createObject(int);    """
         ...
 
@@ -10139,7 +10415,8 @@ Source: FontLab Proteus API documentation"""
         """hasHistoryState(uint history_ix)"""
         ...
 
-    def haveObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def haveObject(*args: Any, **kwargs: Any) -> Any:
         """bool haveObject(uint);                 """
         ...
 
@@ -10155,7 +10432,8 @@ Source: FontLab Proteus API documentation"""
         """initialHistoryIx()"""
         ...
 
-    def instanceType(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def instanceType(*args: Any, **kwargs: Any) -> Any:
         """int instanceType();                    """
         ...
 
@@ -10177,6 +10455,10 @@ Source: FontLab Proteus API documentation"""
 Returns the standard per-segment parametric `t` (0..1) of the closest hit point — useful to identify which segment the closest point is on.
 
 Source: FontLab Proteus API documentation"""
+        ...
+
+    def propertyNames(self, *args: Any, **kwargs: Any) -> Any:
+        """propertyNames(): sorted snapshot of dynamic property keys"""
         ...
 
     def release(self) -> Any:
@@ -10302,6 +10584,12 @@ Constructors:
 
 Native bases: object
 
+Captured native MRO: flEvent, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature.
+
 Supplemental documentation:
 An event with `type` (EventType) and `modifiers` (int) attributes and an `EventType` dict. It is created as a copy `flEvent(flEvent)` or as `flEvent(EventType type[, int modifiers=-1])`.
 
@@ -10309,8 +10597,8 @@ Source: FontLab Proteus API documentation
 
 Source: generated/fontlab.py: flEvent captured declaration"""
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
     EventType: dict
     modifiers: Any
@@ -10451,6 +10739,12 @@ Constructors:
 
 Native bases: object
 
+Captured native MRO: flExpression, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature.
+
 Supplemental documentation:
 Expression holder. The captured declaration exposes `expression`, `hasExpression`, `hasError`, `error`, `clearError`, `isNeedToComplete`, `resetReady`, `ready` and `variables`. It is created with no captured constructor overloads. It also carries the shared object members `changed`, `clone`, `cloneObject`, `getProperty`, `setProperty`, `release`, `remove` and `update` and the shared attributes `id`, `name`, `type`, `isValid` and `isNull`.
 
@@ -10458,8 +10752,8 @@ Source: FontLab Proteus API documentation
 
 Source: generated/fontlab.py: flExpression captured declaration"""
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
 
     def changed(self) -> Any:
@@ -10494,11 +10788,13 @@ Source: FontLab Proteus API documentation"""
         """Clone the object"""
         ...
 
-    def cloneObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def cloneObject(*args: Any, **kwargs: Any) -> Any:
         """flObject cloneObject(const flObject&); """
         ...
 
-    def createObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def createObject(*args: Any, **kwargs: Any) -> Any:
         """flObject/Nothing createObject(int);    """
         ...
 
@@ -10556,7 +10852,8 @@ Source: FontLab Proteus API documentation"""
         """hasHistoryState(uint history_ix)"""
         ...
 
-    def haveObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def haveObject(*args: Any, **kwargs: Any) -> Any:
         """bool haveObject(uint);                 """
         ...
 
@@ -10572,7 +10869,8 @@ Source: FontLab Proteus API documentation"""
         """initialHistoryIx()"""
         ...
 
-    def instanceType(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def instanceType(*args: Any, **kwargs: Any) -> Any:
         """int instanceType();                    """
         ...
 
@@ -10586,6 +10884,10 @@ Source: FontLab Proteus API documentation"""
 Returns `True` if the expression cannot yet be evaluated because it references variables that have not been defined (e.g. an axis tag that hasn't been created yet).
 
 Source: FontLab Proteus API documentation"""
+        ...
+
+    def propertyNames(self, *args: Any, **kwargs: Any) -> Any:
+        """propertyNames(): sorted snapshot of dynamic property keys"""
         ...
 
     def release(self) -> Any:
@@ -10910,6 +11212,12 @@ Constructors:
 
 Native bases: object
 
+Captured native MRO: flGlyph, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature.
+
 Supplemental documentation:
 A FontLab editing glyph containing flLayer objects. The captured declaration exposes `name` and `layers`; iterate `layers` to inspect layer names. Unicode assignments belong to the associated fontgate glyph; they are not flGlyph attributes.
 
@@ -10925,8 +11233,8 @@ Source: FontLab Proteus API documentation
 
 Source: generated/fontlab.py: flGlyph captured declaration"""
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
 
     def addLayer(self, back: Any=...) -> None:
@@ -10989,7 +11297,12 @@ Source: FontLab Proteus API documentation"""
         """clearFlags()"""
         ...
 
-    def clearUpdateFgGlyphs(self) -> Any:
+    def clearSigmaData(self, *args: Any, **kwargs: Any) -> Any:
+        """clearSigmaData(): remove authored Sigma curves"""
+        ...
+
+    @_echopy_builtins.staticmethod
+    def clearUpdateFgGlyphs() -> Any:
         """clearUpdateFgGlyphs()
 
 Clear the queue of glyphs pending a low-level refresh.
@@ -11001,11 +11314,13 @@ Source: FontLab Proteus API documentation"""
         """Clone the object"""
         ...
 
-    def cloneObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def cloneObject(*args: Any, **kwargs: Any) -> Any:
         """flObject cloneObject(const flObject&); """
         ...
 
-    def createInstance(self) -> flGlyph:
+    @_echopy_builtins.staticmethod
+    def createInstance() -> flGlyph:
         """flGlyph createInstance()
 
 Allocate and return a fresh internal glyph instance. Rarely needed in scripts — use `flGlyph()` instead.
@@ -11013,7 +11328,8 @@ Allocate and return a fresh internal glyph instance. Rarely needed in scripts �
 Source: FontLab Proteus API documentation"""
         ...
 
-    def createObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def createObject(*args: Any, **kwargs: Any) -> Any:
         """flObject/Nothing createObject(int);    """
         ...
 
@@ -11029,7 +11345,8 @@ Deactivate all active shapes and contours in this glyph.
 Source: FontLab Proteus API documentation"""
         ...
 
-    def ensureFgData(self, arg0: fgGlyph) -> fgFontGateData:
+    @_echopy_builtins.staticmethod
+    def ensureFgData(arg0: fgGlyph) -> fgFontGateData:
         """fgFontGateData ensureFgData(fgGlyph)
 
 Guarantee the glyph has an associated low-level data block, creating it if absent. Call before writing hint or guide data.
@@ -11137,6 +11454,10 @@ Return both sidebearings as a tuple `(left, right)`.
 Source: FontLab Proteus API documentation"""
         ...
 
+    def getSigmaData(self, *args: Any, **kwargs: Any) -> Any:
+        """dict getSigmaData(): return editable Sigma metadata"""
+        ...
+
     def glyphName(self) -> str:
         """QString glyphName()
 
@@ -11157,7 +11478,8 @@ Source: FontLab Proteus API documentation"""
         """hasHistoryState(uint history_ix)"""
         ...
 
-    def hasInstance(self, arg0: fgGlyph) -> bool:
+    @_echopy_builtins.staticmethod
+    def hasInstance(arg0: fgGlyph) -> bool:
         """bool hasInstance(fgGlyph)
 
 Check whether a given low-level `fgGlyph` already has a Python `flGlyph` wrapper bound to it. Useful when writing tools that mix low-level and high-level APIs.
@@ -11165,7 +11487,8 @@ Check whether a given low-level `fgGlyph` already has a Python `flGlyph` wrapper
 Source: FontLab Proteus API documentation"""
         ...
 
-    def haveObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def haveObject(*args: Any, **kwargs: Any) -> Any:
         """bool haveObject(uint);                 """
         ...
 
@@ -11197,6 +11520,10 @@ Source: FontLab Proteus API documentation"""
         """initialHistoryIx()"""
         ...
 
+    def initializeSigma(self, *args: Any, **kwargs: Any) -> Any:
+        """dict initializeSigma(): bind compatible master points for Sigma"""
+        ...
+
     def inkBox(self, tx: Any=...) -> QRectF:
         """QRectF inkBox([QTransform tx = QTransform()])
 
@@ -11205,7 +11532,8 @@ Returns the tightest bounding box that fits around all visible outlines, optiona
 Source: FontLab Proteus API documentation"""
         ...
 
-    def instanceType(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def instanceType(*args: Any, **kwargs: Any) -> Any:
         """int instanceType();                    """
         ...
 
@@ -11229,7 +11557,8 @@ Return `True` if any component references are currently unresolved — meaning a
 Source: FontLab Proteus API documentation"""
         ...
 
-    def linkInstances(self, arg0: flGlyph, arg1: fgGlyph) -> bool:
+    @_echopy_builtins.staticmethod
+    def linkInstances(arg0: flGlyph, arg1: fgGlyph) -> bool:
         """bool linkInstances(flGlyph, fgGlyph)
 
 Bind an existing `flGlyph` to a given `fgGlyph` identifier. Used internally when the object model is reconstructed after an undo.
@@ -11267,6 +11596,10 @@ Source: FontLab Proteus API documentation"""
 Cache the current geometry before beginning a transform operation. Called internally before dragging or scripted transforms.
 
 Source: FontLab Proteus API documentation"""
+        ...
+
+    def propertyNames(self, *args: Any, **kwargs: Any) -> Any:
+        """propertyNames(): sorted snapshot of dynamic property keys"""
         ...
 
     def release(self) -> Any:
@@ -11381,6 +11714,10 @@ Set both sidebearings in one call. Pass `all_layers=True` to propagate the chang
 Source: FontLab Proteus API documentation"""
         ...
 
+    def setSigmaData(self, *args: Any, **kwargs: Any) -> Any:
+        """setSigmaData(dict): validate and apply Sigma metadata as an undoable edit"""
+        ...
+
     def setTag(self, arg0: str, bool: Any) -> None:
         """void setTag(QString, bool)
 
@@ -11421,7 +11758,8 @@ Re-run specific audit checks on this glyph, identified by their integer check ID
 Source: FontLab Proteus API documentation"""
         ...
 
-    def updateFgGlyph(self, id: int) -> Any:
+    @_echopy_builtins.staticmethod
+    def updateFgGlyph(id: int) -> Any:
         """updateFgGlyph(uint id)
 
 Schedule a glyph (by its internal id) for a low-level data refresh on the next update cycle.
@@ -11437,7 +11775,8 @@ Re-evaluate the glyph's metric expressions and recalculate the sidebearings from
 Source: FontLab Proteus API documentation"""
         ...
 
-    def updatedFgGlyphs(self) -> Any:
+    @_echopy_builtins.staticmethod
+    def updatedFgGlyphs() -> Any:
         """list(uint32_t) updatedFgGlyphs()
 
 Return the list of glyph ids that are queued for a low-level data refresh.
@@ -11481,6 +11820,8 @@ Source: FontLab Proteus API documentation"""
     fgPackage: Any
     'fgFont\n\nThe underlying low-level font object. Mostly used internally; prefer `glyph.package` for scripting.\n\nSource: FontLab Proteus API documentation'
     flObjectFlags: dict
+    glyphMark: Any
+    'int: glyph-only mark; does not change layer marks or record history\n\nStored glyph-only colour mark. Reads and writes do not import geometry or change layer flags. The setter also synchronizes the FontGate mark, but does not create an Undo step or notify the UI.\n\nSource: FontLab Proteus API documentation'
     glyphRect: Any
     "QRectF\n\nThe full glyph cell rectangle, spanning the advance width and the font's ascender-to-descender range.\n\nSource: FontLab Proteus API documentation"
     hasBody: Any
@@ -11705,6 +12046,12 @@ Constructors:
 
 Native bases: object
 
+Captured native MRO: flGlyphInfo, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature.
+
 Supplemental documentation:
 Glyph information. The captured declaration exposes `glyph`, `boundingBox`, `createBoundingBox`, `applyTransform`, `applyTransformTo`, `getNearbyContours`, `getTopHitShape`, `hitToShape`, `kerningOffset`, `setKerningOffset`, `setBoundAscender`, `setBoundDescender`, `setBoundLeft`, `setBoundRight`, `setGlyphScale`, `fontSize`, `leftOffset`, `rightOffset`, `isActive`, `isSelected` and `isNullGlyph`. It is created with no captured constructor overloads. It also carries the shared object members `changed`, `clone`, `cloneObject`, `getProperty`, `setProperty`, `release`, `remove` and `update` and the shared attributes `id`, `name`, `type`, `isValid` and `isNull`.
 
@@ -11712,8 +12059,8 @@ Source: FontLab Proteus API documentation
 
 Source: generated/fontlab.py: flGlyphInfo captured declaration"""
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
 
     def applyTransform(self) -> Any:
@@ -11752,11 +12099,16 @@ Source: FontLab Proteus API documentation"""
         """clearFlags()"""
         ...
 
+    def clearPresentationOverride(self) -> bool:
+        """bool clearPresentationOverride()"""
+        ...
+
     def clone(self, *args: Any, **kwargs: Any) -> Any:
         """Clone the object"""
         ...
 
-    def cloneObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def cloneObject(*args: Any, **kwargs: Any) -> Any:
         """flObject cloneObject(const flObject&); """
         ...
 
@@ -11768,7 +12120,8 @@ Creates or refreshes the bounding box overlay shape for this glyph.
 Source: FontLab Proteus API documentation"""
         ...
 
-    def createObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def createObject(*args: Any, **kwargs: Any) -> Any:
         """flObject/Nothing createObject(int);    """
         ...
 
@@ -11812,7 +12165,8 @@ Source: FontLab Proteus API documentation"""
         """hasHistoryState(uint history_ix)"""
         ...
 
-    def haveObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def haveObject(*args: Any, **kwargs: Any) -> Any:
         """bool haveObject(uint);                 """
         ...
 
@@ -11836,7 +12190,8 @@ Source: FontLab Proteus API documentation"""
         """initialHistoryIx()"""
         ...
 
-    def instanceType(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def instanceType(*args: Any, **kwargs: Any) -> Any:
         """int instanceType();                    """
         ...
 
@@ -11850,6 +12205,10 @@ Source: FontLab Proteus API documentation"""
 Returns the kerning offset that should be applied before this glyph when rendering in the metrics view. Pass `True` to include actual kern pair values; pass `False` to get only the spacing offset without kerning. Useful for custom metrics display code.
 
 Source: FontLab Proteus API documentation"""
+        ...
+
+    def propertyNames(self, *args: Any, **kwargs: Any) -> Any:
+        """propertyNames(): sorted snapshot of dynamic property keys"""
         ...
 
     def release(self) -> Any:
@@ -11866,6 +12225,10 @@ Source: FontLab Proteus API documentation"""
 
     def restoreHistoryState(self, history_ix: int) -> Any:
         """restoreHistoryState(uint history_ix)"""
+        ...
+
+    def setActiveLayer(self, arg0: flLayer) -> bool:
+        """bool setActiveLayer(flLayer)"""
         ...
 
     def setBoundAscender(self, double: Any) -> Any:
@@ -11920,6 +12283,10 @@ Manually overrides the kerning offset for this glyph instance in the metrics dis
 Source: FontLab Proteus API documentation"""
         ...
 
+    def setLocation(self, arg0: flLocation) -> bool:
+        """bool setLocation(flLocation)"""
+        ...
+
     def setProperty(self, *args: Any, **kwargs: Any) -> Any:
         """setProperty('key', value) - set object property by 'key' or number """
         ...
@@ -11939,6 +12306,8 @@ Source: FontLab Proteus API documentation"""
     def update(self) -> Any:
         """update()"""
         ...
+    activeLayer: Any
+    'flLayer\n\nThe real layer resolved for this occurrence; no editable layer for an interpolated presentation.\n\nSource: FontLab Proteus API documentation'
     bodyRectOnCanvas: Any
     'QRectF\n\nThe UPM body rectangle (from descender to ascender) in canvas coordinates.\n\nSource: FontLab Proteus API documentation'
     boundingBox: Any
@@ -11960,12 +12329,16 @@ Source: FontLab Proteus API documentation"""
     'bool'
     hasHistoryStates: Any
     'bool'
+    hasPresentationOverride: Any
+    'bool\n\nWhether this occurrence explicitly selects a layer or location.\n\nSource: FontLab Proteus API documentation'
     id: Any
     'object id'
     isActive: Any
     'bool\n\n`True` if this is the glyph currently open for editing in the glyph editor.\n\nSource: FontLab Proteus API documentation'
     isChanged: Any
     'bool'
+    isEditable: Any
+    "bool\n\nWhether the resolved layer permits editing, independent of the canvas's across-glyph policy.\n\nSource: FontLab Proteus API documentation"
     isNull: Any
     'bool'
     isNullGlyph: Any
@@ -12089,6 +12462,12 @@ Constructors:
 
 Native bases: object
 
+Captured native MRO: flGraphicsInfo, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature.
+
 Supplemental documentation:
 Graphics information. The captured declaration exposes the attribute `transform`. It is created with no captured constructor overloads. It also carries the shared object members `changed`, `clone`, `cloneObject`, `getProperty`, `setProperty`, `release`, `remove` and `update` and the shared attributes `id`, `name`, `type`, `isValid` and `isNull`.
 
@@ -12096,8 +12475,8 @@ Source: FontLab Proteus API documentation
 
 Source: generated/fontlab.py: flGraphicsInfo captured declaration"""
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
 
     def changed(self) -> Any:
@@ -12124,11 +12503,13 @@ Source: generated/fontlab.py: flGraphicsInfo captured declaration"""
         """Clone the object"""
         ...
 
-    def cloneObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def cloneObject(*args: Any, **kwargs: Any) -> Any:
         """flObject cloneObject(const flObject&); """
         ...
 
-    def createObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def createObject(*args: Any, **kwargs: Any) -> Any:
         """flObject/Nothing createObject(int);    """
         ...
 
@@ -12160,7 +12541,8 @@ Source: generated/fontlab.py: flGraphicsInfo captured declaration"""
         """hasHistoryState(uint history_ix)"""
         ...
 
-    def haveObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def haveObject(*args: Any, **kwargs: Any) -> Any:
         """bool haveObject(uint);                 """
         ...
 
@@ -12176,12 +12558,17 @@ Source: generated/fontlab.py: flGraphicsInfo captured declaration"""
         """initialHistoryIx()"""
         ...
 
-    def instanceType(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def instanceType(*args: Any, **kwargs: Any) -> Any:
         """int instanceType();                    """
         ...
 
     def isEqual(self, arg0: flObject) -> Any:
         """isEqual(flObject)"""
+        ...
+
+    def propertyNames(self, *args: Any, **kwargs: Any) -> Any:
+        """propertyNames(): sorted snapshot of dynamic property keys"""
         ...
 
     def release(self) -> Any:
@@ -12535,6 +12922,12 @@ Constructors:
 
 Native bases: object
 
+Captured native MRO: flGuideLine, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature.
+
 Supplemental documentation:
 An editing guideline with `angle`, `centerPoint` and `vectorPoint` attributes. The captured declaration identifies `centerPoint` and `vectorPoint` as QPointF values, and `linef` as a QLineF. `name` identifies the object; `color` is a QColor value. Consult the retained constructors for supported line and point forms.
 
@@ -12542,8 +12935,8 @@ Source: FontLab Proteus API documentation
 
 Source: generated/fontlab.py: flGuideLine captured declaration"""
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
 
     def applyTransform(self, arg0: QTransform) -> None:
@@ -12578,11 +12971,13 @@ Source: FontLab Proteus API documentation"""
         """Clone the object"""
         ...
 
-    def cloneObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def cloneObject(*args: Any, **kwargs: Any) -> Any:
         """flObject cloneObject(const flObject&); """
         ...
 
-    def counterPaper(self) -> int:
+    @_echopy_builtins.staticmethod
+    def counterPaper() -> int:
         """int counterPaper()
 
 Return the number of paper (font-level) guidelines currently in the font
@@ -12590,7 +12985,8 @@ Return the number of paper (font-level) guidelines currently in the font
 Source: FontLab Proteus API documentation"""
         ...
 
-    def createInstance(self) -> flGuideLine:
+    @_echopy_builtins.staticmethod
+    def createInstance() -> flGuideLine:
         """flGuideLine createInstance()
 
 Allocate a new guideline instance
@@ -12598,11 +12994,13 @@ Allocate a new guideline instance
 Source: FontLab Proteus API documentation"""
         ...
 
-    def createObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def createObject(*args: Any, **kwargs: Any) -> Any:
         """flObject/Nothing createObject(int);    """
         ...
 
-    def createPowerGuides(self, arg0: fgFont, arg1: flLayer, horizontal: bool, vertical: bool, use_glyph_guides: Any=...) -> bool:
+    @_echopy_builtins.staticmethod
+    def createPowerGuides(arg0: fgFont, arg1: flLayer, horizontal: bool, vertical: bool, use_glyph_guides: Any=...) -> bool:
         """bool createPowerGuides(fgFont, flLayer, bool horizontal, bool vertical, bool diagonal[, bool use_glyph_guides=true[, bool use_font_guides = true]])
 
 Auto-generate power guides from the extreme points of existing contours in this layer. Pass `horizontal=True` to capture tops and bottoms, `vertical=True` for left/right extremes, `diagonal=True` for diagonal tangent points
@@ -12630,7 +13028,8 @@ Source: FontLab Proteus API documentation"""
         """flag(uint f)"""
         ...
 
-    def getHashCode(self, arg0: QPointF, angle: float) -> int:
+    @_echopy_builtins.staticmethod
+    def getHashCode(arg0: QPointF, angle: float) -> int:
         """long getHashCode(QPointF, double angle)
 
 Compute a unique hash for a given position + angle combination. Used internally for deduplication — you rarely need this, but it can help you check whether two guidelines are "the same"
@@ -12658,7 +13057,8 @@ Source: FontLab Proteus API documentation"""
         """hasHistoryState(uint history_ix)"""
         ...
 
-    def haveObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def haveObject(*args: Any, **kwargs: Any) -> Any:
         """bool haveObject(uint);                 """
         ...
 
@@ -12674,7 +13074,8 @@ Source: FontLab Proteus API documentation"""
         """initialHistoryIx()"""
         ...
 
-    def instanceType(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def instanceType(*args: Any, **kwargs: Any) -> Any:
         """int instanceType();                    """
         ...
 
@@ -12682,7 +13083,8 @@ Source: FontLab Proteus API documentation"""
         """isEqual(flObject)"""
         ...
 
-    def isGuideLine(self, arg0: flObject) -> bool:
+    @_echopy_builtins.staticmethod
+    def isGuideLine(arg0: flObject) -> bool:
         """bool isGuideLine(flObject)
 
 Check whether a generic object is actually a guideline
@@ -12698,7 +13100,8 @@ Returns `True` if the guideline's angle is within `a` degrees of horizontal (0°
 Source: FontLab Proteus API documentation"""
         ...
 
-    def isSnapLine(self, arg0: flObject) -> bool:
+    @_echopy_builtins.staticmethod
+    def isSnapLine(arg0: flObject) -> bool:
         """bool isSnapLine(flObject)"""
         ...
 
@@ -12712,6 +13115,10 @@ Source: FontLab Proteus API documentation"""
 
     def offsetTo(self, arg0: QPointF, mode: int) -> QPointF:
         """QPointF offsetTo(QPointF, uint mode)"""
+        ...
+
+    def propertyNames(self, *args: Any, **kwargs: Any) -> Any:
+        """propertyNames(): sorted snapshot of dynamic property keys"""
         ...
 
     def release(self) -> Any:
@@ -12762,7 +13169,8 @@ Source: FontLab Proteus API documentation"""
         """uint snapFlag(uint role)"""
         ...
 
-    def sortGuideLines(self, ascending: Any=...) -> Any:
+    @_echopy_builtins.staticmethod
+    def sortGuideLines(ascending: Any=...) -> Any:
         """list(flGuideLine) sortGuideLines(list(flGuideLine)[, bool ascending = true])
 
 Sort a list of guidelines by their position value (lowest to highest by default)
@@ -12795,6 +13203,8 @@ Source: FontLab Proteus API documentation"""
     'QLineF\n\nThe extended line segment, if present\n\nSource: FontLab Proteus API documentation'
     extPosition: Any
     "double\n\nAn extended position value. For non-horizontal/vertical guides, this stores a secondary position along the guide's axis\n\nSource: FontLab Proteus API documentation"
+    extension: Any
+    'flNode: existing extension node, or None if absent (read-only)'
     flObjectFlags: dict
     hasChanges: Any
     'bool'
@@ -12816,6 +13226,8 @@ Source: FontLab Proteus API documentation"""
     'bool'
     isExluded: Any
     'bool'
+    isGhost: Any
+    'bool: actual ghost-hint flag (read-only)'
     isHint: Any
     'bool'
     isInUse: Any
@@ -13005,6 +13417,12 @@ Constructors:
 
 Native bases: object
 
+Captured native MRO: flHintingParameters, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature.
+
 Supplemental documentation:
 Font-level hinting parameters. The captured declaration exposes the method `init` and the attributes `blueFuzz`, `blueScale`, `blueShift`, `codePPM`, `dropoutPPM`, `flex`, `fontDirectionHint`, `forceBold`, `forceBoldTreshold`, `lowestRecPPEM`, `maxFunctionDefs`, `maxInstructionDefs`, `maxStackElements`, `maxStorage`, `maxTwilightPoints`, `maxZones`, `stemSnapLimit` and `zonePPM`. It is created as `flHintingParameters()`. Note the captured spelling `forceBoldTreshold`.
 
@@ -13012,8 +13430,8 @@ Source: FontLab Proteus API documentation
 
 Source: generated/fontlab.py: flHintingParameters captured declaration"""
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
 
     def init(self) -> Any:
@@ -13313,6 +13731,12 @@ Constructors:
 
 Native bases: object
 
+Captured native MRO: flInstance, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature.
+
 Supplemental documentation:
 A font instance with the string attributes `name`, `sgn`, `tsn`, `weight` and `width`, the bool attributes `bold`, `exportable` and `italic`, the numeric attributes `slv` (int) and `weightValue` (double), and a `location` attribute. The captured declaration exposes `autoSGN`, `autoSLV`, `autoTSN` and `setSLV`. It is created as `flInstance()` or as `flInstance(name, tsn, location)`.
 
@@ -13320,8 +13744,8 @@ Source: FontLab Proteus API documentation
 
 Source: generated/fontlab.py: flInstance captured declaration"""
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
 
     def autoSGN(self, *args: Any, **kwargs: Any) -> Any:
@@ -13369,6 +13793,8 @@ Source: FontLab Proteus API documentation"""
     'string\n\nStyle Group Name — used for grouping instances into families in Windows font menus\n\nSource: FontLab Proteus API documentation'
     slv: Any
     'int\n\nThe OS/2 style-linking value as a raw integer. This encodes bold/italic/regular flags in the OS/2 `fsSelection` field\n\nSource: FontLab Proteus API documentation'
+    tfn: Any
+    "string: family override; empty inherits the source family\n\nStored typographic family override. An empty string inherits the source font's family; this getter does not resolve that fallback or change `sgn`.\n\nSource: FontLab Proteus API documentation"
     tsn: Any
     'string\n\nTypographic Subfamily Name. The OpenType name table entry that positions this style within the typographic family. E.g. `"Bold"` within a family called `"MyFont"`\n\nSource: FontLab Proteus API documentation'
     weight: Any
@@ -13711,6 +14137,12 @@ Constructors:
 
 Native bases: object
 
+Captured native MRO: flItems, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature.
+
 Supplemental documentation:
 Application items. The captured declaration exposes `appendRecentFile`, `buildRecentList`, `clearRecentFiles`, `getCursor`, `getCursorId`, `instance`, `notifyActivateGlyph`, `notifyClipboardChanged`, `notifyGlyphActivated`, `notifyGlyphDeactivated`, `notifyFontSelected` and `notifyEditModeChanged`. It is created with no captured constructor overloads.
 
@@ -13718,47 +14150,57 @@ Source: FontLab Proteus API documentation
 
 Source: generated/fontlab.py: flItems captured declaration"""
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
 
-    def appendRecentFile(self, arg0: str, file_name: str) -> Any:
+    @_echopy_builtins.staticmethod
+    def appendRecentFile(arg0: str, file_name: str) -> Any:
         """appendRecentFile(QString, QString file_name)"""
         ...
 
-    def buildRecentList(self, arg0: str) -> Any:
+    @_echopy_builtins.staticmethod
+    def buildRecentList(arg0: str) -> Any:
         """QStringList/Nothing buildRecentList(QString)"""
         ...
 
-    def clearRecentFiles(self, arg0: str) -> Any:
+    @_echopy_builtins.staticmethod
+    def clearRecentFiles(arg0: str) -> Any:
         """clearRecentFiles(QString )"""
         ...
 
-    def createObject(self, type: int, key: flObject) -> flObject:
+    @_echopy_builtins.staticmethod
+    def createObject(type: int, key: flObject) -> flObject:
         """flObject createObject(int type, flObject key)"""
         ...
 
-    def getCursor(self, CursorId: Any) -> QCursor:
+    @_echopy_builtins.staticmethod
+    def getCursor(CursorId: Any) -> QCursor:
         """QCursor getCursor(CursorId)"""
         ...
 
-    def getCursorId(self, arg0: str, hot_x: int, hot_y: int) -> Any:
+    @_echopy_builtins.staticmethod
+    def getCursorId(arg0: str, hot_x: int, hot_y: int) -> Any:
         """CursorId getCursorId(QString, int hot_x, int hot_y)"""
         ...
 
-    def guidelinesEditingEnabled(self) -> bool:
+    @_echopy_builtins.staticmethod
+    def guidelinesEditingEnabled() -> bool:
         """bool guidelinesEditingEnabled()"""
         ...
 
-    def init(self) -> Any:
+    @_echopy_builtins.staticmethod
+    def init() -> Any:
         """init()"""
         ...
 
-    def instance(self) -> flItems:
+    @_echopy_builtins.staticmethod
+    def instance() -> flItems:
         """flItems instance()"""
         ...
 
-    def notifyActivateGlyph(self, arg0: flGlyphInfo) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyActivateGlyph(arg0: flGlyphInfo) -> Any:
         """notifyActivateGlyph(flGlyphInfo)
 
 Signals that the given glyph should be considered the active glyph.
@@ -13766,7 +14208,8 @@ Signals that the given glyph should be considered the active glyph.
 Source: FontLab Proteus API documentation"""
         ...
 
-    def notifyAnchorsChanged(self) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyAnchorsChanged() -> Any:
         """notifyAnchorsChanged()
 
 Signals that the anchor points in the current glyph have changed.
@@ -13774,7 +14217,8 @@ Signals that the anchor points in the current glyph have changed.
 Source: FontLab Proteus API documentation"""
         ...
 
-    def notifyApplyTranformFrame(self) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyApplyTranformFrame() -> Any:
         """notifyApplyTranformFrame()
 
 Signals that the transform frame was applied.
@@ -13782,7 +14226,8 @@ Signals that the transform frame was applied.
 Source: FontLab Proteus API documentation"""
         ...
 
-    def notifyAuditHovered(self, id: int) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyAuditHovered(id: int) -> Any:
         """notifyAuditHovered(uint id)
 
 Signals that an audit item is being hovered in the audit panel.
@@ -13790,7 +14235,8 @@ Signals that an audit item is being hovered in the audit panel.
 Source: FontLab Proteus API documentation"""
         ...
 
-    def notifyAutoShapseChanges(self, arg0: flLayer) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyAutoShapseChanges(arg0: flLayer) -> Any:
         """notifyAutoShapseChanges(flLayer)
 
 Signals that auto-shapes in the given layer have changed.
@@ -13798,7 +14244,8 @@ Signals that auto-shapes in the given layer have changed.
 Source: FontLab Proteus API documentation"""
         ...
 
-    def notifyAvailableToSelectNodes(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyAvailableToSelectNodes(*args: Any, **kwargs: Any) -> Any:
         """notifyAvailableToSelectNodes( list(list(flNodeInfo)) )
 
 Signals which nodes are available for selection (for tools that limit selectability).
@@ -13806,7 +14253,8 @@ Signals which nodes are available for selection (for tools that limit selectabil
 Source: FontLab Proteus API documentation"""
         ...
 
-    def notifyBrushModeSelected(self, smart: int) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyBrushModeSelected(smart: int) -> Any:
         """notifyBrushModeSelected(int smart)
 
 Signals a brush mode change.
@@ -13814,7 +14262,8 @@ Signals a brush mode change.
 Source: FontLab Proteus API documentation"""
         ...
 
-    def notifyBrushSelected(self, PaintBrush: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyBrushSelected(PaintBrush: Any) -> Any:
         """notifyBrushSelected(PaintBrush)
 
 Signals that a brush was selected.
@@ -13822,7 +14271,8 @@ Signals that a brush was selected.
 Source: FontLab Proteus API documentation"""
         ...
 
-    def notifyBrushSet(self) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyBrushSet() -> Any:
         """notifyBrushSet()
 
 Signals that the active brush was set.
@@ -13830,7 +14280,8 @@ Signals that the active brush was set.
 Source: FontLab Proteus API documentation"""
         ...
 
-    def notifyCancelTranformFrame(self) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyCancelTranformFrame() -> Any:
         """notifyCancelTranformFrame()
 
 Signals that the transform frame operation was cancelled.
@@ -13838,7 +14289,8 @@ Signals that the transform frame operation was cancelled.
 Source: FontLab Proteus API documentation"""
         ...
 
-    def notifyCanvasAttached(self, arg0: flCanvas) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyCanvasAttached(arg0: flCanvas) -> Any:
         """notifyCanvasAttached(flCanvas)
 
 Signals that a canvas was attached to the workspace.
@@ -13846,7 +14298,8 @@ Signals that a canvas was attached to the workspace.
 Source: FontLab Proteus API documentation"""
         ...
 
-    def notifyCanvasEnterFocus(self, arg0: flCanvas) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyCanvasEnterFocus(arg0: flCanvas) -> Any:
         """notifyCanvasEnterFocus(flCanvas)
 
 Signals that the given canvas gained keyboard focus.
@@ -13854,7 +14307,8 @@ Signals that the given canvas gained keyboard focus.
 Source: FontLab Proteus API documentation"""
         ...
 
-    def notifyCanvasLeaveFocus(self, arg0: flCanvas) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyCanvasLeaveFocus(arg0: flCanvas) -> Any:
         """notifyCanvasLeaveFocus(flCanvas)
 
 Signals that the given canvas lost keyboard focus.
@@ -13862,7 +14316,8 @@ Signals that the given canvas lost keyboard focus.
 Source: FontLab Proteus API documentation"""
         ...
 
-    def notifyCanvasRemoved(self, arg0: flCanvas) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyCanvasRemoved(arg0: flCanvas) -> Any:
         """notifyCanvasRemoved(flCanvas)
 
 Signals that a canvas window was removed.
@@ -13870,15 +14325,17 @@ Signals that a canvas window was removed.
 Source: FontLab Proteus API documentation"""
         ...
 
-    def notifyChangesApplied(self, recursive: Any=...) -> Any:
-        """notifyChangesApplied([QString title, flObject object / list(flObject)[, bool recursive=false]])
+    @_echopy_builtins.staticmethod
+    def notifyChangesApplied(recursive: Any=...) -> Any:
+        """notifyChangesApplied([QString title, flObject object / list(flObject)[, bool recursive=true]])
 
 Signals that changes were applied and should be recorded in the undo history. Pass a descriptive `title` for the undo step name (e.g. `"Move nodes"`), and the object(s) that changed. This is how your scripted edits become undoable.
 
 Source: FontLab Proteus API documentation"""
         ...
 
-    def notifyClipboardChanged(self) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyClipboardChanged() -> Any:
         """notifyClipboardChanged()
 
 Signals that the clipboard contents changed.
@@ -13886,7 +14343,8 @@ Signals that the clipboard contents changed.
 Source: FontLab Proteus API documentation"""
         ...
 
-    def notifyColorSet(self, arg0: QColor, b: bool) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyColorSet(arg0: QColor, b: bool) -> Any:
         """notifyColorSet(QColor, bool b)
 
 Signals that a colour was selected in the colour picker.
@@ -13894,7 +14352,8 @@ Signals that a colour was selected in the colour picker.
 Source: FontLab Proteus API documentation"""
         ...
 
-    def notifyCommandSelected(self) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyCommandSelected() -> Any:
         """notifyCommandSelected()
 
 Signals that a command was selected.
@@ -13902,7 +14361,8 @@ Signals that a command was selected.
 Source: FontLab Proteus API documentation"""
         ...
 
-    def notifyCurrentPaperChanged(self, arg0: flPaper) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyCurrentPaperChanged(arg0: flPaper) -> Any:
         """notifyCurrentPaperChanged(flPaper)
 
 Signals that the active canvas background (paper) changed.
@@ -13910,7 +14370,8 @@ Signals that the active canvas background (paper) changed.
 Source: FontLab Proteus API documentation"""
         ...
 
-    def notifyDropDone(self, canvas: flCanvas) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyDropDone(canvas: flCanvas) -> Any:
         """notifyDropDone(flCanvas& canvas)
 
 Signals that a drag-and-drop operation on the given canvas has completed.
@@ -13918,7 +14379,8 @@ Signals that a drag-and-drop operation on the given canvas has completed.
 Source: FontLab Proteus API documentation"""
         ...
 
-    def notifyEditActionFinished(self) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyEditActionFinished() -> Any:
         """notifyEditActionFinished()
 
 Signals that an edit action has completed.
@@ -13926,7 +14388,8 @@ Signals that an edit action has completed.
 Source: FontLab Proteus API documentation"""
         ...
 
-    def notifyEditActionStarted(self) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyEditActionStarted() -> Any:
         """notifyEditActionStarted()
 
 Signals that an edit action has begun.
@@ -13934,7 +14397,8 @@ Signals that an edit action has begun.
 Source: FontLab Proteus API documentation"""
         ...
 
-    def notifyEditModeChanged(self, mode: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyEditModeChanged(mode: Any) -> Any:
         """notifyEditModeChanged(EditMode mode)
 
 Signals that the editor mode changed (e.g. from node editing to text entry).
@@ -13944,7 +14408,8 @@ Signals an editor mode change.
 Source: FontLab Proteus API documentation"""
         ...
 
-    def notifyEditingChanged(self, arg0: flAbstractEditor) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyEditingChanged(arg0: flAbstractEditor) -> Any:
         """notifyEditingChanged(flAbstractEditor)
 
 Signals that the editing state changed.
@@ -13952,7 +14417,8 @@ Signals that the editing state changed.
 Source: FontLab Proteus API documentation"""
         ...
 
-    def notifyEditingFinished(self) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyEditingFinished() -> Any:
         """notifyEditingFinished()
 
 Signals that an editing session has ended.
@@ -13960,7 +14426,8 @@ Signals that an editing session has ended.
 Source: FontLab Proteus API documentation"""
         ...
 
-    def notifyFeaturesChanged(self, package_id: int, binary: bool) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyFeaturesChanged(package_id: int, binary: bool) -> Any:
         """notifyFeaturesChanged(uint package_id, bool binary)
 
 Signals that the OpenType feature tables have changed. Set `binary=True` if the binary tables changed, `False` if the source feature code changed.
@@ -13968,7 +14435,8 @@ Signals that the OpenType feature tables have changed. Set `binary=True` if the 
 Source: FontLab Proteus API documentation"""
         ...
 
-    def notifyFontPanelActivated(self, b: bool) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyFontPanelActivated(b: bool) -> Any:
         """notifyFontPanelActivated(bool b)
 
 Signals that the font panel has been activated or deactivated.
@@ -13976,7 +14444,8 @@ Signals that the font panel has been activated or deactivated.
 Source: FontLab Proteus API documentation"""
         ...
 
-    def notifyFontSelected(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyFontSelected(*args: Any, **kwargs: Any) -> Any:
         """notifyFontSelected(uint id);
 
 Signals that the user has selected a font (by its workspace ID).
@@ -13984,7 +14453,8 @@ Signals that the user has selected a font (by its workspace ID).
 Source: FontLab Proteus API documentation"""
         ...
 
-    def notifyFrameSelected(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyFrameSelected(*args: Any, **kwargs: Any) -> Any:
         """notifyFrameSelected(list(flNodeInfo))
 
 Signals that a frame (bounding box) selection was made.
@@ -13992,7 +14462,8 @@ Signals that a frame (bounding box) selection was made.
 Source: FontLab Proteus API documentation"""
         ...
 
-    def notifyGalleryChanged(self, arg0: flObject) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyGalleryChanged(arg0: flObject) -> Any:
         """notifyGalleryChanged(flObject)
 
 Signals that the gallery panel content has changed.
@@ -14000,7 +14471,8 @@ Signals that the gallery panel content has changed.
 Source: FontLab Proteus API documentation"""
         ...
 
-    def notifyGlyphActivated(self, arg0: flGlyphInfo) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyGlyphActivated(arg0: flGlyphInfo) -> Any:
         """notifyGlyphActivated(flGlyphInfo)
 
 Signals that a glyph has been activated (opened in the editor).
@@ -14008,7 +14480,8 @@ Signals that a glyph has been activated (opened in the editor).
 Source: FontLab Proteus API documentation"""
         ...
 
-    def notifyGlyphDeactivated(self) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyGlyphDeactivated() -> Any:
         """notifyGlyphDeactivated()
 
 Signals that the currently active glyph was closed or deactivated.
@@ -14016,7 +14489,8 @@ Signals that the currently active glyph was closed or deactivated.
 Source: FontLab Proteus API documentation"""
         ...
 
-    def notifyGlyphDoubleClick(self, arg0: flGlyphInfo) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyGlyphDoubleClick(arg0: flGlyphInfo) -> Any:
         """notifyGlyphDoubleClick(flGlyphInfo)
 
 Signals that the user double-clicked on a glyph cell (typically opens the glyph editor).
@@ -14024,7 +14498,8 @@ Signals that the user double-clicked on a glyph cell (typically opens the glyph 
 Source: FontLab Proteus API documentation"""
         ...
 
-    def notifyGlyphIdSelected(self, packageId: int, glyphId: int, replace: bool) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyGlyphIdSelected(packageId: int, glyphId: int, replace: bool) -> Any:
         """notifyGlyphIdSelected(uint packageId, uint glyphId, bool replace)
 
 Signals a glyph selection change. Set `replace=True` to replace the current selection, `False` to extend it.
@@ -14032,7 +14507,8 @@ Signals a glyph selection change. Set `replace=True` to replace the current sele
 Source: FontLab Proteus API documentation"""
         ...
 
-    def notifyGlyphMaximized(self, arg0: flGlyphInfo) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyGlyphMaximized(arg0: flGlyphInfo) -> Any:
         """notifyGlyphMaximized(flGlyphInfo)
 
 Signals that a glyph window was maximised.
@@ -14040,7 +14516,8 @@ Signals that a glyph window was maximised.
 Source: FontLab Proteus API documentation"""
         ...
 
-    def notifyGlyphPinPointChanged(self, pin_point: Any=...) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyGlyphPinPointChanged(pin_point: Any=...) -> Any:
         """notifyGlyphPinPointChanged([flPinPoint pin_point = flnull[, flGlyphInfo glyph_info = flnull]])
 
 Signals that a glyph-level pin point (anchor) has changed.
@@ -14048,7 +14525,8 @@ Signals that a glyph-level pin point (anchor) has changed.
 Source: FontLab Proteus API documentation"""
         ...
 
-    def notifyGlyphPinPointCreated(self, arg0: flGlyphInfo) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyGlyphPinPointCreated(arg0: flGlyphInfo) -> Any:
         """notifyGlyphPinPointCreated(flGlyphInfo)
 
 Signals that a new glyph-level pin point (anchor) was created.
@@ -14056,7 +14534,8 @@ Signals that a new glyph-level pin point (anchor) was created.
 Source: FontLab Proteus API documentation"""
         ...
 
-    def notifyGlyphUpdated(self, packageId: int, glyphId: int) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyGlyphUpdated(packageId: int, glyphId: int) -> Any:
         """notifyGlyphUpdated(uint packageId, uint glyphId)
 
 Signals that a single glyph's data has been updated. This is the key method to call after editing a glyph in a script — it tells the font window, glyph window, and any open panels to refresh their view of this glyph.
@@ -14064,7 +14543,8 @@ Signals that a single glyph's data has been updated. This is the key method to c
 Source: FontLab Proteus API documentation"""
         ...
 
-    def notifyGlyphWindowInactive(self) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyGlyphWindowInactive() -> Any:
         """notifyGlyphWindowInactive()
 
 Signals that the glyph window has become inactive.
@@ -14072,7 +14552,8 @@ Signals that the glyph window has become inactive.
 Source: FontLab Proteus API documentation"""
         ...
 
-    def notifyGlyphsUpdated(self, packageId: int, glyphIds: set[Any]) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyGlyphsUpdated(packageId: int, glyphIds: set[Any]) -> Any:
         """notifyGlyphsUpdated(uint packageId, QSet<uint32_t> glyphIds)
 
 Batch version of `notifyGlyphUpdated` — signals that multiple glyphs changed at once. Use this after editing many glyphs; it's much more efficient than calling `notifyGlyphUpdated` in a loop.
@@ -14080,7 +14561,8 @@ Batch version of `notifyGlyphUpdated` — signals that multiple glyphs changed a
 Source: FontLab Proteus API documentation"""
         ...
 
-    def notifyGraphEdgeSelectionChanged(self, arg0: flObject) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyGraphEdgeSelectionChanged(arg0: flObject) -> Any:
         """notifyGraphEdgeSelectionChanged(flObject)
 
 Signals that a ShapeBuilder graph edge selection changed.
@@ -14088,7 +14570,8 @@ Signals that a ShapeBuilder graph edge selection changed.
 Source: FontLab Proteus API documentation"""
         ...
 
-    def notifyGuidelinesChanged(self, arg0: flCanvas) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyGuidelinesChanged(arg0: flCanvas) -> Any:
         """notifyGuidelinesChanged(flCanvas)
 
 Signals that guidelines on the given canvas have changed.
@@ -14096,7 +14579,8 @@ Signals that guidelines on the given canvas have changed.
 Source: FontLab Proteus API documentation"""
         ...
 
-    def notifyGuidelinesSelected(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyGuidelinesSelected(*args: Any, **kwargs: Any) -> Any:
         """notifyGuidelinesSelected(list(flGuideLine))
 
 Signals that the given guidelines are now selected.
@@ -14104,7 +14588,8 @@ Signals that the given guidelines are now selected.
 Source: FontLab Proteus API documentation"""
         ...
 
-    def notifyHidePanels(self) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyHidePanels() -> Any:
         """notifyHidePanels()
 
 Signals that all side panels should be hidden.
@@ -14112,7 +14597,8 @@ Signals that all side panels should be hidden.
 Source: FontLab Proteus API documentation"""
         ...
 
-    def notifyHistoryChanged(self) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyHistoryChanged() -> Any:
         """notifyHistoryChanged()
 
 Signals that the undo history has changed.
@@ -14120,7 +14606,8 @@ Signals that the undo history has changed.
 Source: FontLab Proteus API documentation"""
         ...
 
-    def notifyKeyHash(self) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyKeyHash() -> Any:
         """notifyKeyHash()
 
 Signals that the `#` key was pressed — used by some panels for quick-access shortcuts.
@@ -14128,7 +14615,8 @@ Signals that the `#` key was pressed — used by some panels for quick-access sh
 Source: FontLab Proteus API documentation"""
         ...
 
-    def notifyKeyRepeat(self, key: int) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyKeyRepeat(key: int) -> Any:
         """notifyKeyRepeat(int key)
 
 Signals a key-repeat event for the given key code.
@@ -14136,7 +14624,8 @@ Signals a key-repeat event for the given key code.
 Source: FontLab Proteus API documentation"""
         ...
 
-    def notifyKeySlash(self) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyKeySlash() -> Any:
         """notifyKeySlash()
 
 Signals that the `/` key was pressed — used by some panels for quick-access shortcuts.
@@ -14144,7 +14633,8 @@ Signals that the `/` key was pressed — used by some panels for quick-access sh
 Source: FontLab Proteus API documentation"""
         ...
 
-    def notifyLayerActivated(self, arg0: flLayer) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyLayerActivated(arg0: flLayer) -> Any:
         """notifyLayerActivated(flLayer)
 
 Signals that a layer was activated — the user or script switched to editing a different master layer.
@@ -14152,7 +14642,8 @@ Signals that a layer was activated — the user or script switched to editing a 
 Source: FontLab Proteus API documentation"""
         ...
 
-    def notifyModelChanged(self) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyModelChanged() -> Any:
         """notifyModelChanged()
 
 Signals a generic model-level change — a catch-all that causes broad refreshes.
@@ -14160,7 +14651,8 @@ Signals a generic model-level change — a catch-all that causes broad refreshes
 Source: FontLab Proteus API documentation"""
         ...
 
-    def notifyNodeChanged(self, arg0: flNodeInfo) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyNodeChanged(arg0: flNodeInfo) -> Any:
         """notifyNodeChanged(flNodeInfo)
 
 Signals that a single node's data changed.
@@ -14168,7 +14660,8 @@ Signals that a single node's data changed.
 Source: FontLab Proteus API documentation"""
         ...
 
-    def notifyNodesSelected(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyNodesSelected(*args: Any, **kwargs: Any) -> Any:
         """notifyNodesSelected(list(flNodeInfo))
 
 Signals that a specific set of nodes was selected.
@@ -14176,7 +14669,8 @@ Signals that a specific set of nodes was selected.
 Source: FontLab Proteus API documentation"""
         ...
 
-    def notifyPackageAdded(self, arg0: flPackage) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyPackageAdded(arg0: flPackage) -> Any:
         """notifyPackageAdded(flPackage)
 
 Signals that a new font was opened and added to the workspace. UI panels will update to include the new font.
@@ -14184,7 +14678,8 @@ Signals that a new font was opened and added to the workspace. UI panels will up
 Source: FontLab Proteus API documentation"""
         ...
 
-    def notifyPackageClosed(self, arg0: flPackage) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyPackageClosed(arg0: flPackage) -> Any:
         """notifyPackageClosed(flPackage)
 
 Signals that a font is about to close.
@@ -14192,7 +14687,8 @@ Signals that a font is about to close.
 Source: FontLab Proteus API documentation"""
         ...
 
-    def notifyPackageContentUpdated(self, id: int) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyPackageContentUpdated(id: int) -> Any:
         """notifyPackageContentUpdated(uint id)
 
 Signals that the content (glyph list, etc.) of the font has changed.
@@ -14200,7 +14696,8 @@ Signals that the content (glyph list, etc.) of the font has changed.
 Source: FontLab Proteus API documentation"""
         ...
 
-    def notifyPackageReaded(self, arg0: flPackage) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyPackageReaded(arg0: flPackage) -> Any:
         """notifyPackageReaded(flPackage)
 
 Signals that a font was successfully loaded (read) from disk.
@@ -14208,7 +14705,8 @@ Signals that a font was successfully loaded (read) from disk.
 Source: FontLab Proteus API documentation"""
         ...
 
-    def notifyPackageRemoved(self, arg0: flPackage) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyPackageRemoved(arg0: flPackage) -> Any:
         """notifyPackageRemoved(flPackage)
 
 Signals that a font has been removed from the workspace.
@@ -14216,7 +14714,8 @@ Signals that a font has been removed from the workspace.
 Source: FontLab Proteus API documentation"""
         ...
 
-    def notifyPackageUpdated(self, id: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyPackageUpdated(id: Any) -> Any:
         """notifyPackageUpdated(flPackage | uint id)
 
 Signals that a font's data has changed. This triggers a refresh of all displays that show this font.
@@ -14224,7 +14723,8 @@ Signals that a font's data has changed. This triggers a refresh of all displays 
 Source: FontLab Proteus API documentation"""
         ...
 
-    def notifyPackagesRemoved(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyPackagesRemoved(*args: Any, **kwargs: Any) -> Any:
         """notifyPackagesRemoved(list(flObject))
 
 Batch version — signals that multiple fonts were removed.
@@ -14232,7 +14732,8 @@ Batch version — signals that multiple fonts were removed.
 Source: FontLab Proteus API documentation"""
         ...
 
-    def notifyPackagesUpdated(self) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyPackagesUpdated() -> Any:
         """notifyPackagesUpdated()
 
 Signals that all packages have been updated — a blanket refresh trigger.
@@ -14240,7 +14741,8 @@ Signals that all packages have been updated — a blanket refresh trigger.
 Source: FontLab Proteus API documentation"""
         ...
 
-    def notifyPinPointChanged(self, pin_point: Any=...) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyPinPointChanged(pin_point: Any=...) -> Any:
         """notifyPinPointChanged([flPinPoint pin_point = flnull[, flShapeInfo shape_info = flnull]])
 
 Signals that a shape-level pin point changed.
@@ -14248,7 +14750,8 @@ Signals that a shape-level pin point changed.
 Source: FontLab Proteus API documentation"""
         ...
 
-    def notifyPinPointCreated(self, arg0: flShapeInfo) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyPinPointCreated(arg0: flShapeInfo) -> Any:
         """notifyPinPointCreated(flShapeInfo)
 
 Signals that a new pin point was created on a shape.
@@ -14256,7 +14759,8 @@ Signals that a new pin point was created on a shape.
 Source: FontLab Proteus API documentation"""
         ...
 
-    def notifyPinPointSelectionChanged(self) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyPinPointSelectionChanged() -> Any:
         """notifyPinPointSelectionChanged()
 
 Signals that the pin point (anchor) selection changed.
@@ -14264,7 +14768,8 @@ Signals that the pin point (anchor) selection changed.
 Source: FontLab Proteus API documentation"""
         ...
 
-    def notifyPinSelected(self, id: int) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyPinSelected(id: int) -> Any:
         """notifyPinSelected(uint id)
 
 Signals that a pin point was selected, identified by its ID.
@@ -14272,7 +14777,8 @@ Signals that a pin point was selected, identified by its ID.
 Source: FontLab Proteus API documentation"""
         ...
 
-    def notifyPreferencesChanged(self) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyPreferencesChanged() -> Any:
         """notifyPreferencesChanged()
 
 Signals that application preferences changed. Call this after modifying `flPreferences` values so that all panels and displays reflect the new settings.
@@ -14280,7 +14786,8 @@ Signals that application preferences changed. Call this after modifying `flPrefe
 Source: FontLab Proteus API documentation"""
         ...
 
-    def notifyProjectClosed(self) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyProjectClosed() -> Any:
         """notifyProjectClosed()
 
 Signals that the current project was closed.
@@ -14288,7 +14795,8 @@ Signals that the current project was closed.
 Source: FontLab Proteus API documentation"""
         ...
 
-    def notifyProjectReaded(self, file_name: str) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyProjectReaded(file_name: str) -> Any:
         """notifyProjectReaded(QString file_name)
 
 Signals that a project was loaded from `file_name`.
@@ -14296,7 +14804,8 @@ Signals that a project was loaded from `file_name`.
 Source: FontLab Proteus API documentation"""
         ...
 
-    def notifyProjectSaved(self, file_name: str) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyProjectSaved(file_name: str) -> Any:
         """notifyProjectSaved(QString file_name)
 
 Signals that the project was saved to `file_name`.
@@ -14304,7 +14813,8 @@ Signals that the project was saved to `file_name`.
 Source: FontLab Proteus API documentation"""
         ...
 
-    def notifyPropertiesChanged(self, arg0: flObject) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyPropertiesChanged(arg0: flObject) -> Any:
         """notifyPropertiesChanged(flObject)
 
 Signals that the properties of the given object changed.
@@ -14312,7 +14822,8 @@ Signals that the properties of the given object changed.
 Source: FontLab Proteus API documentation"""
         ...
 
-    def notifyRenderingBegin(self, info: str) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyRenderingBegin(info: str) -> Any:
         """notifyRenderingBegin(QString info)
 
 Signals that a rendering operation has started.
@@ -14320,7 +14831,8 @@ Signals that a rendering operation has started.
 Source: FontLab Proteus API documentation"""
         ...
 
-    def notifyRenderingFinished(self, success: bool) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyRenderingFinished(success: bool) -> Any:
         """notifyRenderingFinished(bool success)
 
 Signals that a rendering operation has finished.
@@ -14328,7 +14840,8 @@ Signals that a rendering operation has finished.
 Source: FontLab Proteus API documentation"""
         ...
 
-    def notifyReplaceGlyphsByFgId(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyReplaceGlyphsByFgId(*args: Any, **kwargs: Any) -> Any:
         """notifyReplaceGlyphsByFgId(list(unsigned long), int replace_count)
 
 Signals a batch glyph replacement by fontgate IDs.
@@ -14336,7 +14849,8 @@ Signals a batch glyph replacement by fontgate IDs.
 Source: FontLab Proteus API documentation"""
         ...
 
-    def notifyRequestChangeCurrentClipboard(self, xml: str) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyRequestChangeCurrentClipboard(xml: str) -> Any:
         """notifyRequestChangeCurrentClipboard(QString xml)
 
 Asks FontLab to replace the current clipboard content with the given XML string.
@@ -14344,7 +14858,8 @@ Asks FontLab to replace the current clipboard content with the given XML string.
 Source: FontLab Proteus API documentation"""
         ...
 
-    def notifyRequestNewProject(self) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyRequestNewProject() -> Any:
         """notifyRequestNewProject()
 
 Asks FontLab to create a new, empty project.
@@ -14352,7 +14867,8 @@ Asks FontLab to create a new, empty project.
 Source: FontLab Proteus API documentation"""
         ...
 
-    def notifyRequestOpenProject(self, file_name: str) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyRequestOpenProject(file_name: str) -> Any:
         """notifyRequestOpenProject(QString file_name)
 
 Asks FontLab to open a project file. With no argument, opens the file chooser dialog; with a path string, opens that file directly.
@@ -14360,7 +14876,8 @@ Asks FontLab to open a project file. With no argument, opens the file chooser di
 Source: FontLab Proteus API documentation"""
         ...
 
-    def notifyRequestPasteAction(self) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyRequestPasteAction() -> Any:
         """notifyRequestPasteAction()
 
 Asks FontLab to perform a paste operation.
@@ -14368,7 +14885,8 @@ Asks FontLab to perform a paste operation.
 Source: FontLab Proteus API documentation"""
         ...
 
-    def notifyRequestShowWelcome(self) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyRequestShowWelcome() -> Any:
         """notifyRequestShowWelcome()
 
 Shows the Welcome Screen.
@@ -14376,7 +14894,8 @@ Shows the Welcome Screen.
 Source: FontLab Proteus API documentation"""
         ...
 
-    def notifyRequestShowWorkspace(self) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyRequestShowWorkspace() -> Any:
         """notifyRequestShowWorkspace()
 
 Shows the main workspace window.
@@ -14384,7 +14903,8 @@ Shows the main workspace window.
 Source: FontLab Proteus API documentation"""
         ...
 
-    def notifySCVItemsChanged(self) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifySCVItemsChanged() -> Any:
         """notifySCVItemsChanged()
 
 Signals a change to SCV (source-control versioning) items.
@@ -14392,7 +14912,8 @@ Signals a change to SCV (source-control versioning) items.
 Source: FontLab Proteus API documentation"""
         ...
 
-    def notifyScrollToGlyph(self, arg0: flGlyphInfo) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyScrollToGlyph(arg0: flGlyphInfo) -> Any:
         """notifyScrollToGlyph(flGlyphInfo)
 
 Asks all panels to scroll so the given glyph slot is visible.
@@ -14400,7 +14921,8 @@ Asks all panels to scroll so the given glyph slot is visible.
 Source: FontLab Proteus API documentation"""
         ...
 
-    def notifySelectionChanged(self) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifySelectionChanged() -> Any:
         """notifySelectionChanged()
 
 Signals that the selection has changed. Any panel that shows selection info (like the Inspector) will refresh.
@@ -14408,7 +14930,8 @@ Signals that the selection has changed. Any panel that shows selection info (lik
 Source: FontLab Proteus API documentation"""
         ...
 
-    def notifyShapeActivated(self, arg0: flShapeInfo) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyShapeActivated(arg0: flShapeInfo) -> Any:
         """notifyShapeActivated(flShapeInfo)
 
 Signals that a shape was activated for editing.
@@ -14416,7 +14939,8 @@ Signals that a shape was activated for editing.
 Source: FontLab Proteus API documentation"""
         ...
 
-    def notifyShapeDeactivated(self) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyShapeDeactivated() -> Any:
         """notifyShapeDeactivated()
 
 Signals that the current shape was deactivated.
@@ -14424,7 +14948,8 @@ Signals that the current shape was deactivated.
 Source: FontLab Proteus API documentation"""
         ...
 
-    def notifyShowPanels(self) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyShowPanels() -> Any:
         """notifyShowPanels()
 
 Signals that all side panels should be shown.
@@ -14432,7 +14957,8 @@ Signals that all side panels should be shown.
 Source: FontLab Proteus API documentation"""
         ...
 
-    def notifySnapLineChanged(self, arg0: flGuideLine) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifySnapLineChanged(arg0: flGuideLine) -> Any:
         """notifySnapLineChanged(flGuideLine)
 
 Signals that a guideline used for snapping has changed.
@@ -14440,7 +14966,8 @@ Signals that a guideline used for snapping has changed.
 Source: FontLab Proteus API documentation"""
         ...
 
-    def notifySnapLinesChanged(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifySnapLinesChanged(*args: Any, **kwargs: Any) -> Any:
         """notifySnapLinesChanged(list(flGuideLine))
 
 Batch version — signals multiple snap guideline changes.
@@ -14448,7 +14975,8 @@ Batch version — signals multiple snap guideline changes.
 Source: FontLab Proteus API documentation"""
         ...
 
-    def notifyStaplerPreviewEnabled(self, enbl: bool) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyStaplerPreviewEnabled(enbl: bool) -> Any:
         """notifyStaplerPreviewEnabled(bool enbl)
 
 Signals whether the stapler (composite preview) overlay should be shown.
@@ -14456,7 +14984,8 @@ Signals whether the stapler (composite preview) overlay should be shown.
 Source: FontLab Proteus API documentation"""
         ...
 
-    def notifyStickerCreated(self) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyStickerCreated() -> Any:
         """notifyStickerCreated()
 
 Signals that a sticker (canvas annotation) was created.
@@ -14464,7 +14993,8 @@ Signals that a sticker (canvas annotation) was created.
 Source: FontLab Proteus API documentation"""
         ...
 
-    def notifyStopButtonClicked(self) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyStopButtonClicked() -> Any:
         """notifyStopButtonClicked()
 
 Signals that the stop button was clicked (cancels in-progress operations).
@@ -14472,7 +15002,8 @@ Signals that the stop button was clicked (cancels in-progress operations).
 Source: FontLab Proteus API documentation"""
         ...
 
-    def notifyTextBlockAdded(self, arg0: flTextBlock) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyTextBlockAdded(arg0: flTextBlock) -> Any:
         """notifyTextBlockAdded(flTextBlock)
 
 Signals that a text block was added to the canvas.
@@ -14480,7 +15011,8 @@ Signals that a text block was added to the canvas.
 Source: FontLab Proteus API documentation"""
         ...
 
-    def notifyTextBlockItemActivated(self, check_tools: Any=...) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyTextBlockItemActivated(check_tools: Any=...) -> Any:
         """notifyTextBlockItemActivated(flTextBlockItem[, bool check_tools = true])
 
 Signals that a text block item was activated for editing.
@@ -14488,7 +15020,8 @@ Signals that a text block item was activated for editing.
 Source: FontLab Proteus API documentation"""
         ...
 
-    def notifyTextBlockItemChanged(self, arg0: flTextBlockItem) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyTextBlockItemChanged(arg0: flTextBlockItem) -> Any:
         """notifyTextBlockItemChanged(flTextBlockItem)
 
 Signals that a text block's content changed.
@@ -14496,7 +15029,8 @@ Signals that a text block's content changed.
 Source: FontLab Proteus API documentation"""
         ...
 
-    def notifyTextBlockItemDeactivated(self, arg0: flTextBlockItem) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyTextBlockItemDeactivated(arg0: flTextBlockItem) -> Any:
         """notifyTextBlockItemDeactivated(flTextBlockItem)
 
 Signals that a text block item was deactivated (editing ended).
@@ -14504,7 +15038,8 @@ Signals that a text block item was deactivated (editing ended).
 Source: FontLab Proteus API documentation"""
         ...
 
-    def notifyTextBlockItemMaximized(self, arg0: flTextBlockItem) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyTextBlockItemMaximized(arg0: flTextBlockItem) -> Any:
         """notifyTextBlockItemMaximized(flTextBlockItem)
 
 Signals that a text block item was maximised to fill the canvas.
@@ -14512,7 +15047,8 @@ Signals that a text block item was maximised to fill the canvas.
 Source: FontLab Proteus API documentation"""
         ...
 
-    def notifyTextBlockItemNormalized(self, arg0: flTextBlockItem) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyTextBlockItemNormalized(arg0: flTextBlockItem) -> Any:
         """notifyTextBlockItemNormalized(flTextBlockItem)
 
 Signals that a text block item was restored from maximised state to its normal size.
@@ -14520,7 +15056,8 @@ Signals that a text block item was restored from maximised state to its normal s
 Source: FontLab Proteus API documentation"""
         ...
 
-    def notifyTextBlockItemsSelectionChanged(self, arg0: flCanvas) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyTextBlockItemsSelectionChanged(arg0: flCanvas) -> Any:
         """notifyTextBlockItemsSelectionChanged(flCanvas)
 
 Signals that the selection of text block items on the given canvas changed.
@@ -14528,7 +15065,8 @@ Signals that the selection of text block items on the given canvas changed.
 Source: FontLab Proteus API documentation"""
         ...
 
-    def notifyTextBlockRemoved(self, arg0: flTextBlock) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyTextBlockRemoved(arg0: flTextBlock) -> Any:
         """notifyTextBlockRemoved(flTextBlock)
 
 Signals that a text block was removed.
@@ -14536,7 +15074,8 @@ Signals that a text block was removed.
 Source: FontLab Proteus API documentation"""
         ...
 
-    def notifyToolChanged(self, tool: flBasicTool) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyToolChanged(tool: flBasicTool) -> Any:
         """notifyToolChanged(flBasicTool& tool)
 
 Signals that the active tool changed.
@@ -14544,7 +15083,8 @@ Signals that the active tool changed.
 Source: FontLab Proteus API documentation"""
         ...
 
-    def notifyTransformDataChanged(self, TransformFrame: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyTransformDataChanged(TransformFrame: Any) -> Any:
         """notifyTransformDataChanged(TransformFrame)
 
 Signals that the transform frame data changed during a live transform.
@@ -14552,7 +15092,8 @@ Signals that the transform frame data changed during a live transform.
 Source: FontLab Proteus API documentation"""
         ...
 
-    def notifyTransformFrameChanged(self, arg0: flObject) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyTransformFrameChanged(arg0: flObject) -> Any:
         """notifyTransformFrameChanged(flObject)
 
 Signals that the transform frame itself changed.
@@ -14560,7 +15101,8 @@ Signals that the transform frame itself changed.
 Source: FontLab Proteus API documentation"""
         ...
 
-    def notifyTransformFrameFinished(self, arg0: flObject) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyTransformFrameFinished(arg0: flObject) -> Any:
         """notifyTransformFrameFinished(flObject)
 
 Signals that a transform frame operation was completed and committed.
@@ -14568,7 +15110,8 @@ Signals that a transform frame operation was completed and committed.
 Source: FontLab Proteus API documentation"""
         ...
 
-    def notifyTransformFrameStarted(self, arg0: flObject) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyTransformFrameStarted(arg0: flObject) -> Any:
         """notifyTransformFrameStarted(flObject)
 
 Signals that a transform frame was activated.
@@ -14576,7 +15119,8 @@ Signals that a transform frame was activated.
 Source: FontLab Proteus API documentation"""
         ...
 
-    def notifyTransformStarted(self) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyTransformStarted() -> Any:
         """notifyTransformStarted()
 
 Signals that a transform operation has begun (move, scale, rotate, etc.).
@@ -14584,7 +15128,8 @@ Signals that a transform operation has begun (move, scale, rotate, etc.).
 Source: FontLab Proteus API documentation"""
         ...
 
-    def notifyUpdateHistory(self) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyUpdateHistory() -> Any:
         """notifyUpdateHistory()
 
 Signals that the history display should update.
@@ -14592,7 +15137,8 @@ Signals that the history display should update.
 Source: FontLab Proteus API documentation"""
         ...
 
-    def notifyUpdateStaplers(self) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyUpdateStaplers() -> Any:
         """notifyUpdateStaplers()
 
 Signals that all stapler (composite) previews should be refreshed.
@@ -14600,7 +15146,8 @@ Signals that all stapler (composite) previews should be refreshed.
 Source: FontLab Proteus API documentation"""
         ...
 
-    def notifyViewportChanged(self, old_viewport: QWidget, new_viewport: QWidget) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyViewportChanged(old_viewport: QWidget, new_viewport: QWidget) -> Any:
         """notifyViewportChanged(QWidget* old_viewport, QWidget* new_viewport)
 
 Signals that the viewport widget was swapped.
@@ -14608,7 +15155,8 @@ Signals that the viewport widget was swapped.
 Source: FontLab Proteus API documentation"""
         ...
 
-    def notifyWorkspaceClosed(self, arg0: flWorkspace) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyWorkspaceClosed(arg0: flWorkspace) -> Any:
         """notifyWorkspaceClosed(flWorkspace)
 
 Signals that the workspace was closed.
@@ -14616,7 +15164,8 @@ Signals that the workspace was closed.
 Source: FontLab Proteus API documentation"""
         ...
 
-    def notifyWorkspaceHasChanges(self, c: bool) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyWorkspaceHasChanges(c: bool) -> Any:
         """notifyWorkspaceHasChanges(bool c)
 
 Signals whether there are unsaved changes in the workspace.
@@ -14624,7 +15173,8 @@ Signals whether there are unsaved changes in the workspace.
 Source: FontLab Proteus API documentation"""
         ...
 
-    def notifyWorkspaceInitialized(self, arg0: flWorkspace) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyWorkspaceInitialized(arg0: flWorkspace) -> Any:
         """notifyWorkspaceInitialized(flWorkspace)
 
 Signals that the workspace has been initialized and is ready.
@@ -14632,7 +15182,8 @@ Signals that the workspace has been initialized and is ready.
 Source: FontLab Proteus API documentation"""
         ...
 
-    def notifyZoomChanged(self, canvas: flCanvas) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyZoomChanged(canvas: flCanvas) -> Any:
         """notifyZoomChanged(flCanvas& canvas)
 
 Signals that the zoom level of the given canvas changed.
@@ -14640,7 +15191,8 @@ Signals that the zoom level of the given canvas changed.
 Source: FontLab Proteus API documentation"""
         ...
 
-    def requestActivateNodesTool(self) -> Any:
+    @_echopy_builtins.staticmethod
+    def requestActivateNodesTool() -> Any:
         """requestActivateNodesTool()
 
 Asks the UI to switch to the Nodes (contour editing) tool.
@@ -14648,7 +15200,8 @@ Asks the UI to switch to the Nodes (contour editing) tool.
 Source: FontLab Proteus API documentation"""
         ...
 
-    def requestActivateShapeTool(self) -> Any:
+    @_echopy_builtins.staticmethod
+    def requestActivateShapeTool() -> Any:
         """requestActivateShapeTool()
 
 Asks the UI to switch to the Shape selection tool.
@@ -14656,7 +15209,8 @@ Asks the UI to switch to the Shape selection tool.
 Source: FontLab Proteus API documentation"""
         ...
 
-    def requestActivateTransformTool(self) -> Any:
+    @_echopy_builtins.staticmethod
+    def requestActivateTransformTool() -> Any:
         """requestActivateTransformTool()
 
 Asks the UI to switch to the Transform tool.
@@ -14664,7 +15218,8 @@ Asks the UI to switch to the Transform tool.
 Source: FontLab Proteus API documentation"""
         ...
 
-    def requestCheckHistoryInitIndex(self, arg0: flGlyphInfo) -> Any:
+    @_echopy_builtins.staticmethod
+    def requestCheckHistoryInitIndex(arg0: flGlyphInfo) -> Any:
         """requestCheckHistoryInitIndex(flGlyphInfo)
 
 Asks FontLab to verify the undo history start index for a glyph.
@@ -14672,7 +15227,8 @@ Asks FontLab to verify the undo history start index for a glyph.
 Source: FontLab Proteus API documentation"""
         ...
 
-    def requestContent(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def requestContent(*args: Any, **kwargs: Any) -> Any:
         """requestContent(fgSymbolList characters, int cursorLocation
 
 Requests that content (a glyph sequence) be inserted at a specific cursor location in the text window.
@@ -14680,7 +15236,8 @@ Requests that content (a glyph sequence) be inserted at a specific cursor locati
 Source: FontLab Proteus API documentation"""
         ...
 
-    def requestFontInfoDlg(self) -> Any:
+    @_echopy_builtins.staticmethod
+    def requestFontInfoDlg() -> Any:
         """requestFontInfoDlg()
 
 Opens the Font Info dialog for the current font.
@@ -14688,7 +15245,8 @@ Opens the Font Info dialog for the current font.
 Source: FontLab Proteus API documentation"""
         ...
 
-    def requestGlyphActivate(self, pid: int, gid: int) -> Any:
+    @_echopy_builtins.staticmethod
+    def requestGlyphActivate(pid: int, gid: int) -> Any:
         """requestGlyphActivate(uint pid, uint gid)
 
 Asks FontLab to open the glyph editor for the glyph with package ID `pid` and glyph ID `gid`.
@@ -14696,7 +15254,8 @@ Asks FontLab to open the glyph editor for the glyph with package ID `pid` and gl
 Source: FontLab Proteus API documentation"""
         ...
 
-    def requestGlyphDeactivate(self) -> Any:
+    @_echopy_builtins.staticmethod
+    def requestGlyphDeactivate() -> Any:
         """requestGlyphDeactivate()
 
 Asks FontLab to close the current glyph editor.
@@ -14704,7 +15263,8 @@ Asks FontLab to close the current glyph editor.
 Source: FontLab Proteus API documentation"""
         ...
 
-    def requestGlyphReactivated(self) -> Any:
+    @_echopy_builtins.staticmethod
+    def requestGlyphReactivated() -> Any:
         """requestGlyphReactivated()
 
 Asks FontLab to re-activate (re-open) the current glyph.
@@ -14712,7 +15272,8 @@ Asks FontLab to re-activate (re-open) the current glyph.
 Source: FontLab Proteus API documentation"""
         ...
 
-    def requestLoadingFont(self, font_source: str) -> Any:
+    @_echopy_builtins.staticmethod
+    def requestLoadingFont(font_source: str) -> Any:
         """requestLoadingFont(QString font_source)
 
 Asks FontLab to open a font file from the given path.
@@ -14720,7 +15281,8 @@ Asks FontLab to open a font file from the given path.
 Source: FontLab Proteus API documentation"""
         ...
 
-    def requestPackageAcceptFonts(self, arg0: flPackage) -> Any:
+    @_echopy_builtins.staticmethod
+    def requestPackageAcceptFonts(arg0: flPackage) -> Any:
         """requestPackageAcceptFonts(flPackage)
 
 Asks FontLab to accept and register fonts into the given package.
@@ -14728,7 +15290,8 @@ Asks FontLab to accept and register fonts into the given package.
 Source: FontLab Proteus API documentation"""
         ...
 
-    def requestPackageBorn(self, arg0: flPackage) -> Any:
+    @_echopy_builtins.staticmethod
+    def requestPackageBorn(arg0: flPackage) -> Any:
         """requestPackageBorn(flPackage)
 
 Asks FontLab to initialize a newly created font package.
@@ -14736,7 +15299,8 @@ Asks FontLab to initialize a newly created font package.
 Source: FontLab Proteus API documentation"""
         ...
 
-    def requestPackagePostProcess(self, arg0: flPackage, encoding: str) -> Any:
+    @_echopy_builtins.staticmethod
+    def requestPackagePostProcess(arg0: flPackage, encoding: str) -> Any:
         """requestPackagePostProcess(flPackage, QString encoding)
 
 Asks FontLab to run post-processing on a newly loaded package (e.g. setting up encoding).
@@ -14744,7 +15308,8 @@ Asks FontLab to run post-processing on a newly loaded package (e.g. setting up e
 Source: FontLab Proteus API documentation"""
         ...
 
-    def requestPermissionsForDragGuidelineByNode(self, canvas_pos: QPointF, modifiers: int) -> bool:
+    @_echopy_builtins.staticmethod
+    def requestPermissionsForDragGuidelineByNode(canvas_pos: QPointF, modifiers: int) -> bool:
         """bool requestPermissionsForDragGuidelineByNode(QPointF canvas_pos, uint modifiers)
 
 Checks whether dragging a guideline via a node is permitted at the given position with the given modifier keys.
@@ -14752,7 +15317,8 @@ Checks whether dragging a guideline via a node is permitted at the given positio
 Source: FontLab Proteus API documentation"""
         ...
 
-    def requestProgressMessage(self, message: str) -> Any:
+    @_echopy_builtins.staticmethod
+    def requestProgressMessage(message: str) -> Any:
         """requestProgressMessage(QString message)
 
 Updates the text message shown next to the progress bar.
@@ -14760,7 +15326,8 @@ Updates the text message shown next to the progress bar.
 Source: FontLab Proteus API documentation"""
         ...
 
-    def requestProgressRange(self, v: int) -> Any:
+    @_echopy_builtins.staticmethod
+    def requestProgressRange(v: int) -> Any:
         """requestProgressRange(int v)
 
 Sets the maximum value of the progress bar (e.g. the number of glyphs to process).
@@ -14768,7 +15335,8 @@ Sets the maximum value of the progress bar (e.g. the number of glyphs to process
 Source: FontLab Proteus API documentation"""
         ...
 
-    def requestProgressShow(self, b: bool) -> Any:
+    @_echopy_builtins.staticmethod
+    def requestProgressShow(b: bool) -> Any:
         """requestProgressShow(bool b)
 
 Shows or hides the progress bar.
@@ -14776,7 +15344,8 @@ Shows or hides the progress bar.
 Source: FontLab Proteus API documentation"""
         ...
 
-    def requestProgressValue(self, v: int) -> Any:
+    @_echopy_builtins.staticmethod
+    def requestProgressValue(v: int) -> Any:
         """requestProgressValue(int v)
 
 Sets the current progress bar value.
@@ -14784,7 +15353,8 @@ Sets the current progress bar value.
 Source: FontLab Proteus API documentation"""
         ...
 
-    def requestSaveBar(self, b: bool) -> Any:
+    @_echopy_builtins.staticmethod
+    def requestSaveBar(b: bool) -> Any:
         """requestSaveBar(bool b)
 
 Shows or hides the save status bar.
@@ -14792,7 +15362,8 @@ Shows or hides the save status bar.
 Source: FontLab Proteus API documentation"""
         ...
 
-    def requestSaveBarValue(self, v: int) -> Any:
+    @_echopy_builtins.staticmethod
+    def requestSaveBarValue(v: int) -> Any:
         """requestSaveBarValue(int v)
 
 Sets the value displayed in the save bar.
@@ -14800,7 +15371,8 @@ Sets the value displayed in the save bar.
 Source: FontLab Proteus API documentation"""
         ...
 
-    def requestSubContent(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def requestSubContent(*args: Any, **kwargs: Any) -> Any:
         """requestSubContent(fgSymbolList characters, int cursorLocation
 
 Requests sub-content insertion.
@@ -14808,7 +15380,8 @@ Requests sub-content insertion.
 Source: FontLab Proteus API documentation"""
         ...
 
-    def requestUpdateActiveShape(self, arg0: flShapeInfo) -> Any:
+    @_echopy_builtins.staticmethod
+    def requestUpdateActiveShape(arg0: flShapeInfo) -> Any:
         """requestUpdateActiveShape(flShapeInfo)
 
 Asks the UI to refresh the active shape display.
@@ -14816,35 +15389,43 @@ Asks the UI to refresh the active shape display.
 Source: FontLab Proteus API documentation"""
         ...
 
-    def resetToolCursor(self) -> Any:
+    @_echopy_builtins.staticmethod
+    def resetToolCursor() -> Any:
         """resetToolCursor()"""
         ...
 
-    def setCursor(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def setCursor(*args: Any, **kwargs: Any) -> Any:
         """setCursor(CursorId cursor_id);"""
         ...
 
-    def setEllipseCurvature(self, d: float) -> Any:
+    @_echopy_builtins.staticmethod
+    def setEllipseCurvature(d: float) -> Any:
         """setEllipseCurvature(double d)"""
         ...
 
-    def setEllipseData(self, p0: QPointF, p1: QPointF) -> Any:
+    @_echopy_builtins.staticmethod
+    def setEllipseData(p0: QPointF, p1: QPointF) -> Any:
         """setEllipseData(QPointF p0, QPointF p1)"""
         ...
 
-    def setGuidelinesEditingEnabled(self, b: bool) -> Any:
+    @_echopy_builtins.staticmethod
+    def setGuidelinesEditingEnabled(b: bool) -> Any:
         """setGuidelinesEditingEnabled(bool b)"""
         ...
 
-    def setMeterData(self, p0: QPointF, p1: QPointF) -> Any:
+    @_echopy_builtins.staticmethod
+    def setMeterData(p0: QPointF, p1: QPointF) -> Any:
         """setMeterData(QPointF p0, QPointF p1)"""
         ...
 
-    def setParameterName(self, arg0: flObject, arg1: str) -> Any:
+    @_echopy_builtins.staticmethod
+    def setParameterName(arg0: flObject, arg1: str) -> Any:
         """setParameterName(flObject, QString)"""
         ...
 
-    def setTransformation(self, code: int, value: QPointF) -> Any:
+    @_echopy_builtins.staticmethod
+    def setTransformation(code: int, value: QPointF) -> Any:
         """setTransformation(int code, QPointF value)"""
         ...
 
@@ -14852,11 +15433,13 @@ Source: FontLab Proteus API documentation"""
         """list(flObject) shapeBuilders()"""
         ...
 
-    def strToType(self, arg0: str) -> int:
+    @_echopy_builtins.staticmethod
+    def strToType(arg0: str) -> int:
         """int strToType(QString)"""
         ...
 
-    def typeToStr(self, type: int) -> str:
+    @_echopy_builtins.staticmethod
+    def typeToStr(type: int) -> str:
         """QString typeToStr(int type)"""
         ...
     ItemStates: dict
@@ -15098,6 +15681,12 @@ Constructors:
 
 Native bases: object
 
+Captured native MRO: flLayer, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature.
+
 Supplemental documentation:
 A drawing layer holding shapes, components and anchors. The captured declaration exposes `getContours`, `name`, `shapes`, `components`, `anchors`, `advanceWidth`, `boundingBox` and `isService`. Retrieve contours with `getContours`; the captured flLayer has no contours attribute.
 
@@ -15112,8 +15701,8 @@ Source: FontLab Proteus API documentation
 
 Source: generated/fontlab.py: flLayer captured declaration"""
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
 
     def addAnchor(self, arg0: flPinPoint) -> Any:
@@ -15124,8 +15713,8 @@ Appends an already-constructed `flPinPoint` anchor to this layer. Use this when 
 Source: FontLab Proteus API documentation"""
         ...
 
-    def addComponent(self, component: flComponent) -> Any:
-        """addComponent(flComponent component)
+    def addComponent(self, *args: Any, **kwargs: Any) -> Any:
+        """addComponent(name or (name, QTransform)) creates a live component shape. Use notifyChangesApplied before and after for Undo.
 
 Adds a glyph component (a composite reference to another glyph) to this layer. Components are the basis of composite glyphs like accented characters.
 
@@ -15157,7 +15746,7 @@ Source: FontLab Proteus API documentation"""
         ...
 
     def applyTransform(self, *args: Any, **kwargs: Any) -> Any:
-        """applyTransform([QTransform transform])
+        """applyTransform(QTransform transform [, bool contours, bool metrics, bool guides, bool anchors])
 
 Applies a geometric transformation to all shapes in this layer, permanently baking the transform into the node coordinates. Without an argument, applies the layer's own `transform` property.
 
@@ -15212,7 +15801,8 @@ Source: FontLab Proteus API documentation"""
         """checkInitHistoryState(uint history_ix)"""
         ...
 
-    def checkTags(self, glyph_tags: set[str], item_tags: str) -> bool:
+    @_echopy_builtins.staticmethod
+    def checkTags(glyph_tags: set[str], item_tags: str) -> bool:
         """bool checkTags(QSet<QString> glyph_tags, QString item_tags)
 
 Tests whether a set of glyph tags satisfies a tag-filter expression. Used internally by FontLab's smart filter system, but available if you need the same matching logic in a script.
@@ -15276,7 +15866,8 @@ Creates a customized clone of this layer using the given flags to control which 
 Source: FontLab Proteus API documentation"""
         ...
 
-    def cloneObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def cloneObject(*args: Any, **kwargs: Any) -> Any:
         """flObject cloneObject(const flObject&); """
         ...
 
@@ -15320,7 +15911,8 @@ Creates a new named anchor at the given point and adds it to this layer. The `lo
 Source: FontLab Proteus API documentation"""
         ...
 
-    def createInstance(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def createInstance(*args: Any, **kwargs: Any) -> Any:
         """Native fontlab.flLayer.createInstance; argument details are not documented.
 
 Allocates and returns a fresh, empty layer instance not yet attached to any glyph. Use this when you need to build a layer from scratch before adding it to a glyph.
@@ -15328,7 +15920,8 @@ Allocates and returns a fresh, empty layer instance not yet attached to any glyp
 Source: FontLab Proteus API documentation"""
         ...
 
-    def createObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def createObject(*args: Any, **kwargs: Any) -> Any:
         """flObject/Nothing createObject(int);    """
         ...
 
@@ -15552,7 +16145,8 @@ Returns `True` if the layer contains any shape that uses the given shared shape 
 Source: FontLab Proteus API documentation"""
         ...
 
-    def haveObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def haveObject(*args: Any, **kwargs: Any) -> Any:
         """bool haveObject(uint);                 """
         ...
 
@@ -15600,7 +16194,8 @@ Inserts a shape at a specific z-order position rather than appending it to the t
 Source: FontLab Proteus API documentation"""
         ...
 
-    def instanceType(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def instanceType(*args: Any, **kwargs: Any) -> Any:
         """int instanceType();                    """
         ...
 
@@ -15654,6 +16249,10 @@ Source: FontLab Proteus API documentation"""
 Caches transformation geometry for this layer in preparation for a batch transform operation. Call before `applyTransform` in performance-sensitive scripts.
 
 Source: FontLab Proteus API documentation"""
+        ...
+
+    def propertyNames(self, *args: Any, **kwargs: Any) -> Any:
+        """propertyNames(): sorted snapshot of dynamic property keys"""
         ...
 
     def release(self) -> Any:
@@ -15820,8 +16419,8 @@ Source: FontLab Proteus API documentation"""
         """setFlag(uint f [, bool value])"""
         ...
 
-    def setGlyphComponents(self, result: list[Any], width: float, package: flPackage, colorize: bool, flags: int) -> bool:
-        """bool setGlyphComponents(QList<GlyphComponent> result, double width, flPackage package, bool colorize, uint flags)
+    def setGlyphComponents(self, components: Any, width: Any, package: Any, colorize: Any, arg4: flags=0) -> Any:
+        """setGlyphComponents(components, width, package, colorize, flags=0) -> bool. Replaces shapes; components are GlyphComponent objects or (name_id, transform, width_scale, use_anchors) tuples.
 
 Replaces this layer's contents with a set of glyph components at the given width. Used to programmatically construct composite glyphs from a component recipe.
 
@@ -16108,6 +16707,12 @@ The wrapper accepts positional fields in table order and field keywords. Prefer 
 
 Native bases: object
 
+Captured native MRO: flLayerAttributes, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature.
+
 Supplemental documentation:
 A data wrapper with the attributes `isActive`, `isLocked`, `isService`, `isVisible`, `isWireframe` and `wireframeColor`. The captured declaration exposes `asDict` (represent the object as a dictionary) and `asTuple` (represent it as a tuple).
 
@@ -16115,8 +16720,8 @@ Source: FontLab Proteus API documentation
 
 Source: generated/fontlab.py: flLayerAttributes captured declaration"""
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
 
     def asDict(self, *args: Any, **kwargs: Any) -> Any:
@@ -16229,6 +16834,12 @@ Constructors:
 
 Native bases: object
 
+Captured native MRO: flLayerInfo, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature.
+
 Supplemental documentation:
 Layer information. The captured declaration exposes `layer`, `glyphInfo`, `combine`, `dist`, `transform` and `brectOnCanvas`. It is created with no captured constructor overloads. It also carries the shared object members `changed`, `clone`, `cloneObject`, `getProperty`, `setProperty`, `release`, `remove` and `update` and the shared attributes `id`, `name`, `type`, `isValid` and `isNull`.
 
@@ -16236,8 +16847,8 @@ Source: FontLab Proteus API documentation
 
 Source: generated/fontlab.py: flLayerInfo captured declaration"""
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
 
     def brectOnCanvas(self) -> QRectF:
@@ -16272,7 +16883,8 @@ Source: FontLab Proteus API documentation"""
         """Clone the object"""
         ...
 
-    def cloneObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def cloneObject(*args: Any, **kwargs: Any) -> Any:
         """flObject cloneObject(const flObject&); """
         ...
 
@@ -16280,7 +16892,8 @@ Source: FontLab Proteus API documentation"""
         """combine(QTransform transform)"""
         ...
 
-    def createInstance(self) -> flLayerInfo:
+    @_echopy_builtins.staticmethod
+    def createInstance() -> flLayerInfo:
         """flLayerInfo createInstance()
 
 Factory. Creates a detached `flLayerInfo`. Attach a layer via the `layer` property before calling any other methods.
@@ -16288,7 +16901,8 @@ Factory. Creates a detached `flLayerInfo`. Attach a layer via the `layer` proper
 Source: FontLab Proteus API documentation"""
         ...
 
-    def createObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def createObject(*args: Any, **kwargs: Any) -> Any:
         """flObject/Nothing createObject(int);    """
         ...
 
@@ -16320,7 +16934,8 @@ Source: FontLab Proteus API documentation"""
         """hasHistoryState(uint history_ix)"""
         ...
 
-    def haveObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def haveObject(*args: Any, **kwargs: Any) -> Any:
         """bool haveObject(uint);                 """
         ...
 
@@ -16336,12 +16951,17 @@ Source: FontLab Proteus API documentation"""
         """initialHistoryIx()"""
         ...
 
-    def instanceType(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def instanceType(*args: Any, **kwargs: Any) -> Any:
         """int instanceType();                    """
         ...
 
     def isEqual(self, arg0: flObject) -> Any:
         """isEqual(flObject)"""
+        ...
+
+    def propertyNames(self, *args: Any, **kwargs: Any) -> Any:
+        """propertyNames(): sorted snapshot of dynamic property keys"""
         ...
 
     def release(self) -> Any:
@@ -16560,6 +17180,12 @@ Constructors:
 
 Native bases: object
 
+Captured native MRO: flLocation, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature.
+
 Supplemental documentation:
 A design-space location. The captured declaration exposes no named members, only the native constructors `flLocation()` and `flLocation(flLocation)`. The flAxis method locationName takes an flLocation.
 
@@ -16567,8 +17193,8 @@ Source: FontLab Proteus API documentation
 
 Source: generated/fontlab.py: flLocation captured declaration"""
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
 
 class flMarkerPoint:
@@ -16662,6 +17288,12 @@ Constructors:
 
 Native bases: object
 
+Captured native MRO: flMarkerPoint, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature.
+
 Supplemental documentation:
 Marker point. The captured declaration exposes `markerFlag`, `setMarkerFlag`, `markerFlags`, `isStem`, `isSelected`, `key` and `position`. It is created with no captured constructor overloads. It also carries the shared object members `changed`, `clone`, `cloneObject`, `getProperty`, `setProperty`, `release`, `remove` and `update` and the shared attributes `id`, `name`, `type`, `isValid` and `isNull`.
 
@@ -16669,8 +17301,8 @@ Source: FontLab Proteus API documentation
 
 Source: generated/fontlab.py: flMarkerPoint captured declaration"""
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
 
     def changed(self) -> Any:
@@ -16697,11 +17329,13 @@ Source: generated/fontlab.py: flMarkerPoint captured declaration"""
         """Clone the object"""
         ...
 
-    def cloneObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def cloneObject(*args: Any, **kwargs: Any) -> Any:
         """flObject cloneObject(const flObject&); """
         ...
 
-    def createInstance(self) -> flMarkerPoint:
+    @_echopy_builtins.staticmethod
+    def createInstance() -> flMarkerPoint:
         """flMarkerPoint createInstance()
 
 Factory method: creates a detached `flMarkerPoint` that you can then configure and attach to a guideline. Preferred over calling the constructor directly.
@@ -16709,7 +17343,8 @@ Factory method: creates a detached `flMarkerPoint` that you can then configure a
 Source: FontLab Proteus API documentation"""
         ...
 
-    def createObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def createObject(*args: Any, **kwargs: Any) -> Any:
         """flObject/Nothing createObject(int);    """
         ...
 
@@ -16741,7 +17376,8 @@ Source: FontLab Proteus API documentation"""
         """hasHistoryState(uint history_ix)"""
         ...
 
-    def haveObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def haveObject(*args: Any, **kwargs: Any) -> Any:
         """bool haveObject(uint);                 """
         ...
 
@@ -16757,7 +17393,8 @@ Source: FontLab Proteus API documentation"""
         """initialHistoryIx()"""
         ...
 
-    def instanceType(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def instanceType(*args: Any, **kwargs: Any) -> Any:
         """int instanceType();                    """
         ...
 
@@ -16771,6 +17408,10 @@ Source: FontLab Proteus API documentation"""
 Returns the flag bits for the given `role`. Roles partition a marker's flags into logical groups — for example, role 0 might flag "this marker fills the shape interior", role 1 might flag "this is a left sidebearing marker". Use `flSnaps.MarkerFlags` constants for bit meanings.
 
 Source: FontLab Proteus API documentation"""
+        ...
+
+    def propertyNames(self, *args: Any, **kwargs: Any) -> Any:
+        """propertyNames(): sorted snapshot of dynamic property keys"""
         ...
 
     def release(self) -> Any:
@@ -17086,6 +17727,12 @@ None, static only methods
 
 Native bases: object
 
+Captured native MRO: flModel, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature.
+
 Supplemental documentation:
 A static-only model class with no constructor. The captured declaration exposes the methods `createObject`, `getClassMask`, `instance`, `isClassMask`, `notifyGlyphChanged`, `notifyGlyphUpdate`, `notifyGlyphsChanged` and `typeToStr`, and the dict attributes `ModelType` and `ObjectParameter`. Call `instance` to obtain the flModel object.
 
@@ -17093,11 +17740,12 @@ Source: FontLab Proteus API documentation
 
 Source: generated/fontlab.py: flModel captured declaration"""
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
 
-    def createObject(self, type: int) -> Any:
+    @_echopy_builtins.staticmethod
+    def createObject(type: int) -> Any:
         """flObject/Nothing createObject(int type)
 
 Creates a new, blank object of the given `ModelType` code. Returns the new object, or `Nothing` if the type can't be instantiated this way. Useful when you need to build an object programmatically rather than getting it from a font.
@@ -17105,7 +17753,8 @@ Creates a new, blank object of the given `ModelType` code. Returns the new objec
 Source: FontLab Proteus API documentation"""
         ...
 
-    def getClassMask(self, type: int) -> int:
+    @_echopy_builtins.staticmethod
+    def getClassMask(type: int) -> int:
         """int  getClassMask(int type)
 
 Returns a bitmask describing which base-class categories this type belongs to. Used internally for fast type hierarchy checks without needing RTTI.
@@ -17113,7 +17762,8 @@ Returns a bitmask describing which base-class categories this type belongs to. U
 Source: FontLab Proteus API documentation"""
         ...
 
-    def instance(self) -> flModel:
+    @_echopy_builtins.staticmethod
+    def instance() -> flModel:
         """flModel instance()
 
 Returns the application-wide `flModel` singleton. You rarely need this directly — most methods work as class-level calls.
@@ -17121,7 +17771,8 @@ Returns the application-wide `flModel` singleton. You rarely need this directly 
 Source: FontLab Proteus API documentation"""
         ...
 
-    def isClassMask(self, type: int) -> bool:
+    @_echopy_builtins.staticmethod
+    def isClassMask(type: int) -> bool:
         """bool isClassMask(int type)
 
 Returns `True` if the given constant is a class-mask bitmask rather than a concrete object type ID.
@@ -17129,7 +17780,8 @@ Returns `True` if the given constant is a class-mask bitmask rather than a concr
 Source: FontLab Proteus API documentation"""
         ...
 
-    def notifyGlyphChanged(self, fg_glyphId: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyGlyphChanged(fg_glyphId: Any) -> Any:
         """notifyGlyphChanged(unsigned long fg_glyphId)
 
 **Full data-changed notification.** Tells FontLab that the glyph's data has changed. This triggers the heavier update cycle: metrics recalculation, preview refresh, and all dependent displays. Use this after any real edit to node positions, contour structure, or spacing.
@@ -17137,7 +17789,8 @@ Source: FontLab Proteus API documentation"""
 Source: FontLab Proteus API documentation"""
         ...
 
-    def notifyGlyphUpdate(self, fg_glyphId: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyGlyphUpdate(fg_glyphId: Any) -> Any:
         """notifyGlyphUpdate(unsigned long fg_glyphId)
 
 **Lightweight refresh.** Tells FontLab to redraw the canvas for this glyph, but doesn't trigger metrics recalculation or preview regeneration. Use this for purely visual updates — for example, when you've moved a display element but haven't changed the actual outline data.
@@ -17145,7 +17798,8 @@ Source: FontLab Proteus API documentation"""
 Source: FontLab Proteus API documentation"""
         ...
 
-    def notifyGlyphsChanged(self, glyphs: set[Any]) -> Any:
+    @_echopy_builtins.staticmethod
+    def notifyGlyphsChanged(glyphs: set[Any]) -> Any:
         """notifyGlyphsChanged(QSet<uint32_t> glyphs)
 
 **Batch notification.** Same as `notifyGlyphChanged` but for multiple glyphs at once. Much more efficient than calling `notifyGlyphChanged` in a loop — FontLab can process all the updates together. Use this whenever your script touches more than one glyph.
@@ -17153,7 +17807,8 @@ Source: FontLab Proteus API documentation"""
 Source: FontLab Proteus API documentation"""
         ...
 
-    def typeToStr(self, flObject: Any) -> str:
+    @_echopy_builtins.staticmethod
+    def typeToStr(flObject: Any) -> str:
         """QString typeToStr(int type | flObject)
 
 Returns the human-readable name for a type code or object. Handy for debugging: pass any font object and get back a string like `"Node"` or `"Shape"`.
@@ -17300,6 +17955,12 @@ Constructors:
 
 Native bases: object
 
+Captured native MRO: flModelProducer, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature.
+
 Supplemental documentation:
 A model producer. The captured declaration exposes `copyToClipboard`, `getClipboardData`, `getObjectsFromClipboard`, `getObjectsFromData`, `countGlyphsInData`. It is created with no captured constructor overloads. It also carries the shared object members `changed`, `clone`, `cloneObject`, `getProperty`, `setProperty`, `release`, `remove` and `update` and the shared attributes `id`, `name`, `type`, `isValid` and `isNull`.
 
@@ -17307,8 +17968,8 @@ Source: FontLab Proteus API documentation
 
 Source: generated/fontlab.py: flModelProducer captured declaration"""
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
 
     def changed(self) -> Any:
@@ -17335,11 +17996,13 @@ Source: generated/fontlab.py: flModelProducer captured declaration"""
         """Clone the object"""
         ...
 
-    def cloneObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def cloneObject(*args: Any, **kwargs: Any) -> Any:
         """flObject cloneObject(const flObject&); """
         ...
 
-    def copyToClipboard(self, package_id: Any, objects: list[flObject]) -> Any:
+    @_echopy_builtins.staticmethod
+    def copyToClipboard(package_id: Any, objects: list[flObject]) -> Any:
         """copyToClipboard(objId package_id, QList<flObject> objects)
 
 Serialises the given objects and writes the result directly to the system clipboard. Equivalent to `getClipboardData` + placing the result on the clipboard. After this call the user can paste the shapes using Edit → Paste in the UI.
@@ -17347,7 +18010,8 @@ Serialises the given objects and writes the result directly to the system clipbo
 Source: FontLab Proteus API documentation"""
         ...
 
-    def countGlyphsInData(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def countGlyphsInData(*args: Any, **kwargs: Any) -> Any:
         """int countGlyphsInData(QByteArray *data)
 
 Counts how many glyphs are encoded in a binary blob without fully deserialising it. Useful for showing a count in a dialog before a potentially slow paste operation.
@@ -17355,7 +18019,8 @@ Counts how many glyphs are encoded in a binary blob without fully deserialising 
 Source: FontLab Proteus API documentation"""
         ...
 
-    def createObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def createObject(*args: Any, **kwargs: Any) -> Any:
         """flObject/Nothing createObject(int);    """
         ...
 
@@ -17367,20 +18032,33 @@ Source: FontLab Proteus API documentation"""
         """flag(uint f)"""
         ...
 
-    def getClipboardData(self, *args: Any, **kwargs: Any) -> Any:
-        """QByteArray getClipboardData(objId package_id, QList<flObject>)
+    @_echopy_builtins.staticmethod
+    def getClipboardData(*args: Any, **kwargs: Any) -> Any:
+        """QByteArray getClipboardData(objId package_id, double upm, QList<flObject>)
 
 Serialises the given list of font objects into a binary blob. `package_id` identifies the source font (use `font.id`); `upm` is its units per em (use `font.upm`). This method only creates an in-memory buffer and does not access the system clipboard. Returns a `QByteArray` binary blob. Store this blob if you want a snapshot of the shapes at a moment in time, or write it to the clipboard.
 
 Source: FontLab Proteus API documentation"""
         ...
 
-    def getObjectsFromClipboard(self) -> Any:
-        """flObjects/Nothing getObjectsFromClipboard()"""
+    @_echopy_builtins.staticmethod
+    def getClipboardDataJson(*args: Any, **kwargs: Any) -> Any:
+        """QByteArray getClipboardDataJson(objId package_id, double upm, QList<flObject>)"""
         ...
 
-    def getObjectsFromData(self, *args: Any, **kwargs: Any) -> Any:
-        """flObjects/Nothing getObjectsFromData(QByteArray *data)"""
+    @_echopy_builtins.staticmethod
+    def getObjectsFromClipboard() -> Any:
+        """list(flObject)/Nothing getObjectsFromClipboard()"""
+        ...
+
+    @_echopy_builtins.staticmethod
+    def getObjectsFromData(*args: Any, **kwargs: Any) -> Any:
+        """list(flObject)/Nothing getObjectsFromData(QByteArray *data)"""
+        ...
+
+    @_echopy_builtins.staticmethod
+    def getObjectsFromJsonData(data: Any) -> Any:
+        """list(flObject)/Nothing getObjectsFromJsonData(QByteArray/bytes/bytearray/str data)"""
         ...
 
     def getProperties(self, *args: Any, **kwargs: Any) -> Any:
@@ -17403,7 +18081,8 @@ Source: FontLab Proteus API documentation"""
         """hasHistoryState(uint history_ix)"""
         ...
 
-    def haveObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def haveObject(*args: Any, **kwargs: Any) -> Any:
         """bool haveObject(uint);                 """
         ...
 
@@ -17419,12 +18098,17 @@ Source: FontLab Proteus API documentation"""
         """initialHistoryIx()"""
         ...
 
-    def instanceType(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def instanceType(*args: Any, **kwargs: Any) -> Any:
         """int instanceType();                    """
         ...
 
     def isEqual(self, arg0: flObject) -> Any:
         """isEqual(flObject)"""
+        ...
+
+    def propertyNames(self, *args: Any, **kwargs: Any) -> Any:
+        """propertyNames(): sorted snapshot of dynamic property keys"""
         ...
 
     def release(self) -> Any:
@@ -17502,6 +18186,12 @@ Constructors:
 
 Native bases: object
 
+Captured native MRO: flMouseEvent, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature.
+
 Supplemental documentation:
 A mouse event. The captured declaration exposes the attributes `button`, `buttons`, `delta`, `firstPressed`, `global_`, `modifiers`, `movement`, `origin`, `prev` and `type`. It is created as a copy `flMouseEvent(flMouseEvent)`.
 
@@ -17509,8 +18199,8 @@ Source: FontLab Proteus API documentation
 
 Source: generated/fontlab.py: flMouseEvent captured declaration"""
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
     button: Any
     'Qt::MouseButton\n\nButton responsible for the event.\n\nSource: FontLab Proteus API documentation'
@@ -17812,6 +18502,12 @@ Constructors:
 
 Native bases: object
 
+Captured native MRO: flNode, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature.
+
 Supplemental documentation:
 A contour node. The captured declaration exposes `x`, `y`, `type` and `smooth`. The `type` member distinguishes on-curve points from off-curve control points. Read or assign `x` and `y` on the original native object.
 
@@ -17819,8 +18515,8 @@ Source: FontLab Proteus API documentation
 
 Source: generated/fontlab.py: flNode captured declaration"""
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
 
     def angleTo(self, p: QPointF) -> float:
@@ -17915,7 +18611,8 @@ Creates a copy of this node with its coordinates transformed by the given matrix
 Source: FontLab Proteus API documentation"""
         ...
 
-    def cloneObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def cloneObject(*args: Any, **kwargs: Any) -> Any:
         """flObject cloneObject(const flObject&); """
         ...
 
@@ -17959,7 +18656,8 @@ Copies the position, type, smooth flag, and other properties from another node i
 Source: FontLab Proteus API documentation"""
         ...
 
-    def createObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def createObject(*args: Any, **kwargs: Any) -> Any:
         """flObject/Nothing createObject(int);    """
         ...
 
@@ -18015,7 +18713,8 @@ Source: FontLab Proteus API documentation"""
         """hasHistoryState(uint history_ix)"""
         ...
 
-    def haveObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def haveObject(*args: Any, **kwargs: Any) -> Any:
         """bool haveObject(uint);                 """
         ...
 
@@ -18039,7 +18738,8 @@ Source: FontLab Proteus API documentation"""
         """initialHistoryIx()"""
         ...
 
-    def instanceType(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def instanceType(*args: Any, **kwargs: Any) -> Any:
         """int instanceType();                    """
         ...
 
@@ -18181,6 +18881,10 @@ Source: FontLab Proteus API documentation"""
 Same as `nextNode` but travels backward through the contour. Handy for finding the incoming handle of a curve segment.
 
 Source: FontLab Proteus API documentation"""
+        ...
+
+    def propertyNames(self, *args: Any, **kwargs: Any) -> Any:
+        """propertyNames(): sorted snapshot of dynamic property keys"""
         ...
 
     def release(self) -> Any:
@@ -18518,6 +19222,12 @@ Constructors:
 
 Native bases: object
 
+Captured native MRO: flNodeInfo, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature.
+
 Supplemental documentation:
 Node information. The captured declaration exposes `node`, `contour`, `contourInfo`, `shape`, `shapeInfo`, `glyphInfo`, `getGlyphPoint`, `setGlyphPoint`, `setGlyphPointX`, `setGlyphPointY`, `getMappedPoint`, `toNodesInfo`, `breakContourExpanded`, `combine`, `dist` and `transform`. It is created with no captured constructor overloads. It also carries the shared object members `changed`, `clone`, `cloneObject`, `getProperty`, `setProperty`, `release`, `remove` and `update` and the shared attributes `id`, `name`, `type`, `isValid` and `isNull`.
 
@@ -18525,8 +19235,8 @@ Source: FontLab Proteus API documentation
 
 Source: generated/fontlab.py: flNodeInfo captured declaration"""
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
 
     def breakContourExpanded(self, extrapolate_d: Any=...) -> bool:
@@ -18561,7 +19271,8 @@ Source: FontLab Proteus API documentation"""
         """Clone the object"""
         ...
 
-    def cloneObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def cloneObject(*args: Any, **kwargs: Any) -> Any:
         """flObject cloneObject(const flObject&); """
         ...
 
@@ -18577,7 +19288,8 @@ Returns the `flContour` that contains this node.
 Source: FontLab Proteus API documentation"""
         ...
 
-    def createInstance(self) -> flNodeInfo:
+    @_echopy_builtins.staticmethod
+    def createInstance() -> flNodeInfo:
         """flNodeInfo createInstance()
 
 Factory. Creates a detached `flNodeInfo`.
@@ -18585,7 +19297,8 @@ Factory. Creates a detached `flNodeInfo`.
 Source: FontLab Proteus API documentation"""
         ...
 
-    def createObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def createObject(*args: Any, **kwargs: Any) -> Any:
         """flObject/Nothing createObject(int);    """
         ...
 
@@ -18649,7 +19362,8 @@ Source: FontLab Proteus API documentation"""
         """hasHistoryState(uint history_ix)"""
         ...
 
-    def haveObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def haveObject(*args: Any, **kwargs: Any) -> Any:
         """bool haveObject(uint);                 """
         ...
 
@@ -18665,7 +19379,8 @@ Source: FontLab Proteus API documentation"""
         """initialHistoryIx()"""
         ...
 
-    def instanceType(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def instanceType(*args: Any, **kwargs: Any) -> Any:
         """int instanceType();                    """
         ...
 
@@ -18679,6 +19394,10 @@ Source: FontLab Proteus API documentation"""
 Returns `True` if this node info points to an existing node. After a delete operation some infos may become invalid — check this before using the result.
 
 Source: FontLab Proteus API documentation"""
+        ...
+
+    def propertyNames(self, *args: Any, **kwargs: Any) -> Any:
+        """propertyNames(): sorted snapshot of dynamic property keys"""
         ...
 
     def release(self) -> Any:
@@ -18988,6 +19707,12 @@ Constructors:
 
 Native bases: object
 
+Captured native MRO: flObject, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature.
+
 Supplemental documentation:
 Base editing object. The captured declaration exposes identity and state attributes `id`, `name`, `type`, `refCnt`, `isValid`, `isNull`, `isPresent`, `isReleased`, `isChanged` and `hasChanges`. Captured methods cover properties (`getProperty`, `setProperty`, `getProperties`), flags (`flag`, `setFlag`, `clearFlag`), history states (`historyStates`, `restoreHistoryState`, `hasHistoryState`) and object lifetime (`clone`, `release`, `remove`, `update`, `changed`).
 
@@ -18995,8 +19720,8 @@ Source: FontLab Proteus API documentation
 
 Source: generated/fontlab.py: flObject captured declaration"""
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
 
     def changed(self) -> Any:
@@ -19047,7 +19772,8 @@ Creates a deep copy of this object. The copy is completely independent — it ge
 Source: FontLab Proteus API documentation"""
         ...
 
-    def cloneObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def cloneObject(*args: Any, **kwargs: Any) -> Any:
         """flObject cloneObject(const flObject&); 
 
 Creates a deep copy of the given object and returns it. The clone is fully independent — modifying it will not affect the original. This is the class-level version of the instance method `clone()`.
@@ -19055,7 +19781,8 @@ Creates a deep copy of the given object and returns it. The clone is fully indep
 Source: FontLab Proteus API documentation"""
         ...
 
-    def createObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def createObject(*args: Any, **kwargs: Any) -> Any:
         """flObject/Nothing createObject(int);    
 
 Allocates a new object of the given type ID and returns it as a generic `flObject`. The integer argument is the type constant (same system as `.type`). Returns `None` if the type is not recognized. You rarely need this — use the concrete subclass constructors instead.
@@ -19119,7 +19846,8 @@ Returns `True` if a history state at the given index exists for this object. Use
 Source: FontLab Proteus API documentation"""
         ...
 
-    def haveObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def haveObject(*args: Any, **kwargs: Any) -> Any:
         """bool haveObject(uint);                 
 
 Given an object ID (an integer), returns `True` if an object with that ID currently exists in the font model. Useful for validating stored IDs before trying to use them — for example, after undo operations that might have removed an object.
@@ -19151,7 +19879,8 @@ Returns the index of the oldest available history state — in other words, how 
 Source: FontLab Proteus API documentation"""
         ...
 
-    def instanceType(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def instanceType(*args: Any, **kwargs: Any) -> Any:
         """int instanceType();                    
 
 Returns the integer type identifier for this class. Every subclass of `flObject` has a unique type constant — this lets you check "what kind of object is this?" at the class level, before you even have an instance.
@@ -19163,6 +19892,14 @@ Source: FontLab Proteus API documentation"""
         """isEqual(flObject)
 
 Compares this object to another for deep equality. Unlike Python's `==` (which compares references), `isEqual` checks whether the two objects have the same structural content. Two separately constructed shapes with identical contours will return `True`.
+
+Source: FontLab Proteus API documentation"""
+        ...
+
+    def propertyNames(self, *args: Any, **kwargs: Any) -> Any:
+        """propertyNames(): sorted snapshot of dynamic property keys
+
+Returns a sorted snapshot of the dynamic property keys, including explicitly stored zero values. Pair with `getProperty(key)` to inspect values.
 
 Source: FontLab Proteus API documentation"""
         ...
@@ -19279,6 +20016,12 @@ Use the wrapper's mutation methods to edit its contents. Changing its `list` sna
 
 Native bases: object
 
+Captured native MRO: flObjectsList<flGuideLine>, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature.
+
 Supplemental documentation:
 Guideline list. The captured declaration exposes `append`, `at`, `clearContent`, `contains`, `count`, `first`, `indexOf`, `insert`, `last`, `list`, `removeOne` and `swap`. It is created with no captured constructor overloads. It also carries the shared object members `changed`, `clone`, `cloneObject`, `getProperty`, `setProperty`, `release`, `remove` and `update` and the shared attributes `id`, `name`, `type`, `isValid` and `isNull`.
 
@@ -19286,8 +20029,8 @@ Source: FontLab Proteus API documentation
 
 Source: generated/fontlab.py: flObjectsList_flGuideLine_ captured declaration"""
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
 
     def append(self, o: Any) -> None:
@@ -19338,7 +20081,8 @@ Source: FontLab Proteus API documentation"""
         """Clone the object"""
         ...
 
-    def cloneObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def cloneObject(*args: Any, **kwargs: Any) -> Any:
         """flObject cloneObject(const flObject&); """
         ...
 
@@ -19350,7 +20094,8 @@ Return a boolean membership result.
 Source: FontLab Proteus API documentation"""
         ...
 
-    def createObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def createObject(*args: Any, **kwargs: Any) -> Any:
         """flObject/Nothing createObject(int);    """
         ...
 
@@ -19382,7 +20127,8 @@ Source: FontLab Proteus API documentation"""
         """hasHistoryState(uint history_ix)"""
         ...
 
-    def haveObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def haveObject(*args: Any, **kwargs: Any) -> Any:
         """bool haveObject(uint);                 """
         ...
 
@@ -19414,12 +20160,17 @@ Insert an item.
 Source: FontLab Proteus API documentation"""
         ...
 
-    def instanceType(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def instanceType(*args: Any, **kwargs: Any) -> Any:
         """int instanceType();                    """
         ...
 
     def isEqual(self, arg0: flObject) -> Any:
         """isEqual(flObject)"""
+        ...
+
+    def propertyNames(self, *args: Any, **kwargs: Any) -> Any:
+        """propertyNames(): sorted snapshot of dynamic property keys"""
         ...
 
     def release(self) -> Any:
@@ -19518,6 +20269,12 @@ Use the wrapper's mutation methods to edit its contents. Changing its `list` sna
 
 Native bases: object
 
+Captured native MRO: flObjectsList<flShape>, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature.
+
 Supplemental documentation:
 Shape list. The captured declaration exposes `append`, `at`, `clearContent`, `contains`, `count`, `first`, `indexOf`, `insert`, `last`, `list`, `removeOne` and `swap`. It is created with no captured constructor overloads. It also carries the shared object members `changed`, `clone`, `cloneObject`, `getProperty`, `setProperty`, `release`, `remove` and `update` and the shared attributes `id`, `name`, `type`, `isValid` and `isNull`.
 
@@ -19525,8 +20282,8 @@ Source: FontLab Proteus API documentation
 
 Source: generated/fontlab.py: flObjectsList_flShape_ captured declaration"""
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
 
     def append(self, o: Any) -> None:
@@ -19577,7 +20334,8 @@ Source: FontLab Proteus API documentation"""
         """Clone the object"""
         ...
 
-    def cloneObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def cloneObject(*args: Any, **kwargs: Any) -> Any:
         """flObject cloneObject(const flObject&); """
         ...
 
@@ -19589,7 +20347,8 @@ Return a boolean membership result.
 Source: FontLab Proteus API documentation"""
         ...
 
-    def createObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def createObject(*args: Any, **kwargs: Any) -> Any:
         """flObject/Nothing createObject(int);    """
         ...
 
@@ -19621,7 +20380,8 @@ Source: FontLab Proteus API documentation"""
         """hasHistoryState(uint history_ix)"""
         ...
 
-    def haveObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def haveObject(*args: Any, **kwargs: Any) -> Any:
         """bool haveObject(uint);                 """
         ...
 
@@ -19653,12 +20413,17 @@ Insert an item.
 Source: FontLab Proteus API documentation"""
         ...
 
-    def instanceType(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def instanceType(*args: Any, **kwargs: Any) -> Any:
         """int instanceType();                    """
         ...
 
     def isEqual(self, arg0: flObject) -> Any:
         """isEqual(flObject)"""
+        ...
+
+    def propertyNames(self, *args: Any, **kwargs: Any) -> Any:
+        """propertyNames(): sorted snapshot of dynamic property keys"""
         ...
 
     def release(self) -> Any:
@@ -20014,6 +20779,12 @@ Constructors:
 
 Native bases: object
 
+Captured native MRO: flPackage, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature.
+
 Supplemental documentation:
 Font package. The captured declaration exposes `addAxis`, `addGlyph`, `addInstance`, `addMaster`, `autoKern`, `autohintGlyphs`, `clearInstances`, `clearMasters`, `close`, `deleteGlyph`, `deleteGroups`, `findAxis`, `findGroup`, `findUnicode`, `generateGlyph`, `getAllGroups`, `hasAxis` and `hasMaster`. It is created with no captured constructor overloads. It also carries the shared object members `changed`, `clone`, `cloneObject`, `getProperty`, `setProperty`, `release`, `remove` and `update` and the shared attributes `id`, `name`, `type`, `isValid` and `isNull`.
 
@@ -20021,8 +20792,8 @@ Source: FontLab Proteus API documentation
 
 Source: generated/fontlab.py: flPackage captured declaration"""
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
 
     def activateGlyph(self, arg0: flGlyph) -> Any:
@@ -20161,12 +20932,13 @@ Source: FontLab Proteus API documentation"""
         """Clone the object"""
         ...
 
-    def cloneObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def cloneObject(*args: Any, **kwargs: Any) -> Any:
         """flObject cloneObject(const flObject&); """
         ...
 
-    def close(self, save: Any=False) -> Any:
-        """close(save=False) - Close the font
+    def close(self, prompt: Any=True) -> Any:
+        """close(prompt=True) - Close the font, prompting for unsaved changes. Pass False to discard changes without prompting.
 
 Close the font. With no argument or `True`, prompt to save unsaved changes. Pass `False` to discard changes and close without prompting. Canceling the prompt leaves the font open.
 
@@ -20197,7 +20969,8 @@ Convert a set of alignment zones into font-level guidelines. Useful for visual r
 Source: FontLab Proteus API documentation"""
         ...
 
-    def createObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def createObject(*args: Any, **kwargs: Any) -> Any:
         """flObject/Nothing createObject(int);    """
         ...
 
@@ -20445,7 +21218,8 @@ Source: FontLab Proteus API documentation"""
         """hasHistoryState(uint history_ix)"""
         ...
 
-    def hasInstaceFor(self, arg0: fgFont) -> bool:
+    @_echopy_builtins.staticmethod
+    def hasInstaceFor(arg0: fgFont) -> bool:
         """bool hasInstaceFor(fgFont)
 
 Check whether a Python `flPackage` wrapper already exists for the given low-level font. Prevents creating duplicate wrappers.
@@ -20485,7 +21259,8 @@ Return `True` if there are any alignment zones defined.
 Source: FontLab Proteus API documentation"""
         ...
 
-    def haveObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def haveObject(*args: Any, **kwargs: Any) -> Any:
         """bool haveObject(uint);                 """
         ...
 
@@ -20525,7 +21300,8 @@ Source: FontLab Proteus API documentation"""
         """initialHistoryIx()"""
         ...
 
-    def instanceType(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def instanceType(*args: Any, **kwargs: Any) -> Any:
         """int instanceType();                    """
         ...
 
@@ -20645,7 +21421,12 @@ Return the name of this package within a multi-font project.
 Source: FontLab Proteus API documentation"""
         ...
 
-    def readFromFile(self, *args: Any, **kwargs: Any) -> Any:
+    def propertyNames(self, *args: Any, **kwargs: Any) -> Any:
+        """propertyNames(): sorted snapshot of dynamic property keys"""
+        ...
+
+    @_echopy_builtins.staticmethod
+    def readFromFile(*args: Any, **kwargs: Any) -> Any:
         """flPackage/Nothing readFromFile(string[, StorageInfo*=0])
 
 Load a font from a file path and return its `flPackage`, or `None` if the file cannot be opened. The optional `StorageInfo` controls import options.
@@ -21254,6 +22035,12 @@ Constructors:
 
 Native bases: object
 
+Captured native MRO: flPaper, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature.
+
 Supplemental documentation:
 A paper object holding glyph information. The captured declaration exposes the methods `activeGlyphInfo`, `getGlyphInfo`, `glyphInfoAt`, `glyphsBoundRect`, `hasActive`, `hasContent`, `glyph`, `setActiveGlyph` and `setPaperGlyph`. It is created as `flPaper()`, `flPaper(flPaper)`, `flPaper(flObject)` or `flPaper(QBrush)`. It also carries the shared object members `name`, `id`, `type`, `isValid`, `release` and `remove`.
 
@@ -21261,8 +22048,8 @@ Source: FontLab Proteus API documentation
 
 Source: generated/fontlab.py: flPaper captured declaration"""
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
 
     def activeGlyphInfo(self) -> flObject:
@@ -21297,11 +22084,13 @@ Source: FontLab Proteus API documentation"""
         """Clone the object"""
         ...
 
-    def cloneObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def cloneObject(*args: Any, **kwargs: Any) -> Any:
         """flObject cloneObject(const flObject&); """
         ...
 
-    def createInstance(self) -> flPaper:
+    @_echopy_builtins.staticmethod
+    def createInstance() -> flPaper:
         """flPaper createInstance()
 
 Creates a detached `flPaper` instance. In most use cases the paper is created and managed by the canvas engine.
@@ -21309,7 +22098,8 @@ Creates a detached `flPaper` instance. In most use cases the paper is created an
 Source: FontLab Proteus API documentation"""
         ...
 
-    def createObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def createObject(*args: Any, **kwargs: Any) -> Any:
         """flObject/Nothing createObject(int);    """
         ...
 
@@ -21389,7 +22179,8 @@ Source: FontLab Proteus API documentation"""
         """hasHistoryState(uint history_ix)"""
         ...
 
-    def haveObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def haveObject(*args: Any, **kwargs: Any) -> Any:
         """bool haveObject(uint);                 """
         ...
 
@@ -21405,7 +22196,8 @@ Source: FontLab Proteus API documentation"""
         """initialHistoryIx()"""
         ...
 
-    def instanceType(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def instanceType(*args: Any, **kwargs: Any) -> Any:
         """int instanceType();                    """
         ...
 
@@ -21419,6 +22211,10 @@ Source: FontLab Proteus API documentation"""
 Returns the `flPackage` (font file) whose glyphs are displayed on this paper.
 
 Source: FontLab Proteus API documentation"""
+        ...
+
+    def propertyNames(self, *args: Any, **kwargs: Any) -> Any:
+        """propertyNames(): sorted snapshot of dynamic property keys"""
         ...
 
     def release(self) -> Any:
@@ -21698,6 +22494,12 @@ Constructors:
 
 Native bases: object
 
+Captured native MRO: flPinPoint, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature.
+
 Supplemental documentation:
 A pin point object with a `point` position, a `style`, an `appearance` value and the boolean attributes `anchor`, `isLatch`, `markEnabled`, `cloudEnabled` and `hasExpression`, plus the text attributes `expressionX` and `expressionY`. The captured declaration also exposes `translate`, `createInstance` and the object property, flag and history methods shared with the base editing object.
 
@@ -21705,8 +22507,8 @@ Source: FontLab Proteus API documentation
 
 Source: generated/fontlab.py: flPinPoint captured declaration"""
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
 
     def changed(self) -> Any:
@@ -21733,11 +22535,13 @@ Source: generated/fontlab.py: flPinPoint captured declaration"""
         """Clone the object"""
         ...
 
-    def cloneObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def cloneObject(*args: Any, **kwargs: Any) -> Any:
         """flObject cloneObject(const flObject&); """
         ...
 
-    def createInstance(self) -> flPinPoint:
+    @_echopy_builtins.staticmethod
+    def createInstance() -> flPinPoint:
         """flPinPoint createInstance()
 
 Allocates and returns a new, empty anchor instance.
@@ -21745,7 +22549,8 @@ Allocates and returns a new, empty anchor instance.
 Source: FontLab Proteus API documentation"""
         ...
 
-    def createObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def createObject(*args: Any, **kwargs: Any) -> Any:
         """flObject/Nothing createObject(int);    """
         ...
 
@@ -21777,7 +22582,8 @@ Source: FontLab Proteus API documentation"""
         """hasHistoryState(uint history_ix)"""
         ...
 
-    def haveObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def haveObject(*args: Any, **kwargs: Any) -> Any:
         """bool haveObject(uint);                 """
         ...
 
@@ -21793,12 +22599,17 @@ Source: FontLab Proteus API documentation"""
         """initialHistoryIx()"""
         ...
 
-    def instanceType(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def instanceType(*args: Any, **kwargs: Any) -> Any:
         """int instanceType();                    """
         ...
 
     def isEqual(self, arg0: flObject) -> Any:
         """isEqual(flObject)"""
+        ...
+
+    def propertyNames(self, *args: Any, **kwargs: Any) -> Any:
+        """propertyNames(): sorted snapshot of dynamic property keys"""
         ...
 
     def release(self) -> Any:
@@ -22397,6 +23208,12 @@ Constructors:
 
 Native bases: object
 
+Captured native MRO: flPreferences, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature.
+
 Supplemental documentation:
 Preferences. The captured declaration exposes `doInterpolate`, `fontAuditTests`, `instance`, `load`, `save`, `saveView`, `setFontAuditTest`, `setGridDistances`, `sourceMetricsSamples`, `unicode2text`, `ConflictOverwrite`, `ConflictRename`, `ConflictSkip`, `DestinationAsk`, `DestinationFolder` and `DsigAlgorithmSHA256`. It is created with no captured constructor overloads.
 
@@ -22404,11 +23221,12 @@ Source: FontLab Proteus API documentation
 
 Source: generated/fontlab.py: flPreferences captured declaration"""
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
 
-    def doInterpolate(self) -> bool:
+    @_echopy_builtins.staticmethod
+    def doInterpolate() -> bool:
         """bool doInterpolate()
 
 Returns whether variable font interpolation is currently enabled.
@@ -22416,7 +23234,8 @@ Returns whether variable font interpolation is currently enabled.
 Source: FontLab Proteus API documentation"""
         ...
 
-    def fontAuditTests(self) -> Any:
+    @_echopy_builtins.staticmethod
+    def fontAuditTests() -> Any:
         """list(int) fontAuditTests()
 
 Returns the list of audit test IDs that are currently enabled.
@@ -22424,7 +23243,8 @@ Returns the list of audit test IDs that are currently enabled.
 Source: FontLab Proteus API documentation"""
         ...
 
-    def instance(self) -> flPreferences:
+    @_echopy_builtins.staticmethod
+    def instance() -> flPreferences:
         """flPreferences instance()
 
 Returns the global preferences singleton.
@@ -22432,7 +23252,8 @@ Returns the global preferences singleton.
 Source: FontLab Proteus API documentation"""
         ...
 
-    def load(self, arg0: dict[str, Any]) -> Any:
+    @_echopy_builtins.staticmethod
+    def load(arg0: dict[str, Any]) -> Any:
         """load(QVariantMap)
 
 Restores preferences from a previously saved dict. Use this to restore a snapshot.
@@ -22440,7 +23261,8 @@ Restores preferences from a previously saved dict. Use this to restore a snapsho
 Source: FontLab Proteus API documentation"""
         ...
 
-    def namecaptionFont(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def namecaptionFont(*args: Any, **kwargs: Any) -> Any:
         """QFont  namecaptionFont (bool condensed)
 
 Returns the full Qt font object used for glyph name captions.
@@ -22448,7 +23270,8 @@ Returns the full Qt font object used for glyph name captions.
 Source: FontLab Proteus API documentation"""
         ...
 
-    def namecaptionFontFamilyName(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def namecaptionFontFamilyName(*args: Any, **kwargs: Any) -> Any:
         """string namecaptionFontFamilyName (bool condensed)
 
 Returns the family name of the font used for glyph captions.
@@ -22456,7 +23279,8 @@ Returns the family name of the font used for glyph captions.
 Source: FontLab Proteus API documentation"""
         ...
 
-    def namecaptionFontId(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def namecaptionFontId(*args: Any, **kwargs: Any) -> Any:
         """int    namecaptionFontId (bool condensed)
 
 Returns the font ID used for glyph name captions in the font window. Pass `condensed=True` for the condensed caption variant.
@@ -22464,7 +23288,8 @@ Returns the font ID used for glyph name captions in the font window. Pass `conde
 Source: FontLab Proteus API documentation"""
         ...
 
-    def options2tracer_precision(self) -> float:
+    @_echopy_builtins.staticmethod
+    def options2tracer_precision() -> float:
         """double options2tracer_precision()
 
 Converts the current auto-trace options to a precision value (used internally by the tracer).
@@ -22472,7 +23297,8 @@ Converts the current auto-trace options to a precision value (used internally by
 Source: FontLab Proteus API documentation"""
         ...
 
-    def options2tracer_smoothness(self) -> int:
+    @_echopy_builtins.staticmethod
+    def options2tracer_smoothness() -> int:
         """int options2tracer_smoothness()
 
 Converts the current auto-trace options to a smoothness value.
@@ -22480,7 +23306,8 @@ Converts the current auto-trace options to a smoothness value.
 Source: FontLab Proteus API documentation"""
         ...
 
-    def save(self) -> dict[str, Any]:
+    @_echopy_builtins.staticmethod
+    def save() -> dict[str, Any]:
         """QVariantMap save()
 
 Serializes all current preferences to a Python dict. Useful for saving a preferences snapshot before making temporary changes.
@@ -22488,7 +23315,8 @@ Serializes all current preferences to a Python dict. Useful for saving a prefere
 Source: FontLab Proteus API documentation"""
         ...
 
-    def saveView(self) -> Any:
+    @_echopy_builtins.staticmethod
+    def saveView() -> Any:
         """saveView()
 
 Persists the current window layout so it's restored on next launch.
@@ -22496,7 +23324,8 @@ Persists the current window layout so it's restored on next launch.
 Source: FontLab Proteus API documentation"""
         ...
 
-    def setFontAuditTest(self, id: int, value: bool) -> Any:
+    @_echopy_builtins.staticmethod
+    def setFontAuditTest(id: int, value: bool) -> Any:
         """setFontAuditTest(int id, bool value)
 
 Enables or disables a specific font audit test by ID.
@@ -22504,7 +23333,8 @@ Enables or disables a specific font audit test by ID.
 Source: FontLab Proteus API documentation"""
         ...
 
-    def setGridDistances(self, x: float, y: float) -> Any:
+    @_echopy_builtins.staticmethod
+    def setGridDistances(x: float, y: float) -> Any:
         """setGridDistances(double x, double y)
 
 Sets both horizontal and vertical grid spacing in one call. More convenient than setting `gridDistanceX` and `gridDistanceY` separately.
@@ -22512,7 +23342,8 @@ Sets both horizontal and vertical grid spacing in one call. More convenient than
 Source: FontLab Proteus API documentation"""
         ...
 
-    def sourceMetricsSamples(self) -> str:
+    @_echopy_builtins.staticmethod
+    def sourceMetricsSamples() -> str:
         """QString sourceMetricsSamples()
 
 Returns the source text used for metrics sample strings.
@@ -22520,7 +23351,8 @@ Returns the source text used for metrics sample strings.
 Source: FontLab Proteus API documentation"""
         ...
 
-    def tracer2options_precision(self, curve_fit: float) -> float:
+    @_echopy_builtins.staticmethod
+    def tracer2options_precision(curve_fit: float) -> float:
         """double tracer2options_precision(double curve_fit)
 
 Maps a `curve_fit` value back to a tracer precision setting.
@@ -22528,7 +23360,8 @@ Maps a `curve_fit` value back to a tracer precision setting.
 Source: FontLab Proteus API documentation"""
         ...
 
-    def tracer2options_smoothness(self, straighten_angle: int) -> float:
+    @_echopy_builtins.staticmethod
+    def tracer2options_smoothness(straighten_angle: int) -> float:
         """double tracer2options_smoothness(int straighten_angle)
 
 Maps a `straighten_angle` value back to a tracer smoothness setting.
@@ -22536,7 +23369,8 @@ Maps a `straighten_angle` value back to a tracer smoothness setting.
 Source: FontLab Proteus API documentation"""
         ...
 
-    def unicode2text(self, unc: int) -> str:
+    @_echopy_builtins.staticmethod
+    def unicode2text(unc: int) -> str:
         """QString unicode2text(uint unc)
 
 Converts a Unicode codepoint to its text representation.
@@ -22871,6 +23705,8 @@ Source: FontLab Proteus API documentation"""
     'int\n\nHow inactive (non-selected-shape) nodes are displayed: 0 = hidden, other values = different rendering modes.\n\nSource: FontLab Proteus API documentation'
     editorInactiveWireframe: Any
     'bool\n\nDisplay inactive shapes as wireframe outlines rather than filled shapes.\n\nSource: FontLab Proteus API documentation'
+    editorIndependentGlyphMasters: Any
+    'bool'
     editorInertion: Any
     'bool\n\nEnable inertia scrolling (the view continues to scroll after you lift your finger).\n\nSource: FontLab Proteus API documentation'
     editorInstanceLayer: Any
@@ -23103,6 +23939,8 @@ Source: FontLab Proteus API documentation"""
     'int'
     fontsAutoSaveTimeInterval: Any
     'int'
+    generalActivateFontWindowOnOpen: Any
+    'bool'
     generalActivatePanels: Any
     'bool'
     generalBeta: Any
@@ -23114,6 +23952,8 @@ Source: FontLab Proteus API documentation"""
     generalDarkFont: Any
     'bool'
     generalDarkGlyph: Any
+    'bool'
+    generalHideWarningDialogs: Any
     'bool'
     generalSketchboard: Any
     'bool'
@@ -23501,6 +24341,12 @@ Constructors:
 
 Native bases: object
 
+Captured native MRO: flProperty, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature.
+
 Supplemental documentation:
 A property object. The captured declaration exposes the property accessors `getProperty`, `getPropertyInt`, `getPropertyFloat`, `setProperty`, `setPropertyInt` and `setPropertyFloat`, and the attribute `objectAttr`. It is created with no captured constructor overloads. It also carries the shared object members `name`, `id`, `type`, `isValid`, `release` and `remove`.
 
@@ -23508,8 +24354,8 @@ Source: FontLab Proteus API documentation
 
 Source: generated/fontlab.py: flProperty captured declaration"""
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
 
     def changed(self) -> Any:
@@ -23536,11 +24382,13 @@ Source: generated/fontlab.py: flProperty captured declaration"""
         """Clone the object"""
         ...
 
-    def cloneObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def cloneObject(*args: Any, **kwargs: Any) -> Any:
         """flObject cloneObject(const flObject&); """
         ...
 
-    def createObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def createObject(*args: Any, **kwargs: Any) -> Any:
         """flObject/Nothing createObject(int);    """
         ...
 
@@ -23572,7 +24420,8 @@ Source: generated/fontlab.py: flProperty captured declaration"""
         """hasHistoryState(uint history_ix)"""
         ...
 
-    def haveObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def haveObject(*args: Any, **kwargs: Any) -> Any:
         """bool haveObject(uint);                 """
         ...
 
@@ -23588,12 +24437,17 @@ Source: generated/fontlab.py: flProperty captured declaration"""
         """initialHistoryIx()"""
         ...
 
-    def instanceType(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def instanceType(*args: Any, **kwargs: Any) -> Any:
         """int instanceType();                    """
         ...
 
     def isEqual(self, arg0: flObject) -> Any:
         """isEqual(flObject)"""
+        ...
+
+    def propertyNames(self, *args: Any, **kwargs: Any) -> Any:
+        """propertyNames(): sorted snapshot of dynamic property keys"""
         ...
 
     def release(self) -> Any:
@@ -23754,6 +24608,12 @@ Constructors:
 
 Native bases: object
 
+Captured native MRO: flPropertyDouble, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature.
+
 Supplemental documentation:
 A numeric property. The captured declaration exposes the attributes `value`, `expression`. It is created with no captured constructor overloads. It also carries the shared object members `changed`, `clone`, `cloneObject`, `getProperty`, `setProperty`, `release`, `remove` and `update` and the shared attributes `id`, `name`, `type`, `isValid` and `isNull`.
 
@@ -23761,8 +24621,8 @@ Source: FontLab Proteus API documentation
 
 Source: generated/fontlab.py: flPropertyDouble captured declaration"""
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
 
     def changed(self) -> Any:
@@ -23789,11 +24649,13 @@ Source: generated/fontlab.py: flPropertyDouble captured declaration"""
         """Clone the object"""
         ...
 
-    def cloneObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def cloneObject(*args: Any, **kwargs: Any) -> Any:
         """flObject cloneObject(const flObject&); """
         ...
 
-    def createObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def createObject(*args: Any, **kwargs: Any) -> Any:
         """flObject/Nothing createObject(int);    """
         ...
 
@@ -23825,7 +24687,8 @@ Source: generated/fontlab.py: flPropertyDouble captured declaration"""
         """hasHistoryState(uint history_ix)"""
         ...
 
-    def haveObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def haveObject(*args: Any, **kwargs: Any) -> Any:
         """bool haveObject(uint);                 """
         ...
 
@@ -23841,12 +24704,17 @@ Source: generated/fontlab.py: flPropertyDouble captured declaration"""
         """initialHistoryIx()"""
         ...
 
-    def instanceType(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def instanceType(*args: Any, **kwargs: Any) -> Any:
         """int instanceType();                    """
         ...
 
     def isEqual(self, arg0: flObject) -> Any:
         """isEqual(flObject)"""
+        ...
+
+    def propertyNames(self, *args: Any, **kwargs: Any) -> Any:
+        """propertyNames(): sorted snapshot of dynamic property keys"""
         ...
 
     def release(self) -> Any:
@@ -24000,6 +24868,12 @@ Constructors:
 
 Native bases: object
 
+Captured native MRO: flPropertyPoint, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature.
+
 Supplemental documentation:
 A point property. The captured declaration exposes `hasExpression`, and the attributes `point`, `paramType`, `ParameterType`, `expressionX`, `expressionY`. It is created with no captured constructor overloads. It also carries the shared object members `changed`, `clone`, `cloneObject`, `getProperty`, `setProperty`, `release`, `remove` and `update` and the shared attributes `id`, `name`, `type`, `isValid` and `isNull`.
 
@@ -24007,8 +24881,8 @@ Source: FontLab Proteus API documentation
 
 Source: generated/fontlab.py: flPropertyPoint captured declaration"""
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
 
     def changed(self) -> Any:
@@ -24035,11 +24909,13 @@ Source: generated/fontlab.py: flPropertyPoint captured declaration"""
         """Clone the object"""
         ...
 
-    def cloneObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def cloneObject(*args: Any, **kwargs: Any) -> Any:
         """flObject cloneObject(const flObject&); """
         ...
 
-    def createObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def createObject(*args: Any, **kwargs: Any) -> Any:
         """flObject/Nothing createObject(int);    """
         ...
 
@@ -24079,7 +24955,8 @@ Source: FontLab Proteus API documentation"""
         """hasHistoryState(uint history_ix)"""
         ...
 
-    def haveObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def haveObject(*args: Any, **kwargs: Any) -> Any:
         """bool haveObject(uint);                 """
         ...
 
@@ -24095,12 +24972,17 @@ Source: FontLab Proteus API documentation"""
         """initialHistoryIx()"""
         ...
 
-    def instanceType(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def instanceType(*args: Any, **kwargs: Any) -> Any:
         """int instanceType();                    """
         ...
 
     def isEqual(self, arg0: flObject) -> Any:
         """isEqual(flObject)"""
+        ...
+
+    def propertyNames(self, *args: Any, **kwargs: Any) -> Any:
+        """propertyNames(): sorted snapshot of dynamic property keys"""
         ...
 
     def release(self) -> Any:
@@ -24255,6 +25137,12 @@ Constructors:
 
 Native bases: object
 
+Captured native MRO: flSearchInfo, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature.
+
 Supplemental documentation:
 Search information. The captured declaration exposes `combine`, and the attributes `dist`, `glyphInfo`, `transform`. It is created with no captured constructor overloads. It also carries the shared object members `changed`, `clone`, `cloneObject`, `getProperty`, `setProperty`, `release`, `remove` and `update` and the shared attributes `id`, `name`, `type`, `isValid` and `isNull`.
 
@@ -24262,8 +25150,8 @@ Source: FontLab Proteus API documentation
 
 Source: generated/fontlab.py: flSearchInfo captured declaration"""
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
 
     def changed(self) -> Any:
@@ -24290,7 +25178,8 @@ Source: generated/fontlab.py: flSearchInfo captured declaration"""
         """Clone the object"""
         ...
 
-    def cloneObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def cloneObject(*args: Any, **kwargs: Any) -> Any:
         """flObject cloneObject(const flObject&); """
         ...
 
@@ -24302,7 +25191,8 @@ Multiplies the object's internal transform by `transform`. Used internally when 
 Source: FontLab Proteus API documentation"""
         ...
 
-    def createObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def createObject(*args: Any, **kwargs: Any) -> Any:
         """flObject/Nothing createObject(int);    """
         ...
 
@@ -24334,7 +25224,8 @@ Source: FontLab Proteus API documentation"""
         """hasHistoryState(uint history_ix)"""
         ...
 
-    def haveObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def haveObject(*args: Any, **kwargs: Any) -> Any:
         """bool haveObject(uint);                 """
         ...
 
@@ -24350,12 +25241,17 @@ Source: FontLab Proteus API documentation"""
         """initialHistoryIx()"""
         ...
 
-    def instanceType(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def instanceType(*args: Any, **kwargs: Any) -> Any:
         """int instanceType();                    """
         ...
 
     def isEqual(self, arg0: flObject) -> Any:
         """isEqual(flObject)"""
+        ...
+
+    def propertyNames(self, *args: Any, **kwargs: Any) -> Any:
+        """propertyNames(): sorted snapshot of dynamic property keys"""
         ...
 
     def release(self) -> Any:
@@ -24683,6 +25579,12 @@ Constructors:
 
 Native bases: object
 
+Captured native MRO: flShape, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature.
+
 Supplemental documentation:
 An editing shape with a `contours` collection of flContour objects. `getContours()` also returns its contours, and `contoursCount` reports their count. `boundingBox` is a QRectF attribute. Read the captured boolean attributes `isComponent` and `isComposite` to inspect the shape kind.
 
@@ -24690,8 +25592,8 @@ Source: FontLab Proteus API documentation
 
 Source: generated/fontlab.py: flShape captured declaration"""
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
 
     def activateBuilder(self) -> Any:
@@ -24702,8 +25604,8 @@ Enters the shape-builder editing mode for this shape, as if you had double-click
 Source: FontLab Proteus API documentation"""
         ...
 
-    def addContour(self, arg0: flContour) -> Any:
-        """addContour(flContour)
+    def addContour(self, arg0: flContour, check_duplicate: Any=False, validate: Any=True) -> Any:
+        """addContour(flContour, check_duplicate=False, validate=True)
 
 Appends a single contour to this shape. After adding, the contour is owned by the shape; you should not add the same contour object to another shape.
 
@@ -24716,6 +25618,14 @@ Source: FontLab Proteus API documentation"""
 Adds multiple contours in one call. More efficient than calling `addContour` in a loop when you have many contours ready at once.
 
 Source: FontLab Proteus API documentation"""
+        ...
+
+    def addSmartCorner(self, node: flNode, radius: float=20, smooth: bool=False) -> bool:
+        """bool addSmartCorner(flNode node, float radius=20, bool smooth=False) - add/update a live smart corner; negative radius creates an ink trap; manages the filter; reacquire source nodes afterwards"""
+        ...
+
+    def addSmartCorners(self, radius: float=20, smooth: bool=False) -> int:
+        """int addSmartCorners(float radius=20, bool smooth=False) - add live smart corners at applicable nodes, skip existing corners, return count; manages/reuses the filter"""
         ...
 
     def appendAnchor(self, node: flNode, guideline: flObject) -> Any:
@@ -24798,7 +25708,8 @@ Source: FontLab Proteus API documentation"""
         """Clone the object"""
         ...
 
-    def cloneObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def cloneObject(*args: Any, **kwargs: Any) -> Any:
         """flObject cloneObject(const flObject&); """
         ...
 
@@ -24842,7 +25753,8 @@ Like `convertToFgShape` but performs a full deep copy into the fontgate shape. T
 Source: FontLab Proteus API documentation"""
         ...
 
-    def createInstance(self) -> flShape:
+    @_echopy_builtins.staticmethod
+    def createInstance() -> flShape:
         """flShape createInstance()
 
 Allocates and returns a fresh, empty shape. Useful when you need a shape instance but are not yet ready to attach it to a layer.
@@ -24850,7 +25762,8 @@ Allocates and returns a fresh, empty shape. Useful when you need a shape instanc
 Source: FontLab Proteus API documentation"""
         ...
 
-    def createObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def createObject(*args: Any, **kwargs: Any) -> Any:
         """flObject/Nothing createObject(int);    """
         ...
 
@@ -24896,6 +25809,10 @@ Source: FontLab Proteus API documentation"""
 Forces FontLab to regenerate all path data for this shape from the current node coordinates. Call this after bulk node edits to make sure the visual representation and bounding boxes are accurate.
 
 Source: FontLab Proteus API documentation"""
+        ...
+
+    def expandStroke(self, *args: Any, **kwargs: Any) -> Any:
+        """bool expandStroke([bool outer_only]) - replace the stroke with its filled outline"""
         ...
 
     def findNode(self, arg0: str) -> flNode:
@@ -25026,7 +25943,8 @@ Returns `True` if there is anything selected in this shape matching the given se
 Source: FontLab Proteus API documentation"""
         ...
 
-    def haveObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def haveObject(*args: Any, **kwargs: Any) -> Any:
         """bool haveObject(uint);                 """
         ...
 
@@ -25074,7 +25992,8 @@ Returns the bounding rectangle of the shape's actual ink (visible filled area), 
 Source: FontLab Proteus API documentation"""
         ...
 
-    def instanceType(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def instanceType(*args: Any, **kwargs: Any) -> Any:
         """int instanceType();                    """
         ...
 
@@ -25090,7 +26009,8 @@ Source: FontLab Proteus API documentation"""
         """isEqual(flObject)"""
         ...
 
-    def isShape(self, arg0: flObject) -> bool:
+    @_echopy_builtins.staticmethod
+    def isShape(arg0: flObject) -> bool:
         """bool isShape(flObject)
 
 Tests whether a generic `flObject` reference is actually an `flShape`. Handy when iterating a mixed-type list and you want to filter for shapes only.
@@ -25112,6 +26032,10 @@ Source: FontLab Proteus API documentation"""
 Caches the current geometry so that interactive transformations (rotate, scale) work smoothly. Must be called before applying a transform to this shape.
 
 Source: FontLab Proteus API documentation"""
+        ...
+
+    def propertyNames(self, *args: Any, **kwargs: Any) -> Any:
+        """propertyNames(): sorted snapshot of dynamic property keys"""
         ...
 
     def release(self) -> Any:
@@ -25242,6 +26166,10 @@ Currently returns `False` unconditionally in the native implementation. Use `sha
 Source: FontLab Proteus API documentation"""
         ...
 
+    def smartCornerSource(self) -> flShape:
+        """flShape smartCornerSource() - editable source of a Smart Corners filter, self for plain outlines, null for unsupported/locked shapes"""
+        ...
+
     def tag(self, *args: Any, **kwargs: Any) -> Any:
         """tag([string])"""
         ...
@@ -25346,6 +26274,8 @@ Source: FontLab Proteus API documentation"""
     'QPainterPath\n\nA Qt painter path containing only the open contours. Open contours are common in stroke-based workflows and some decorative elements.\n\nSource: FontLab Proteus API documentation'
     pen: Any
     'QPen\n\nThe live-stroke pen: controls brush/color, width, join, miter limit, and basic caps. `Qt.NoPen` disables the stroke. For independent start/end caps and other native stroke settings, use `penParameters`.\n\nSource: FontLab Proteus API documentation'
+    penParameters: Any
+    'dict: stroke parameters (thickness, proportion, contrast, rotation, join, miter_limit, remove_overlap, cap0/cap1, cap_*0/1)\n\nRead/write native stroke settings, including thickness, proportion, contrast, rotation, cap0/cap1, join, and miter limit. See Stroke scripting below for units, defaults, and replacement semantics.\n\nSource: FontLab Proteus API documentation'
     refCnt: Any
     'object references count'
     selected: Any
@@ -25643,6 +26573,12 @@ Constructors:
 
 Native bases: object
 
+Captured native MRO: flShapeBuilder, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature.
+
 Supplemental documentation:
 Shape builder. The captured declaration exposes `deactivate`, `getSmartNodes`, `hasFeature`, `init`, `prepareTransformationData`, `resetTransformationData`, `setDestShape`, `setDestShapeData`, `setOwnerLayer`, `setOwnerShapeData`, `canUngroup`, `haveResult` and `title`. It is created with no captured constructor overloads. It also carries the shared object members `changed`, `clone`, `cloneObject`, `getProperty`, `setProperty`, `release`, `remove` and `update` and the shared attributes `id`, `name`, `type`, `isValid` and `isNull`.
 
@@ -25650,8 +26586,8 @@ Source: FontLab Proteus API documentation
 
 Source: generated/fontlab.py: flShapeBuilder captured declaration"""
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
 
     def changed(self) -> Any:
@@ -25678,11 +26614,13 @@ Source: generated/fontlab.py: flShapeBuilder captured declaration"""
         """Clone the object"""
         ...
 
-    def cloneObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def cloneObject(*args: Any, **kwargs: Any) -> Any:
         """flObject cloneObject(const flObject&); """
         ...
 
-    def createObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def createObject(*args: Any, **kwargs: Any) -> Any:
         """flObject/Nothing createObject(int);    """
         ...
 
@@ -25734,7 +26672,8 @@ Source: FontLab Proteus API documentation"""
         """hasHistoryState(uint history_ix)"""
         ...
 
-    def haveObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def haveObject(*args: Any, **kwargs: Any) -> Any:
         """bool haveObject(uint);                 """
         ...
 
@@ -25758,7 +26697,8 @@ Source: FontLab Proteus API documentation"""
         """initialHistoryIx()"""
         ...
 
-    def instanceType(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def instanceType(*args: Any, **kwargs: Any) -> Any:
         """int instanceType();                    """
         ...
 
@@ -25772,6 +26712,10 @@ Source: FontLab Proteus API documentation"""
 Caches the current geometry so that interactive transformations (rotate, scale) work correctly on the builder's result shape. Must be called before applying any transform to a shape that has a builder. The same rule applies here as for `flShape.prepareTransformationData()`.
 
 Source: FontLab Proteus API documentation"""
+        ...
+
+    def propertyNames(self, *args: Any, **kwargs: Any) -> Any:
+        """propertyNames(): sorted snapshot of dynamic property keys"""
         ...
 
     def release(self) -> Any:
@@ -26098,6 +27042,12 @@ Constructors:
 
 Native bases: object
 
+Captured native MRO: flShapeData, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature.
+
 Supplemental documentation:
 Shape data. The captured declaration exposes `addContour`, `addContours`, `arrangeContours`, `assignContours`, `clearContours`, `clearIncludesList`, `goDown`, `goUp`, `includesList`, `removeAnchor`, `removeContour`, `sendToBack`, `sendToFront`, `sortContours`, `takeIncludesList`, `builder`, `componentGlyph`, `componentLayer`, `contours`, `includes`, `isComponent`, `isComposite`, `referenceCount`, `segments` and `shapeType`. It is created with no captured constructor overloads. It also carries the shared object members `changed`, `clone`, `cloneObject`, `getProperty`, `setProperty`, `release`, `remove` and `update` and the shared attributes `id`, `name`, `type`, `isValid` and `isNull`.
 
@@ -26105,8 +27055,8 @@ Source: FontLab Proteus API documentation
 
 Source: generated/fontlab.py: flShapeData captured declaration"""
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
 
     def addContour(self, arg0: flContour) -> Any:
@@ -26189,11 +27139,13 @@ Source: FontLab Proteus API documentation"""
         """Clone the object"""
         ...
 
-    def cloneObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def cloneObject(*args: Any, **kwargs: Any) -> Any:
         """flObject cloneObject(const flObject&); """
         ...
 
-    def createObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def createObject(*args: Any, **kwargs: Any) -> Any:
         """flObject/Nothing createObject(int);    """
         ...
 
@@ -26241,7 +27193,8 @@ Source: FontLab Proteus API documentation"""
         """hasHistoryState(uint history_ix)"""
         ...
 
-    def haveObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def haveObject(*args: Any, **kwargs: Any) -> Any:
         """bool haveObject(uint);                 """
         ...
 
@@ -26261,7 +27214,8 @@ Source: FontLab Proteus API documentation"""
         """initialHistoryIx()"""
         ...
 
-    def instanceType(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def instanceType(*args: Any, **kwargs: Any) -> Any:
         """int instanceType();                    """
         ...
 
@@ -26275,6 +27229,10 @@ Source: FontLab Proteus API documentation"""
 Pre-computes and caches the geometric state needed for interactive transformations (rotate, scale, shear). You must call this before applying any transform to this shape data. Failing to call it first can produce incorrect results or crashes during live transformation.
 
 Source: FontLab Proteus API documentation"""
+        ...
+
+    def propertyNames(self, *args: Any, **kwargs: Any) -> Any:
+        """propertyNames(): sorted snapshot of dynamic property keys"""
         ...
 
     def release(self) -> Any:
@@ -26550,6 +27508,12 @@ Constructors:
 
 Native bases: object
 
+Captured native MRO: flShapeInfo, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature.
+
 Supplemental documentation:
 Shape information. The captured declaration exposes `shape`, `layer`, `composites`, `appendComposite`, `pushFrontComposite`, `takeFirstComposite`, `takeLastComposite`, `ownerComposite`, `ownerCompositeInfo`, `getContoursInfo`, `findNode`, `contains`, `boundingBox`, `toCanvasTransform`, `toGlyphTransform`, `replaceShape`, `move` and `hasAboveComposites`. It is created with no captured constructor overloads. It also carries the shared object members `changed`, `clone`, `cloneObject`, `getProperty`, `setProperty`, `release`, `remove` and `update` and the shared attributes `id`, `name`, `type`, `isValid` and `isNull`.
 
@@ -26557,8 +27521,8 @@ Source: FontLab Proteus API documentation
 
 Source: generated/fontlab.py: flShapeInfo captured declaration"""
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
 
     def appendComposite(self, arg0: flShapeInfo) -> Any:
@@ -26609,7 +27573,8 @@ Source: FontLab Proteus API documentation"""
         """Clone the object"""
         ...
 
-    def cloneObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def cloneObject(*args: Any, **kwargs: Any) -> Any:
         """flObject cloneObject(const flObject&); """
         ...
 
@@ -26633,7 +27598,8 @@ Returns `True` if the canvas point hits this shape's filled area. `s` is a scale
 Source: FontLab Proteus API documentation"""
         ...
 
-    def createInstance(self) -> flShapeInfo:
+    @_echopy_builtins.staticmethod
+    def createInstance() -> flShapeInfo:
         """flShapeInfo createInstance()
 
 Factory method. Creates a detached `flShapeInfo` for use in tool code. The engine calls this for you during normal editing.
@@ -26641,7 +27607,8 @@ Factory method. Creates a detached `flShapeInfo` for use in tool code. The engin
 Source: FontLab Proteus API documentation"""
         ...
 
-    def createObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def createObject(*args: Any, **kwargs: Any) -> Any:
         """flObject/Nothing createObject(int);    """
         ...
 
@@ -26705,7 +27672,8 @@ Source: FontLab Proteus API documentation"""
         """hasHistoryState(uint history_ix)"""
         ...
 
-    def haveObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def haveObject(*args: Any, **kwargs: Any) -> Any:
         """bool haveObject(uint);                 """
         ...
 
@@ -26721,7 +27689,8 @@ Source: FontLab Proteus API documentation"""
         """initialHistoryIx()"""
         ...
 
-    def instanceType(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def instanceType(*args: Any, **kwargs: Any) -> Any:
         """int instanceType();                    """
         ...
 
@@ -26759,6 +27728,10 @@ Source: FontLab Proteus API documentation"""
 Returns the `flShapeInfo` of the owning composite.
 
 Source: FontLab Proteus API documentation"""
+        ...
+
+    def propertyNames(self, *args: Any, **kwargs: Any) -> Any:
+        """propertyNames(): sorted snapshot of dynamic property keys"""
         ...
 
     def pushFrontComposite(self, arg0: flShapeInfo) -> Any:
@@ -26999,6 +27972,12 @@ Constructors:
 
 Native bases: object
 
+Captured native MRO: flSnapLine, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature.
+
 Supplemental documentation:
 Snap line. The captured declaration exposes `distanceTo`, `offsetTo`, `getHashCode`, `isSnapLine`, `reset`, `setSnapFlag`, `setSnapFlagValue`, `snapFlag`, `angle`, `angleMode`, `center`, `centerPoint`, `color`, `constraints`, `expression`, `extLinef`, `extPosition`, `length`, `hasColor`, `hasExtLine`, `isHint`, `isZone`, `isPassive` and `isMeasurementLine`. It is created with no captured constructor overloads. It also carries the shared object members `changed`, `clone`, `cloneObject`, `getProperty`, `setProperty`, `release`, `remove` and `update` and the shared attributes `id`, `name`, `type`, `isValid` and `isNull`.
 
@@ -27006,8 +27985,8 @@ Source: FontLab Proteus API documentation
 
 Source: generated/fontlab.py: flSnapLine captured declaration"""
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
 
     def changed(self) -> Any:
@@ -27034,11 +28013,13 @@ Source: generated/fontlab.py: flSnapLine captured declaration"""
         """Clone the object"""
         ...
 
-    def cloneObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def cloneObject(*args: Any, **kwargs: Any) -> Any:
         """flObject cloneObject(const flObject&); """
         ...
 
-    def createObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def createObject(*args: Any, **kwargs: Any) -> Any:
         """flObject/Nothing createObject(int);    """
         ...
 
@@ -27086,7 +28067,8 @@ Source: FontLab Proteus API documentation"""
         """hasHistoryState(uint history_ix)"""
         ...
 
-    def haveObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def haveObject(*args: Any, **kwargs: Any) -> Any:
         """bool haveObject(uint);                 """
         ...
 
@@ -27102,7 +28084,8 @@ Source: FontLab Proteus API documentation"""
         """initialHistoryIx()"""
         ...
 
-    def instanceType(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def instanceType(*args: Any, **kwargs: Any) -> Any:
         """int instanceType();                    """
         ...
 
@@ -27110,7 +28093,8 @@ Source: FontLab Proteus API documentation"""
         """isEqual(flObject)"""
         ...
 
-    def isSnapLine(self, arg0: flObject) -> bool:
+    @_echopy_builtins.staticmethod
+    def isSnapLine(arg0: flObject) -> bool:
         """bool isSnapLine(flObject)
 
 Returns `True` if the given object is any kind of snap line (including guidelines). Use this for type checking when iterating mixed collections of objects.
@@ -27124,6 +28108,10 @@ Source: FontLab Proteus API documentation"""
 Returns the snap offset vector — the shortest path from the given point to the nearest position on this line. The snapping engine adds this vector to the cursor position to "pull" it onto the guide.
 
 Source: FontLab Proteus API documentation"""
+        ...
+
+    def propertyNames(self, *args: Any, **kwargs: Any) -> Any:
+        """propertyNames(): sorted snapshot of dynamic property keys"""
         ...
 
     def release(self) -> Any:
@@ -27215,6 +28203,8 @@ Source: FontLab Proteus API documentation"""
     'QLineF\n\nThe extended line segment, if any\n\nSource: FontLab Proteus API documentation'
     extPosition: Any
     "double\n\nAn extended position value along the line's axis, used for non-H/V guides\n\nSource: FontLab Proteus API documentation"
+    extension: Any
+    'flNode: existing extension node, or None if absent (read-only)\n\nExisting extension node, preserving its native ID and model. `None` means no extension. Read-only; also inherited by `flGuideLine`.\n\nSource: FontLab Proteus API documentation'
     flObjectFlags: dict
     hasChanges: Any
     'bool'
@@ -27234,6 +28224,8 @@ Source: FontLab Proteus API documentation"""
     'bool'
     isExluded: Any
     'bool'
+    isGhost: Any
+    'bool: actual ghost-hint flag (read-only)'
     isHint: Any
     'bool'
     isInUse: Any
@@ -27383,6 +28375,12 @@ Constructors:
 
 Native bases: object
 
+Captured native MRO: flSnapObject, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature.
+
 Supplemental documentation:
 Snap object. The captured declaration exposes `distanceTo`, `offsetTo`, `getHashCode`, `reset`, `setSnapFlag`, `setSnapFlagValue`, `snapFlag`, `snapFlags`, `style`, `isHint`, `isZone`, `isPassive` and `isMeasurementLine`. It is created with no captured constructor overloads. It also carries the shared object members `changed`, `clone`, `cloneObject`, `getProperty`, `setProperty`, `release`, `remove` and `update` and the shared attributes `id`, `name`, `type`, `isValid` and `isNull`.
 
@@ -27390,8 +28388,8 @@ Source: FontLab Proteus API documentation
 
 Source: generated/fontlab.py: flSnapObject captured declaration"""
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
 
     def changed(self) -> Any:
@@ -27418,11 +28416,13 @@ Source: generated/fontlab.py: flSnapObject captured declaration"""
         """Clone the object"""
         ...
 
-    def cloneObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def cloneObject(*args: Any, **kwargs: Any) -> Any:
         """flObject cloneObject(const flObject&); """
         ...
 
-    def createObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def createObject(*args: Any, **kwargs: Any) -> Any:
         """flObject/Nothing createObject(int);    """
         ...
 
@@ -27470,7 +28470,8 @@ Source: FontLab Proteus API documentation"""
         """hasHistoryState(uint history_ix)"""
         ...
 
-    def haveObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def haveObject(*args: Any, **kwargs: Any) -> Any:
         """bool haveObject(uint);                 """
         ...
 
@@ -27486,7 +28487,8 @@ Source: FontLab Proteus API documentation"""
         """initialHistoryIx()"""
         ...
 
-    def instanceType(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def instanceType(*args: Any, **kwargs: Any) -> Any:
         """int instanceType();                    """
         ...
 
@@ -27500,6 +28502,10 @@ Source: FontLab Proteus API documentation"""
 Returns the vector from the given point to the nearest snap position on this object. Add this vector to the cursor position to find the snapped-to point.
 
 Source: FontLab Proteus API documentation"""
+        ...
+
+    def propertyNames(self, *args: Any, **kwargs: Any) -> Any:
+        """propertyNames(): sorted snapshot of dynamic property keys"""
         ...
 
     def release(self) -> Any:
@@ -27584,6 +28590,8 @@ Source: FontLab Proteus API documentation"""
     'bool'
     isExluded: Any
     'bool\n\n`True` if this object is excluded from snap calculations. (Note: the misspelling "Exluded" matches the source code.)\n\nSource: FontLab Proteus API documentation'
+    isGhost: Any
+    'bool: actual ghost-hint flag (read-only)\n\nActual native ghost-hint flag, independent of `snapFlags` and width sign. Also inherited by `flSnapLine` and `flGuideLine`.\n\nSource: FontLab Proteus API documentation'
     isHint: Any
     'bool\n\n`True` if this object represents an autohint stem.\n\nSource: FontLab Proteus API documentation'
     isInUse: Any
@@ -27755,6 +28763,12 @@ Use the `flSnaps.ViewMode` dictionary with subscription.
 
 Native bases: object
 
+Captured native MRO: flSnaps, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature.
+
 Supplemental documentation:
 A holder of snap constants. The captured declaration exposes the dict attributes `FastGuidelines`, `MarkerFlags`, `MarkerKey`, `SnapLineFlags`, `SnapMode`, `SnapStyle` and `ViewMode`; it has no methods beyond the constructor.
 
@@ -27762,8 +28776,8 @@ Source: FontLab Proteus API documentation
 
 Source: generated/fontlab.py: flSnaps captured declaration"""
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
     FastGuidelines: dict
     MarkerFlags: dict
@@ -27883,6 +28897,12 @@ Constructors:
 
 Native bases: object
 
+Captured native MRO: flStem, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature.
+
 Supplemental documentation:
 A stem described by `value` (double), with `name`, `tags`, `program` and `programText` attributes. The captured declaration also exposes `guaranteeName`, `linear`, `ppm`, `tagsSet` and `toStem`. Consult the retained constructor documentation for the supported creation forms.
 
@@ -27890,8 +28910,8 @@ Source: FontLab Proteus API documentation
 
 Source: generated/fontlab.py: flStem captured declaration"""
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
 
     def guaranteeName(self) -> Any:
@@ -28063,6 +29083,12 @@ Constructors:
 
 Native bases: object
 
+Captured native MRO: flSticker, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature.
+
 Supplemental documentation:
 A sticker object on the canvas. The captured declaration exposes the attributes `text`, `textRect`, `shape` and `boundingBox`, and the method `move`. It is created as `flSticker()`, `flSticker(flObject)`, `flSticker(flSticker)` or `flSticker(QString)`. It also carries the shared object members `name`, `id`, `type`, `isValid`, `release` and `remove`.
 
@@ -28070,8 +29096,8 @@ Source: FontLab Proteus API documentation
 
 Source: generated/fontlab.py: flSticker captured declaration"""
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
 
     def changed(self) -> Any:
@@ -28098,11 +29124,13 @@ Source: generated/fontlab.py: flSticker captured declaration"""
         """Clone the object"""
         ...
 
-    def cloneObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def cloneObject(*args: Any, **kwargs: Any) -> Any:
         """flObject cloneObject(const flObject&); """
         ...
 
-    def createObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def createObject(*args: Any, **kwargs: Any) -> Any:
         """flObject/Nothing createObject(int);    """
         ...
 
@@ -28134,7 +29162,8 @@ Source: generated/fontlab.py: flSticker captured declaration"""
         """hasHistoryState(uint history_ix)"""
         ...
 
-    def haveObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def haveObject(*args: Any, **kwargs: Any) -> Any:
         """bool haveObject(uint);                 """
         ...
 
@@ -28150,7 +29179,8 @@ Source: generated/fontlab.py: flSticker captured declaration"""
         """initialHistoryIx()"""
         ...
 
-    def instanceType(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def instanceType(*args: Any, **kwargs: Any) -> Any:
         """int instanceType();                    """
         ...
 
@@ -28164,6 +29194,10 @@ Source: generated/fontlab.py: flSticker captured declaration"""
 Moves the sticker to a new position on the canvas. The position is in canvas (glyph) coordinates. Calling this repositions the sticker without changing its attached shape.
 
 Source: FontLab Proteus API documentation"""
+        ...
+
+    def propertyNames(self, *args: Any, **kwargs: Any) -> Any:
+        """propertyNames(): sorted snapshot of dynamic property keys"""
         ...
 
     def release(self) -> Any:
@@ -28376,6 +29410,12 @@ Constructors:
 
 Native bases: object
 
+Captured native MRO: flTTHCommand, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature.
+
 Supplemental documentation:
 A TrueType hinting command with `code`, `parameters` and `point_names` attributes. The captured declaration exposes `fromString`, `isDelta`, `isFinal`, `isHorizontal`, `isVertical`, `nodesCount`, `parametersCount`, `stemIndex` and `zoneIndex`. It is created as `flTTHCommand()`.
 
@@ -28383,8 +29423,8 @@ Source: FontLab Proteus API documentation
 
 Source: generated/fontlab.py: flTTHCommand captured declaration"""
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
 
     def fromString(self, arg0: str, itr: Any) -> bool:
@@ -28759,6 +29799,12 @@ Constructors:
 
 Native bases: object
 
+Captured native MRO: flTextBlock, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature.
+
 Supplemental documentation:
 Text block. The captured declaration exposes `addFeature`, `removeFeature`, `removeFeatures`, `setFeatures`, `features`, `fontSize`, `charsCount`, `glyphsCount`, `getAllGlyphs`, `getGlyphAt`, `getActiveGlyph`, `setActiveGlyph`, `getSelectedGlyphs`, `getSelectedCharacters`, `getLineIndex`, `getGlyphsInLine`, `reformat`, `textFits`, `script`, `frameRect` and `locked`. It is created with no captured constructor overloads. It also carries the shared object members `changed`, `clone`, `cloneObject`, `getProperty`, `setProperty`, `release`, `remove` and `update` and the shared attributes `id`, `name`, `type`, `isValid` and `isNull`.
 
@@ -28766,8 +29812,8 @@ Source: FontLab Proteus API documentation
 
 Source: generated/fontlab.py: flTextBlock captured declaration"""
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
 
     def activeObjectChanged(self) -> flNotifier:
@@ -28810,11 +29856,13 @@ Source: generated/fontlab.py: flTextBlock captured declaration"""
         """Clone the object"""
         ...
 
-    def cloneObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def cloneObject(*args: Any, **kwargs: Any) -> Any:
         """flObject cloneObject(const flObject&); """
         ...
 
-    def createInstance(self) -> flTextBlock:
+    @_echopy_builtins.staticmethod
+    def createInstance() -> flTextBlock:
         """flTextBlock createInstance()
 
 Creates a new detached `flTextBlock`. You must call `init(canvas)` to attach it to a canvas before using it. Detached text blocks are useful for computing layout outside of a display context.
@@ -28822,7 +29870,8 @@ Creates a new detached `flTextBlock`. You must call `init(canvas)` to attach it 
 Source: FontLab Proteus API documentation"""
         ...
 
-    def createObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def createObject(*args: Any, **kwargs: Any) -> Any:
         """flObject/Nothing createObject(int);    """
         ...
 
@@ -28962,7 +30011,8 @@ Source: FontLab Proteus API documentation"""
         """bool hasHoveredNodeEdit()"""
         ...
 
-    def haveObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def haveObject(*args: Any, **kwargs: Any) -> Any:
         """bool haveObject(uint);                 """
         ...
 
@@ -28994,7 +30044,8 @@ Source: FontLab Proteus API documentation"""
         """initialHistoryIx()"""
         ...
 
-    def instanceType(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def instanceType(*args: Any, **kwargs: Any) -> Any:
         """int instanceType();                    """
         ...
 
@@ -29052,6 +30103,10 @@ Source: FontLab Proteus API documentation"""
 
     def parentTextBlock(self) -> flTextBlock:
         """flTextBlock parentTextBlock()"""
+        ...
+
+    def propertyNames(self, *args: Any, **kwargs: Any) -> Any:
+        """propertyNames(): sorted snapshot of dynamic property keys"""
         ...
 
     def reformat(self) -> Any:
@@ -29417,6 +30472,12 @@ Constructors:
 
 Native bases: object
 
+Captured native MRO: flTransform, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature.
+
 Supplemental documentation:
 A transform object. The captured declaration exposes the attributes `transform` and `scale` and the methods `map`, `mapRect` and `translate`. It is created as `flTransform()`, `flTransform(flTransform)`, `flTransform(flObject)` or `flTransform(QTransform)`. It also carries the shared object members `name`, `id`, `type`, `isValid`, `release` and `remove`.
 
@@ -29424,8 +30485,8 @@ Source: FontLab Proteus API documentation
 
 Source: generated/fontlab.py: flTransform captured declaration"""
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
 
     def changed(self) -> Any:
@@ -29452,11 +30513,13 @@ Source: generated/fontlab.py: flTransform captured declaration"""
         """Clone the object"""
         ...
 
-    def cloneObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def cloneObject(*args: Any, **kwargs: Any) -> Any:
         """flObject cloneObject(const flObject&); """
         ...
 
-    def createObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def createObject(*args: Any, **kwargs: Any) -> Any:
         """flObject/Nothing createObject(int);    """
         ...
 
@@ -29488,7 +30551,8 @@ Source: generated/fontlab.py: flTransform captured declaration"""
         """hasHistoryState(uint history_ix)"""
         ...
 
-    def haveObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def haveObject(*args: Any, **kwargs: Any) -> Any:
         """bool haveObject(uint);                 """
         ...
 
@@ -29504,7 +30568,8 @@ Source: generated/fontlab.py: flTransform captured declaration"""
         """initialHistoryIx()"""
         ...
 
-    def instanceType(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def instanceType(*args: Any, **kwargs: Any) -> Any:
         """int instanceType();                    """
         ...
 
@@ -29526,6 +30591,10 @@ Source: FontLab Proteus API documentation"""
 Pass a rectangle through the transform and return the transformed bounding rectangle. Note: if the transform includes a rotation, the result is the axis-aligned bounding box of the rotated rectangle, not the rotated rectangle itself.
 
 Source: FontLab Proteus API documentation"""
+        ...
+
+    def propertyNames(self, *args: Any, **kwargs: Any) -> Any:
+        """propertyNames(): sorted snapshot of dynamic property keys"""
         ...
 
     def release(self) -> Any:
@@ -29743,6 +30812,12 @@ Constructors:
 
 Native bases: object
 
+Captured native MRO: flVectorNode, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature.
+
 Supplemental documentation:
 Vector node. The captured declaration exposes `angleTo`, `canBeSmooth`, `canCollapse`, `collapseHandles`, `convertToCurve`, `convertToLine`, `moveBy`, `rotateBy`, `scaleBy`, `skewBy`, `makeStart`, `nextNode`, `prevNode`, `isCurve`, `isOn`, `isOff`, `isFirst`, `isLast`, `smooth`, `position`, `selected`, `x`, `y`, `guideline`, `mode`, `setPositionMode` and `isVectorNode`. It is created with no captured constructor overloads. It also carries the shared object members `changed`, `clone`, `cloneObject`, `getProperty`, `setProperty`, `release`, `remove` and `update` and the shared attributes `id`, `name`, `type`, `isValid` and `isNull`.
 
@@ -29750,8 +30825,8 @@ Source: FontLab Proteus API documentation
 
 Source: generated/fontlab.py: flVectorNode captured declaration"""
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
 
     def angleTo(self, p: QPointF) -> float:
@@ -29814,7 +30889,8 @@ Source: generated/fontlab.py: flVectorNode captured declaration"""
         """flNode cloneMapped(QTransform)"""
         ...
 
-    def cloneObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def cloneObject(*args: Any, **kwargs: Any) -> Any:
         """flObject cloneObject(const flObject&); """
         ...
 
@@ -29838,11 +30914,13 @@ Source: generated/fontlab.py: flVectorNode captured declaration"""
         """copyFrom(Node[, withSelected=False])"""
         ...
 
-    def createInstance(self) -> flVectorNode:
+    @_echopy_builtins.staticmethod
+    def createInstance() -> flVectorNode:
         """flVectorNode createInstance()"""
         ...
 
-    def createObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def createObject(*args: Any, **kwargs: Any) -> Any:
         """flObject/Nothing createObject(int);    """
         ...
 
@@ -29886,7 +30964,8 @@ Source: generated/fontlab.py: flVectorNode captured declaration"""
         """hasHistoryState(uint history_ix)"""
         ...
 
-    def haveObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def haveObject(*args: Any, **kwargs: Any) -> Any:
         """bool haveObject(uint);                 """
         ...
 
@@ -29906,7 +30985,8 @@ Source: generated/fontlab.py: flVectorNode captured declaration"""
         """initialHistoryIx()"""
         ...
 
-    def instanceType(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def instanceType(*args: Any, **kwargs: Any) -> Any:
         """int instanceType();                    """
         ...
 
@@ -29962,7 +31042,8 @@ Source: generated/fontlab.py: flVectorNode captured declaration"""
         """bool isSmartAngle()"""
         ...
 
-    def isVectorNode(self, arg0: flObject) -> bool:
+    @_echopy_builtins.staticmethod
+    def isVectorNode(arg0: flObject) -> bool:
         """bool isVectorNode(flObject)"""
         ...
 
@@ -29984,6 +31065,10 @@ Source: generated/fontlab.py: flVectorNode captured declaration"""
 
     def prevNode(self, nodeType: Any=...) -> Any:
         """Node/None prevNode([string nodeType= [, int searchDepth=1]])"""
+        ...
+
+    def propertyNames(self, *args: Any, **kwargs: Any) -> Any:
+        """propertyNames(): sorted snapshot of dynamic property keys"""
         ...
 
     def release(self) -> Any:
@@ -30323,6 +31408,12 @@ Constructors:
 
 Native bases: object
 
+Captured native MRO: flVisualItem, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature.
+
 Supplemental documentation:
 Visual item. The captured declaration exposes `appendDecorator`, `clearDecorators`, `clearItems`, `contain`, `containsItem`, `hide`, `show`, `move`, `select`, `unselect`, `invselect`, `mapCanvasToItem`, `mapItemToCanvas`, `mapCanvasDistanceToItem`, `paint`, `canvas`, `opacity`, `visible`, `selected`, `locked` and `itemScale`. It is created with no captured constructor overloads. It also carries the shared object members `changed`, `clone`, `cloneObject`, `getProperty`, `setProperty`, `release`, `remove` and `update` and the shared attributes `id`, `name`, `type`, `isValid` and `isNull`.
 
@@ -30330,8 +31421,8 @@ Source: FontLab Proteus API documentation
 
 Source: generated/fontlab.py: flVisualItem captured declaration"""
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
 
     def acceptEvents(self) -> int:
@@ -30438,7 +31529,8 @@ Source: FontLab Proteus API documentation"""
         """Clone the object"""
         ...
 
-    def cloneObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def cloneObject(*args: Any, **kwargs: Any) -> Any:
         """flObject cloneObject(const flObject&); """
         ...
 
@@ -30458,7 +31550,8 @@ Returns `True` if the given `flVisualItem` is a child of this item.
 Source: FontLab Proteus API documentation"""
         ...
 
-    def createObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def createObject(*args: Any, **kwargs: Any) -> Any:
         """flObject/Nothing createObject(int);    """
         ...
 
@@ -30522,7 +31615,8 @@ Returns `True` if clicking at `canvas_pos` would activate an inline editor for t
 Source: FontLab Proteus API documentation"""
         ...
 
-    def haveObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def haveObject(*args: Any, **kwargs: Any) -> Any:
         """bool haveObject(uint);                 """
         ...
 
@@ -30546,7 +31640,8 @@ Source: FontLab Proteus API documentation"""
         """initialHistoryIx()"""
         ...
 
-    def instanceAcceptEvents(self) -> int:
+    @_echopy_builtins.staticmethod
+    def instanceAcceptEvents() -> int:
         """int instanceAcceptEvents()
 
 Returns the default event acceptance bitmask for all instances of this class. Each bit represents a type of event (mouse, keyboard, etc.) the class can handle.
@@ -30554,7 +31649,8 @@ Returns the default event acceptance bitmask for all instances of this class. Ea
 Source: FontLab Proteus API documentation"""
         ...
 
-    def instanceType(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def instanceType(*args: Any, **kwargs: Any) -> Any:
         """int instanceType();                    """
         ...
 
@@ -30648,6 +31744,10 @@ Source: FontLab Proteus API documentation"""
 Forces a repaint of this item on the canvas without changing any model data. Use this to show a temporary visual state (e.g. a hover highlight) without committing a change.
 
 Source: FontLab Proteus API documentation"""
+        ...
+
+    def propertyNames(self, *args: Any, **kwargs: Any) -> Any:
+        """propertyNames(): sorted snapshot of dynamic property keys"""
         ...
 
     def referencePoint(self) -> QPointF:
@@ -30988,6 +32088,12 @@ Constructors:
 
 Native bases: object
 
+Captured native MRO: flWorkspace, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature.
+
 Supplemental documentation:
 Workspace. The captured declaration exposes `addPackage`, `closePackage`, `closeProject`, `createNewProject`, `readProject`, `saveProject`, `currentPackage`, `currentGlyph`, `packages`, `canvases`, `getActiveCanvas`, `setActiveCanvas`, `hasPackage`, `findPackageId`, `exportCurrentFont`, `exportFont`, `doZoomIn`, `doZoomOut`, `setRulers` and `isRulersEnabled`. It is created with no captured constructor overloads. It also carries the shared object members `changed`, `clone`, `cloneObject`, `getProperty`, `setProperty`, `release`, `remove` and `update` and the shared attributes `id`, `name`, `type`, `isValid` and `isNull`.
 
@@ -30995,8 +32101,8 @@ Source: FontLab Proteus API documentation
 
 Source: generated/fontlab.py: flWorkspace captured declaration"""
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
 
     def activateEditor(self, arg0: flVisualItem, canvas_pos: QPointF) -> Any:
@@ -31087,7 +32193,8 @@ Source: FontLab Proteus API documentation"""
         """Clone the object"""
         ...
 
-    def cloneObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def cloneObject(*args: Any, **kwargs: Any) -> Any:
         """flObject cloneObject(const flObject&); """
         ...
 
@@ -31123,7 +32230,8 @@ Creates a new empty project.
 Source: FontLab Proteus API documentation"""
         ...
 
-    def createObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def createObject(*args: Any, **kwargs: Any) -> Any:
         """flObject/Nothing createObject(int);    """
         ...
 
@@ -31215,6 +32323,14 @@ Returns the text block item that is currently active in the metrics or text wind
 Source: FontLab Proteus API documentation"""
         ...
 
+    def getActiveTextBlockModel(self, *args: Any, **kwargs: Any) -> Any:
+        """flTextBlock/Nothing getActiveTextBlockModel(): model of the exact active text block
+
+Returns the exact active item's typed text-block model, or `None` when no item is active. Use this reader from Python: the legacy graphics-item getter depends on PythonQt wrapper availability. Does not select or activate a block.
+
+Source: FontLab Proteus API documentation"""
+        ...
+
     def getBoundingRect(self) -> QRectF:
         """QRectF getBoundingRect()
 
@@ -31283,7 +32399,8 @@ Returns `True` if a glyph editor window is currently open and ready.
 Source: FontLab Proteus API documentation"""
         ...
 
-    def haveObject(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def haveObject(*args: Any, **kwargs: Any) -> Any:
         """bool haveObject(uint);                 """
         ...
 
@@ -31307,7 +32424,8 @@ Source: FontLab Proteus API documentation"""
         """initialHistoryIx()"""
         ...
 
-    def instance(self) -> flWorkspace:
+    @_echopy_builtins.staticmethod
+    def instance() -> flWorkspace:
         """flWorkspace instance()
 
 Returns the global workspace singleton — the FontLab application object.
@@ -31315,7 +32433,8 @@ Returns the global workspace singleton — the FontLab application object.
 Source: FontLab Proteus API documentation"""
         ...
 
-    def instanceType(self, *args: Any, **kwargs: Any) -> Any:
+    @_echopy_builtins.staticmethod
+    def instanceType(*args: Any, **kwargs: Any) -> Any:
         """int instanceType();                    """
         ...
 
@@ -31355,12 +32474,20 @@ Returns whether preview rendering is currently on.
 Source: FontLab Proteus API documentation"""
         ...
 
+    def propertyNames(self, *args: Any, **kwargs: Any) -> Any:
+        """propertyNames(): sorted snapshot of dynamic property keys"""
+        ...
+
     def readProject(self, QString: Any) -> bool:
         """bool readProject(const QString)
 
 Opens a project file from `path`. Returns `True` on success.
 
 Source: FontLab Proteus API documentation"""
+        ...
+
+    def registerPythonTool(self, *args: Any, **kwargs: Any) -> Any:
+        """registerPythonTool(name, icon or None, object) -> token. Optional activate/deactivate, mousePressed/Moved/Released, keyPressed/Released and paint callbacks."""
         ...
 
     def release(self) -> Any:
@@ -31669,6 +32796,10 @@ Source: FontLab Proteus API documentation"""
 Re-enables screen updates before the block time expires.
 
 Source: FontLab Proteus API documentation"""
+        ...
+
+    def unregisterPythonTool(self, token: Any) -> Any:
+        """unregisterPythonTool(token) -> bool. Removes palette/menu entries and deactivates the tool."""
         ...
 
     def update(self) -> Any:
@@ -31981,6 +33112,12 @@ Constructors:
 
 Native bases: object
 
+Captured native MRO: flZone, object
+
+Native __new__ allocation evidence (not an __init__ overload):
+(*args, **kwargs)
+Create and return a new object.  See help(type) for accurate signature.
+
 Supplemental documentation:
 An alignment zone described by `position` and `width` (both double), with `name`, `tags`, `program` and `programText` attributes. The captured declaration also exposes `guaranteeName`, `tagsSet` and `toZone`. Consult the retained constructor documentation for the supported creation forms.
 
@@ -31988,8 +33125,8 @@ Source: FontLab Proteus API documentation
 
 Source: generated/fontlab.py: flZone captured declaration"""
 
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
-        """Native constructor; consult class documentation for supported overloads."""
+    def __init__(self, /, *args: Any, **kwargs: Any) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
         ...
 
     def guaranteeName(self, top: bool) -> Any:
