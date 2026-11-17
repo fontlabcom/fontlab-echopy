@@ -2,6 +2,30 @@
 this_file: WORK.md
 ---
 
+## 2026-11-17 — Guarded common installer source candidate
+
+Copied the exact common template shipped with Instamix 1.0.11. Provider reuse
+requires migration/rollback capabilities and bootstrap checks entry context.
+Added only the existing `src_docs/md/llms.txt` to the sdist input allowlist:
+the full extracted suite reproduced its omission as a missing-file failure.
+The index bytes, runtime, tests, dependency floors and legal files are unchanged.
+
+The unchanged normal pre-push hook passed 776 tests with zero skips in 232.45 s
+(238.29 s total). It selected no changed production modules, so this adds no
+production-module coverage claim. Installer AST/compile and Ruff 0.14.10 pass.
+The repaired sdist gate passed its outer case in 130.17 s and all 776 shipped
+source tests with zero skips in 123.47 s, on managed arm64 CPython 3.11.14.
+Real temporary wheel/sdist installs retain the overlay, metadata, origin and
+payload assertions. The prior missing-input failures remain dated evidence.
+
+Independent final review, current graph qualification, main/CI delivery,
+committed matching archives and release/download checks remain. Full consumer,
+owner recovery, installed FontLab, Windows and native qualification stay open.
+No installer, provider bootstrap, owner-folder or native operation ran. The
+inherited broad Ruff baseline is not green. Historical sections retain their
+original scope.
+
+
 ## 2026-11-17 — Issue 257 Tasks 1–3
 
 Added the Proteus and MCP reference overlays, keyword-only `fontpr` signatures,

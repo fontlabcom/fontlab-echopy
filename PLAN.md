@@ -2,6 +2,18 @@
 this_file: PLAN.md
 ---
 
+## Guarded common installer: remaining qualification
+
+Independently review the exact Instamix 1.0.11 template and the single sdist
+input addition for the existing `src_docs/md/llms.txt`, then qualify the current
+graph and reconcile with fresh main before delivery. The normal hook and full
+extracted-sdist suite pass; tests, runtime, index bytes, dependency floors and
+legal files remain unchanged. Qualify exact-SHA CI, genuine committed matching
+archives and release/downloads separately. Full consumer/cohort, owner recovery,
+installed FontLab, Windows and native acceptance remain open under existing
+holds. Keep historical backlog and pauses intact.
+
+
 ## FontLab 9.1 API promotion — 2026-11-16
 
 `fontlab_echopy.api91` records the 9.1.9812 changes from source. The stubs are now generated from a 9.1.9813 capture that declares every record; next, move the remaining records into manual class guidance and keep `api91` as the version-change record with its QByteArray guard. Member presence, `fgBrush.size` absence and the QByteArray wrap round trip are verified live on 9.1.9812; live-verify the behavior of each record (`penParameters` writes, `expandStroke`, `makeStroke`, presentation overrides) before promotion.

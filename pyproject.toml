@@ -39,6 +39,7 @@ packages = ["src/fontlab_echopy", "src/echopy"]
 [tool.hatch.build.targets.sdist]
 only-include = [
     "install.vfpy",
+    "src_docs/md/llms.txt",
     "src",
     "tests",
     "patches",

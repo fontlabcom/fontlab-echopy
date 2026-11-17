@@ -2,6 +2,12 @@
 this_file: TODO.md
 ---
 
+## Guarded common installer
+
+- [ ] Independently review the exact 1.0.11 common template, the existing llms index's single sdist allowlist addition and preserved runtime/test/dependency/licence contracts; qualify the current graph and fresh-main integration.
+- [ ] Qualify exact-SHA CI and committed matching release/download artifacts, then the full consumer/cohort, owner recovery and installed/Windows/native behavior under their separate admissions; passing source and temporary-artifact gates do not establish those outcomes.
+
+
 ## Issue 257 follow-ups — 2026-11-17
 
 - [ ] Recapture `PythonQt.private` after exercising FontLab actions in the session: the 9.1.9813 capture lists 5 classes there (the 9.0 capture had 221); then drop `--retain PythonQt` and regenerate PythonQt from that recapture.

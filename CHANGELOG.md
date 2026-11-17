@@ -2,6 +2,25 @@
 this_file: CHANGELOG.md
 ---
 
+## 2026-11-17 — Guarded common installer source candidate
+
+Propagated the exact Instamix 1.0.11 common template and restored the existing
+`src_docs/md/llms.txt` to the sdist inputs after the mandatory extracted suite
+reproduced its omission. Runtime, tests, dependency floors, the index bytes and
+legal files are unchanged.
+
+The unchanged normal hook passed 776 tests with zero skips in 232.45 s;
+no changed production module was selected and no new coverage is claimed.
+The repaired artifact gate passed one outer case and all 776 extracted-source
+cases with zero skips on arm64 CPython 3.11.14 (130.17 s outer, 123.47 s inner).
+Installer AST/compile, exact-template bytes and scoped Ruff 0.14.10 pass.
+These are source and ordinary temporary-artifact results. Independent review,
+main/CI, committed release/downloads, full consumers, owner recovery and
+installed/Windows/native behavior remain separate. No installer or native
+operation ran; the inherited broad Ruff baseline is not green. Earlier entries
+retain their dated scope.
+
+
 ## 2026-11-17 — Issue 257: Regenerated from a FontLab 9.1.9813 capture
 
 - Native modules (`fontlab`, `fontgate`, `fontpr`, `FL`) come from 9.1.9813;
