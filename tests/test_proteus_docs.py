@@ -314,13 +314,22 @@ def test_mcp_build_when_spec_and_capture_then_only_shared_tools_documented():
     patches, report = mcp.build(
         SPEC, {"rename_glyph", "capture_only", "available", "call", "list_tools"}
     )
-    assert set(patches) == {"fontpr", "fontpr.rename_glyph"}
+    assert set(patches) == {
+        "fontpr",
+        "fontpr.rename_glyph",
+        "fontpr.call",
+        "fontpr.list_tools",
+    }
+    assert set(mcp.build(SPEC, {"rename_glyph"})[0]) == {
+        "fontpr",
+        "fontpr.rename_glyph",
+    }, "helpers only when captured"
     assert report["spec_only"] == ["run_python", "spec_only"]
     assert report["capture_only"] == ["capture_only"]
     assert report["blocked_in_spec"] == ["run_python"]
     tool = patches["fontpr.rename_glyph"]
     assert tool["signature"] == (
-        "*, glyph_name: str, new_name: str, font_id: float | None = None, "
+        "*, glyph_name: str, new_name: str, font_id: int | None = None, "
         "mode: str | None = None, names: list[str] | None = None"
     )
     doc = tool["reference"]
@@ -372,3 +381,50 @@ def test_shipped_llms_when_generated_then_small_and_current():
         "rerun `fontlab-echopy llms`"
     )
     assert "## PythonQt" not in shipped and "fontlabpr" not in shipped
+
+
+def test_lead_with_prose_when_inherits_first_then_prose_leads():
+    from fontlab_echopy.tooling.proteus import lead_with_prose
+
+    doc = "Inherits from `flObject`.\n\n## What?\n\nA contour is a path. More.\n\nRest."
+    assert lead_with_prose(doc) == (
+        "A contour is a path. More.\n\nInherits from `flObject`.\n\n## What?\n\nRest."
+    )
+    assert (
+        lead_with_prose("Plain lead.\n\nInherits from x.")
+        == "Plain lead.\n\nInherits from x."
+    )
+    assert (
+        lead_with_prose("Inherits from x.\n\n## Only heading")
+        == "Inherits from x.\n\n## Only heading"
+    )
+
+
+def test_with_reference_when_lead_repeats_reference_then_single_copy():
+    from fontlab_echopy.tooling.merge import with_reference
+
+    out = with_reference("Same lead.\n\nSource: x", "Same  lead.\n\nMore.")
+    assert out.count("Same") == 1 and out.endswith("Source: x")
+
+
+def test_mcp_build_when_helpers_then_call_and_list_tools_documented():
+    from fontlab_echopy.tooling import mcp
+
+    patches, _ = mcp.build(
+        {
+            "tools": [
+                {
+                    "name": "list_glyphs",
+                    "inputSchema": {
+                        "properties": {"font_id": {"type": "number"}},
+                        "additionalProperties": False,
+                    },
+                }
+            ]
+        },
+        {"list_glyphs", "call", "list_tools", "available"},
+    )
+    assert patches["fontpr.call"]["signature"] == "name: str, /, **kwargs: Any"
+    assert "metadata dicts" in patches["fontpr.list_tools"]["reference"]
+    assert "Blocked tools" in patches["fontpr"]["reference"]
+    assert patches["fontpr.list_glyphs"]["signature"] == "*, font_id: int | None = None"

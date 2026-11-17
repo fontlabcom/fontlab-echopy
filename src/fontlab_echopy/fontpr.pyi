@@ -2,8 +2,6 @@
 # Generated from native metadata and independent enrichment inputs.
 """FontLab MCP tools for embedded Python.
 
-FontLab MCP tools for embedded Python.
-
 `fontpr` exposes the tools of FontLab's MCP server as ordinary functions inside
 FontLab's own Python. A script can call the same focused, validated operations
 that an external MCP client uses, without a network connection or a token.
@@ -14,12 +12,15 @@ Calling convention:
   ignored, so `fontpr.list_glyphs(font_id=1)` works and
   `fontpr.list_glyphs(1)` does not pass `font_id`.
 - `fontpr.call(name, **kwargs)` calls a tool by its MCP name; `name` must be a
-  string (otherwise `TypeError`).
+  string (otherwise `TypeError`), for example
+  `fontpr.call("list_glyphs", font_id=1)`.
 - `fontpr.available()` returns True once the MCP tools are ready. Before then
   every call raises `fontpr.Error("MCP tools are not available yet.")`.
-- `fontpr.list_tools()` returns the tool names in the running build, or an
-  empty list when tools are unavailable. Treat it as authoritative: the
-  functions documented here come from one build and one specification.
+- `fontpr.list_tools()` returns a list of tool metadata dicts (`name`,
+  `description`, `inputSchema` and the other MCP fields) for the running
+  build. Blocked tools are left out, and the list is empty when tools are
+  unavailable. Treat it as authoritative: the functions documented here come
+  from one build and one specification.
 - `run_python` and `get_python_output` are blocked: calling them through
   `fontpr` raises `fontpr.Error`, because a script is already running Python.
 
@@ -90,7 +91,7 @@ def available(*args: Any, **kwargs: Any) -> Any:
     """Return True when MCP tools are ready."""
     ...
 
-def build_glyph(*, glyph_name: str, recipe: str, font_id: float | None=None, font_name: str | None=None, direction: str | None=None, layer_name: str | None=None, replace: bool | None=None, auto_layer: bool | None=None, dry_run: bool | None=None) -> Any:
+def build_glyph(*, glyph_name: str, recipe: str, font_id: int | None=None, font_name: str | None=None, direction: str | None=None, layer_name: str | None=None, replace: bool | None=None, auto_layer: bool | None=None, dry_run: bool | None=None) -> Any:
     """Build a glyph from a bounded explicit recipe using FontLab's construction engine. Use get_glyph detail=construction when source anchors, layers or placement facts are not yet known. Syntax: =ligature+mark@top_2[_top] or =base&second+mark@top[_top]. No expressions or implicit mark positioning. Validates dependencies and builds a temporary layer before committing. One exact master layer only; preserves other layers. Replaces target shapes/components/anchors and width. New glyphs are unencoded. Does not create OpenType substitutions. Returned resolved_components group numbers follow recipe order, not visual RTL order. Undo supported.
 
 Parameters:
@@ -125,11 +126,17 @@ result = fontpr.build_glyph(font_id=101, glyph_name='Aacute', recipe='=A+acuteco
 Source: FontLab MCP specification"""
     ...
 
-def call(*args: Any, **kwargs: Any) -> Any:
-    """call(name, **kwargs) - invoke an MCP tool."""
+def call(name: str, /, **kwargs: Any) -> Any:
+    """call(name, **kwargs) - invoke an MCP tool.
+
+Call an MCP tool by its name with keyword arguments.
+
+`name` must be a str, otherwise `TypeError` is raised. Example: `fontpr.call("list_glyphs", font_id=1)`.
+
+Source: FontLab MCP specification"""
     ...
 
-def close_font(*, font_id: float | None=None, font_name: str | None=None, save: bool | None=None) -> Any:
+def close_font(*, font_id: int | None=None, font_name: str | None=None, save: bool | None=None) -> Any:
     """Close the active or requested font without prompting, discarding unsaved changes by default. With save:true, first save to its known native location; fail and keep the font open if saving needs a path or fails.
 
 Parameters:
@@ -155,7 +162,7 @@ result = fontpr.close_font(font_id=101, save=False)
 Source: FontLab MCP specification"""
     ...
 
-def delete_all_kerning_classes(*, font_id: float | None=None, font_name: str | None=None, master_name: str | None=None, all_masters: bool | None=None, undo: bool | None=None) -> Any:
+def delete_all_kerning_classes(*, font_id: int | None=None, font_name: str | None=None, master_name: str | None=None, all_masters: bool | None=None, undo: bool | None=None) -> Any:
     """Delete all kerning classes from one or more font masters.
 
 Parameters:
@@ -182,7 +189,7 @@ result = fontpr.delete_all_kerning_classes(font_id=101, master_name='Regular')
 Source: FontLab MCP specification"""
     ...
 
-def delete_all_kerning_pairs(*, font_id: float | None=None, font_name: str | None=None, master_name: str | None=None, all_masters: bool | None=None, undo: bool | None=None) -> Any:
+def delete_all_kerning_pairs(*, font_id: int | None=None, font_name: str | None=None, master_name: str | None=None, all_masters: bool | None=None, undo: bool | None=None) -> Any:
     """Delete all kerning pairs from one or more font masters.
 
 Parameters:
@@ -209,7 +216,7 @@ result = fontpr.delete_all_kerning_pairs(font_id=101, master_name='Regular')
 Source: FontLab MCP specification"""
     ...
 
-def delete_kerning_class(*, class_name: str, font_id: float | None=None, font_name: str | None=None, master_name: str | None=None, undo: bool | None=None) -> Any:
+def delete_kerning_class(*, class_name: str, font_id: int | None=None, font_name: str | None=None, master_name: str | None=None, undo: bool | None=None) -> Any:
     """Delete a kerning class from a font master by class name.
 
 Parameters:
@@ -236,7 +243,7 @@ result = fontpr.delete_kerning_class(font_id=101, class_name='A_Left', master_na
 Source: FontLab MCP specification"""
     ...
 
-def delete_kerning_pair(*, left: str, right: str, font_id: float | None=None, font_name: str | None=None, master_name: str | None=None, undo: bool | None=None) -> Any:
+def delete_kerning_pair(*, left: str, right: str, font_id: int | None=None, font_name: str | None=None, master_name: str | None=None, undo: bool | None=None) -> Any:
     """Delete a kerning pair from a font master. Use @GroupName for kerning classes.
 
 Parameters:
@@ -264,7 +271,7 @@ result = fontpr.delete_kerning_pair(font_id=101, left='A', right='V', master_nam
 Source: FontLab MCP specification"""
     ...
 
-def edit_glyph_nodes(*, glyph_name: str, operations: list[dict[str, Any]], font_id: float | None=None, font_name: str | None=None, layer_name: str | None=None, dry_run: bool | None=None) -> Any:
+def edit_glyph_nodes(*, glyph_name: str, operations: list[dict[str, Any]], font_id: int | None=None, font_name: str | None=None, layer_name: str | None=None, dry_run: bool | None=None) -> Any:
     """Apply 1..256 sequential native node/curve edits to one existing non-Auto layer, atomically with Undo. No Python needed. Indices refer to the result of preceding operations; process original indices descending for insert/delete batches. Inspect first. Returns changed contours with fresh indices. Coordinates and vectors are shape-local font units. Supports on endpoints, off quadratic controls and curve cubic controls. duplicate_extrema selects existing extrema on the specified axis and follows contour direction automatically. smart_corner sets a node radius (negative for ink traps) and manages the live filter. Smart Corners filters expose source node indices; other components/groups must be edited at their source.
 
 Parameters:
@@ -301,7 +308,7 @@ result = fontpr.edit_glyph_nodes(glyph_name='C', operations=[{'op': 'duplicate_e
 Source: FontLab MCP specification"""
     ...
 
-def edit_layer_hints(*, glyph_name: str, operations: list[dict[str, Any]], font_id: float | None=None, font_name: str | None=None, layer_name: str | None=None, dry_run: bool | None=None) -> Any:
+def edit_layer_hints(*, glyph_name: str, operations: list[dict[str, Any]], font_id: int | None=None, font_name: str | None=None, layer_name: str | None=None, dry_run: bool | None=None) -> Any:
     """Atomically add, set, move or delete stored PostScript hints in one existing non-Auto glyph layer with Undo. No Python or full glyph replacement needed. Read get_layer_hints first. Indices refer only to hints (not guidelines) and to the result of preceding operations; delete original indices descending. Coordinates are layer font units. Ordinary widths must be positive; native ghost widths are -20 top or 21 bottom and require horizontal orientation. Linked/expression geometry needs explicit detach=true, which freezes the hint and does not move outlines. Existing hint identities, unrelated guides/anchors/outlines, other layers and TrueType instructions are preserved. Locked hints must be unlocked in FontLab first.
 
 Parameters:
@@ -453,7 +460,7 @@ result = fontpr.get_current_glyphs()
 Source: FontLab MCP specification"""
     ...
 
-def get_font_info(*, font_id: float | None=None, font_name: str | None=None, detail: str | None=None, master_name: str | None=None, kind: str | None=None, offset: float | None=None, limit: float | None=None) -> Any:
+def get_font_info(*, font_id: int | None=None, font_name: str | None=None, detail: str | None=None, master_name: str | None=None, kind: str | None=None, offset: float | None=None, limit: float | None=None) -> Any:
     """Return package-level font info JSON without glyph outlines. Full metadata can be large because it includes kerning, groups, features and lib data. For alignment zones and standard stems use get_font_hinting instead, or detail='hinting'; no Python required. Use set_font_info for metadata patches.
 
 Parameters:
@@ -482,7 +489,7 @@ result = fontpr.get_font_info(font_id=101)
 Source: FontLab MCP specification"""
     ...
 
-def get_font_metrics(*, font_id: float | None=None, font_name: str | None=None) -> Any:
+def get_font_metrics(*, font_id: int | None=None, font_name: str | None=None) -> Any:
     """Return font-level metrics for the active or requested font: UPM, ascender, descender, x-height, cap height, line gap, italic angle, weight, and width.
 
 Parameters:
@@ -506,7 +513,7 @@ result = fontpr.get_font_metrics(font_id=101)
 Source: FontLab MCP specification"""
     ...
 
-def get_glyph(*, glyph_name: str, detail: str | None=None, layer_name: str | None=None, mark_glyph: str | None=None, component_index: float | None=None, nodes_format: str | None=None, font_id: float | None=None, font_name: str | None=None) -> Any:
+def get_glyph(*, glyph_name: str, detail: str | None=None, layer_name: str | None=None, mark_glyph: str | None=None, component_index: float | None=None, nodes_format: str | None=None, font_id: int | None=None, font_name: str | None=None) -> Any:
     """Read one glyph. detail=construction returns compact layer names, anchors, component identities/transforms and width. Omit detail for full writable VFJ, including outlines and metadata. Choose the representation needed for the operation; construction is not a replacement payload. For indexed node edits use get_glyph_nodes. Full contours use nodes_list with x, y, type and flags.
 
 Parameters:
@@ -539,7 +546,7 @@ result = fontpr.get_glyph(font_id=101, glyph_name='H', detail='construction', la
 Source: FontLab MCP specification"""
     ...
 
-def get_glyph_metrics(*, glyph_name: str, font_id: float | None=None, font_name: str | None=None) -> Any:
+def get_glyph_metrics(*, glyph_name: str, font_id: int | None=None, font_name: str | None=None) -> Any:
     """Return glyph metrics: advance width, LSB, RSB, and metrics expressions for the active or requested glyph.
 
 Parameters:
@@ -564,7 +571,7 @@ result = fontpr.get_glyph_metrics(font_id=101, glyph_name='H')
 Source: FontLab MCP specification"""
     ...
 
-def get_glyph_nodes(*, glyph_name: str, font_id: float | None=None, font_name: str | None=None, layer_name: str | None=None, shape_index: int | None=None, contour_index: int | None=None) -> Any:
+def get_glyph_nodes(*, glyph_name: str, font_id: int | None=None, font_name: str | None=None, layer_name: str | None=None, shape_index: int | None=None, contour_index: int | None=None) -> Any:
     """Inspect indexed nodes in one glyph layer without full VFJ. Coordinates are local to each shape; shape_transform maps them to layer coordinates. Indices are zero-based storage indices. type=on is an endpoint, curve is an ordinary cubic Bezier handle, off is a quadratic handle. Returns vertical_extrema (y extrema) and horizontal_extrema (x extrema) indices of existing smooth curve extrema. Smart Corners filters expose their editable source nodes with smart_radius and smart_corner_applicable; other components/groups are unsupported. Use before edit_glyph_nodes.
 
 Parameters:
@@ -594,7 +601,7 @@ result = fontpr.get_glyph_nodes(glyph_name='C')
 Source: FontLab MCP specification"""
     ...
 
-def get_kerning_pair(*, left: str, right: str, font_id: float | None=None, font_name: str | None=None, master_name: str | None=None) -> Any:
+def get_kerning_pair(*, left: str, right: str, font_id: int | None=None, font_name: str | None=None, master_name: str | None=None) -> Any:
     """Return the kerning value for a left/right pair on a font master. Use @GroupName for kerning classes.
 
 Parameters:
@@ -621,7 +628,7 @@ result = fontpr.get_kerning_pair(font_id=101, left='A', right='V')
 Source: FontLab MCP specification"""
     ...
 
-def get_layer_hints(*, glyph_name: str, font_id: float | None=None, font_name: str | None=None, layer_name: str | None=None, offset: int | None=None, limit: int | None=None, include_tth: bool | None=None) -> Any:
+def get_layer_hints(*, glyph_name: str, font_id: int | None=None, font_name: str | None=None, layer_name: str | None=None, offset: int | None=None, limit: int | None=None, include_tth: bool | None=None) -> Any:
     """Read stored PostScript stem/ghost hints on one glyph layer without outlines or whole-glyph JSON. These are actual hints, not detected preview stems. Returns zero-based hint_index, orientation, position, width, ghost, name, lock/link/expression state, pagination and tth_command_count. Horizontal position is y, vertical position is x, in layer font units. No Python needed. include_tth optionally reads native TrueType command strings; this tool pair edits PostScript hints only.
 
 Parameters:
@@ -749,7 +756,7 @@ result = fontpr.list_fonts()
 Source: FontLab MCP specification"""
     ...
 
-def list_glyphs(*, font_id: float | None=None, font_name: str | None=None, detail: str | None=None, query: str | None=None, limit: float | None=None, offset: float | None=None, min_contour_count: float | None=None, max_contour_count: float | None=None, min_component_count: float | None=None, min_bottom: float | None=None, max_bottom: float | None=None, has_unicode: bool | None=None, script: str | None=None) -> Any:
+def list_glyphs(*, font_id: int | None=None, font_name: str | None=None, detail: str | None=None, query: str | None=None, limit: float | None=None, offset: float | None=None, min_contour_count: float | None=None, max_contour_count: float | None=None, min_component_count: float | None=None, min_bottom: float | None=None, max_bottom: float | None=None, has_unicode: bool | None=None, script: str | None=None) -> Any:
     """List glyphs. For requests like 'glyphs with 3 or more contours', use min_contour_count with basic detail for compact results. For bottom/minY range requests, use min_bottom and max_bottom so the tool filters exactly. Use detail='facts' when glyph facts such as bounds.height are needed for comparisons. For comparisons, the caller must apply the numeric predicate exactly, e.g. taller than height 696 means bounds.height > 696 only. contour_count is real contours across glyph layers and is not shape_count.
 
 Parameters:
@@ -787,7 +794,7 @@ result = fontpr.list_glyphs(font_id=101, detail='basic', limit=100, offset=0)
 Source: FontLab MCP specification"""
     ...
 
-def list_kerning_classes(*, font_id: float | None=None, font_name: str | None=None, master_name: str | None=None) -> Any:
+def list_kerning_classes(*, font_id: int | None=None, font_name: str | None=None, master_name: str | None=None) -> Any:
     """List kerning classes for a font master, including member glyph names.
 
 Parameters:
@@ -812,7 +819,7 @@ result = fontpr.list_kerning_classes(font_id=101)
 Source: FontLab MCP specification"""
     ...
 
-def list_kerning_pairs(*, font_id: float | None=None, font_name: str | None=None, master_name: str | None=None, left: str | None=None, right: str | None=None, limit: float | None=None, offset: float | None=None) -> Any:
+def list_kerning_pairs(*, font_id: int | None=None, font_name: str | None=None, master_name: str | None=None, left: str | None=None, right: str | None=None, limit: float | None=None, offset: float | None=None) -> Any:
     """List kerning pairs for a font master. Use @GroupName syntax for kerning classes. Supports pagination and optional left/right filters.
 
 Parameters:
@@ -842,8 +849,14 @@ result = fontpr.list_kerning_pairs(font_id=101, master_name='Regular', limit=200
 Source: FontLab MCP specification"""
     ...
 
-def list_tools(*args: Any, **kwargs: Any) -> Any:
-    """Return MCP tool metadata."""
+def list_tools() -> Any:
+    """Return MCP tool metadata.
+
+Return the MCP tool metadata dicts of the running build.
+
+Each dict carries `name`, `description` and `inputSchema`. Blocked tools (`run_python`, `get_python_output`) are left out; the list is empty while the MCP tools are unavailable.
+
+Source: FontLab MCP specification"""
     ...
 
 def new_font(*, family_name: str | None=None, style_name: str | None=None, encoding: str | None=None) -> Any:
@@ -923,7 +936,7 @@ result = fontpr.read_aidus_file(root='scripts', path='generate.py')
 Source: FontLab MCP specification"""
     ...
 
-def rename_kerning_class(*, class_name: str, new_name: str, font_id: float | None=None, font_name: str | None=None, master_name: str | None=None, undo: bool | None=None) -> Any:
+def rename_kerning_class(*, class_name: str, new_name: str, font_id: int | None=None, font_name: str | None=None, master_name: str | None=None, undo: bool | None=None) -> Any:
     """Rename a kerning class on a font master.
 
 Parameters:
@@ -951,7 +964,7 @@ result = fontpr.rename_kerning_class(font_id=101, class_name='A_Left', new_name=
 Source: FontLab MCP specification"""
     ...
 
-def run_actions(*, actions: list[Any], glyph_names: list[Any] | None=None, layer_mode: str | None=None, undo: bool | None=None, font_id: float | None=None, font_name: str | None=None) -> Any:
+def run_actions(*, actions: list[Any], glyph_names: list[Any] | None=None, layer_mode: str | None=None, undo: bool | None=None, font_id: int | None=None, font_name: str | None=None) -> Any:
     """Run FontLab actions on explicit glyph names or the current glyph selection. Actions execute in array order; a later error does not roll back earlier edits. Stroke actions operate on unlocked, simple contour elements, skipping locked/auto/instance layers and components/composites. add_stroke requires positive thickness (width alias) and accepts VFJ stroke keys; defaults are proportion 50, contrast 100, rotation 0, join miter, miter_limit 3, cap0/cap1 butt, tolerance 1, remove_overlap false. It replaces stroke parameters and preserves pen brush and fill. expand_stroke accepts optional outer_only (default false); remove_stroke only removes the pen. Results include stroke_actions:[{id,changed_shapes}]. flatten_glyph does not expand strokes. Use list_actions when the action id is unresolved. Action ids are snake_case. Metrics: auto_space autosets sidebearings on target glyphs; auto_kern computes/applies kerning for left/right or pairs (optional master_name, apply). Shadow and extrude accept distance (offset length), optional angle (degrees), thickness, or explicit dx/dy/thickness — example shadow: {"id":"shadow","distance":50,"thickness":10}. Example remove overlap: {"actions":[{"id":"remove_overlap"}],"glyph_names":["B"],"layer_mode":"active"}. Example auto kern: {"actions":[{"id":"auto_kern","left":"A","right":"V"}]}. Example move glyph: {"actions":[{"id":"shift","horizontal":0,"vertical":100}]}. CamelCase ids such as removeOverlap are accepted. Do not use a generic Transform action. Use this for whole-glyph actions, not partial node edits.
 
 Parameters:
@@ -987,7 +1000,7 @@ result = fontpr.run_actions(font_id=101, glyph_names=['H'], layer_mode='active',
 Source: FontLab MCP specification"""
     ...
 
-def save_font(*, font_id: float | None=None, font_name: str | None=None, path: str | None=None, format: str | None=None, overwrite: bool | None=None) -> Any:
+def save_font(*, font_id: int | None=None, font_name: str | None=None, path: str | None=None, format: str | None=None, overwrite: bool | None=None) -> Any:
     """Save a font synchronously without dialogs. With path, write a copy without changing the source location or backups. Without path, write the known native VFJ/VFC location, or fail if none exists. Does not clear the font's dirty state.
 
 Parameters:
@@ -1017,7 +1030,7 @@ result = fontpr.save_font(font_id=101, path='/absolute/output.vfj', overwrite=Fa
 Source: FontLab MCP specification"""
     ...
 
-def set_active_font(*, font_id: float | None=None, font_name: str | None=None) -> Any:
+def set_active_font(*, font_id: int | None=None, font_name: str | None=None) -> Any:
     """Activate an open font by id or name.
 
 Parameters:
@@ -1042,7 +1055,7 @@ result = fontpr.set_active_font(font_id=101)
 Source: FontLab MCP specification"""
     ...
 
-def set_active_glyph(*, glyph_name: str, font_id: float | None=None, font_name: str | None=None) -> Any:
+def set_active_glyph(*, glyph_name: str, font_id: int | None=None, font_name: str | None=None) -> Any:
     """Set the active package and internal current-glyph reference. Does not open or switch a glyph window, change its displayed glyph, or select glyphs in the Font window. UI-triggered actions still use the actual window selection; use run_actions with explicit glyph_names for model edits.
 
 Parameters:
@@ -1068,7 +1081,7 @@ result = fontpr.set_active_glyph(font_id=101, glyph_name='H')
 Source: FontLab MCP specification"""
     ...
 
-def set_font_info(*, font_id: float | None=None, font_name: str | None=None, font_info: dict[str, Any] | None=None, master_name: str | None=None, all_masters: bool | None=None, scale_upm: bool | None=None) -> Any:
+def set_font_info(*, font_id: int | None=None, font_name: str | None=None, font_info: dict[str, Any] | None=None, master_name: str | None=None, all_masters: bool | None=None, scale_upm: bool | None=None) -> Any:
     """Patch FontInfo metadata on the active or requested font using FontInfo/Python-style field names. Accepts font_info as an object, or top-level fields. Common fields include familyName/family_name, styleName/style_name, postscriptFontName, postscriptFullName, openTypeNameDesigner, openTypeOS2VendorID, copyright, trademark, versionMajor, versionMinor, unitsPerEm/upm, ascender, descender, xHeight, capHeight, openTypeOS2WeightClass, openTypeOS2WidthClass, and masters:[{name,...}] for per-master patches. Other settings can be patched with other_data (or otherData). other_data.nametablePath is a font-wide custom .nam path; an empty string or null restores standard mapping. Setting it reloads the mapping. Does not replace arbitrary full VFJ font JSON.
 
 Parameters:
@@ -1100,7 +1113,7 @@ result = fontpr.set_font_info(font_id=101, font_info={'familyName': 'MCP Demo', 
 Source: FontLab MCP specification"""
     ...
 
-def set_font_metrics(*, font_id: float | None=None, font_name: str | None=None, ascender: float | None=None, descender: float | None=None, x_height: float | None=None, cap_height: float | None=None, line_gap: float | None=None, italic_angle: float | None=None, weight: float | None=None, width: float | None=None) -> Any:
+def set_font_metrics(*, font_id: int | None=None, font_name: str | None=None, ascender: float | None=None, descender: float | None=None, x_height: float | None=None, cap_height: float | None=None, line_gap: float | None=None, italic_angle: float | None=None, weight: float | None=None, width: float | None=None) -> Any:
     """Set one or more font-level metrics on the active or requested font.
 
 Parameters:
@@ -1132,7 +1145,7 @@ result = fontpr.set_font_metrics(font_id=101, ascender=800, descender=-200)
 Source: FontLab MCP specification"""
     ...
 
-def set_glyph(*, glyph_name: str, glyph_data: dict[str, Any], create: bool | None=None, dry_run: bool | None=None, font_id: float | None=None, font_name: str | None=None) -> Any:
+def set_glyph(*, glyph_name: str, glyph_data: dict[str, Any], create: bool | None=None, dry_run: bool | None=None, font_id: int | None=None, font_name: str | None=None) -> Any:
     """Whole-glyph replacement or creation. Prefer a scoped editing tool when it supports the requested change and preserves unrelated data. Replace a whole glyph with writable VFJ JSON, or create with create:true. Supports layers, outlines/nodes, components and element transforms, anchors, hints/guidelines, groups, paint and metadata; discover exact structure with get_vfj_schema. When replacing an existing glyph, read full get_glyph and preserve unrelated data. Construction summaries are not VFJ. nodes_list takes precedence over nodes. dry_run validates a detached glyph without committing. Pass glyph_data as an object. Omitted fields use native defaults; this is NOT a patch. See schema overview for replacement and serialization limitations.
 
 Parameters:
@@ -1166,7 +1179,7 @@ result = fontpr.set_glyph(font_id=101, glyph_name='H', create=True, glyph_data={
 Source: FontLab MCP specification"""
     ...
 
-def set_glyph_anchors(*, glyph_name: str, anchors: list[dict[str, Any]], font_id: float | None=None, font_name: str | None=None, layer_name: str | None=None) -> Any:
+def set_glyph_anchors(*, glyph_name: str, anchors: list[dict[str, Any]], font_id: int | None=None, font_name: str | None=None, layer_name: str | None=None) -> Any:
     """Patch named anchors on one existing non-Auto layer. Each patch has name and optional x,y,expression_x,expression_y,cloud_enabled,mark_enabled or remove=true. New anchors require x and y. Coordinates clear expressions on that axis unless an expression is supplied. All patches are validated before application; unrelated anchors and other layers are preserved. mark_enabled requires cloud_enabled. Auto Layer anchors must be edited at their source. Undo supported.
 
 Parameters:
@@ -1195,7 +1208,7 @@ result = fontpr.set_glyph_anchors(font_id=101, glyph_name='H', layer_name='Regul
 Source: FontLab MCP specification"""
     ...
 
-def set_glyph_metrics(*, glyph_name: str, lsb: float | None=None, rsb: float | None=None, advance_width: float | None=None, metrics_left: str | None=None, metrics_right: str | None=None, metrics_width: str | None=None, font_id: float | None=None, font_name: str | None=None) -> Any:
+def set_glyph_metrics(*, glyph_name: str, lsb: float | None=None, rsb: float | None=None, advance_width: float | None=None, metrics_left: str | None=None, metrics_right: str | None=None, metrics_width: str | None=None, font_id: int | None=None, font_name: str | None=None) -> Any:
     """Set glyph metrics on the active or requested glyph. Use numeric lsb/rsb/advance_width for direct edits, or metrics_left/metrics_right/metrics_width for expression-based metrics.
 
 Parameters:
@@ -1227,7 +1240,7 @@ result = fontpr.set_glyph_metrics(font_id=101, glyph_name='H', advance_width=640
 Source: FontLab MCP specification"""
     ...
 
-def set_kerning_class(*, class_name: str, glyph_names: list[Any] | None=None, add_glyph_names: list[Any] | None=None, remove_glyph_names: list[Any] | None=None, left: bool | None=None, right: bool | None=None, font_id: float | None=None, font_name: str | None=None, master_name: str | None=None, undo: bool | None=None) -> Any:
+def set_kerning_class(*, class_name: str, glyph_names: list[Any] | None=None, add_glyph_names: list[Any] | None=None, remove_glyph_names: list[Any] | None=None, left: bool | None=None, right: bool | None=None, font_id: int | None=None, font_name: str | None=None, master_name: str | None=None, undo: bool | None=None) -> Any:
     """Create or update a kerning class on a font master. Use class_name without the @ prefix. Provide glyph_names to replace membership, or add_glyph_names/remove_glyph_names for incremental edits. Set left and/or right to control which side the class applies to.
 
 Parameters:
@@ -1261,7 +1274,7 @@ result = fontpr.set_kerning_class(font_id=101, class_name='A_Left', glyph_names=
 Source: FontLab MCP specification"""
     ...
 
-def set_kerning_pair(*, left: str, right: str, value: float, font_id: float | None=None, font_name: str | None=None, master_name: str | None=None, undo: bool | None=None) -> Any:
+def set_kerning_pair(*, left: str, right: str, value: float, font_id: int | None=None, font_name: str | None=None, master_name: str | None=None, undo: bool | None=None) -> Any:
     """Set the kerning value for a left/right pair on a font master. Use @GroupName for kerning classes.
 
 Parameters:

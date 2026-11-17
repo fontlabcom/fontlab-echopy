@@ -8488,11 +8488,11 @@ Source: FontLab Proteus API documentation"""
     'flWorkspace\n\nThe workspace that owns this canvas.\n\nSource: FontLab Proteus API documentation'
 
 class flContour:
-    """Inherits from `flObject`.
+    """A contour is the **closed or open path that forms a letter's shape**. Everything you see when you look at a glyph in the editor — the outer edge of an "H", the bowl of a "p", the counter inside an "O" — is a contour. Each contour is made up of an ordered sequence of `flNode` objects connected by curve and line segments. The contour is the level at which you think about the overall shape of a letter part, while nodes are the individual control points that define exactly where the path goes.
+
+Inherits from `flObject`.
 
 ## What Is a Contour?
-
-A contour is the **closed or open path that forms a letter's shape**. Everything you see when you look at a glyph in the editor — the outer edge of an "H", the bowl of a "p", the counter inside an "O" — is a contour. Each contour is made up of an ordered sequence of `flNode` objects connected by curve and line segments. The contour is the level at which you think about the overall shape of a letter part, while nodes are the individual control points that define exactly where the path goes.
 
 **Open vs. closed contours.** Most glyphs consist entirely of *closed* contours — the path's last node connects back to its first node, enclosing an area. Closed contours are what you use for all regular letterforms. An *open* contour, by contrast, has two free endpoints that don't connect. Open contours appear in some decorative or component-based designs, in stroke-based workflows where a skeleton is later expanded, and in glyphs built from paths that are meant to be processed further rather than filled directly. The `closed` property tells you which kind you have.
 
@@ -10672,11 +10672,11 @@ Source: FontLab Proteus API documentation"""
     'object type'
 
 class flGlyph:
-    """Inherits from `flObject`.
+    """A glyph is your font's record for one character — the letter "A", the numeral "3", an ampersand, or any other symbol you draw. Think of it as a folder: the glyph holds your drawings (called **layers**), the character code it maps to (**unicodes**), the spacing information (**metrics**), and any organisational labels (**tags**) you want to attach.
+
+Inherits from `flObject`.
 
 ## What is a Glyph?
-
-A glyph is your font's record for one character — the letter "A", the numeral "3", an ampersand, or any other symbol you draw. Think of it as a folder: the glyph holds your drawings (called **layers**), the character code it maps to (**unicodes**), the spacing information (**metrics**), and any organisational labels (**tags**) you want to attach.
 
 ### The shape of a glyph
 
@@ -14883,11 +14883,11 @@ Source: FontLab Proteus API documentation"""
     'flObject\n\nThe workspace object. Useful for getting a reference to the workspace from the items context.\n\nSource: FontLab Proteus API documentation'
 
 class flLayer:
-    """Inherits from `flObject`.
+    """In FontLab, a **layer** is the container inside a glyph that holds the actual drawing for one master. If your font has a Light master and a Bold master, then every glyph has (at least) two layers — one for each master. The layer is where shapes live, where metrics are set, and where anchors and guidelines for that specific master are stored.
+
+Inherits from `flObject`.
 
 ## What is a Layer?
-
-In FontLab, a **layer** is the container inside a glyph that holds the actual drawing for one master. If your font has a Light master and a Bold master, then every glyph has (at least) two layers — one for each master. The layer is where shapes live, where metrics are set, and where anchors and guidelines for that specific master are stored.
 
 Think of layers as the per-master "slots" inside a glyph:
 
@@ -19749,11 +19749,11 @@ Source: FontLab Proteus API documentation"""
     'object type'
 
 class flPackage:
-    """Inherits from `flObject`.
+    """`flPackage` *is* your font file. Everything that makes up a font — every glyph, every master, the design-space axes, named instances, kerning tables, OpenType feature code, stems, alignment zones, guidelines, and all the metadata that ends up in the font's name tables — lives inside one `flPackage` object.
+
+Inherits from `flObject`.
 
 ## What is a Package?
-
-`flPackage` *is* your font file. Everything that makes up a font — every glyph, every master, the design-space axes, named instances, kerning tables, OpenType feature code, stems, alignment zones, guidelines, and all the metadata that ends up in the font's name tables — lives inside one `flPackage` object.
 
 When you open a `.vfc`, `.ufo`, `.otf`, or any other supported format in FontLab, the application creates an `flPackage` for it. In a script, wrap the low-level current font with `fl.flPackage(fl.CurrentFont())`, after checking that `fl.CurrentFont()` is not `None`.
 

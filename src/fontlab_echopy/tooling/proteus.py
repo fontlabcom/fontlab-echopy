@@ -178,6 +178,30 @@ def class_names(text: str, stem: str, owners: dict[str, set[str]]) -> list[str]:
     return list(dict.fromkeys(names))
 
 
+def lead_with_prose(doc: str) -> str:
+    """Start with the first prose sentence, not "Inherits from" or a heading.
+
+    Tools and tooltips show only the first line, so the inheritance note moves
+    after the first prose paragraph and the remaining text keeps its order.
+    """
+    paragraphs = doc.split("\n\n")
+    if not paragraphs[0].startswith("Inherits from"):
+        return doc
+    prose = next(
+        (
+            i
+            for i, p in enumerate(paragraphs)
+            if i and not p.startswith(("#", "|", "-", "```"))
+        ),
+        None,
+    )
+    if prose is None:
+        return doc
+    inherits = paragraphs.pop(0)
+    first = paragraphs.pop(prose - 1)
+    return "\n\n".join([first, inherits, *paragraphs])
+
+
 def class_overlay(path: Path, index: dict[str, set[str]], overlay: Overlay) -> None:
     text = path.read_text()
     targets = index["keys"]
@@ -204,7 +228,7 @@ def class_overlay(path: Path, index: dict[str, set[str]], overlay: Overlay) -> N
                     members.setdefault(name, []).append(desc)
         elif heading.lower() not in SKIPPED_SECTIONS:
             parts.append(f"## {heading}\n\n" + clean(lines, overlay))
-    doc = "\n\n".join(p for p in parts if p.strip())
+    doc = lead_with_prose("\n\n".join(p for p in parts if p.strip()))
     names = class_names(text, path.stem, index)
     if not names:
         overlay.unplaced.append(f"article:{path.name}")

@@ -328,15 +328,42 @@ def test_class_guidance_requires_at_least_one_backticked_member():
     assert backticked_names("No identifiers here.") == []
 
 
-def test_merge_when_raw_lacks_capture_identity_then_existing_identity_is_dropped(tmp_path):
-    """A merge never keeps an identity its raw input does not carry; refreshes restore it."""
+def test_merge_when_raw_lacks_capture_identity_then_identity_and_identities_kept(tmp_path):
+    """Re-merging the committed raw tree keeps the recorded capture and its identities."""
     out = tmp_path / "out"
-    out.mkdir()
-    (out / "_provenance.json").write_text(
-        json.dumps({"capture_identity": {"sha256": "old"}}) + "\n"
-    )
     merge(ROOT / "generated", out, [ROOT / "patches/manual.json"])
-    assert "capture_identity" not in json.loads((out / "_provenance.json").read_text())
+    provenance_path = out / "_provenance.json"
+    provenance = json.loads(provenance_path.read_text())
+    provenance["capture_identity"] = {"sha256": "old"}
+    provenance_path.write_text(json.dumps(provenance) + "\n")
+    (out / "_identities.json").write_text('{"kept": true}\n')
+    merge(ROOT / "generated", out, [ROOT / "patches/manual.json"])
+    assert json.loads(provenance_path.read_text())["capture_identity"] == {"sha256": "old"}
+    assert json.loads((out / "_identities.json").read_text()) == {"kept": True}
+
+
+def test_merge_when_unmatched_changes_then_identities_removed(tmp_path):
+    out = tmp_path / "out"
+    merge(ROOT / "generated", out, [ROOT / "patches/manual.json"])
+    (out / "_identities.json").write_text("{}\n")
+    extra = tmp_path / "extra.json"
+    extra.write_text(json.dumps({"fontlab.NoSuchThing": {"doc": "x"}}))
+    result = merge(ROOT / "generated", out, [ROOT / "patches/manual.json", extra])
+    assert result["unmatched"] == ["fontlab.NoSuchThing"]
+    assert not (out / "_identities.json").exists(), "identities embed merge.unmatched"
+
+
+def test_merge_when_raw_carries_new_capture_identity_then_identities_removed(tmp_path):
+    raw = tmp_path / "raw"
+    shutil.copytree(ROOT / "generated", raw)
+    out = tmp_path / "out"
+    merge(raw, out, [ROOT / "patches/manual.json"])
+    (out / "_identities.json").write_text("{}\n")
+    coverage = json.loads((raw / "coverage.json").read_text())
+    coverage["capture_identity"] = {"sha256": "new"}
+    (raw / "coverage.json").write_text(json.dumps(coverage))
+    merge(raw, out, [ROOT / "patches/manual.json"])
+    assert not (out / "_identities.json").exists()
 
 
 def test_merge_when_raw_carries_capture_identity_then_provenance_records_it(tmp_path):

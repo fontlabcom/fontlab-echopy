@@ -39,12 +39,15 @@ Calling convention:
   ignored, so `fontpr.list_glyphs(font_id=1)` works and
   `fontpr.list_glyphs(1)` does not pass `font_id`.
 - `fontpr.call(name, **kwargs)` calls a tool by its MCP name; `name` must be a
-  string (otherwise `TypeError`).
+  string (otherwise `TypeError`), for example
+  `fontpr.call("list_glyphs", font_id=1)`.
 - `fontpr.available()` returns True once the MCP tools are ready. Before then
   every call raises `fontpr.Error("MCP tools are not available yet.")`.
-- `fontpr.list_tools()` returns the tool names in the running build, or an
-  empty list when tools are unavailable. Treat it as authoritative: the
-  functions documented here come from one build and one specification.
+- `fontpr.list_tools()` returns a list of tool metadata dicts (`name`,
+  `description`, `inputSchema` and the other MCP fields) for the running
+  build. Blocked tools are left out, and the list is empty when tools are
+  unavailable. Treat it as authoritative: the functions documented here come
+  from one build and one specification.
 - `run_python` and `get_python_output` are blocked: calling them through
   `fontpr` raises `fontpr.Error`, because a script is already running Python.
 
@@ -71,14 +74,20 @@ def schema_type(schema: dict[str, Any]) -> str:
     return JSON_TYPES.get(kind, "Any")
 
 
+def param_type(name: str, schema: dict[str, Any]) -> str:
+    """Identifiers such as ``font_id`` are integers even where the schema says number."""
+    kind = schema_type(schema)
+    return "int" if kind == "float" and name.endswith("_id") else kind
+
+
 def signature(tool: dict[str, Any]) -> str:
     """Keyword-only parameter list; required parameters come first."""
     schema = tool.get("inputSchema", {})
     props: dict[str, Any] = schema.get("properties", {})
     required = [n for n in schema.get("required", []) if n in props]
-    named = [f"{name}: {schema_type(props[name])}" for name in required]
+    named = [f"{name}: {param_type(name, props[name])}" for name in required]
     named += [
-        f"{name}: {schema_type(spec)} | None = None"
+        f"{name}: {param_type(name, spec)} | None = None"
         for name, spec in props.items()
         if name not in required
     ]
@@ -158,6 +167,25 @@ def module_doc(spec: dict[str, Any]) -> str:
     return "\n\n".join(parts)
 
 
+HELPER_PATCHES: dict[str, dict[str, str]] = {
+    "call": {
+        "reference": "Call an MCP tool by its name with keyword arguments.\n\n"
+        "`name` must be a str, otherwise `TypeError` is raised. Example: "
+        '`fontpr.call("list_glyphs", font_id=1)`.',
+        "reference_source": REFERENCE_SOURCE,
+        "signature": "name: str, /, **kwargs: Any",
+    },
+    "list_tools": {
+        "reference": "Return the MCP tool metadata dicts of the running build.\n\n"
+        "Each dict carries `name`, `description` and `inputSchema`. Blocked tools "
+        "(`run_python`, `get_python_output`) are left out; the list is empty "
+        "while the MCP tools are unavailable.",
+        "reference_source": REFERENCE_SOURCE,
+        "signature": "",
+    },
+}
+
+
 def captured_functions(generated: Path) -> set[str]:
     tree = ast.parse((generated / "fontpr.py").read_text())
     return {n.name for n in tree.body if isinstance(n, ast.FunctionDef)}
@@ -177,10 +205,13 @@ def build(
             "reference_source": REFERENCE_SOURCE,
             "signature": signature(tools[name]),
         }
+    for key, value in HELPER_PATCHES.items():
+        if key in captured:  # only patch helpers the capture defines
+            patches[f"fontpr.{key}"] = value
     helpers = {"available", "call", "list_tools"}
     report = {
         "spec_tools": len(tools),
-        "documented": len(patches) - 1,
+        "documented": len(set(tools) & captured),
         "spec_only": sorted(set(tools) - captured),
         "capture_only": sorted(captured - set(tools) - helpers),
         "blocked_in_spec": [name for name in BLOCKED if name in tools],

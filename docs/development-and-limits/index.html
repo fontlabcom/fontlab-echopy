@@ -646,7 +646,10 @@ captured scope, name, class member and constructor, the capture hash, the
 native spelling of each sanitized identity (<code>QPainter::PixmapFragment</code> →
 <code>QPainter__PixmapFragment</code>, <code>QWidget.raise</code> → <code>QWidget.raise_</code>), maintained
 extensions, unmatched overlay targets and enrichment gaps. Documentation builds
-reconcile their coverage against it without the raw capture. To refresh or
+reconcile their coverage against it without the raw capture. A standalone
+<code>merge</code> keeps the file and <code>capture_identity</code> while its raw input records no
+new capture and the unmatched overlay targets are unchanged; otherwise it
+removes the file. To refresh or
 check it against a capture without regenerating sidecars:</p>
 <div class="highlight"><pre><span></span><code>fontlab-echopy<span class="w"> </span>identities<span class="w"> </span>path/to/native.json<span class="w"> </span>src/fontlab_echopy
 fontlab-echopy<span class="w"> </span>verify-identities<span class="w"> </span>path/to/native.json<span class="w"> </span>src/fontlab_echopy

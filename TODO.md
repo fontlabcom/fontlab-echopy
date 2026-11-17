@@ -4,7 +4,7 @@ this_file: TODO.md
 
 ## Issue 257 follow-ups — 2026-11-17
 
-- [ ] Run `verify-identities` against the raw capture after the next capture; `_identities.json` was restored from HEAD after merge (it does not depend on docstrings), and `capture_identity` was re-inserted into `_provenance.json` by hand.
+- [ ] Run `verify-identities` against the raw capture after the next capture; `_identities.json` was carried over from the previous capture (it does not depend on docstrings) and was not re-derived.
 - [ ] Next capture: confirm `fontlabpr` is gone from `generated/coverage.json`, `reports/*.json` and `_identities.json` (these records still show its old absence).
 - [ ] Document the 43 `fontgate` classes that still have placeholder leads; the Proteus articles cover only `fontlab`.
 - [ ] Review the 82 unplaced Proteus entries in the `proteus-docs` report (names the capture lacks).
@@ -91,5 +91,5 @@ this_file: TODO.md
 - [ ] Qualify the six consumed C14 class overlays in a type checker or IDE that reads the installed `.pyi` stubs (hover and completion show the supplemental text); the installed wheel and sdist stubs and offline `help()` are verified by `tests/test_installed_class_overlays.py`. Inside FontLab 9 the classes are the native builtins, so `help()`, `__doc__` and the editor show native text only (live reports 32 and 32b); that is by design, not a defect.
 - [ ] `generated/coverage.json` lacks `capture_identity`; regenerate with `generate` from a fresh native capture (shipped identity `5a405eb5a8888bc217c9653b606013439483a9ead5c0b9b1b478172c18e521e9`), then remove the manual README-merge restore of `capture_identity` in `_provenance.json`.
 - [ ] Licence (Issue 250, owner Q5): `pyproject.toml` reads `Apache-2.0 AND LGPL-3.0-only AND GFDL-1.3-only`. The LGPL/GFDL terms come from PySide2-derived declarations, which the owner keeps as marked third-party. Check that every FontLab-authored file under `src/`, `tools/`, `enrichment/` and `tests/` is Apache-2.0 (no SPDX headers exist today: add them), and that `NOTICE` and `licenses/` mark exactly the PySide2-derived declaration files as third-party. `licenses/Qt-LICENSE.COMMERCIAL` stays a third-party text.
-- [ ] Echopy provenance: `src/fontlab_echopy/FL.py` and `FL.pyi` are tracked but `_provenance.json` has no entry for them (none at e4a42b4 or 173c99fd), while `fontlab-echopy merge` lists both. Check whether they ship in the wheel: if so, make provenance hash them; if not, drop them from the merge input. Re-run the merge to confirm `capture_identity` is also preserved or generated. Predates batch 11; accepted as M-1 by reviewer2.
+- [ ] Echopy provenance: since Issue 257 `_provenance.json` `merged_outputs` hashes `FL.py` and `FL.pyi`, and a standalone merge keeps `capture_identity`. Remaining check: confirm both FL files ship in the built wheel and sdist (accepted earlier as M-1 by reviewer2).
 - [ ] Native check (D46): after the row-61 rewording, decide between a documentation-only close and a live recheck of the 7 classes whose overlays show 0/7 in an IDE.

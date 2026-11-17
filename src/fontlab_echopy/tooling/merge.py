@@ -22,7 +22,10 @@ def documented_outputs(tree: ast.Module, relative: Path) -> tuple[str, str]:
     for node in tree.body:
         if isinstance(node, ast.Assign) and len(node.targets) == 1:
             target = node.targets[0]
-            if isinstance(target, ast.Name) and target.id == "__echopy_source_aliases__":
+            if (
+                isinstance(target, ast.Name)
+                and target.id == "__echopy_source_aliases__"
+            ):
                 aliases.update(ast.literal_eval(node.value))
             # Compatibility with the exact class markers in historical raw output.
             elif (
@@ -30,7 +33,8 @@ def documented_outputs(tree: ast.Module, relative: Path) -> tuple[str, str]:
                 and isinstance(target.value, ast.Call)
                 and isinstance(target.value.func, ast.Name)
                 and target.value.func.id == "globals"
-                and not target.value.args and not target.value.keywords
+                and not target.value.args
+                and not target.value.keywords
                 and isinstance(target.slice, ast.Constant)
                 and isinstance(target.slice.value, str)
                 and isinstance(node.value, ast.Name)
@@ -109,7 +113,8 @@ def with_reference(doc: str, reference: str) -> str:
     lead, sep, rest = doc.partition("\n\n")
     if lead.strip().startswith(STRUCTURAL_LEADS):
         lead, rest = "", doc
-    if is_placeholder_lead(lead):
+    first = reference.partition("\n\n")[0]
+    if is_placeholder_lead(lead) or " ".join(lead.split()) == " ".join(first.split()):
         return reference + ("\n\n" + rest if rest else "")
     return lead + "\n\n" + reference + (sep + rest if rest else "")
 
@@ -296,12 +301,18 @@ def merge(raw: Path, output: Path, overlays: list[Path]) -> dict[str, Any]:
     identity = native.pop("capture_identity", None)
     if coverage_path.exists():
         provenance["native_coverage"] = native
-    # The merged package documents the raw input's capture; anything else is stale.
-    if identity is None:
-        provenance.pop("capture_identity", None)
-    else:
+    # A raw tree without its own capture identity (the committed `generated/`)
+    # re-merges the capture already recorded, so keep that identity. Identities
+    # embed `merge.unmatched`, so they survive only while it is unchanged; a new
+    # capture identity or a different unmatched set needs `identities` again.
+    previous = provenance.get("capture_identity")
+    stale = (identity is not None and identity != previous) or (
+        provenance.get("merge", {}).get("unmatched") != result["unmatched"]
+    )
+    if identity is not None:
         provenance["capture_identity"] = identity
-    (output / "_identities.json").unlink(missing_ok=True)  # Re-derive with `identities`.
+    if stale:
+        (output / "_identities.json").unlink(missing_ok=True)
     provenance.update(
         schema_version=1,
         merge=result,

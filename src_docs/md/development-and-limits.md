@@ -73,7 +73,10 @@ captured scope, name, class member and constructor, the capture hash, the
 native spelling of each sanitized identity (`QPainter::PixmapFragment` →
 `QPainter__PixmapFragment`, `QWidget.raise` → `QWidget.raise_`), maintained
 extensions, unmatched overlay targets and enrichment gaps. Documentation builds
-reconcile their coverage against it without the raw capture. To refresh or
+reconcile their coverage against it without the raw capture. A standalone
+`merge` keeps the file and `capture_identity` while its raw input records no
+new capture and the unmatched overlay targets are unchanged; otherwise it
+removes the file. To refresh or
 check it against a capture without regenerating sidecars:
 
 ```sh
