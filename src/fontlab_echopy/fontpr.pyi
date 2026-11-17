@@ -406,7 +406,7 @@ result = fontpr.edit_layer_hints(glyph_name='H', layer_name='Regular', operation
 Source: FontLab MCP specification"""
     ...
 
-def explain(*, query: str | None=None, id: str | None=None, section: str | None=None, limit: float | None=None, max_chars: float | None=None) -> Any:
+def explain(*, query: str | None=None, id: str | None=None, section: str | None=None, limit: int | None=None, max_chars: int | None=None) -> Any:
     """Search FontLab Quick Help content loaded in the current workspace. Use this first for explain, how-to, tutorial, UI control, tool, panel, setting, and action questions. For exact Quick Help/status-tip ids, pass id such as 'bar_glyph.valueLSB' or '@bar_glyph.valueLSB'. For natural-language topics, pass a short query. This tool is read-only and never changes font or editor state.
 
 Parameters:
@@ -553,7 +553,7 @@ result = fontpr.get_features(font_id=101)
 Source: FontLab MCP specification"""
     ...
 
-def get_font_hinting(*, font_id: int | None=None, font_name: str | None=None, master_name: str | None=None, kind: str | None=None, offset: float | None=None, limit: float | None=None) -> Any:
+def get_font_hinting(*, font_id: int | None=None, font_name: str | None=None, master_name: str | None=None, kind: str | None=None, offset: int | None=None, limit: int | None=None) -> Any:
     """Read font-level alignment zones and standard stems directly, without glyphs, kerning, features or Python. Returns paged exact records for one master, plus available master names. Distinguishes PostScript, TrueType and family zones. PostScript zones match Font Info's guideline-derived values. Use this for 'list/show my font's zones/stems'; get_layer_hints is glyph-level and is not a replacement. Follow next_offset when has_more=true.
 
 Parameters:
@@ -582,7 +582,7 @@ result = fontpr.get_font_hinting(kind='zones')
 Source: FontLab MCP specification"""
     ...
 
-def get_font_info(*, font_id: int | None=None, font_name: str | None=None, detail: str | None=None, master_name: str | None=None, kind: str | None=None, offset: float | None=None, limit: float | None=None) -> Any:
+def get_font_info(*, font_id: int | None=None, font_name: str | None=None, detail: str | None=None, master_name: str | None=None, kind: str | None=None, offset: int | None=None, limit: int | None=None) -> Any:
     """Return package-level font info JSON without glyph outlines. Full metadata can be large because it includes kerning, groups, features and lib data. For alignment zones and standard stems use get_font_hinting instead, or detail='hinting'; no Python required. Use set_font_info for metadata patches.
 
 Parameters:
@@ -635,7 +635,7 @@ result = fontpr.get_font_metrics(font_id=101)
 Source: FontLab MCP specification"""
     ...
 
-def get_glyph(*, glyph_name: str, detail: str | None=None, layer_name: str | None=None, mark_glyph: str | None=None, component_index: float | None=None, nodes_format: str | None=None, font_id: int | None=None, font_name: str | None=None) -> Any:
+def get_glyph(*, glyph_name: str, detail: str | None=None, layer_name: str | None=None, mark_glyph: str | None=None, component_index: int | None=None, nodes_format: str | None=None, font_id: int | None=None, font_name: str | None=None) -> Any:
     """Read one glyph. detail=construction returns compact layer names, anchors, component identities/transforms and width. Omit detail for full writable VFJ, including outlines and metadata. Choose the representation needed for the operation; construction is not a replacement payload. For indexed node edits use get_glyph_nodes. Full contours use nodes_list with x, y, type and flags.
 
 Parameters:
@@ -987,7 +987,7 @@ result = fontpr.list_fonts()
 Source: FontLab MCP specification"""
     ...
 
-def list_glyphs(*, font_id: int | None=None, font_name: str | None=None, detail: str | None=None, query: str | None=None, limit: float | None=None, offset: float | None=None, min_contour_count: float | None=None, max_contour_count: float | None=None, min_component_count: float | None=None, min_bottom: float | None=None, max_bottom: float | None=None, has_unicode: bool | None=None, script: str | None=None) -> Any:
+def list_glyphs(*, font_id: int | None=None, font_name: str | None=None, detail: str | None=None, query: str | None=None, limit: int | None=None, offset: int | None=None, min_contour_count: int | None=None, max_contour_count: int | None=None, min_component_count: int | None=None, min_bottom: float | None=None, max_bottom: float | None=None, has_unicode: bool | None=None, script: str | None=None) -> Any:
     """List glyphs. For requests like 'glyphs with 3 or more contours', use min_contour_count with basic detail for compact results. For bottom/minY range requests, use min_bottom and max_bottom so the tool filters exactly. Use detail='facts' when glyph facts such as bounds.height are needed for comparisons. For comparisons, the caller must apply the numeric predicate exactly, e.g. taller than height 696 means bounds.height > 696 only. contour_count is real contours across glyph layers and is not shape_count.
 
 Parameters:
@@ -1050,7 +1050,7 @@ result = fontpr.list_kerning_classes(font_id=101)
 Source: FontLab MCP specification"""
     ...
 
-def list_kerning_pairs(*, font_id: int | None=None, font_name: str | None=None, master_name: str | None=None, left: str | None=None, right: str | None=None, limit: float | None=None, offset: float | None=None) -> Any:
+def list_kerning_pairs(*, font_id: int | None=None, font_name: str | None=None, master_name: str | None=None, left: str | None=None, right: str | None=None, limit: int | None=None, offset: int | None=None) -> Any:
     """List kerning pairs for a font master. Use @GroupName syntax for kerning classes. Supports pagination and optional left/right filters.
 
 Parameters:

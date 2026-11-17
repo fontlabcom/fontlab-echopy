@@ -42,7 +42,7 @@
     "fontlab.py": "bb9bd0abf17d4f1ec66f4e375f67a43f39ca5e39817fdbce538bb5ae58cf5498",
     "fontlab.pyi": "02f276365fa3a7c873eeab0bfbeab3d9aab1ac87d60b20177614c836b44b8e89",
     "fontpr.py": "8b8ac880f4deeff73082041c3a3d2cc9c65deeca08357b9f9d0b7a4f7a9ce6ab",
-    "fontpr.pyi": "90c872ce8222d2593742c3d34bd4166cc7053c6c4480366ab4c47e655426c012"
+    "fontpr.pyi": "3871344ff9dc9ba5898cafdce016542b2cdac73f4ed8dc85b421f0a57f317dce"
   },
   "native_coverage": {
     "modules": {
@@ -273,7 +273,7 @@
     },
     {
       "file": "fontpr-mcp.json",
-      "sha256": "c9188ed5a18a3b25b288dc315015a5ee222256cbf3021217ee465633b0629776"
+      "sha256": "8ddc006d86cd5e360c06ebc5bf2b66f9be8deb2393e08526a0fa885f52b2a43f"
     },
     {
       "file": "manual.json",

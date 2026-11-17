@@ -428,3 +428,13 @@ def test_mcp_build_when_helpers_then_call_and_list_tools_documented():
     assert "metadata dicts" in patches["fontpr.list_tools"]["reference"]
     assert "Blocked tools" in patches["fontpr"]["reference"]
     assert patches["fontpr.list_glyphs"]["signature"] == "*, font_id: int | None = None"
+
+
+def test_mcp_param_type_when_count_or_position_number_then_int():
+    """Counts, positions and page sizes are integers even where the schema says number."""
+    number = {"type": "number"}
+    for name in ("limit", "offset", "max_chars", "min_contour_count", "component_index", "font_id"):
+        assert mcp.param_type(name, number) == "int", name
+    for name in ("width", "italic_angle", "max_bottom", "t", "value"):
+        assert mcp.param_type(name, number) == "float", name
+    assert mcp.param_type("limit", {"type": "string"}) == "str"

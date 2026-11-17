@@ -14,6 +14,7 @@ from __future__ import annotations
 
 import ast
 import json
+import re
 from pathlib import Path
 from typing import Any
 
@@ -74,10 +75,14 @@ def schema_type(schema: dict[str, Any]) -> str:
     return JSON_TYPES.get(kind, "Any")
 
 
+INTEGER_NAMES = re.compile(r"(limit|offset|max_chars|.*_(id|count|index))")
+
+
 def param_type(name: str, schema: dict[str, Any]) -> str:
-    """Identifiers such as ``font_id`` are integers even where the schema says number."""
+    """Identifiers, counts, indices and page sizes (``font_id``, ``limit``,
+    ``min_contour_count``) are integers even where the schema says number."""
     kind = schema_type(schema)
-    return "int" if kind == "float" and name.endswith("_id") else kind
+    return "int" if kind == "float" and INTEGER_NAMES.fullmatch(name) else kind
 
 
 def signature(tool: dict[str, Any]) -> str:
