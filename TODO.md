@@ -10,6 +10,7 @@ this_file: TODO.md
 
 ## Issue 257 follow-ups — 2026-11-17
 
+- [ ] Replace the "not documented" summaries of the `FL` constants `a*`, `cRECT_*`, `cTO_*` and `ft*` with evidence-based text once a native probe or historical FL5 source shows their values and callers.
 - [ ] Recapture `PythonQt.private` after exercising FontLab actions in the session: the 9.1.9813 capture lists 5 classes there (the 9.0 capture had 221); then drop `--retain PythonQt` and regenerate PythonQt from that recapture.
 - [ ] Refresh `reports/qt-enrichment.json` and the `qt_enrichment` provenance record with a cached `--qt-cache` run; this regeneration reused `enrichment/qt5.json` offline.
 - [ ] Document the 43 `fontgate` classes that still have placeholder leads; the Proteus articles cover only `fontlab`.

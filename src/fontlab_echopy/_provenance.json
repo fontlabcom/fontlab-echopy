@@ -4,12 +4,12 @@
     "sha256": "432487810f3e4ba931591705c9d0edd4a5202af03c06cf882c5f3972bec039a7"
   },
   "merge": {
-    "applied": 26000,
+    "applied": 26111,
     "unmatched": []
   },
   "merged_outputs": {
     "FL.py": "c49764a49b40b62f2e6e883d6796c6a145ff5f095f0f9ec4c622d14f108c702a",
-    "FL.pyi": "934603c35ae7e017c673c05f665d0eb78ae5a7d26d3ee948350d8c8f6644602b",
+    "FL.pyi": "4442e575397679364b72deb46e44aa868179b80909de32a3814a5fb85d4bbafd",
     "PythonQt/BoolResult.py": "012ad997a44161056c843b197ee9616d67a0a6d357d3ffd8e4fdf334201fab5c",
     "PythonQt/BoolResult.pyi": "825f6d678ce706bc66426f82e8e67ba09fff886b7a838ffaca095202285ff3fa",
     "PythonQt/Config.py": "4cd0a6c15713f6ad7b1656ea70bf67478222c06ed8da67c2955748605fe0491c",
@@ -38,9 +38,9 @@
     "PythonQt/private.pyi": "fa2e0552574dfcc70299958478588b20b19f3d04bc2eddd31b8626f9a7a59795",
     "_patch_extensions.py": "907bb6ff1749b8511f43fccda767c9f6b81aacbe76389ad5c8df692dc1e85f5a",
     "fontgate.py": "16796fe6044fe23dcc74f61e38e155c71e4de753a00754d88c6dea8d282f7326",
-    "fontgate.pyi": "c8a2771b00736b66dcef413623ac1581649a634ff5d64ddcc950686d68149994",
+    "fontgate.pyi": "118837e727239669d9ac21a2b25a8d37b4a1e055e69f15f4443cff0cbcea0754",
     "fontlab.py": "bb9bd0abf17d4f1ec66f4e375f67a43f39ca5e39817fdbce538bb5ae58cf5498",
-    "fontlab.pyi": "02f276365fa3a7c873eeab0bfbeab3d9aab1ac87d60b20177614c836b44b8e89",
+    "fontlab.pyi": "6198af61e3bacbf35b51253bc757ec62ff32000350d0684a0d277a3140964150",
     "fontpr.py": "8b8ac880f4deeff73082041c3a3d2cc9c65deeca08357b9f9d0b7a4f7a9ce6ab",
     "fontpr.pyi": "3871344ff9dc9ba5898cafdce016542b2cdac73f4ed8dc85b421f0a57f317dce"
   },
@@ -277,7 +277,7 @@
     },
     {
       "file": "manual.json",
-      "sha256": "60013333f0017219fdfc344057538051969202abe875479a2be428070e424165"
+      "sha256": "706489c2079bbdbaca6625cba128f03d50575d11ffe1972796f905abf8508fa1"
     }
   ],
   "qt_enrichment": {

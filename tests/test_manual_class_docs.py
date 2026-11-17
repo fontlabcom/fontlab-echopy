@@ -396,3 +396,19 @@ def test_batch_11_guidance_when_member_invented_then_rejected():
     assert names_outside_capture(patch["doc"], "fgGlyphIDsSet", members) == set()
     mutant = patch["doc"].replace("`contains`", "`containsAll`")
     assert names_outside_capture(mutant, "fgGlyphIDsSet", members) == {"containsAll"}
+
+
+@pytest.mark.parametrize("module", ["FL", "fontgate", "fontlab"])
+def test_native_module_constants_when_generated_then_each_has_a_docstring(module):
+    """Every module-level native constant carries a one-line summary for the docs landing pages."""
+    body = ast.parse((ROOT / "src/fontlab_echopy" / f"{module}.pyi").read_text()).body
+    missing = []
+    for index, node in enumerate(body):
+        if not isinstance(node, ast.AnnAssign):
+            continue
+        following = body[index + 1] if index + 1 < len(body) else None
+        text = following.value.value if isinstance(following, ast.Expr) and isinstance(following.value, ast.Constant) else ""
+        lines = [p for p in str(text).split("\n\n") if p and not p.startswith(("Keys:", "- ", "Source:"))]
+        if not lines:
+            missing.append(node.target.id)
+    assert missing == [], f"{module} constants without a summary: {missing}"

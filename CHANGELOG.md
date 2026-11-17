@@ -2,6 +2,21 @@
 this_file: CHANGELOG.md
 ---
 
+## 2026-11-17 — Issue 258: staleness, fontpr integer types and constant summaries
+
+- The identity manifest is now dropped when the maintained extension registry
+  changes, not only when the capture identity or unmatched set changes
+  (`tooling/merge.py`; `test_merge_when_extension_registry_changes_then_manifest_is_dropped`).
+- `fontpr.pyi` types `limit`, `offset`, `max_chars`, `*_id`, `*_count` and
+  `*_index` as `int`; the rule lives in the MCP overlay generator
+  (`tooling/mcp.py` `INTEGER_NAMES`), and `enrichment/fontpr-mcp.json` was rebuilt.
+- `patches/manual.json` gives every module constant in `FL` (106), `fontgate` (5)
+  and `fontlab` (17 dict enums) a one-line summary drawn from the captured
+  docstrings (Dialog, Canvas, Node, fgNode) and the Proteus key lists. Constants
+  with no usage evidence (`a*`, `cRECT_*`, `cTO_*`, `ft*`) say so instead of
+  guessing. Blank landing-page summaries for these modules went from 128 to 0.
+- `./test.sh`: 781 passed in 180.39 s.
+
 ## 2026-11-17 — Guarded common installer source candidate
 
 Propagated the exact Instamix 1.0.11 common template and restored the existing

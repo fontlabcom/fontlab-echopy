@@ -1839,109 +1839,215 @@ Create and return a new object.  See help(type) for accurate signature."""
         """Initialize self.  See help(type(self)) for accurate signature."""
         ...
 BUTTONCONTROL: int
+'Dialog control type for the ControlType argument of Dialog.AddControl; the name denotes a push button.\n\nSource: src/fontlab_echopy/FL.pyi: Dialog docstring (AddControl ControlType and ControlStyle) and capture-9813 FL attribute names'
 CHECKBOXCONTROL: int
+'Dialog control type for the ControlType argument of Dialog.AddControl; the name denotes a check box.\n\nSource: src/fontlab_echopy/FL.pyi: Dialog docstring (AddControl ControlType and ControlStyle) and capture-9813 FL attribute names'
 CHOICECONTROL: int
+'Dialog control type for the ControlType argument of Dialog.AddControl; the name denotes a choice (drop-down) list.\n\nSource: src/fontlab_echopy/FL.pyi: Dialog docstring (AddControl ControlType and ControlStyle) and capture-9813 FL attribute names'
 Cancel: int
+'Integer constant named after the dialog Cancel button. Dialog documents ok and cancel button text and End(integer returnvalue).\n\nSource: src/fontlab_echopy/FL.pyi: Dialog docstring'
 EDITCONTROL: int
+'Dialog control type for the ControlType argument of Dialog.AddControl; the name denotes an edit field.\n\nSource: src/fontlab_echopy/FL.pyi: Dialog docstring (AddControl ControlType and ControlStyle) and capture-9813 FL attribute names'
 LISTCONTROL: int
+'Dialog control type for the ControlType argument of Dialog.AddControl; the name denotes a list.\n\nSource: src/fontlab_echopy/FL.pyi: Dialog docstring (AddControl ControlType and ControlStyle) and capture-9813 FL attribute names'
 NULLCONTROL: int
+'Dialog control type for the ControlType argument of Dialog.AddControl; the name denotes no control.\n\nSource: src/fontlab_echopy/FL.pyi: Dialog docstring (AddControl ControlType and ControlStyle) and capture-9813 FL attribute names'
 OK: int
+'Integer constant named after the dialog OK button. Dialog documents ok and cancel button text and End(integer returnvalue).\n\nSource: src/fontlab_echopy/FL.pyi: Dialog docstring'
 PREVIEWCONTROL: int
+'Dialog control type for the ControlType argument of Dialog.AddControl; the name denotes a preview area.\n\nSource: src/fontlab_echopy/FL.pyi: Dialog docstring (AddControl ControlType and ControlStyle) and capture-9813 FL attribute names'
 STATICCONTROL: int
+'Dialog control type for the ControlType argument of Dialog.AddControl; the name denotes static text.\n\nSource: src/fontlab_echopy/FL.pyi: Dialog docstring (AddControl ControlType and ControlStyle) and capture-9813 FL attribute names'
 STYLE_BEVELBUTTON: int
+'Dialog control style for the ControlStyle argument of Dialog.AddControl; the name denotes a bevel button.\n\nSource: src/fontlab_echopy/FL.pyi: Dialog docstring (AddControl ControlType and ControlStyle) and capture-9813 FL attribute names'
 STYLE_BUTTON: int
+'Dialog control style for the ControlStyle argument of Dialog.AddControl; the name denotes a button.\n\nSource: src/fontlab_echopy/FL.pyi: Dialog docstring (AddControl ControlType and ControlStyle) and capture-9813 FL attribute names'
 STYLE_CHECKBOX: int
+'Dialog control style for the ControlStyle argument of Dialog.AddControl; the name denotes a check box.\n\nSource: src/fontlab_echopy/FL.pyi: Dialog docstring (AddControl ControlType and ControlStyle) and capture-9813 FL attribute names'
 STYLE_CHOICE: int
+'Dialog control style for the ControlStyle argument of Dialog.AddControl; the name denotes a choice list.\n\nSource: src/fontlab_echopy/FL.pyi: Dialog docstring (AddControl ControlType and ControlStyle) and capture-9813 FL attribute names'
 STYLE_CUSTOM: int
+'Dialog control style for the ControlStyle argument of Dialog.AddControl; the name denotes a custom-drawn control.\n\nSource: src/fontlab_echopy/FL.pyi: Dialog docstring (AddControl ControlType and ControlStyle) and capture-9813 FL attribute names'
 STYLE_EDIT: int
+'Dialog control style for the ControlStyle argument of Dialog.AddControl; the name denotes an edit field.\n\nSource: src/fontlab_echopy/FL.pyi: Dialog docstring (AddControl ControlType and ControlStyle) and capture-9813 FL attribute names'
 STYLE_FRAME: int
+'Dialog control style for the ControlStyle argument of Dialog.AddControl; the name denotes a frame.\n\nSource: src/fontlab_echopy/FL.pyi: Dialog docstring (AddControl ControlType and ControlStyle) and capture-9813 FL attribute names'
 STYLE_LABEL: int
+'Dialog control style for the ControlStyle argument of Dialog.AddControl; the name denotes a label.\n\nSource: src/fontlab_echopy/FL.pyi: Dialog docstring (AddControl ControlType and ControlStyle) and capture-9813 FL attribute names'
 STYLE_LIST: int
+'Dialog control style for the ControlStyle argument of Dialog.AddControl; the name denotes a list.\n\nSource: src/fontlab_echopy/FL.pyi: Dialog docstring (AddControl ControlType and ControlStyle) and capture-9813 FL attribute names'
 WS_BORDER: int
+'Window style flag named after the Windows WS_BORDER style. The captured FL reference does not document which call accepts it.\n\nSource: capture-9813 FL attributes (type int, no documentation)'
 WS_CAPTION: int
+'Window style flag named after the Windows WS_CAPTION style. The captured FL reference does not document which call accepts it.\n\nSource: capture-9813 FL attributes (type int, no documentation)'
 WS_CHILD: int
+'Window style flag named after the Windows WS_CHILD style. The captured FL reference does not document which call accepts it.\n\nSource: capture-9813 FL attributes (type int, no documentation)'
 WS_CLIPCHILDREN: int
+'Window style flag named after the Windows WS_CLIPCHILDREN style. The captured FL reference does not document which call accepts it.\n\nSource: capture-9813 FL attributes (type int, no documentation)'
 WS_CLIPSIBLINGS: int
+'Window style flag named after the Windows WS_CLIPSIBLINGS style. The captured FL reference does not document which call accepts it.\n\nSource: capture-9813 FL attributes (type int, no documentation)'
 WS_DISABLED: int
+'Window style flag named after the Windows WS_DISABLED style. The captured FL reference does not document which call accepts it.\n\nSource: capture-9813 FL attributes (type int, no documentation)'
 WS_DLGFRAME: int
+'Window style flag named after the Windows WS_DLGFRAME style. The captured FL reference does not document which call accepts it.\n\nSource: capture-9813 FL attributes (type int, no documentation)'
 WS_GROUP: int
+'Window style flag named after the Windows WS_GROUP style. The captured FL reference does not document which call accepts it.\n\nSource: capture-9813 FL attributes (type int, no documentation)'
 WS_HSCROLL: int
+'Window style flag named after the Windows WS_HSCROLL style. The captured FL reference does not document which call accepts it.\n\nSource: capture-9813 FL attributes (type int, no documentation)'
 WS_MAXIMIZE: int
+'Window style flag named after the Windows WS_MAXIMIZE style. The captured FL reference does not document which call accepts it.\n\nSource: capture-9813 FL attributes (type int, no documentation)'
 WS_MAXIMIZEBOX: int
+'Window style flag named after the Windows WS_MAXIMIZEBOX style. The captured FL reference does not document which call accepts it.\n\nSource: capture-9813 FL attributes (type int, no documentation)'
 WS_MINIMIZE: int
+'Window style flag named after the Windows WS_MINIMIZE style. The captured FL reference does not document which call accepts it.\n\nSource: capture-9813 FL attributes (type int, no documentation)'
 WS_MINIMIZEBOX: int
+'Window style flag named after the Windows WS_MINIMIZEBOX style. The captured FL reference does not document which call accepts it.\n\nSource: capture-9813 FL attributes (type int, no documentation)'
 WS_OVERLAPPED: int
+'Window style flag named after the Windows WS_OVERLAPPED style. The captured FL reference does not document which call accepts it.\n\nSource: capture-9813 FL attributes (type int, no documentation)'
 WS_OVERLAPPEDWINDOW: int
+'Window style flag named after the Windows WS_OVERLAPPEDWINDOW style. The captured FL reference does not document which call accepts it.\n\nSource: capture-9813 FL attributes (type int, no documentation)'
 WS_POPUP: int
+'Window style flag named after the Windows WS_POPUP style. The captured FL reference does not document which call accepts it.\n\nSource: capture-9813 FL attributes (type int, no documentation)'
 WS_POPUPWINDOW: int
+'Window style flag named after the Windows WS_POPUPWINDOW style. The captured FL reference does not document which call accepts it.\n\nSource: capture-9813 FL attributes (type int, no documentation)'
 WS_SYSMENU: int
+'Window style flag named after the Windows WS_SYSMENU style. The captured FL reference does not document which call accepts it.\n\nSource: capture-9813 FL attributes (type int, no documentation)'
 WS_TABSTOP_: int
+'Window style flag named after the Windows WS_TABSTOP style; the native attribute name is "WS_TABSTOP " with a trailing space, exposed here as WS_TABSTOP_.\n\nSource: capture-9813 FL attributes (type int, no documentation)'
 WS_THICKFRAME: int
+'Window style flag named after the Windows WS_THICKFRAME style. The captured FL reference does not document which call accepts it.\n\nSource: capture-9813 FL attributes (type int, no documentation)'
 WS_VISIBLE: int
+'Window style flag named after the Windows WS_VISIBLE style. The captured FL reference does not document which call accepts it.\n\nSource: capture-9813 FL attributes (type int, no documentation)'
 WS_VSCROLL: int
+'Window style flag named after the Windows WS_VSCROLL style. The captured FL reference does not document which call accepts it.\n\nSource: capture-9813 FL attributes (type int, no documentation)'
 aALIGN: int
+'Integer constant named aALIGN. Its value and the call that takes it are not documented in the captured FL reference.\n\nSource: capture-9813 FL attributes (type int, no documentation)'
 aAUTO: int
+'Integer constant named aAUTO. Its value and the call that takes it are not documented in the captured FL reference.\n\nSource: capture-9813 FL attributes (type int, no documentation)'
 aIDENT: int
+'Integer constant named aIDENT. Its value and the call that takes it are not documented in the captured FL reference.\n\nSource: capture-9813 FL attributes (type int, no documentation)'
 aIDENT2: int
+'Integer constant named aIDENT2. Its value and the call that takes it are not documented in the captured FL reference.\n\nSource: capture-9813 FL attributes (type int, no documentation)'
 aIDENT3: int
+'Integer constant named aIDENT3. Its value and the call that takes it are not documented in the captured FL reference.\n\nSource: capture-9813 FL attributes (type int, no documentation)'
 aNEXT: int
+'Integer constant named aNEXT. Its value and the call that takes it are not documented in the captured FL reference.\n\nSource: capture-9813 FL attributes (type int, no documentation)'
 aSAME: int
+'Integer constant named aSAME. Its value and the call that takes it are not documented in the captured FL reference.\n\nSource: capture-9813 FL attributes (type int, no documentation)'
 cBRUSH_NULL: int
+'Brush style for the write-only Canvas.brush_style attribute; the name denotes no brush.\n\nSource: src/fontlab_echopy/FL.pyi: Canvas attribute docstrings and capture-9813 FL attribute names'
 cBRUSH_SOLID: int
+'Brush style for the write-only Canvas.brush_style attribute; the name denotes a solid brush.\n\nSource: src/fontlab_echopy/FL.pyi: Canvas attribute docstrings and capture-9813 FL attribute names'
 cPEN_DASH: int
+'Pen style for the write-only Canvas.pen_style attribute; the name denotes a dashed pen.\n\nSource: src/fontlab_echopy/FL.pyi: Canvas attribute docstrings and capture-9813 FL attribute names'
 cPEN_DOT: int
+'Pen style for the write-only Canvas.pen_style attribute; the name denotes a dotted pen.\n\nSource: src/fontlab_echopy/FL.pyi: Canvas attribute docstrings and capture-9813 FL attribute names'
 cPEN_NULL: int
+'Pen style for the write-only Canvas.pen_style attribute; the name denotes no pen.\n\nSource: src/fontlab_echopy/FL.pyi: Canvas attribute docstrings and capture-9813 FL attribute names'
 cPEN_SOLID: int
+'Pen style for the write-only Canvas.pen_style attribute; the name denotes a solid pen.\n\nSource: src/fontlab_echopy/FL.pyi: Canvas attribute docstrings and capture-9813 FL attribute names'
 cRECT_3DDOWN: int
+'Integer canvas constant named cRECT_3DDOWN. Its value and the call that takes it are not documented in the captured FL reference.\n\nSource: capture-9813 FL attributes (type int, no documentation)'
 cRECT_3DDOWN_FLAT: int
+'Integer canvas constant named cRECT_3DDOWN_FLAT. Its value and the call that takes it are not documented in the captured FL reference.\n\nSource: capture-9813 FL attributes (type int, no documentation)'
 cRECT_3DDOWN_SOLID: int
+'Integer canvas constant named cRECT_3DDOWN_SOLID. Its value and the call that takes it are not documented in the captured FL reference.\n\nSource: capture-9813 FL attributes (type int, no documentation)'
 cRECT_3DUP: int
+'Integer canvas constant named cRECT_3DUP. Its value and the call that takes it are not documented in the captured FL reference.\n\nSource: capture-9813 FL attributes (type int, no documentation)'
 cRECT_3DUP_FLAT: int
+'Integer canvas constant named cRECT_3DUP_FLAT. Its value and the call that takes it are not documented in the captured FL reference.\n\nSource: capture-9813 FL attributes (type int, no documentation)'
 cRECT_3DUP_SOLID: int
+'Integer canvas constant named cRECT_3DUP_SOLID. Its value and the call that takes it are not documented in the captured FL reference.\n\nSource: capture-9813 FL attributes (type int, no documentation)'
 cRECT_BLACK_FRAME: int
+'Integer canvas constant named cRECT_BLACK_FRAME. Its value and the call that takes it are not documented in the captured FL reference.\n\nSource: capture-9813 FL attributes (type int, no documentation)'
 cRECT_BLACK_SOLID: int
+'Integer canvas constant named cRECT_BLACK_SOLID. Its value and the call that takes it are not documented in the captured FL reference.\n\nSource: capture-9813 FL attributes (type int, no documentation)'
 cRECT_BLACK_THICK_FRAME: int
+'Integer canvas constant named cRECT_BLACK_THICK_FRAME. Its value and the call that takes it are not documented in the captured FL reference.\n\nSource: capture-9813 FL attributes (type int, no documentation)'
 cRECT_ELLIPSE: int
+'Integer canvas constant named cRECT_ELLIPSE. Its value and the call that takes it are not documented in the captured FL reference.\n\nSource: capture-9813 FL attributes (type int, no documentation)'
 cRECT_FOCUS: int
+'Integer canvas constant named cRECT_FOCUS. Its value and the call that takes it are not documented in the captured FL reference.\n\nSource: capture-9813 FL attributes (type int, no documentation)'
 cRECT_GRAY_FRAME: int
+'Integer canvas constant named cRECT_GRAY_FRAME. Its value and the call that takes it are not documented in the captured FL reference.\n\nSource: capture-9813 FL attributes (type int, no documentation)'
 cRECT_GRAY_SOLID: int
+'Integer canvas constant named cRECT_GRAY_SOLID. Its value and the call that takes it are not documented in the captured FL reference.\n\nSource: capture-9813 FL attributes (type int, no documentation)'
 cRECT_INVERT: int
+'Integer canvas constant named cRECT_INVERT. Its value and the call that takes it are not documented in the captured FL reference.\n\nSource: capture-9813 FL attributes (type int, no documentation)'
 cRECT_LTGRAY_SOLID: int
+'Integer canvas constant named cRECT_LTGRAY_SOLID. Its value and the call that takes it are not documented in the captured FL reference.\n\nSource: capture-9813 FL attributes (type int, no documentation)'
 cRECT_RECTANGLE: int
+'Integer canvas constant named cRECT_RECTANGLE. Its value and the call that takes it are not documented in the captured FL reference.\n\nSource: capture-9813 FL attributes (type int, no documentation)'
 cRECT_SIZE: int
+'Integer canvas constant named cRECT_SIZE. Its value and the call that takes it are not documented in the captured FL reference.\n\nSource: capture-9813 FL attributes (type int, no documentation)'
 cRECT_WHITE_SOLID: int
+'Integer canvas constant named cRECT_WHITE_SOLID. Its value and the call that takes it are not documented in the captured FL reference.\n\nSource: capture-9813 FL attributes (type int, no documentation)'
 cRECT_YELLOW_FRAME: int
+'Integer canvas constant named cRECT_YELLOW_FRAME. Its value and the call that takes it are not documented in the captured FL reference.\n\nSource: capture-9813 FL attributes (type int, no documentation)'
 cRECT_YELLOW_SOLID: int
+'Integer canvas constant named cRECT_YELLOW_SOLID. Its value and the call that takes it are not documented in the captured FL reference.\n\nSource: capture-9813 FL attributes (type int, no documentation)'
 cRGB_BLACK: int
+'Color value for Canvas color attributes such as pen_color, brush_color, text_color and bk_color; the name denotes black.\n\nSource: src/fontlab_echopy/FL.pyi: Canvas attribute docstrings and capture-9813 FL attribute names'
 cRGB_BLUE: int
+'Color value for Canvas color attributes such as pen_color, brush_color, text_color and bk_color; the name denotes blue.\n\nSource: src/fontlab_echopy/FL.pyi: Canvas attribute docstrings and capture-9813 FL attribute names'
 cRGB_GRAY: int
+'Color value for Canvas color attributes such as pen_color, brush_color, text_color and bk_color; the name denotes gray.\n\nSource: src/fontlab_echopy/FL.pyi: Canvas attribute docstrings and capture-9813 FL attribute names'
 cRGB_GREEN: int
+'Color value for Canvas color attributes such as pen_color, brush_color, text_color and bk_color; the name denotes green.\n\nSource: src/fontlab_echopy/FL.pyi: Canvas attribute docstrings and capture-9813 FL attribute names'
 cRGB_LTGRAY: int
+'Color value for Canvas color attributes such as pen_color, brush_color, text_color and bk_color; the name denotes light gray.\n\nSource: src/fontlab_echopy/FL.pyi: Canvas attribute docstrings and capture-9813 FL attribute names'
 cRGB_RED: int
+'Color value for Canvas color attributes such as pen_color, brush_color, text_color and bk_color; the name denotes red.\n\nSource: src/fontlab_echopy/FL.pyi: Canvas attribute docstrings and capture-9813 FL attribute names'
 cRGB_WHITE: int
+'Color value for Canvas color attributes such as pen_color, brush_color, text_color and bk_color; the name denotes white.\n\nSource: src/fontlab_echopy/FL.pyi: Canvas attribute docstrings and capture-9813 FL attribute names'
 cRGB_YELLOW: int
+'Color value for Canvas color attributes such as pen_color, brush_color, text_color and bk_color; the name denotes yellow.\n\nSource: src/fontlab_echopy/FL.pyi: Canvas attribute docstrings and capture-9813 FL attribute names'
 cTO_BOTTOM: int
+'Integer canvas constant named cTO_BOTTOM. Its value and the call that takes it are not documented in the captured FL reference.\n\nSource: capture-9813 FL attributes (type int, no documentation)'
 cTO_CENTER: int
+'Integer canvas constant named cTO_CENTER. Its value and the call that takes it are not documented in the captured FL reference.\n\nSource: capture-9813 FL attributes (type int, no documentation)'
 cTO_LEFT: int
+'Integer canvas constant named cTO_LEFT. Its value and the call that takes it are not documented in the captured FL reference.\n\nSource: capture-9813 FL attributes (type int, no documentation)'
 cTO_RIGHT: int
+'Integer canvas constant named cTO_RIGHT. Its value and the call that takes it are not documented in the captured FL reference.\n\nSource: capture-9813 FL attributes (type int, no documentation)'
 cTO_TOP: int
+'Integer canvas constant named cTO_TOP. Its value and the call that takes it are not documented in the captured FL reference.\n\nSource: capture-9813 FL attributes (type int, no documentation)'
 cTO_VCENTER: int
+'Integer canvas constant named cTO_VCENTER. Its value and the call that takes it are not documented in the captured FL reference.\n\nSource: capture-9813 FL attributes (type int, no documentation)'
 fl: Any
+'The FontLab application object (type FontLab), the entry point to the FL module API.\n\nSource: capture-9813 FL attribute fl (type FontLab)'
 ftFONTLAB: int
+'Font format type code whose name denotes the FontLab font format. The captured FL reference does not document which call takes it.\n\nSource: capture-9813 FL attributes (type int, no documentation)'
 ftMACTRUETYPE: int
+'Font format type code whose name denotes Mac TrueType. The captured FL reference does not document which call takes it.\n\nSource: capture-9813 FL attributes (type int, no documentation)'
 ftMACTRUETYPE_DFONT: int
+'Font format type code whose name denotes Mac TrueType in a dfont suitcase. The captured FL reference does not document which call takes it.\n\nSource: capture-9813 FL attributes (type int, no documentation)'
 ftMACTYPE1: int
+'Font format type code whose name denotes Mac Type 1. The captured FL reference does not document which call takes it.\n\nSource: capture-9813 FL attributes (type int, no documentation)'
 ftOPENTYPE: int
+'Font format type code whose name denotes OpenType. The captured FL reference does not document which call takes it.\n\nSource: capture-9813 FL attributes (type int, no documentation)'
 ftTRUETYPE: int
+'Font format type code whose name denotes TrueType. The captured FL reference does not document which call takes it.\n\nSource: capture-9813 FL attributes (type int, no documentation)'
 ftTYPE1: int
+'Font format type code whose name denotes Type 1. The captured FL reference does not document which call takes it.\n\nSource: capture-9813 FL attributes (type int, no documentation)'
 ftTYPE1ASCII: int
+'Font format type code whose name denotes ASCII Type 1. The captured FL reference does not document which call takes it.\n\nSource: capture-9813 FL attributes (type int, no documentation)'
 ftTYPE1ASCII_MM: int
+'Font format type code whose name denotes ASCII Type 1 multiple master. The captured FL reference does not document which call takes it.\n\nSource: capture-9813 FL attributes (type int, no documentation)'
 ftTYPE1_MM: int
+'Font format type code whose name denotes Type 1 multiple master. The captured FL reference does not document which call takes it.\n\nSource: capture-9813 FL attributes (type int, no documentation)'
 nCURVE: int
+'Node type value for Node.type; denotes a curve node.\n\nSource: src/fontlab_echopy/FL.pyi: Node type and alignment docstrings'
 nFIXED: int
+'Node alignment value for Node.alignment; denotes a fixed connection.\n\nSource: src/fontlab_echopy/FL.pyi: Node type and alignment docstrings'
 nLINE: int
+'Node type value for Node.type; denotes a line node.\n\nSource: src/fontlab_echopy/FL.pyi: Node type and alignment docstrings'
 nMOVE: int
+'Node type value for Node.type; denotes a move (contour start) node.\n\nSource: src/fontlab_echopy/FL.pyi: Node type and alignment docstrings'
 nOFF: int
+'Node type value for Node.type; denotes an off-curve node.\n\nSource: src/fontlab_echopy/FL.pyi: Node type and alignment docstrings'
 nSHARP: int
+'Node alignment value for Node.alignment; denotes a sharp (corner) connection.\n\nSource: src/fontlab_echopy/FL.pyi: Node type and alignment docstrings'
 nSMOOTH: int
+'Node alignment value for Node.alignment; denotes a smooth connection.\n\nSource: src/fontlab_echopy/FL.pyi: Node type and alignment docstrings'
 __all__ = ['Anchor', 'BUTTONCONTROL', 'CHECKBOXCONTROL', 'CHOICECONTROL', 'Cancel', 'Canvas', 'CmapTable', 'Component', 'Dialog', 'EDITCONTROL', 'Encoding', 'EncodingRecord', 'Feature', 'Features', 'Font', 'Glyph', 'Guide', 'Hint', 'Image', 'KerningArray', 'KerningPair', 'LISTCONTROL', 'Link', 'Matrix', 'NULLCONTROL', 'Node', 'OK', 'PREVIEWCONTROL', 'Point', 'Rect', 'STATICCONTROL', 'STYLE_BEVELBUTTON', 'STYLE_BUTTON', 'STYLE_CHECKBOX', 'STYLE_CHOICE', 'STYLE_CUSTOM', 'STYLE_EDIT', 'STYLE_FRAME', 'STYLE_LABEL', 'STYLE_LIST', 'TTGasp', 'TTPoint', 'TTVdmx', 'TrueTypeTable', 'Uni', 'VSSGaspArray', 'VSSTTPointArray', 'VSSVdmxArray', 'WS_BORDER', 'WS_CAPTION', 'WS_CHILD', 'WS_CLIPCHILDREN', 'WS_CLIPSIBLINGS', 'WS_DISABLED', 'WS_DLGFRAME', 'WS_GROUP', 'WS_HSCROLL', 'WS_MAXIMIZE', 'WS_MAXIMIZEBOX', 'WS_MINIMIZE', 'WS_MINIMIZEBOX', 'WS_OVERLAPPED', 'WS_OVERLAPPEDWINDOW', 'WS_POPUP', 'WS_POPUPWINDOW', 'WS_SYSMENU', 'WS_TABSTOP ', 'WS_THICKFRAME', 'WS_VISIBLE', 'WS_VSCROLL', 'WeightVector', 'aALIGN', 'aAUTO', 'aIDENT', 'aIDENT2', 'aIDENT3', 'aNEXT', 'aSAME', 'cBRUSH_NULL', 'cBRUSH_SOLID', 'cPEN_DASH', 'cPEN_DOT', 'cPEN_NULL', 'cPEN_SOLID', 'cRECT_3DDOWN', 'cRECT_3DDOWN_FLAT', 'cRECT_3DDOWN_SOLID', 'cRECT_3DUP', 'cRECT_3DUP_FLAT', 'cRECT_3DUP_SOLID', 'cRECT_BLACK_FRAME', 'cRECT_BLACK_SOLID', 'cRECT_BLACK_THICK_FRAME', 'cRECT_ELLIPSE', 'cRECT_FOCUS', 'cRECT_GRAY_FRAME', 'cRECT_GRAY_SOLID', 'cRECT_INVERT', 'cRECT_LTGRAY_SOLID', 'cRECT_RECTANGLE', 'cRECT_SIZE', 'cRECT_WHITE_SOLID', 'cRECT_YELLOW_FRAME', 'cRECT_YELLOW_SOLID', 'cRGB_BLACK', 'cRGB_BLUE', 'cRGB_GRAY', 'cRGB_GREEN', 'cRGB_LTGRAY', 'cRGB_RED', 'cRGB_WHITE', 'cRGB_YELLOW', 'cTO_BOTTOM', 'cTO_CENTER', 'cTO_LEFT', 'cTO_RIGHT', 'cTO_TOP', 'cTO_VCENTER', 'fl', 'ftFONTLAB', 'ftMACTRUETYPE', 'ftMACTRUETYPE_DFONT', 'ftMACTYPE1', 'ftOPENTYPE', 'ftTRUETYPE', 'ftTYPE1', 'ftTYPE1ASCII', 'ftTYPE1ASCII_MM', 'ftTYPE1_MM', 'nCURVE', 'nFIXED', 'nLINE', 'nMOVE', 'nOFF', 'nSHARP', 'nSMOOTH']
