@@ -7,6 +7,7 @@ import ast
 import copy
 import hashlib
 import json
+import re
 from pathlib import Path
 from typing import Any
 
@@ -21,7 +22,10 @@ def documented_outputs(tree: ast.Module, relative: Path) -> tuple[str, str]:
     for node in tree.body:
         if isinstance(node, ast.Assign) and len(node.targets) == 1:
             target = node.targets[0]
-            if isinstance(target, ast.Name) and target.id == "__echopy_source_aliases__":
+            if (
+                isinstance(target, ast.Name)
+                and target.id == "__echopy_source_aliases__"
+            ):
                 aliases.update(ast.literal_eval(node.value))
             # Compatibility with the exact class markers in historical raw output.
             elif (
@@ -29,7 +33,8 @@ def documented_outputs(tree: ast.Module, relative: Path) -> tuple[str, str]:
                 and isinstance(target.value, ast.Call)
                 and isinstance(target.value.func, ast.Name)
                 and target.value.func.id == "globals"
-                and not target.value.args and not target.value.keywords
+                and not target.value.args
+                and not target.value.keywords
                 and isinstance(target.slice, ast.Constant)
                 and isinstance(target.slice.value, str)
                 and isinstance(node.value, ast.Name)
@@ -81,17 +86,62 @@ def documented_outputs(tree: ast.Module, relative: Path) -> tuple[str, str]:
     return facade, stub
 
 
+PLACEHOLDER_LEADS = (
+    re.compile(r"\S+ representation"),  # fontlab class stub: "flGlyph representation"
+    re.compile(r"\S+<[^>]*> doc"),  # template stub: "flObjectsList<flGuideLine> doc"
+    re.compile(r"Call an MCP tool by name\."),  # generic fontpr tool stub
+)
+STRUCTURAL_LEADS = ("Constructors:", "Native bases:")
+
+
+def is_placeholder_lead(paragraph: str) -> bool:
+    """True when a generated first paragraph carries no description of its own."""
+    text = paragraph.strip()
+    return (
+        not text
+        or text.startswith(STRUCTURAL_LEADS)
+        or any(p.fullmatch(text) for p in PLACEHOLDER_LEADS)
+    )
+
+
+def with_reference(doc: str, reference: str) -> str:
+    """Put upstream reference prose first, replacing a placeholder lead.
+
+    A real lead (for example a captured C++ signature line) stays first and the
+    reference follows it. Constructors and native bases keep their place after.
+    """
+    lead, sep, rest = doc.partition("\n\n")
+    if lead.strip().startswith(STRUCTURAL_LEADS):
+        lead, rest = "", doc
+    first = reference.partition("\n\n")[0]
+    if is_placeholder_lead(lead) or " ".join(lead.split()) == " ".join(first.split()):
+        return reference + ("\n\n" + rest if rest else "")
+    return lead + "\n\n" + reference + (sep + rest if rest else "")
+
+
+def reference_source(patch: dict[str, Any]) -> str:
+    return patch.get("reference_source", "upstream reference")
+
+
 def enrich_node(node: ast.AST, patch: dict[str, Any]) -> None:
     """Apply docs/types only to explicit targets; preserve overload provenance."""
     if isinstance(node, ast.AnnAssign):
+        if patch.get("reference"):
+            node._echopy_reference = (
+                patch["reference"] + "\n\nSource: " + reference_source(patch)
+            )
         if patch.get("doc"):
             node._echopy_doc = (
                 patch["doc"] + "\n\nSource: " + patch.get("source", "native metadata")
             )
         if patch.get("returns"):
             node.annotation = ast.parse(patch["returns"], mode="eval").body
-    if hasattr(node, "body") and ("doc" in patch or patch.get("signatures")):
+    if hasattr(node, "body") and (
+        "doc" in patch or patch.get("signatures") or patch.get("reference")
+    ):
         doc = ast.get_docstring(node) or ""
+        if patch.get("reference"):
+            doc = with_reference(doc, patch["reference"])
         supplemental = patch.get("doc", "")
         if supplemental and supplemental != doc:
             doc += ("\n\nSupplemental documentation:\n" if doc else "") + supplemental
@@ -101,6 +151,8 @@ def enrich_node(node: ast.AST, patch: dict[str, Any]) -> None:
                 + "\n".join(patch["signatures"])
                 + "\n```"
             )
+        if patch.get("reference"):
+            doc += "\n\nSource: " + reference_source(patch)
         if patch.get("source"):
             doc += "\n\nSource: " + patch["source"]
         statement = ast.Expr(value=ast.Constant(value=doc))
@@ -109,6 +161,10 @@ def enrich_node(node: ast.AST, patch: dict[str, Any]) -> None:
         else:
             node.body.insert(0, statement)
     if isinstance(node, ast.FunctionDef):
+        if "signature" in patch:
+            # Replace the captured parameter list, e.g. a dynamic (*args, **kwargs).
+            template = ast.parse(f"def _({patch['signature']}): pass").body[0]
+            node.args = template.args
         for arg in node.args.posonlyargs + node.args.args + node.args.kwonlyargs:
             if arg.arg in patch.get("parameter_types", {}):
                 arg.annotation = ast.parse(
@@ -177,15 +233,24 @@ def merge(raw: Path, output: Path, overlays: list[Path]) -> dict[str, Any]:
             body = []
             for index, child in enumerate(owner.body):
                 body.append(child)
-                if hasattr(child, "_echopy_doc"):
-                    following = (
-                        owner.body[index + 1] if index + 1 < len(owner.body) else None
+                following = (
+                    owner.body[index + 1] if index + 1 < len(owner.body) else None
+                )
+                if not (
+                    isinstance(following, ast.Expr)
+                    and isinstance(following.value, ast.Constant)
+                    and isinstance(following.value.value, str)
+                ):
+                    following = None
+                if hasattr(child, "_echopy_reference"):
+                    if following is None:
+                        following = ast.Expr(value=ast.Constant(value=""))
+                        body.append(following)
+                    following.value.value = with_reference(
+                        following.value.value, child._echopy_reference
                     )
-                    if (
-                        isinstance(following, ast.Expr)
-                        and isinstance(following.value, ast.Constant)
-                        and isinstance(following.value.value, str)
-                    ):
+                if hasattr(child, "_echopy_doc"):
+                    if following is not None:
                         following.value.value += (
                             "\n\nSupplemental documentation:\n" + child._echopy_doc
                         )
@@ -236,12 +301,18 @@ def merge(raw: Path, output: Path, overlays: list[Path]) -> dict[str, Any]:
     identity = native.pop("capture_identity", None)
     if coverage_path.exists():
         provenance["native_coverage"] = native
-    # The merged package documents the raw input's capture; anything else is stale.
-    if identity is None:
-        provenance.pop("capture_identity", None)
-    else:
+    # A raw tree without its own capture identity (the committed `generated/`)
+    # re-merges the capture already recorded, so keep that identity. Identities
+    # embed `merge.unmatched`, so they survive only while it is unchanged; a new
+    # capture identity or a different unmatched set needs `identities` again.
+    previous = provenance.get("capture_identity")
+    stale = (identity is not None and identity != previous) or (
+        provenance.get("merge", {}).get("unmatched") != result["unmatched"]
+    )
+    if identity is not None:
         provenance["capture_identity"] = identity
-    (output / "_identities.json").unlink(missing_ok=True)  # Re-derive with `identities`.
+    if stale:
+        (output / "_identities.json").unlink(missing_ok=True)
     provenance.update(
         schema_version=1,
         merge=result,

@@ -2,6 +2,29 @@
 this_file: CHANGELOG.md
 ---
 
+## 2026-11-17 — Issue 257: Proteus and MCP reference documentation
+
+- New `proteus-docs` command builds `enrichment/fontlab-proteus.json` from
+  FontLab's Proteus API articles: 1,906 class, member, function, enum and
+  module entries for `fontlab`. Implementation notes, C++ source names and paths
+  are stripped.
+- New `mcp-docs` command builds `enrichment/fontpr-mcp.json` from the FontLab MCP
+  specification. The 44 captured `fontpr` tools get descriptions, parameters,
+  effects, results, notes, an example and keyword-only signatures. The module
+  docstring states the calling convention, `available()`, `list_tools()`,
+  blocked tools and result handling.
+- Merge accepts `reference`/`reference_source` and `signature` patch keys.
+  Reference prose replaces placeholder class leads (`flGlyph representation`,
+  `flObjectsList<…> doc`, `Call an MCP tool by name.`). Constructors, native
+  bases, manual notes and sources follow it. The stubs are regenerated with four
+  overlays (applied 25,970, unmatched 0).
+- New `llms` command writes `src_docs/md/llms.txt` (19 KB), a compact index of
+  the `fontlab`, `fontgate`, `fontpr` and `FL` classes and functions. It is
+  published at the site root.
+- Removed the `fontlabpr` shim: no such module is registered in the FontLab
+  source. Capture-derived records of its old absence are kept unchanged.
+- Tests: 766 passed (CPython 3.14.10); documentation tests 36 passed.
+
 ## 1.1.16 (2026-11-16)
 
 - `install.vfpy` is now the short fontlab-instamix stub. It installs

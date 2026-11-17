@@ -30,6 +30,8 @@ def test_griffe_resolves_canonical_sidecars_without_runtime_inspection():
     assert "Returns the x coordinate" in point_x.docstring.value
     coverage = json.loads((root / "reports/native-coverage.json").read_text())
     for name, scope in coverage["modules"].items():
+        if name in coverage["unavailable"]:
+            continue  # the capture recorded the module as absent; no shim ships
         module = package.get_member(name)
         path = root / "src/fontlab_echopy" / Path(*name.split("."))
         path = path / "__init__.pyi" if path.is_dir() else path.with_suffix(".pyi")

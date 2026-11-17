@@ -36,8 +36,27 @@ fontlab-echopy generate ~/.cache/fontlab-echopy/native.json generated
 fontlab-echopy enrich ~/.cache/fontlab-echopy/native.json enrichment/qt5.json \
   --cache .cache/upstream
 fontlab-echopy merge generated src/fontlab_echopy \
-  --overlay enrichment/qt5.json --overlay patches/manual.json
+  --overlay enrichment/qt5.json --overlay enrichment/fontlab-proteus.json \
+  --overlay enrichment/fontpr-mcp.json --overlay patches/manual.json
 ```
+
+`enrichment/fontlab-proteus.json` comes from FontLab's Proteus API articles and
+`enrichment/fontpr-mcp.json` from the FontLab MCP specification. Rebuild them
+when those sources change (`vendor/` holds local links to them; it is not
+committed):
+
+```sh
+fontlab-echopy proteus-docs --api-docs vendor/api-docs --output enrichment/fontlab-proteus.json
+fontlab-echopy mcp-docs --mcp-json vendor/mcp/fontlab-mcp.json --output enrichment/fontpr-mcp.json
+fontlab-echopy llms --output src_docs/md/llms.txt
+```
+
+Reference prose replaces placeholder class leads such as `flGlyph
+representation`; constructors, native bases, manual notes (under
+`Supplemental documentation:`) and `Source:` lines follow it. `fontpr` tool
+stubs get keyword-only signatures from the MCP input schemas.
+`src_docs/md/llms.txt` is a compact index of the `fontlab`, `fontgate`, `fontpr`
+and `FL` classes and functions, published at the site root.
 
 The repeatable one-command equivalent captures inside FontLab if `--capture`
 is omitted. Outside FontLab, supply a previously captured file:
@@ -45,7 +64,8 @@ is omitted. Outside FontLab, supply a previously captured file:
 ```sh
 fontlab-echopy pipeline --capture ~/.cache/fontlab-echopy/native.json \
   --raw generated --output src/fontlab_echopy --qt-cache .cache/upstream \
-  --qt-overlay enrichment/qt5.json --overlay patches/manual.json --reports reports
+  --qt-overlay enrichment/qt5.json --overlay enrichment/fontlab-proteus.json \
+  --overlay enrichment/fontpr-mcp.json --overlay patches/manual.json --reports reports
 ```
 
 The pipeline also writes `_identities.json` into the merged package: every
@@ -53,7 +73,10 @@ captured scope, name, class member and constructor, the capture hash, the
 native spelling of each sanitized identity (`QPainter::PixmapFragment` →
 `QPainter__PixmapFragment`, `QWidget.raise` → `QWidget.raise_`), maintained
 extensions, unmatched overlay targets and enrichment gaps. Documentation builds
-reconcile their coverage against it without the raw capture. To refresh or
+reconcile their coverage against it without the raw capture. A standalone
+`merge` keeps the file and `capture_identity` while its raw input records no
+new capture and the unmatched overlay targets are unchanged; otherwise it
+removes the file. To refresh or
 check it against a capture without regenerating sidecars:
 
 ```sh
@@ -120,7 +143,7 @@ structured Qt Markdown and separate overload source lines in
 enrichment; `docnames` aliases that let mkdocstrings render the native
 `fontlab`/`fontgate`/`fontpr`/`PythonQt` identities; and the BoolResult
 class/namespace collision handling, each proven by strict source-only rendering.
-`fontlabpr` is absent in FontLab 9.0.9780; capture records that absence.
+No `fontlabpr` module exists in FontLab; the old capture recorded it as absent and Echopy no longer probes or shims it.
 
 ## Archive preservation in this delivery
 

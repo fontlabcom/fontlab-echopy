@@ -547,7 +547,6 @@
 <h1 id="declarations-and-tooling">Declarations and tooling</h1>
 <h2 id="scope">Scope</h2>
 <p>Echopy shims only FontLab's native bindings: <code>fontlab</code>, <code>fontgate</code>, <code>fontpr</code>,
-<code>fontlabpr</code> (absent in measured builds; the absence is recorded) and
 <code>FL</code> and <code>PythonQt.*</code>. It does not emulate other APIs. The <code>FL</code> module (FontLab 5
 compatibility, <code>from FL import *</code>) is shipped as <code>fontlab_echopy.FL</code> (136
 names, 30 classes, from a native FontLab 9 capture). To refresh it, run
@@ -575,7 +574,7 @@ accepts <code>echopy_object_name</code>. The standalone helpers remain available
 cases. Existing native methods are never replaced by convenience fallbacks.</p>
 <h2 id="document-the-actual-native-names">Document the actual native names</h2>
 <p>The enriched Python source is also the documentation authority for the live
-<code>fontlab</code>, <code>fontgate</code>, <code>fontpr</code>, optional <code>fontlabpr</code> and <code>PythonQt.*</code> namespaces.
+<code>fontlab</code>, <code>fontgate</code>, <code>fontpr</code> and <code>PythonQt.*</code> namespaces.
 Capture inside FontLab first, then generate/enrich/merge outside it. Qt HTML
 becomes structured Markdown docstrings: paragraphs, lists, links, tables and
 code examples remain readable in the generated Python sidecars.</p>

@@ -4,10 +4,12 @@
     "sha256": "5a405eb5a8888bc217c9653b606013439483a9ead5c0b9b1b478172c18e521e9"
   },
   "merge": {
-    "applied": 24093,
+    "applied": 25972,
     "unmatched": []
   },
   "merged_outputs": {
+    "FL.py": "c49764a49b40b62f2e6e883d6796c6a145ff5f095f0f9ec4c622d14f108c702a",
+    "FL.pyi": "5c4845d6e88f445c8e9a42dc0d02b46a87e8ac67ccf263600dacc2447aa898bd",
     "PythonQt/BoolResult.py": "012ad997a44161056c843b197ee9616d67a0a6d357d3ffd8e4fdf334201fab5c",
     "PythonQt/BoolResult.pyi": "825f6d678ce706bc66426f82e8e67ba09fff886b7a838ffaca095202285ff3fa",
     "PythonQt/Config.py": "4cd0a6c15713f6ad7b1656ea70bf67478222c06ed8da67c2955748605fe0491c",
@@ -38,11 +40,9 @@
     "fontgate.py": "16796fe6044fe23dcc74f61e38e155c71e4de753a00754d88c6dea8d282f7326",
     "fontgate.pyi": "f439922e5c0ad358655e0b6672c4277faeffd54cf4def96c1b41bc63d4ec60b0",
     "fontlab.py": "bb9bd0abf17d4f1ec66f4e375f67a43f39ca5e39817fdbce538bb5ae58cf5498",
-    "fontlab.pyi": "0f0af6e5a9d8cc9ea9cb0af10c5deaa1d90d2c9ac61b59f42e7aca3169e2f039",
-    "fontlabpr.py": "0d908eb97203deccfa26f57c4785dab98b3c0fdc8e148fd6466390c77929db73",
-    "fontlabpr.pyi": "14e3c4e5ba15c4a5ff1694a34fd80a204f78f0bb2d1aa0ebf4b03ce09020d840",
+    "fontlab.pyi": "2e96b3ccef0a69593e4d2c1341c8838273293748628d76c326aff1f78d7764a4",
     "fontpr.py": "8b8ac880f4deeff73082041c3a3d2cc9c65deeca08357b9f9d0b7a4f7a9ce6ab",
-    "fontpr.pyi": "f2d781243ccabb0f2b0c54a1fc1db1d89f5fc7d784df03179a737b402bd4b0ed"
+    "fontpr.pyi": "e52309ea4a4f2975b734606c8a7ce46454ae22265ebcf4db67b8a01f36e67cfd"
   },
   "native_coverage": {
     "modules": {
@@ -259,6 +259,14 @@
     {
       "file": "qt5.json",
       "sha256": "6eaeb82df78d69d19593fe489eaa7eb77b6177b0622246fff78c10cdc1e271c8"
+    },
+    {
+      "file": "fontlab-proteus.json",
+      "sha256": "ec2e4e74bf9da85ebebe0ba84219cb1944a3c9c316803eb03bfc9a850c735e77"
+    },
+    {
+      "file": "fontpr-mcp.json",
+      "sha256": "d0217b859184cfb25873717f702920838b8b4ece9526e394f75201d9f7e48d61"
     },
     {
       "file": "manual.json",

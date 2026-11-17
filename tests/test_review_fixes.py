@@ -10,6 +10,8 @@ from pathlib import Path
 
 import pytest
 
+from fontlab_echopy.tooling.merge import is_placeholder_lead
+
 from fontlab_echopy.extensions import get_extension, install_extensions
 from fontlab_echopy.tooling.generate import generate
 from fontlab_echopy.tooling.merge import merge
@@ -87,7 +89,11 @@ def test_committed_manual_docs_retain_all_captured_class_documentation():
         merged = ast.parse((root / "src/fontlab_echopy" / (module + ".pyi")).read_text())
         docs = {node.name: ast.get_docstring(node) for node in merged.body if isinstance(node, ast.ClassDef)}
         for name, doc in native_docs.items():
-            assert doc in docs[name], f"Native documentation lost: {module}.{name}"
+            # A placeholder lead ("flContour representation") may be replaced by
+            # upstream reference prose; every other captured paragraph must stay.
+            lead, _, rest = doc.partition("\n\n")
+            kept = rest if is_placeholder_lead(lead) else doc
+            assert kept in docs[name], f"Native documentation lost: {module}.{name}"
     forbidden = {"fontlab.flGlyph": ("unicode (", "unicodes ("),
                  "fontlab.flLayer": ("layer.contours",),
                  "fontgate.fgGlyph": ("glyph.contours[",),
