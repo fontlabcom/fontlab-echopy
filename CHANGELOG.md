@@ -43,6 +43,10 @@ The older shipped-input entry below records the source-stage observation; this e
 - Before the manifest repair, the complete artifact regression reproduced 252 failures and seven errors across the original 704 shipped cases. The earlier full default run passed 705 cases, including the archive gate, with all original 704 extracted-source case IDs and zero skips; its 163-second runtime motivated the separate packaging gate. The final default source recipe passes all original 704 cases plus the fast payload check: 705 passed, zero skips, 77.35 seconds. The fast payload oracle also rejects the original incomplete v1.1.14 sdist. Pre-run source checks assert arm64 Python 3.11.18, genuine VCS metadata, editable origin and Homebrew Git.
 - The strict locked documentation build preserves all 55 output bytes, sizes and raw modes. The unchanged docs suite remains 35 passed / one filename-only failure; Ruff 0.14.10 remains at 7,374 existing findings, with none in the new regression. These failures, native/provenance/installer/full-provider qualification and reviewed upstream delivery remain separate.
 
+## 2026-11-14 — Functional work order documented
+
+- Added the owner's functional-progress-first guidance and repository-specific priorities, including cross-package compatibility and a later detailed testing pass. Existing mandatory hooks, holds and unfinished work remain in force.
+- This change updates guidance and planning only; it establishes no new runtime, installed, native or release result.
 
 ## 2026-11-12 — D46 documentation pass (Issue 250)
 

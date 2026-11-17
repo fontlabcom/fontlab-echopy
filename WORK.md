@@ -33,4 +33,10 @@ Next: independently review the complete candidate and its private archive/origin
 
 # Work in progress
 
+## 2026-11-14 — Functional work order documented
+
+Updated AGENTS, PLAN and TODO to prioritize useful functional changes and compatible package boundaries, with detailed testing deferred. Existing backlog and prior records are retained. Documentation preservation and policy consistency were checked; no runtime, installed or native checks ran in this documentation-only pass.
+
+Next: continue remaining FontGate guidance from captured declarations and reconcile overlays, aliases and provenance with pythonqtside/Fly consumers before the later full capture and installed-cohort pass.
+
 Earlier WORK.md (40,111 bytes, SHA256 `14dbb88e75ca20c111c21cff9b6e52cb6be92179bebdf239c56e1cb9ceefdbe4`) is archived on the owner's workspace data volume (not public) under `issue250/work-archives/` (Issue 250). Completed work is in CHANGELOG.md; open work is in TODO.md and PLAN.md.

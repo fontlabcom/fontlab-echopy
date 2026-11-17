@@ -23,6 +23,8 @@ this_file: TODO.md
 
 # Open tasks
 
+- [ ] Continue remaining FontGate guidance from captured declarations and reconcile overlays, aliases and provenance with pythonqtside/Fly consumers before the later full capture and installed-cohort pass.
+
 - [ ] Reconcile the Issue 207 enriched candidate and its five catalogues with current producers before a reviewed regeneration.
 - [ ] Qualify exact captures, aliases, docstrings, identities/provenance and ordinary installed consumers; document absent native APIs without inventing support.
 - [ ] Run the exact repository checks on the integrated source, obtain independent review, commit/push the scoped milestone and verify its remote head.

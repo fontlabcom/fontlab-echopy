@@ -19,6 +19,12 @@ Source tests and archive inputs are recorded in CHANGELOG; native capture, prove
 
 # Forward plan
 
+## Functional work order — 2026-11-14
+
+Prioritize missing maintained guidance and concrete capture or routing defects using captured declarations and existing overlays. Keep generated namespaces, aliases, identities and provenance synchronized with pythonqtside and Fly consumers; do not invent absent native APIs.
+
+Use small smoke checks and focused regressions for changed behavior and package boundaries. Keep the existing detailed acceptance tasks for a later testing pass; mandatory delivery hooks and current holds remain in force.
+
 Issue 230 reconciliation is current. Issue 123 implementation remains paused; its acceptance backlog below is preserved, not resumed. Keep qualified Issue 207 candidates distinct from canonical source, ordinary installed artifacts, native acceptance and publication. Issue 210 defines the future plugin split; Issue 211 retains follow-up checks. The owner corrected the preparation catalogue reference to Issue 214.
 
 ## Current enrichment and capture
