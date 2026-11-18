@@ -20,3 +20,17 @@ src/fontlab_echopy/__version__.py
 
 # Local symlinks to the FontLab Proteus documentation checkout (not redistributed)
 vendor/
+
+# Python and macOS (pypitrust)
+*.py[cod]
+.eggs/
+build/
+.ruff_cache/
+.mypy_cache/
+htmlcov/
+.tox/
+.nox/
+
+# Python and macOS (pypitrust)
+__version__.py
+_version.py
