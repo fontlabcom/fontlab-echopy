@@ -2,6 +2,9 @@
 this_file: TODO.md
 ---
 
+- [ ] Issue 271: independently review and integrate the generated installer through repository gates, verify exact-SHA CI/archives, and qualify macOS/Windows native execution after serialized admission.
+
+
 ## Guarded common installer
 
 - [ ] Independently review the exact 1.0.11 common template, the existing llms index's single sdist allowlist addition and preserved runtime/test/dependency/licence contracts; qualify the current graph and fresh-main integration.
